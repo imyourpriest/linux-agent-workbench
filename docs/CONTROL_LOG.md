@@ -294,3 +294,31 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   not reference a missing label; no issue was submitted. The branch remains local and uncommitted
   at this checkpoint. No customer, marketing post, checkout, payment, merchant account, purchase,
   domain, wallet, XLM, subscription, or customer/private input changed.
+
+## 2026-08-08 - Session 011 - Versioned migration and Support Eval publication
+
+- Committed the 57-file reviewed scope as `72d3bcd341dbe4a9492f21b48fbd541211e09778` on
+  `agent/governance-and-evidence-v2` and pushed that branch. Ignored `.private`, `.tmp`, build,
+  egg-info, and cache paths were not staged. The existing four-file Patch candidate bundle and
+  its receipt were unchanged relative to the previous public `main`.
+- The GitHub connector returned HTTP 403 when asked to create the pull request, so the documented
+  publication fallback used the already authenticated GitHub CLI. Draft PR 5 accurately disclosed
+  the AI assistance, safety boundary, local checks, and absence of customers, payments, wallet
+  actions, or marketing. No repository source changed during that fallback.
+- PR 5's protected checks passed on the exact branch commit: CI run `31284206557` passed Python
+  3.12, 3.13, 3.14, the preserved `Release Readiness on Windows` check, and generated-evidence
+  replay; CodeQL run `31284205553` passed Actions and Python analysis. Only then was the PR marked
+  ready and squash-merged.
+- Public `main` now points to `c961ab29792a0edd29df29aaae9651b5ab1ed906`. PR 5 is merged and its
+  `Closes #3` link closed the versioned-evidence-migration issue. Post-merge CI run `31284253009`
+  and CodeQL run `31284252933` both passed on that exact merge commit.
+- The project-owned `support-eval-interest` label exists for the public nonbinding form. At the
+  post-merge checkpoint, private vulnerability reporting returned `enabled: true`; Dependabot,
+  secret-scanning, and code-scanning APIs each returned zero open alerts. These are time-stamped
+  observations, not guarantees. No open issue or pull request remained.
+- A direct whole-account Usage-page reading after merge and hosted verification showed 69%
+  remaining; the final publication-audit snapshot showed 67%. Neither is attributed to a
+  particular action. R-002 remains two Patch units to one revenue unit; publication is shared
+  completion work, not another dedicated unit. Revenue remains $0.00. No customer, interest
+  submission, marketing post, checkout, payment, merchant account, purchase, domain, wallet, XLM,
+  subscription, upstream contact, or customer/private input changed.
