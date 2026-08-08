@@ -158,3 +158,45 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   customer record, payment, sale, purchase, wallet action, or XLM movement occurred.
 - The private staging repository is retained as audit evidence. It is not a customer-facing or
   revenue channel.
+
+## 2026-08-08 — Session 006 — Public source launch
+
+### Gate sequence
+
+- Pushed the audit-log update to the private staging PR. Hosted Actions run `31249908795` passed
+  the same five jobs on candidate commit `594bf0f9928e90533d1c6cb8d647852df56ad6ee`.
+- Marked staging PR 1 ready and merged it as
+  `703a4efb05b41e4632f2ec7911d6cda846729166`; the reviewed candidate commit remains separately
+  identifiable in that history.
+- Created `imyourpriest/linux-agent-workbench` as a public but empty repository. Before pushing any
+  source, enabled private vulnerability reporting, confirmed the API returned `enabled: true`, and
+  confirmed that an unauthenticated visitor could see **Report a vulnerability** on the repository
+  security page. The empty repository reported size zero at that checkpoint.
+- Added the final repository as local `origin` and pushed the privately verified candidate commit
+  to `main`. Public CI run `31249964779` passed all five jobs on the same exact commit.
+
+### Public security baseline
+
+- Enabled Dependabot vulnerability alerts and security updates. GitHub secret scanning and push
+  protection were enabled. Default CodeQL setup was configured for Actions and Python; run
+  `31249984455` passed both analyses.
+- At the post-run snapshot, the repository reported zero Dependabot alerts, zero secret-scanning
+  alerts, and zero CodeQL alerts. These are time-stamped launch observations, not guarantees.
+- Protected `main` with strict required checks for the five CI jobs and both CodeQL analyses,
+  administrator enforcement, pull-request use, conversation resolution, and linear history.
+  Force pushes and branch deletion are disabled; no approving review is required because the
+  accountable owner is currently the sole maintainer.
+- Enabled public Issues, disabled the unused wiki, and added descriptive Linux, open-source,
+  AI-agent, reproducible-research, and GitHub Actions topics.
+
+### Publication outcome
+
+- Public source: `https://github.com/imyourpriest/linux-agent-workbench` at launch commit
+  `594bf0f9928e90533d1c6cb8d647852df56ad6ee`.
+- The source crossed the public boundary only after the private reporting route was enabled and
+  tested. The same source state passed private staging CI and public CI.
+- No upstream project or candidate was contacted. No social promotion, customer outreach, domain,
+  merchant relationship, payment, purchase, sale, wallet action, or XLM movement occurred.
+- Patch Cabinet issue 18 remains evidence-only and `investigate`. D-014 and every real-repository
+  Revenue Lab report or sale remain blocked by the real isolation, legal, merchant, privacy,
+  support, refund, and tax gates.

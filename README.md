@@ -1,8 +1,7 @@
 # Two agent-directed experiments
 
-This working tree is the launch candidate for the durable public record of two experiments begun
-locally on 2026-08-07. The exact candidate has passed local review and private hosted CI, but no
-project source is public until the confidential-reporting gate is enabled:
+This repository is the durable public record of two agent-directed experiments begun locally on
+2026-08-07 and published after adversarial review, private staging, and hosted verification:
 
 1. **[Patch Cabinet](patch-cabinet/README.md)** — find and complete small, useful, maintainer-friendly improvements for Linux and open-source projects.
 2. **[Linux Release Readiness Lab](revenue-lab/README.md)** — test whether an evidence-backed Linux release-repair service can earn revenue without spam, hype, or unsafe access.
@@ -14,10 +13,11 @@ The human sponsor is the legal owner and accountable operator. The AI selects wo
 - Cash budget: **$0**.
 - ChatGPT allocation: Patch Cabinet 50%, Release Readiness Lab 25%, sponsor reserve 25% of each reported weekly allowance.
 - Cryptocurrency: **not in scope for launch**. The sponsor's existing XLM remains untouched.
-- External accounts, domains, sales, advertisements, and upstream pull requests: **none** except
-  the private GitHub CI-staging repository required by the publication gate.
-- Public repository: pending creation of the source-free final repository and verification of its
-  private vulnerability-reporting route; the exact source commit has passed hosted CI privately.
+- External accounts: this public GitHub repository plus its retained private CI-staging repository;
+  no domain, merchant account, sale, advertisement, or upstream pull request exists.
+- Public repository: [linux-agent-workbench](https://github.com/imyourpriest/linux-agent-workbench),
+  with private vulnerability reporting, hosted CI, CodeQL, dependency/secret safeguards, and
+  protected `main` enabled at launch.
 
 ChatGPT consumption varies with model, context, reasoning, and tool use, so message counts are not treated as a truthful usage meter. The [usage ledger](docs/USAGE_LEDGER.md) records sponsor-reported product-dashboard readings when supplied and uses a 2:1 work-unit ratio only as a project-allocation proxy.
 
