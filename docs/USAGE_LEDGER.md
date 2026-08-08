@@ -34,11 +34,10 @@ Official product behavior makes exact consumption task-dependent: model, context
 | 2026-08-08 | Release Readiness Lab | 1 | Trusted-demo isolation, bounded enumeration, and operative acquisition gate | unknown |
 | 2026-08-08 | Patch Cabinet | 1 | Current public candidate discovery and immutable evidence bundle | unknown |
 | 2026-08-08 | Release Readiness Lab | 1 | D-014 synthetic contract scaffold and adversarial correction | unknown |
+| 2026-08-08 | Patch Cabinet | 1 | Versioned evidence-migration gate and bounded Dependabot correction | unknown |
 
 Do not backfill an “actual” delta from message count. When the sponsor supplies before/after UI readings, record them as sponsor-reported and preserve ambiguity caused by unrelated or concurrent ChatGPT use.
 
-The recorded dedicated-workstream totals are now seven Patch Cabinet units and four Release
-Readiness Lab units. The next dedicated workstream unit must be Patch Cabinet before any additional
-Revenue Lab unit; that Patch unit restores the cumulative 2:1 ratio. Shared publication
-governance remains allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
-dedicated unit.
+The recorded dedicated-workstream totals are now eight Patch Cabinet units and four Release
+Readiness Lab units, preserving the cumulative 2:1 ratio. Shared publication governance remains
+allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a dedicated unit.

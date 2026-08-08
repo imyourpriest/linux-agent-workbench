@@ -200,3 +200,18 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - Patch Cabinet issue 18 remains evidence-only and `investigate`. D-014 and every real-repository
   Revenue Lab report or sale remain blocked by the real isolation, legal, merchant, privacy,
   support, refund, and tax gates.
+
+## 2026-08-08 — Session 007 — First post-launch maintenance boundary
+
+- GitHub's first Dependabot pull request proposed `packaging` 26.3 for Patch Cabinet. All ordinary
+  tests passed, but the immutable-evidence job rejected the unversioned evaluator dependency
+  change because the published engine 0.1.0 bundle records 26.2.
+- Opened issue 3 to design a versioned migration that keeps historical bundles unchanged and
+  reproducible. Closed Dependabot PR 1 without merging and linked the explanation to issue 3.
+- D-017 pauses ordinary Patch Cabinet version-update PRs with `open-pull-requests-limit: 0`, the
+  GitHub-documented configuration that retains security updates. Vulnerability alerts,
+  security-update proposals, Revenue Lab and Actions version monitoring, and CodeQL remain
+  enabled; ordinary Patch dependency updates resume only after the versioned migration.
+- This is one Patch Cabinet maintenance work unit, bringing recorded dedicated units to eight
+  Patch Cabinet and four Revenue Lab. No dependency or historical artifact changed, and no
+  third-party project was contacted.
