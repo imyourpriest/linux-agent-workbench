@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
 authors = [{ name = "Patch Cabinet contributors" }]
-dependencies = ["packaging==26.2"]
+dependencies = ["packaging==26.3"]
 
 [project.scripts]
 patch-cabinet = "patch_cabinet.cli:main"
