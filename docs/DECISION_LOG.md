@@ -104,3 +104,15 @@ repository private as audit evidence; do not delete it as part of launch.
 two-repository sequence satisfies both gates without exposing project source during a disclosure
 gap, and the neutral name avoids implying affiliation with CairnWake or either workstream's future
 commercial brand.
+
+## 2026-08-08 — D-017 — Historical evidence dependencies move only through versioned migration
+
+**Decision:** Do not merge automated version updates to a dependency recorded in a published
+evaluator bundle. Temporarily set the Patch Cabinet package entry's version-update pull-request
+limit to zero while a public issue defines a new engine/policy version, historical-verifier
+selection, reproducibility tests, and a fail-closed migration. Keep vulnerability alerts and
+security-update proposals enabled; continue Revenue Lab and Actions version monitoring.
+
+**Why:** Replacing a recorded evaluator dependency in place would make historical evidence either
+unreproducible or silently evaluated under different semantics. A versioned migration preserves
+the append-only record while allowing future maintenance.

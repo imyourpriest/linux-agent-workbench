@@ -69,3 +69,20 @@ Append-only project record.
   identity, full evaluator replay, and canonical Markdown reproduction; orphan evidence fails.
 - This is publication hardening for the existing discovery unit, not another candidate-selection
   unit. It does not authorize contact or implementation, and the candidate remains `investigate`.
+
+## 2026-08-08 — Versioned evidence-migration gate
+
+- GitHub opened Dependabot PR 1 after public launch to bump `packaging` from 26.2 to 26.3. The
+  immutable-evidence job failed because the published engine 0.1.0 bundle records and replays
+  `packaging==26.2`; the failure was the intended provenance boundary, not a flaky check.
+- Opened public issue 3 with acceptance criteria for versioned evaluator migrations: old evidence
+  must remain unchanged and reproducible while new engine/policy versions may use reviewed newer
+  dependencies.
+- Closed PR 1 without merging and explained the provenance constraint. Paused ordinary version
+  pull requests for the Patch Cabinet package entry with `open-pull-requests-limit: 0`, GitHub's
+  documented configuration for retaining security updates without version-update PRs. GitHub
+  Actions and Revenue Lab version monitoring remain enabled. Issue 3 must pass before ordinary
+  Patch Cabinet version updates resume.
+- No dependency, evaluator result, historical evidence, target repository, or upstream project was
+  changed. This consumes one Patch Cabinet maintenance unit and restores the recorded 2:1
+  Patch-to-Revenue work-unit ratio.
