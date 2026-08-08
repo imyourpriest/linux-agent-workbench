@@ -140,7 +140,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="release-readiness")
     subparsers = parser.add_subparsers(dest="command", required=True)
     audit = subparsers.add_parser("audit", help="collect static release-readiness evidence")
-    audit.add_argument("path", help="local public-repository checkout")
+    audit.add_argument("path", help="synthetic or trusted project-owned demo directory")
     audit.add_argument("--repository-url", required=True)
     audit.add_argument("--commit-sha", required=True)
     audit.add_argument(

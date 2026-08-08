@@ -1,0 +1,10 @@
+{
+  "schema_version": "1",
+  "bundle": "2026-08-08-initial-shortlist",
+  "files": {
+    "patch-cabinet/data/candidates/2026-08-08-initial-shortlist.json": "f21d8ade0e522e60b9eb12b28b0a1672f19651880efc3eb13378ef2861a93d56",
+    "patch-cabinet/evidence/2026-08-08-initial-shortlist.md": "fc6c3de36b73f943af9773348096e615b0610fe5b9333cfe8783f36ee865087e",
+    "patch-cabinet/evidence/2026-08-08-initial-shortlist-policy.json": "e8c8996c608d2e12f1b743bccb5c610e38a1b3d2e4a517db0d0ff4b67b541e2f",
+    "patch-cabinet/evidence/2026-08-08-initial-shortlist-policy.md": "28143c3a56e7b4dfa7aa1d825e9eb445742f3a534c66a4f56ea655bc97fc852c"
+  }
+}

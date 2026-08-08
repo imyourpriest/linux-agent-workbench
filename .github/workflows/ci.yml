@@ -95,6 +95,9 @@ jobs:
       - name: Check public tree for private paths and secret signatures
         run: python tools/check_public_tree.py
 
+      - name: Verify immutable candidate evidence bundles
+        run: python tools/check_evidence_bundles.py
+
       - name: Regenerate Patch Cabinet sample
         working-directory: patch-cabinet
         run: >-

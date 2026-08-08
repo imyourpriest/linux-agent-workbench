@@ -91,3 +91,16 @@ Append-only. A superseding entry may change a decision; old entries remain.
 **Decision:** Supersede the auto-discovery portion of D-012. Project candidate runs must pass the ignored operator-owned exclusion file explicitly; the CLI never discovers exclusions from a manifest or target repository. Missing exclusion context fails closed unless a public/synthetic no-context flag is explicit. Repeatable explicit files are unioned and excluded candidates remain redacted.
 
 **Why:** A target-controlled Git tree can contain a plausible `.private` file, while a manifest may live outside the project root. An explicit operator path is a smaller, auditable trust boundary and forgetting it stops the run rather than exposing a sponsor-excluded name.
+
+## 2026-08-08 — D-016 — Publish through an isolated CI staging repository
+
+**Decision:** Use `linux-agent-workbench` as the neutral descriptive public repository name. First
+run the exact candidate commit and hosted checks in a separate private staging repository. Then
+create the final repository public but empty, enable and verify GitHub private vulnerability
+reporting before any source push, and publish only the already-verified commit. Keep the staging
+repository private as audit evidence; do not delete it as part of launch.
+
+**Why:** GitHub private vulnerability reporting is available only for public repositories. The
+two-repository sequence satisfies both gates without exposing project source during a disclosure
+gap, and the neutral name avoids implying affiliation with CairnWake or either workstream's future
+commercial brand.

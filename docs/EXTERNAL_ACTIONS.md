@@ -36,6 +36,10 @@ Before first publication:
 5. Decision and project logs accurately describe what happened.
 6. The target account and owner are confirmed without sharing credentials.
 7. A usable private vulnerability-reporting route is enabled and tested without sensitive content.
+8. Dependabot alerts, secret scanning and push protection, and code scanning are enabled where
+   GitHub makes them available; any unavailable control is documented rather than implied.
+9. The default branch requires the hosted CI checks and blocks force pushes and deletion before
+   outside contributions are accepted.
 
 ## Revenue gate
 

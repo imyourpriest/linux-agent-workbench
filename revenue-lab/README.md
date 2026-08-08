@@ -26,6 +26,11 @@ The collector caps entries, files, path depth, per-file bytes, aggregate text, a
 
 Verified public reports are intentionally blocked until the project has a disposable, project-controlled acquisition environment that clones upstream without local-object reuse, proves the requested upstream commit, disables network access during analysis, and is independently tested. This boundary is a launch requirement, not a feature implied by the demo.
 
+The [D-014 acquisition and sandbox contract](D014_ACQUISITION_AND_SANDBOX_CONTRACT.md)
+now records the threat model, fail-closed platform requirements, and synthetic-only
+contract-test scaffold. The scaffold performs no acquisition or isolation and always marks
+real-repository use ineligible; passing its tests does not pass the D-014 gate.
+
 ```powershell
 $env:PYTHONPATH = "src"
 python -m release_readiness.cli audit samples/demo-cli --repository-url https://example.invalid/release-readiness/demo-cli --commit-sha 1111111111111111111111111111111111111111 --observed-at 2026-08-07 --unverified-demo --markdown-out out/demo-report.md --json-out out/demo-report.json
