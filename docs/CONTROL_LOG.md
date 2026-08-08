@@ -110,3 +110,51 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - Created root commit `fea128776194193fd133c468ba2d8b3d3c7e01e1` (`Launch Patch Cabinet and Linux release lab`) on local `main` using the neutral project-only author and committer identity recorded above.
 - After the commit, the working tree contained no tracked or untracked public changes. Only ignored `.private`, `.tmp`, build, package-metadata, and bytecode/cache directories remained.
 - No remote exists and nothing was pushed. GitHub reauthentication, private vulnerability reporting, and hosted CI remain publication gates.
+
+## 2026-08-08 — Session 005 — Private hosted-CI staging
+
+### Reviewed work units
+
+- Patch Cabinet completed one public, read-only discovery unit. Creator Toolkit CLI issue 18 was
+  independently revalidated as open, unassigned, uncommented, documentation-only, and unrelated
+  to the sole open pull request. The evidence remains `investigate`, not implementation-ready,
+  because no explicit upstream AI-contribution policy was found. No contact or target checkout
+  occurred.
+- Release Readiness Lab completed one synthetic contract-only D-014 unit. Repeated adversarial
+  review corrected bounded JSON parsing, resource/isolation shape coverage, sentinel digests,
+  integration-boundary parsing, and acquisition/analysis signature sequencing. The public
+  entrypoint has no acquisition, network, Git, subprocess, target-execution, or real-repository
+  eligibility path.
+- Three independent final reviews reported no surviving P1 or P2 finding after the corrections.
+
+### Local verification
+
+- Installed both packages from the reviewed tree without dependency resolution or build
+  isolation; `pip check` and both installed entrypoint help commands passed.
+- Patch Cabinet passed 25/25 tests. Release Readiness Lab ran 41 tests: 40 passed and the Windows
+  symlink test skipped because the local session lacks symlink privilege; its junction test passed.
+- Compilation, whitespace, generated sample reproduction, the bounded public-tree scan, and the
+  immutable candidate-evidence replay passed. The intended public scan covered 61 files / 295,870
+  bytes / six secret-signature families before commit.
+
+### Private staging action
+
+- The owner reauthenticated GitHub CLI 2.96.0 as the expected account; token contents were not
+  displayed or stored in the project.
+- Created neutral branch `agent/launch-linux-agent-workbench` and commit
+  `bd9f7b5ed312171a0a9b8d820c4c118a34dfacce` (`Add first work units and publication gates`).
+- Created the private `linux-agent-workbench-ci` staging repository, pushed local `main` and the
+  candidate branch, and opened draft staging PR 1. This was project publication infrastructure,
+  not third-party contact.
+- Hosted Actions run `31249833586` passed all five jobs on the exact candidate commit: Python 3.12,
+  3.13, and 3.14; Release Readiness on Windows; and generated-evidence/privacy integrity.
+- The final repository does not yet exist and no source is public. GitHub private vulnerability
+  reporting is available only on public repositories, so D-016 requires a public-but-empty final
+  repository, verified private reporting, and only then the source push.
+
+### External-action state
+
+- No issue, upstream pull request, comment, social post, advertisement, domain, merchant account,
+  customer record, payment, sale, purchase, wallet action, or XLM movement occurred.
+- The private staging repository is retained as audit evidence. It is not a customer-facing or
+  revenue channel.

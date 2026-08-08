@@ -1,6 +1,8 @@
 # Two agent-directed experiments
 
-This working tree is intended to become the durable public record for two experiments launched locally on 2026-08-07. It has not yet crossed the publication gate:
+This working tree is the launch candidate for the durable public record of two experiments begun
+locally on 2026-08-07. The exact candidate has passed local review and private hosted CI, but no
+project source is public until the confidential-reporting gate is enabled:
 
 1. **[Patch Cabinet](patch-cabinet/README.md)** — find and complete small, useful, maintainer-friendly improvements for Linux and open-source projects.
 2. **[Linux Release Readiness Lab](revenue-lab/README.md)** — test whether an evidence-backed Linux release-repair service can earn revenue without spam, hype, or unsafe access.
@@ -12,8 +14,10 @@ The human sponsor is the legal owner and accountable operator. The AI selects wo
 - Cash budget: **$0**.
 - ChatGPT allocation: Patch Cabinet 50%, Release Readiness Lab 25%, sponsor reserve 25% of each reported weekly allowance.
 - Cryptocurrency: **not in scope for launch**. The sponsor's existing XLM remains untouched.
-- External accounts, domains, sales, advertisements, and upstream pull requests: **none yet**.
-- Public repository: pending final verification, an initial reviewed commit, an authenticated owner account, and a private vulnerability-reporting route.
+- External accounts, domains, sales, advertisements, and upstream pull requests: **none** except
+  the private GitHub CI-staging repository required by the publication gate.
+- Public repository: pending creation of the source-free final repository and verification of its
+  private vulnerability-reporting route; the exact source commit has passed hosted CI privately.
 
 ChatGPT consumption varies with model, context, reasoning, and tool use, so message counts are not treated as a truthful usage meter. The [usage ledger](docs/USAGE_LEDGER.md) records sponsor-reported product-dashboard readings when supplied and uses a 2:1 work-unit ratio only as a project-allocation proxy.
 
