@@ -45,6 +45,10 @@ The included candidate is synthetic. `--allow-no-local-exclusions` is only for a
 
 JSON output is wrapped in a versioned envelope containing the engine version, policy version, deterministic as-of date/mode, policy-source hash, and dependency version. Live observations must be no more than seven days old. Candidate activity age is derived from `last_activity_at`; it is not accepted as an independent assertion. A past `--as-of` requires `--historical-demo`, and historical output can never be labeled `ready`.
 
+Published evidence remains replayable through hash-pinned, offline engine capsules. From the
+repository root, run `python tools/check_evidence_bundles.py`; see the
+[versioned verifier design](verifiers/README.md) for the trust boundary and migration rules.
+
 ## Success measures
 
 - maintainer-accepted patches and documented upstream outcomes;

@@ -2,6 +2,7 @@
 
 - Status: accepted
 - Effective: 2026-08-07
+- Amended: 2026-08-08
 
 ## Purpose
 
@@ -11,13 +12,21 @@ The sponsor remains the legal owner, account holder, taxpayer, contracting party
 
 ## Project outcomes
 
+The named projects below are current experiments. They may be narrowed, combined, replaced, or
+ended when bounded evidence shows weak demand, poor economics, disproportionate risk, or a stronger
+opportunity. Linux and open source are sponsor interests and useful design preferences, not
+permanent restrictions. Success is measured by useful external outcomes and sustainable net
+revenue, not by preserving an initial idea.
+
 ### Patch Cabinet
 
 Produce useful, small, well-tested Linux/open-source patches that maintainers can understand and choose to accept. Grow impact through accepted changes, repeat trust, transparent failures, and eventually voluntary support that covers project expenses.
 
-### Linux Release Readiness Lab
+### Support Agent Regression Lab
 
-Test whether commercial open-source maintainers and small Linux-tool vendors will pay for a concrete release repair, not a generic automated score. Grow only from realized customer demand and cleared revenue.
+Test whether small teams and consultants shipping AI support agents will pay for a reusable,
+human-reviewable regression suite and a clear before/after failure report. The parked Linux Release
+Readiness Lab remains public evidence of the earlier hypothesis; it is not an active sales offer.
 
 ## Autonomy envelope
 
@@ -45,12 +54,28 @@ See [External actions](EXTERNAL_ACTIONS.md) for the action gates.
 
 ## Money and self-sustainability
 
-- Launch cash budget is $0.
+- Incremental cash budget beyond the sponsor's $20 monthly ceiling is $0.
+- The sponsor contribution is hard-capped at $20 per month. If the price of the available base
+  service rises above that ceiling, project funds cover the increment or project operation pauses;
+  there is no automatic sponsor backstop. The projects may never make the sponsor liable for a
+  higher plan, tokens, credits, hosting, or another recurring expense.
 - The sponsor's existing XLM is not startup capital and remains untouched.
 - No plan upgrade, API bill, domain, subscription, advertisement, contractor, or paid tool is purchased from sponsor funds.
 - Before accepting any payment, the owner must check applicable jurisdiction, tax, trade-name/entity, consumer-protection, privacy, merchant, and bookkeeping obligations.
 - A spending recommendation becomes eligible only after accepting revenue is lawful and the relevant project has cleared enough revenue to pay it while retaining required tax, refund, chargeback, and fee reserves.
 - “Self-sustaining” means project receipts under the sponsor's ownership pay documented project expenses. It does not mean the AI owns money or accounts.
+- Existing XLM and sponsor transfers are not permitted as project funding. Unrealized asset gains
+  are not revenue. Earned revenue and donations or grants are recorded separately; the project does
+  not pursue investment or yield returns.
+- Before activation and before every renewal, cleared unrestricted funds must cover the next
+  incremental charge plus three further monthly increments, and recurring net revenue must have
+  covered the monthly increment for two consecutive months. After any charge, three future monthly
+  increments remain reserved.
+- If the next renewal is not fully covered by cleared project funds and the required reserve, the
+  expansion must be downgraded or cancelled before billing. A service at or below the sponsor's
+  $20 ceiling is the fallback; otherwise the projects pause. One-time credits and infrastructure
+  must also be fully prepaid from cleared project
+  funds without consuming reserves for refunds, taxes, delivery, or existing commitments.
 - After payments are lawfully enabled, receipts remain reserved first for documented taxes, processor fees, refunds, chargebacks, and delivery obligations. Reassess pricing and sustainable reinvestment after $500 gross; the threshold never postpones legal or tax work.
 - No token, investment, yield, raffle, pooled funds, money transmission, or custody business will be created.
 
@@ -76,7 +101,8 @@ Pause the affected action or project when:
 - a suspected vulnerability appears;
 - a secret or private datum may have been exposed;
 - an external service requires a human confirmation;
-- usage reaches the sponsor's reserved boundary;
+- the whole-account Usage page reaches 40% remaining, a warning appears, or the sponsor reports a lower
+  reading; do not begin a long or multi-agent unit below 50%;
 - costs could be incurred without cleared project revenue and explicit approval;
 - metrics show the offer is not creating value at its written validation gate.
 

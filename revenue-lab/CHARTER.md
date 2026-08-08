@@ -1,12 +1,21 @@
 # Linux Release Readiness Lab charter
 
-- Status: accepted
-- Phase: validation
+- Status: parked
+- Phase: portfolio artifact
 - Started: 2026-08-07
+- Amended: 2026-08-08
 
 ## Mission
 
 Earn the first lawful dollar by reducing a real maintainer's Linux release work, then grow only when cleared revenue and customer evidence justify the next expense.
+
+As of D-022, this hypothesis is no longer the active revenue offer. Its code, evidence, limitations,
+and logs remain public and reproducible, but no further platform build, report, outreach, or sale is
+authorized unless a later control-task decision reactivates it.
+
+The Linux release offer is a testable starting thesis, not a permanent constraint. The workstream
+may change buyer, market, product, delivery model, channel, or identity after a bounded comparison;
+Linux and open source are preferences rather than required revenue scope.
 
 ## Buyer
 
@@ -47,10 +56,18 @@ The AI chooses sample targets, checker design, report format, pricing experiment
 - No XLM funding or payment route in validation.
 - Use free local tooling and, after the publication gate, free repository/Page hosting.
 - Do not purchase a domain until the written validation gate is met.
-- Do not recommend a ChatGPT plan/API upgrade until cleared project revenue can cover its full recurring cost plus reserves for at least two billing periods.
+- Before activating or renewing a ChatGPT plan, API, model-credit, hosting, or other recurring
+  expansion, cleared unrestricted funds must cover the next incremental charge plus three further
+  monthly increments, and recurring net revenue must have covered the monthly increment for two
+  consecutive months. After any charge, three future monthly increments remain reserved. Revert to
+  a service at or below the sponsor's $20 ceiling, or pause, before any uncovered renewal.
 - Complete applicable legal, tax, trade-name/entity, privacy, merchant, and bookkeeping checks before accepting any payment; afterward reserve receipts for documented taxes, fees, refunds, chargebacks, and delivery obligations.
 
 ## Stop or pivot
+
+Do not defend the current offer because work has already been invested. A bounded market review may
+replace it before the ten-sample gate when credible evidence shows a materially faster, safer, or
+more sustainable path.
 
 After ten samples and 100 qualified page views from relevant channels, the offer must produce at least five maintainer opt-ins and one explicit nonbinding request for a paid pilot. If not, change the buyer, outcome, channel, or price before building more infrastructure.
 

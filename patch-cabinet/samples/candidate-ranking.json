@@ -2,7 +2,7 @@
   "schema_version": "1",
   "engine": {
     "name": "patch-cabinet",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "policy": {
     "version": "season-1.2",
@@ -11,7 +11,7 @@
     "evaluation_mode": "historical"
   },
   "dependencies": {
-    "packaging": "26.2"
+    "packaging": "26.3"
   },
   "source_label": "synthetic.json",
   "results": [

@@ -2,6 +2,7 @@
 
 - Status: accepted
 - Effective: 2026-08-07
+- Amended: 2026-08-08
 
 This file distinguishes broad project delegation from confirmations that must happen at the moment of action.
 
@@ -17,7 +18,7 @@ This file distinguishes broad project delegation from confirmations that must ha
 | Create external account or organization | Human checkpoint | Human owns it, accepts terms, supplies truthful identity/recovery data, and enables MFA |
 | Save or use credentials | Human checkpoint | Password manager only; least privilege; never copied into repository/chat/logs |
 | Create social post or marketing campaign | First-channel checkpoint | Accurate identity/disclosure; platform rules; no spam, scraping, fake engagement, or unsolicited bulk contact |
-| Buy domain, service, credits, or subscription | Per-purchase checkpoint | Exact total/renewal/owner/refund terms shown; cleared project revenue available |
+| Buy domain, service, credits, or subscription | Per-purchase checkpoint | Exact total/renewal/owner/refund terms shown; D-019 reserve and recurring-coverage test passes; reversion is scheduled before any uncovered renewal |
 | Accept first customer payment | Human/legal checkpoint | Merchant/KYC/tax owner established; offer terms, privacy, refund, scope, and records ready |
 | Access private customer repository | Not allowed at launch | Separate reviewed contract, least privilege, retention/deletion, incident response, and isolated environment |
 | Publish security finding | Never publicly by default | Use upstream private security process and coordinated disclosure |
@@ -45,9 +46,14 @@ Before first publication:
 
 Before first sale:
 
-1. For any real repository report or review, pass the D-014 disposable acquisition and network-disabled analysis gate; the trusted-local demo is not eligible for customer source.
-2. Verify the owner's jurisdiction and any trade-name/entity/license obligations.
-3. Establish user-owned merchant, tax, and bookkeeping records.
-4. Publish scope, limitations, price, delivery conditions, refund policy, privacy/retention terms, and contact route.
-5. Test checkout, cancellation/refund, delivery, deletion, and support flows.
-6. Never describe a purchase as a charitable donation unless a qualified organization is actually involved.
+1. The active support-evaluation prototype accepts only original synthetic fixtures or sanitized,
+   customer-approved public policy material—never private transcripts, personal data, credentials,
+   production access, regulated-domain work, or customer system execution.
+2. If the parked Release Readiness Lab is ever reactivated for a real repository report, first pass
+   D-014's disposable acquisition and network-disabled analysis gate; its trusted-local demo is not
+   eligible for customer source.
+3. Verify the owner's jurisdiction and any trade-name/entity/license obligations.
+4. Establish user-owned merchant, tax, and bookkeeping records.
+5. Publish scope, limitations, price, delivery conditions, refund policy, privacy/retention terms, and contact route.
+6. Test checkout, cancellation/refund, delivery, deletion, and support flows.
+7. Never describe a purchase as a charitable donation unless a qualified organization is actually involved.

@@ -1,7 +1,7 @@
 # Patch Cabinet candidate ranking
 
 Input label: <code>synthetic.json</code>
-Engine: <code>patch-cabinet 0.1.0</code>
+Engine: <code>patch-cabinet 0.2.0</code>
 Policy: <code>season-1.2</code>
 Policy as-of: <code>2026-08-07</code>
 Evaluation mode: <code>historical</code>

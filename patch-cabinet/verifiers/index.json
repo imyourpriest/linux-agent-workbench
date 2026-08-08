@@ -1,0 +1,93 @@
+{
+  "schema_version": "1",
+  "active_engine": "0.2.0",
+  "active_descriptor": {
+    "path": "patch-cabinet/src/patch_cabinet/engine.py",
+    "sha256": "6cc8ce7077942681e29be2b0f48fb7447737e51b51fb4e3e72294dc70fdabbb5"
+  },
+  "replay_adapters": {
+    "replay-v1": {
+      "path": "patch-cabinet/verifiers/replay_v1.py",
+      "sha256": "c5edd13150996f8f964d4a189c3fb78505a9330bb3c27cbfe833a5c9224e8b66"
+    }
+  },
+  "engines": {
+    "0.1.0": {
+      "engine_name": "patch-cabinet",
+      "engine_version": "0.1.0",
+      "output_schema_version": "1",
+      "mode": "replay-only",
+      "replay_adapter": "replay-v1",
+      "python": {
+        "minimum": "3.12",
+        "maximum": "3.14"
+      },
+      "policy": {
+        "version": "season-1.2",
+        "source_path": "patch-cabinet/verifiers/policies/season-1.2/policy.py",
+        "source_sha256": "f65055c2c771296958b4bc6fc464ba79f48af756b6d2a47404ca78042bc7582a"
+      },
+      "dependencies": {
+        "packaging": "26.2"
+      },
+      "wheel": {
+        "path": "patch-cabinet/verifiers/0.1.0/wheelhouse/packaging-26.2-py3-none-any.whl",
+        "sha256": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
+      },
+      "requirements_lock": {
+        "path": "patch-cabinet/verifiers/0.1.0/requirements.lock",
+        "sha256": "f87ca9c72bb3ba71823ab911eb2f0676a3bb9eb3987f1249ab508e9cd77161a5"
+      },
+      "capsule_note": {
+        "path": "patch-cabinet/verifiers/0.1.0/CAPSULE.md",
+        "sha256": "16e2014f654f6f74c2587643088459c0de92b26a912e6de6ffdc3b081fda6476"
+      },
+      "test_vector": null
+    },
+    "0.2.0": {
+      "engine_name": "patch-cabinet",
+      "engine_version": "0.2.0",
+      "output_schema_version": "1",
+      "mode": "active",
+      "replay_adapter": "replay-v1",
+      "python": {
+        "minimum": "3.12",
+        "maximum": "3.14"
+      },
+      "policy": {
+        "version": "season-1.2",
+        "source_path": "patch-cabinet/verifiers/policies/season-1.2/policy.py",
+        "source_sha256": "f65055c2c771296958b4bc6fc464ba79f48af756b6d2a47404ca78042bc7582a"
+      },
+      "dependencies": {
+        "packaging": "26.3"
+      },
+      "wheel": {
+        "path": "patch-cabinet/verifiers/0.2.0/wheelhouse/packaging-26.3-py3-none-any.whl",
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+      },
+      "requirements_lock": {
+        "path": "patch-cabinet/verifiers/0.2.0/requirements.lock",
+        "sha256": "18ddd9bf1173535d45a737f16bb71ccd1a24b4593c0e238c0bef5aed0c40abdd"
+      },
+      "capsule_note": {
+        "path": "patch-cabinet/verifiers/0.2.0/CAPSULE.md",
+        "sha256": "0a19b7571f9bbeae2d80c38f3803d2a55d8e6b481f1d1bbb4677cf63aa40f256"
+      },
+      "test_vector": {
+        "manifest": {
+          "path": "patch-cabinet/data/candidates/synthetic.json",
+          "sha256": "ec3837e3d771c3912066716ec1e3af8477b840b6b72a844a74ba6e776bc31ac6"
+        },
+        "policy": {
+          "path": "patch-cabinet/samples/candidate-ranking.json",
+          "sha256": "3a2f9a6c9df5fb1c646d78fde579c5b3df4499fb93ef5413e231663217bffc6a"
+        },
+        "markdown": {
+          "path": "patch-cabinet/samples/candidate-ranking.md",
+          "sha256": "a2dac1879350f6766f12f58d48f793075bff5ea94eaf703ccaaabb85c2125556"
+        }
+      }
+    }
+  }
+}

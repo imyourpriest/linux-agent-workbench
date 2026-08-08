@@ -78,3 +78,14 @@ Append-only project record.
 - Real acquisition, real repository analysis, and every sale remain blocked. No network, Git,
   subprocess, filesystem acquisition, target execution, customer input, payment, or XLM movement
   occurred in this correction.
+
+## 2026-08-08 — Parked after bounded market comparison
+
+- D-022 parks this workstream as a public portfolio artifact. The synthetic collector and D-014
+  contract remain available as evidence, but no further isolation-platform build, real repository
+  report, outreach, or sale is active.
+- Current demand evidence favored a lower-risk support-agent regression product that can be built
+  and demonstrated with original synthetic data. This is a testable pivot, not a claim that the new
+  offer will succeed.
+- Revenue remains $0.00. No customer, payment, merchant account, domain, advertisement, repository
+  input, wallet action, XLM movement, or subscription change occurred.
