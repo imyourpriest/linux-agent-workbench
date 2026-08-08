@@ -48,3 +48,15 @@ Append-only project record.
   an individual action. The branch remains local and uncommitted at this checkpoint; no customer,
   post, checkout, payment, merchant account, purchase, domain, wallet, XLM, subscription, or
   customer data changed.
+
+## 2026-08-08 - Free starter published
+
+- PR 5 passed every protected CI and CodeQL check and was squash-merged as
+  `c961ab29792a0edd29df29aaae9651b5ab1ed906`; main-branch CI and CodeQL passed again on that exact
+  commit. The ten-case starter, mocked comparison, rubric, local quickstart, validation plan, and
+  nonbinding public interest form are now public in the project repository.
+- The `support-eval-interest` label exists, but no interest issue, customer, order, checkout,
+  payment, or cleared receipt exists. Revenue remains $0.00. Publishing source is not counted as a
+  qualified view; channel-path traffic starts only from a separately recorded activation window.
+- This publication completes the one already recorded revenue unit; it is not an additional work
+  unit. No marketing channel was activated and no private or customer input was received.

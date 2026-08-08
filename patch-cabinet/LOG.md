@@ -117,3 +117,14 @@ Append-only project record.
   directory-symlink test skipped for unavailable Windows privilege; both 0.1.0 historical evidence
   and the 0.2.0 active vector replayed successfully. This distinct correction is one Patch Cabinet
   work unit.
+
+## 2026-08-08 - Versioned engine migration published
+
+- PR 5 passed every protected CI and CodeQL check and was squash-merged as
+  `c961ab29792a0edd29df29aaae9651b5ab1ed906`. Main-branch CI and CodeQL then passed again on that
+  exact commit. Issue 3 closed through the merged PR.
+- Engine 0.2.0 with `packaging==26.3` is now the active public generator. Engine 0.1.0 and its exact
+  `packaging==26.2` wheel remain replay-only, and the existing candidate evidence and receipt were
+  not rewritten. Ordinary dependency proposals are restored under the versioned migration rule.
+- This publication completes the two already recorded Patch units; it is not an additional work
+  unit. No upstream candidate was contacted and no patch was submitted.

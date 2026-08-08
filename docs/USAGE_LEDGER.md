@@ -62,8 +62,13 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 - Third direct browser observation: 73% remaining after the Support Agent Regression Lab unit and
   its independent product and security reviews. This is also a whole-account snapshot, not
   per-unit attribution.
+- Post-merge direct browser observation: 69% remaining after PR 5 merged and its protected
+  pull-request and main-branch checks passed. This is a whole-account snapshot; the four-point
+  change is not attributed to a particular project action.
+- Final publication-audit direct browser observation: 67% remaining after preparing the public
+  merge receipt. This is a whole-account snapshot and is not attributed to a particular action.
 - Operational stop: 40% remaining; no long or multi-agent unit begins below 50%.
-- Ending UI reading: pending.
+- Ending UI reading: 67% remaining, directly observed during the final publication audit.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
