@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "patch-cabinet"
+version = "0.1.0"
+description = "Auditable candidate selection for small Linux and open-source patches"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Patch Cabinet contributors" }]
+dependencies = ["packaging==26.2"]
+
+[project.scripts]
+patch-cabinet = "patch_cabinet.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

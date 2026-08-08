@@ -1,0 +1,105 @@
+{
+  "schema_version": "1",
+  "engine": {
+    "name": "patch-cabinet",
+    "version": "0.1.0"
+  },
+  "policy": {
+    "version": "season-1.2",
+    "source_sha256": "f65055c2c771296958b4bc6fc464ba79f48af756b6d2a47404ca78042bc7582a",
+    "as_of": "2026-08-07",
+    "evaluation_mode": "historical"
+  },
+  "dependencies": {
+    "packaging": "26.2"
+  },
+  "source_label": "synthetic.json",
+  "results": [
+    {
+      "repository": "example-linux/quiet-cli",
+      "eligible": true,
+      "score": 95,
+      "band": "investigate",
+      "reasons": [
+        "explicit issue invites the work",
+        "Linux relevance is direct",
+        "estimated scope is 2 hours",
+        "last recorded activity was 14 days before observation"
+      ],
+      "cautions": [
+        "upstream AI-contribution policy is unknown",
+        "historical evaluation cannot be labeled ready"
+      ],
+      "evidence": {
+        "url": "https://example.invalid/example-linux/quiet-cli",
+        "observed_at": "2026-08-07",
+        "commit_sha": "0123456789abcdef0123456789abcdef01234567",
+        "issue_url": "https://example.invalid/example-linux/quiet-cli/issues/12",
+        "license_spdx": "MIT",
+        "task_type": "bugfix"
+      },
+      "normalized_inputs": {
+        "repository": "example-linux/quiet-cli",
+        "url": "https://example.invalid/example-linux/quiet-cli",
+        "observed_at": "2026-08-07",
+        "commit_sha": "0123456789abcdef0123456789abcdef01234567",
+        "public": true,
+        "archived": false,
+        "license_spdx": "MIT",
+        "linux_relevance": "direct",
+        "maintainer_signal": "explicit_issue",
+        "issue_url": "https://example.invalid/example-linux/quiet-cli/issues/12",
+        "task_type": "bugfix",
+        "last_activity_at": "2026-07-24",
+        "estimated_hours": 2,
+        "has_reproduction": true,
+        "has_tests": true,
+        "has_contributing": true,
+        "ai_policy": "unknown",
+        "requires_human_attestation": false,
+        "sensitive_subsystem": false,
+        "requires_secrets": false,
+        "requires_production_access": false,
+        "requires_network_probe": false,
+        "open_pull_requests": 3,
+        "policy_as_of": "2026-08-07",
+        "evaluation_mode": "historical",
+        "last_activity_days": 14
+      },
+      "score_trace": [
+        {
+          "rule": "maintainer signal",
+          "delta": 30
+        },
+        {
+          "rule": "Linux relevance",
+          "delta": 20
+        },
+        {
+          "rule": "reproduction recorded",
+          "delta": 15
+        },
+        {
+          "rule": "automated tests recorded",
+          "delta": 10
+        },
+        {
+          "rule": "activity recency",
+          "delta": 10
+        },
+        {
+          "rule": "bounded scope",
+          "delta": 10
+        },
+        {
+          "rule": "contribution guide recorded",
+          "delta": 5
+        },
+        {
+          "rule": "AI policy unknown",
+          "delta": -5
+        }
+      ]
+    }
+  ]
+}

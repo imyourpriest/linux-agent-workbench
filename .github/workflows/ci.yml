@@ -1,0 +1,122 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13", "3.14"]
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install both packages
+        run: python -m pip install ./patch-cabinet ./revenue-lab
+
+      - name: Smoke-test installed entry points
+        run: |
+          patch-cabinet --help
+          release-readiness --help
+
+      - name: Test Patch Cabinet
+        run: python -m unittest discover -s patch-cabinet/tests -v
+
+      - name: Test Release Readiness Lab
+        run: python -m unittest discover -s revenue-lab/tests -v
+
+      - name: Compile project modules
+        run: >-
+          python -m compileall -q
+          patch-cabinet/src
+          revenue-lab/src
+
+  revenue-windows:
+    name: Release Readiness on Windows
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install and test Release Readiness Lab
+        run: |
+          python -m pip install ./revenue-lab
+          release-readiness --help
+          python -m unittest discover -s revenue-lab/tests -v
+
+  generated-evidence:
+    name: Generated evidence is current
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install both packages
+        run: python -m pip install ./patch-cabinet ./revenue-lab
+
+      - name: Check public tree for private paths and secret signatures
+        run: python tools/check_public_tree.py
+
+      - name: Regenerate Patch Cabinet sample
+        working-directory: patch-cabinet
+        run: >-
+          patch-cabinet score
+          data/candidates/synthetic.json
+          --as-of 2026-08-07
+          --historical-demo
+          --allow-no-local-exclusions
+          --markdown-out samples/candidate-ranking.md
+          --json-out samples/candidate-ranking.json
+
+      - name: Regenerate Release Readiness Lab sample
+        working-directory: revenue-lab
+        run: >-
+          release-readiness audit
+          samples/demo-cli
+          --repository-url https://example.invalid/release-readiness/demo-cli
+          --commit-sha 1111111111111111111111111111111111111111
+          --observed-at 2026-08-07
+          --unverified-demo
+          --markdown-out samples/demo-report.md
+          --json-out samples/demo-report.json
+
+      - name: Verify generated files
+        run: git diff --exit-code

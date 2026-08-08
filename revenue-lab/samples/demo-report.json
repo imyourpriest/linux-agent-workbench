@@ -1,0 +1,132 @@
+{
+  "schema_version": "2",
+  "collector": {
+    "name": "linux-release-readiness",
+    "version": "0.1.0",
+    "rules_version": "1.2",
+    "rules_sha256": "e4700e171ffc30b3f92b27651572bb8bd1e0800cf99fded52c84e1fce3ea00ae"
+  },
+  "declared_repository_url": "https://example.invalid/release-readiness/demo-cli",
+  "declared_commit_sha": "1111111111111111111111111111111111111111",
+  "declared_observed_at": "2026-08-07",
+  "observation_source": "caller_supplied_for_unverified_demo",
+  "provenance_status": "unverified_local_demo",
+  "provenance_details": [
+    "Repository URL, commit, and observation date are caller-supplied labels; no upstream identity was verified.",
+    "The collector read the supplied local directory without invoking Git or target code.",
+    "Use only synthetic or trusted staging directories; safe third-party acquisition is intentionally outside this MVP."
+  ],
+  "files_considered": 4,
+  "findings": [
+    {
+      "identifier": "license",
+      "title": "License-file signal",
+      "status": "signal_detected",
+      "review_priority": "manual_review",
+      "evidence": [
+        "LICENSE"
+      ],
+      "recommendation": "Confirm the signal's applicability and correctness manually at the declared commit."
+    },
+    {
+      "identifier": "package-metadata",
+      "title": "Go or Python package-metadata signal",
+      "status": "signal_detected",
+      "review_priority": "manual_review",
+      "evidence": [
+        "pyproject.toml"
+      ],
+      "recommendation": "Confirm the signal's applicability and correctness manually at the declared commit."
+    },
+    {
+      "identifier": "changelog",
+      "title": "Changelog or release-note-history signal",
+      "status": "not_detected",
+      "review_priority": "medium",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: add a maintained changelog or documented generated-release-note workflow."
+    },
+    {
+      "identifier": "ci",
+      "title": "Continuous-integration configuration signal",
+      "status": "not_detected",
+      "review_priority": "high",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: add a least-privileged CI workflow for the project's supported test matrix."
+    },
+    {
+      "identifier": "release-workflow",
+      "title": "Automated release-workflow signal",
+      "status": "not_detected",
+      "review_priority": "high",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: add a reviewed tag/manual release workflow with minimal permissions and rollback notes."
+    },
+    {
+      "identifier": "linux-architectures",
+      "title": "Linux amd64 and arm64 artifact signals",
+      "status": "not_detected",
+      "review_priority": "high",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: configure and test Linux amd64 and arm64 release artifacts where supported."
+    },
+    {
+      "identifier": "checksums",
+      "title": "Release-checksum signal",
+      "status": "not_detected",
+      "review_priority": "medium",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: generate and publish checksums for downloadable release artifacts."
+    },
+    {
+      "identifier": "sbom",
+      "title": "SBOM-generation signal",
+      "status": "not_detected",
+      "review_priority": "medium",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: generate an SBOM in a documented format as part of the release workflow."
+    },
+    {
+      "identifier": "provenance",
+      "title": "Provenance or attestation signal",
+      "status": "not_detected",
+      "review_priority": "low",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: evaluate an appropriate provenance or artifact-attestation step."
+    },
+    {
+      "identifier": "install",
+      "title": "Installation-instruction signal",
+      "status": "signal_detected",
+      "review_priority": "manual_review",
+      "evidence": [
+        "README.md:5"
+      ],
+      "recommendation": "Confirm the signal's applicability and correctness manually at the declared commit."
+    },
+    {
+      "identifier": "uninstall",
+      "title": "Uninstall or removal-instruction signal",
+      "status": "not_detected",
+      "review_priority": "low",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: document how users can remove installed files and reverse setup changes."
+    },
+    {
+      "identifier": "tests",
+      "title": "Automated-test-file signal",
+      "status": "not_detected",
+      "review_priority": "high",
+      "evidence": [],
+      "recommendation": "First confirm applicability with the maintainer. If applicable: add automated validation for release-critical behavior before changing automation."
+    },
+    {
+      "identifier": "pinned-actions",
+      "title": "GitHub Actions immutable-pin signal",
+      "status": "manual_review",
+      "review_priority": "low",
+      "evidence": [],
+      "recommendation": "No GitHub Actions workflow was found; review the applicable CI system manually."
+    }
+  ]
+}
