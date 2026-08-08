@@ -103,3 +103,10 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - XLM remains untouched. No cash was spent; no domain, merchant account, customer record, sale, advertisement, social post, third-party contact, target-repository clone, upstream contribution, or remote repository was created.
 - GitHub CLI 2.96.0 was present, but its stored account authentication was invalid when checked. The owner must reauthenticate before remote creation. Publication also requires enabled private vulnerability reporting and a passing hosted CI run.
 - Local commits use the project-only neutral identity `Cairn-Inspo automation <cairn-inspo@localhost.invalid>` via per-command environment variables. No global Git identity or trust configuration is changed.
+
+## 2026-08-08 — Session 004 — Local history created
+
+- Immediately before the launch commit, the staged scope contained exactly 52 intended public files. `git diff --cached --check` passed, the bounded public-tree scanner passed 52 files / 199,931 bytes / six signature families, and no ignored/private/build path was staged.
+- Created root commit `fea128776194193fd133c468ba2d8b3d3c7e01e1` (`Launch Patch Cabinet and Linux release lab`) on local `main` using the neutral project-only author and committer identity recorded above.
+- After the commit, the working tree contained no tracked or untracked public changes. Only ignored `.private`, `.tmp`, build, package-metadata, and bytecode/cache directories remained.
+- No remote exists and nothing was pushed. GitHub reauthentication, private vulnerability reporting, and hosted CI remain publication gates.
