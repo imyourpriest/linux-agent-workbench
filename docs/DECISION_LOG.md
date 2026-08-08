@@ -116,3 +116,97 @@ security-update proposals enabled; continue Revenue Lab and Actions version moni
 **Why:** Replacing a recorded evaluator dependency in place would make historical evidence either
 unreproducible or silently evaluated under different semantics. A versioned migration preserves
 the append-only record while allowing future maintenance.
+
+## 2026-08-08 — D-018 — Success outranks attachment to the initial concepts
+
+**Decision:** Treat Patch Cabinet and Linux Release Readiness Lab as replaceable experiments. The
+AI operating task may narrow, combine, rename, replace, or end either after a bounded evidence
+review recorded by the control task, which first establishes the replacement charter and write scope.
+Linux and open source are sponsor preferences and useful inspiration, not permanent constraints.
+
+**Why:** The objective is lawful, useful impact and sustainable revenue. Preserving a weak initial
+idea because effort has already been invested would substitute sunk cost for evidence.
+
+## 2026-08-08 — D-019 — Every expansion must fund its own renewal and reversion
+
+**Decision:** The sponsor contribution is hard-capped at $20 per month. A higher plan, API or model
+credits, hosting, and any other project expense must be paid entirely from cleared project funds;
+sponsor transfers and existing XLM are not permitted as project funding. Before activation and
+before every renewal, cleared unrestricted funds must cover the next incremental charge plus three
+further monthly increments, and recurring net revenue must have covered the monthly increment for
+two consecutive months. After any charge, three future monthly increments remain reserved.
+Downgrade, cancel, or pause before an uncovered renewal. If the base price rises above $20, project
+funds cover the increment or project operation pauses.
+
+**Why:** One receipt can buy capacity but does not prove the project can sustain it. A reserve,
+repeat revenue, and automatic fallback keep project risk from becoming a personal bill.
+
+## 2026-08-08 — D-020 — Usage stops at 40%, not at the sponsor reserve
+
+**Decision:** Supersede D-005's 25% start-stop boundary. Preserve the final 25% for the sponsor by
+stopping project work at 40% remaining and beginning no long or multi-agent unit below 50%.
+Read the signed-in Usage page before and after substantive units when available; sponsor reports
+remain authoritative snapshots when browser access is unavailable.
+
+**Why:** The first period's observed end reading fell below the intended reserve. No cause is
+attributed from a whole-account snapshot; a 15-point operational buffer reduces recurrence risk.
+
+## 2026-08-08 — D-021 — Evidence engines migrate by addition, never replacement
+
+**Decision:** Preserve engine 0.1.0 and its `packaging==26.2` environment as replay-only. Make
+engine 0.2.0 with `packaging==26.3` the active generator, backed by a strict registry, frozen
+policy source, hash-pinned offline wheels, a versioned replay adapter, and an active synthetic
+replay vector. Existing candidate artifacts and their receipt remain byte-for-byte unchanged.
+Ordinary Patch Cabinet dependency proposals resume only after both engines pass isolated replay.
+
+The checker validates working-tree consistency tied to a reviewed commit; it is not an external
+signature. It statically reads the hash-bound active descriptor, executes only pre-hashed frozen
+policy/adapter code in isolated child interpreters, rejects path escapes and symlinked evidence
+directories, and caps replay inputs and inventory. A policy, dependency, renderer, source, or
+serialization change requires a new engine identity.
+
+**Why:** Replacing a published evaluator dependency would destroy reproducibility. Append-only
+engines allow maintenance without rewriting evidence, while frozen code and active replay vectors
+prevent an apparently complete registry entry from bypassing its actual evaluator and renderer.
+
+## 2026-08-08 — D-022 — Revenue pivots to support-agent regression packs
+
+**Decision:** Park Linux Release Readiness Lab as an honest portfolio artifact and replace its
+active revenue role with **Support Agent Regression Lab**, a descriptive pre-brand under
+`support-eval-lab/`. The first bounded product is a free ten-case synthetic regression starter with
+an offline deterministic checker, human-review rubric, mocked before/after runs, and reproducible
+Markdown/JSON report. Proposed next offers are a $49 reusable expanded pack and a $149 custom
+starter based only on sanitized, customer-approved public policy material; these are price
+hypotheses, not established value, and no sale is eligible until the revenue gate passes.
+
+The launch prototype accepts no credentials, production access, private transcripts, personal
+data, model-provider keys, regulated-domain work, penetration testing, security/compliance claims,
+or guarantees. It does not call a model or score subjective quality as objective fact. Human-review
+fields remain visibly separate from deterministic checks. The earlier Lab, D-014, and its blocked
+real-repository acquisition design remain intact and inactive.
+
+**Why:** Upwork's completed-job data reports 109% year-over-year growth for AI-referencing skills
+and 71% growth for AI chatbot development, while experimentation/testing remains an in-demand data
+skill. Paid agent-evaluation products provide a second demand signal. This does not prove demand
+for this offer, but it gives a faster, safer test than building the D-014 hostile-repository
+platform before a buyer exists. The pivot creates a product that can demonstrate value using only
+original synthetic data and project-owned code.
+
+## 2026-08-08 — D-023 — The first paid hypothesis is a ten-case local pilot
+
+**Decision:** Narrow D-022 after adversarial product review. The free artifact remains an
+educational synthetic starter. Add an explicit `sanitized-local` mode for test outputs prepared
+outside the tool from synthetic prompts and one customer-approved public policy source; it requires
+an acknowledgement and still performs no upload, model call, customer-system access, or reviewer
+authentication. Publish a review rubric and redaction-focused buyer quickstart.
+
+Test a fixed $149 ten-case custom pilot with one comparison template and one revision, not a
+30-case custom pack. Treat the $49 reusable template as a secondary hypothesis and defer larger or
+recurring work until delivery time and repeat demand are measured. Focus initially on small B2B
+SaaS teams with text support assistants. Evaluate at 45 days or 100 qualified views, whichever
+comes first, under the operational view definition in the charter.
+
+**Why:** The first draft was a credible technical demo but could not accept even sanitized local
+test output and overstated example labels as completed human review. A smaller, explicit,
+review-ready pilot is both more useful and more honest, while preserving the no-private-data and
+no-production-access boundary.

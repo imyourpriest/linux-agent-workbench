@@ -8,11 +8,11 @@ import html
 import json
 import unicodedata
 from datetime import date
-from importlib.metadata import version
 from pathlib import Path
 from typing import Sequence
 
 from . import __version__, policy as policy_module
+from .engine import ENGINE_NAME, OUTPUT_SCHEMA_VERSION, validate_runtime_dependencies
 from .policy import (
     REPOSITORY_NAME,
     Evaluation,
@@ -115,6 +115,7 @@ def _render_markdown(
 
 
 def _score(args: argparse.Namespace) -> int:
+    dependencies = validate_runtime_dependencies()
     source = Path(args.input)
     with source.open("rb") as stream:
         raw_payload = stream.read(MAX_MANIFEST_BYTES + 1)
@@ -164,15 +165,15 @@ def _score(args: argparse.Namespace) -> int:
     )
     policy_sha256 = hashlib.sha256(Path(policy_module.__file__).read_bytes()).hexdigest()
     serialized = {
-        "schema_version": "1",
-        "engine": {"name": "patch-cabinet", "version": __version__},
+        "schema_version": OUTPUT_SCHEMA_VERSION,
+        "engine": {"name": ENGINE_NAME, "version": __version__},
         "policy": {
             "version": SEASON_POLICY_VERSION,
             "source_sha256": policy_sha256,
             "as_of": policy_as_of.isoformat(),
             "evaluation_mode": evaluation_mode,
         },
-        "dependencies": {"packaging": version("packaging")},
+        "dependencies": dependencies,
         "source_label": source.name,
         "results": [item.to_dict() for item in evaluations],
     }

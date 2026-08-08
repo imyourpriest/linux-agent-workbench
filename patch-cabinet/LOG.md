@@ -86,3 +86,34 @@ Append-only project record.
 - No dependency, evaluator result, historical evidence, target repository, or upstream project was
   changed. This consumes one Patch Cabinet maintenance unit and restores the recorded 2:1
   Patch-to-Revenue work-unit ratio.
+
+## 2026-08-08 — Versioned engine migration
+
+- Preserved engine 0.1.0 and its receipted evidence as replay-only with the exact unmodified
+  `packaging` 26.2 wheel. Added active engine 0.2.0 with the exact `packaging` 26.3 wheel; new
+  synthetic output records the new engine and dependency without rewriting published evidence.
+- Added a strict engine registry, frozen Season 1.2 policy implementation, hash-pinned offline
+  wheels and requirements records, and a versioned schema-1 JSON/Markdown replay adapter.
+- Added a hash-bound active synthetic vector so engine 0.2.0's evaluator, serializer, and renderer
+  are exercised even before it owns a current-candidate evidence bundle. CI replays all registered
+  engines on Python 3.12, 3.13, and 3.14.
+- Restored ordinary Patch Cabinet Dependabot version proposals after the append-only migration
+  boundary was implemented. This is one Patch Cabinet maintenance work unit.
+
+## 2026-08-08 — Adversarial verifier containment correction
+
+- An independent hostile review found that the first draft could execute the active descriptor or
+  package initializer before verifying all source hashes. It also found Windows backslash and
+  symlinked-directory path escapes. No draft was published.
+- Replaced descriptor import with hash verification plus static literal parsing. Replay children
+  now load only the pre-hashed frozen policy and adapter directly; they never import the active
+  package initializer. Registered files must resolve within their declared subdirectory, and
+  backslashes, symlinked evidence/candidate directories, duplicate artifact roles, oversized
+  inventories, and oversized inputs fail closed.
+- Worker output is discarded instead of buffered without limit. The registry and receipt establish
+  consistency inside the reviewed tree, not an external signature; durable immutability depends on
+  protected Git history and a named commit.
+- The Patch suite passed 26 tests. The replay-control suite passed 18 tests with one additional
+  directory-symlink test skipped for unavailable Windows privilege; both 0.1.0 historical evidence
+  and the 0.2.0 active vector replayed successfully. This distinct correction is one Patch Cabinet
+  work unit.

@@ -3,10 +3,15 @@
 - Status: accepted
 - Season: 1
 - Started: 2026-08-07
+- Amended: 2026-08-08
 
 ## Mission
 
 Find neglected but welcome, bounded work in Linux-facing open source and deliver the smallest correct patch with enough evidence that a maintainer can make an easy decision.
+
+This is the current impact experiment, not an irrevocable scope commitment. Root governance may
+pivot or replace it after a bounded outcome review; Linux and open source remain preferences rather
+than sponsor-imposed restrictions.
 
 ## Decision rights
 

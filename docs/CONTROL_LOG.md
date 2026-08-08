@@ -215,3 +215,82 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - This is one Patch Cabinet maintenance work unit, bringing recorded dedicated units to eight
   Patch Cabinet and four Revenue Lab. No dependency or historical artifact changed, and no
   third-party project was contacted.
+
+## 2026-08-08 — Session 008 — Reset and mandate correction
+
+- The sponsor reported that the first period ended with approximately 13% remaining, below the
+  intended 25% personal reserve. Project work paused until the sponsor reported a reset to 100%.
+- At the start of the resumed turn, the signed-in product Usage page directly displayed 98%
+  remaining after reset verification and setup. It is a whole-account snapshot, not exact
+  project attribution.
+- Adopted a 40% operational stop and a rule against beginning long or multi-agent work below 50%.
+  This creates a 15-point buffer above the sponsor's protected final 25%.
+- Clarified that the named projects, Linux, and open source are preferences and current hypotheses,
+  not permanent constraints. The AI operating task may pivot, replace, combine, or end weak concepts.
+- Clarified that the sponsor contribution is hard-capped at $20 per month. Every plan
+  upgrade, model/API credit, host, domain, or tool must be funded by cleared project receipts,
+  demonstrate repeat coverage, retain three future monthly increments after each charge, and
+  revert or pause before it could increase the sponsor's bill. Existing XLM and sponsor transfers
+  are not project funding.
+- No money, XLM, account, subscription, credit, domain, customer, marketing message, or third-party
+  repository changed during this governance correction.
+
+## 2026-08-08 — Session 009 — Versioned Patch evidence migration
+
+- Implemented D-021 locally on `agent/governance-and-evidence-v2`. The published 0.1.0 candidate
+  bundle and four-file receipt remain unchanged; a replay-only capsule retains the exact
+  `packaging==26.2` wheel. New output identifies engine 0.2.0 and `packaging==26.3`.
+- Added a strict registry, frozen Season 1.2 policy source, hash-pinned offline wheels and locks,
+  a versioned replay adapter, an active 0.2.0 synthetic vector, and CI replay across Python
+  3.12–3.14. Restored the Patch Cabinet Dependabot version-update limit from zero to five.
+- Independent adversarial review found and blocked pre-hash source execution, Windows backslash
+  scope escape, and symlinked-directory escape. The corrected verifier statically parses the
+  hash-bound descriptor, directly loads only hash-verified frozen code, resolves every registered
+  path inside its declared subdirectory, caps inputs/inventory, discards worker output, and rejects
+  artifact-role collisions.
+- Local verification passed 26 Patch policy tests. The replay-control suite ran 19 tests: 18
+  passed and one expected Windows test skipped because this session cannot create directory
+  symlinks. Both registered
+  engines passed isolated replay, including the historical receipted bundle and active synthetic
+  vector. Revenue Lab's 41-test suite remained 40 passed with its existing privilege-dependent
+  symlink skip. Compilation, package dependency checks, and the public-tree heuristic scan passed.
+- This records two Patch Cabinet work units: one versioned migration and one distinct adversarial
+  containment correction. A direct whole-account Usage-page reading after these units showed 83%
+  remaining; no per-action consumption is inferred. The branch remains local and uncommitted at this checkpoint; no GitHub
+  issue, pull request, dependency, customer, payment, wallet, XLM, domain, account, or subscription
+  changed yet.
+
+## 2026-08-08 - Session 010 - Revenue pivot prototype and combined local checkpoint
+
+- Implemented D-022 and D-023 locally as Support Agent Regression Lab: a free ten-case synthetic
+  support-agent regression starter, an offline deterministic checker, an explicit human-review
+  rubric, mocked before/after runs, and reproducible response-free reports. Linux Release
+  Readiness Lab remains intact but parked; D-014 still blocks every hostile third-party checkout.
+- The first paid hypothesis is deliberately narrow: $149 for ten original cases derived from one
+  approved public policy source, a rubric and response-free comparison template, one revision,
+  and a proposed five-business-day initial handoff. It is not an active offer or market-value
+  claim. The $49 reusable template is secondary; larger or recurring work remains deferred.
+- Independent security review found and reproduced sensitive-content acceptance, deep-nesting
+  failure, pathname time-of-check/time-of-use exposure, existing-output hard-link overwrite, and
+  a review-to-fail classification error. The corrected local-only path uses an explicit separate
+  command, common-sensitive-pattern preflight, one verified input descriptor, bounded nesting,
+  atomic same-directory output replacement, severity ordering, and response-free reports. The
+  review then returned no surviving P0-P2 findings.
+- Independent product review narrowed scope and required a public/permanent issue-form warning,
+  AI-assistance disclosure, fixed delivery/revision window, hash-confidentiality caveat, and a
+  measurable validation record. Qualified views now require a unique unlisted channel-entry path
+  in GitHub Traffic's Popular content table, a declared UTC window, manual owner-preview
+  subtraction, and a retained record at least every 14 days; unattributed repository totals do not
+  count. The final product review returned clean.
+- Local tests passed: Patch Cabinet 26/26; Release Readiness Lab 41 tests with one expected
+  Windows privilege-dependent symlink skip; Support Agent Regression Lab 17/17; replay controls
+  19 tests with one expected Windows symlink skip. Both registered Patch engines and the immutable
+  evidence checker passed. All three generated sample pairs were regenerated from the installed
+  packages. Compilation and dependency checks passed. The final bounded public-tree scan covered
+  96 files / 716308 bytes / six secret-signature families.
+- This is one revenue work unit, bringing R-002 to two Patch units and one revenue unit. A direct
+  whole-account Usage-page observation after the unit showed 73% remaining; no per-action usage is
+  inferred. Created the project-owned `support-eval-interest` label so the public issue form does
+  not reference a missing label; no issue was submitted. The branch remains local and uncommitted
+  at this checkpoint. No customer, marketing post, checkout, payment, merchant account, purchase,
+  domain, wallet, XLM, subscription, or customer/private input changed.

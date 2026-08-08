@@ -9,6 +9,13 @@ from pathlib import Path
 from unittest.mock import patch
 
 from patch_cabinet.cli import main
+from patch_cabinet.engine import (
+    ENGINE_NAME,
+    ENGINE_VERSION,
+    EXPECTED_DEPENDENCIES,
+    OUTPUT_SCHEMA_VERSION,
+    validate_runtime_dependencies,
+)
 from patch_cabinet.policy import (
     evaluate_candidate as _evaluate_candidate,
     evaluate_candidates as _evaluate_candidates,
@@ -253,7 +260,11 @@ class CandidatePolicyTests(unittest.TestCase):
 
             self.assertEqual(result, 0)
             payload = json.loads(json_out.read_text())
-            self.assertEqual(payload["schema_version"], "1")
+            self.assertEqual(payload["schema_version"], OUTPUT_SCHEMA_VERSION)
+            self.assertEqual(
+                payload["engine"], {"name": ENGINE_NAME, "version": ENGINE_VERSION}
+            )
+            self.assertEqual(payload["dependencies"], EXPECTED_DEPENDENCIES)
             self.assertEqual(payload["policy"]["as_of"], AS_OF.isoformat())
             self.assertEqual(payload["policy"]["evaluation_mode"], "live")
             self.assertEqual(payload["results"][0]["score"], 100)
@@ -261,6 +272,11 @@ class CandidatePolicyTests(unittest.TestCase):
             self.assertIn(AS_OF.isoformat(), markdown)
             self.assertIn("example/tool", markdown)
             self.assertNotIn(str(root), markdown)
+
+    def test_active_engine_dependency_identity_matches_runtime(self):
+        self.assertEqual(ENGINE_VERSION, "0.2.0")
+        self.assertEqual(EXPECTED_DEPENDENCIES, {"packaging": "26.3"})
+        self.assertEqual(validate_runtime_dependencies(), EXPECTED_DEPENDENCIES)
 
     def test_cli_requires_operator_exclusions_and_ignores_target_discovery(self):
         private_name = "private/local-history"

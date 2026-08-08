@@ -33,27 +33,36 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install both packages
-        run: python -m pip install ./patch-cabinet ./revenue-lab
+      - name: Install project packages
+        run: python -m pip install ./patch-cabinet ./revenue-lab ./support-eval-lab
 
       - name: Smoke-test installed entry points
         run: |
           patch-cabinet --help
           release-readiness --help
+          support-eval --help
 
       - name: Test Patch Cabinet
         run: python -m unittest discover -s patch-cabinet/tests -v
 
+      - name: Replay registered Patch Cabinet engines
+        run: python tools/check_evidence_bundles.py
+
       - name: Test Release Readiness Lab
         run: python -m unittest discover -s revenue-lab/tests -v
+
+      - name: Test Support Agent Regression Lab
+        run: python -m unittest discover -s support-eval-lab/tests -v
 
       - name: Compile project modules
         run: >-
           python -m compileall -q
           patch-cabinet/src
           revenue-lab/src
+          support-eval-lab/src
 
   revenue-windows:
+    # Preserve the protected required-check name while broadening this job to both prototypes.
     name: Release Readiness on Windows
     runs-on: windows-latest
     timeout-minutes: 10
@@ -68,11 +77,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install and test Release Readiness Lab
+      - name: Install and test revenue prototypes
         run: |
-          python -m pip install ./revenue-lab
+          python -m pip install ./revenue-lab ./support-eval-lab
           release-readiness --help
+          support-eval --help
           python -m unittest discover -s revenue-lab/tests -v
+          python -m unittest discover -s support-eval-lab/tests -v
 
   generated-evidence:
     name: Generated evidence is current
@@ -89,11 +100,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install both packages
-        run: python -m pip install ./patch-cabinet ./revenue-lab
+      - name: Install project packages
+        run: python -m pip install ./patch-cabinet ./revenue-lab ./support-eval-lab
 
       - name: Check public tree for private paths and secret signatures
         run: python tools/check_public_tree.py
+
+      - name: Test versioned evidence replay controls
+        run: python -m unittest discover -s tools/tests -v
 
       - name: Verify immutable candidate evidence bundles
         run: python tools/check_evidence_bundles.py
@@ -120,6 +134,16 @@ jobs:
           --unverified-demo
           --markdown-out samples/demo-report.md
           --json-out samples/demo-report.json
+
+      - name: Regenerate Support Agent Regression Lab sample
+        working-directory: support-eval-lab
+        run: >-
+          support-eval compare
+          samples/cases.jsonl
+          samples/baseline.jsonl
+          samples/candidate.jsonl
+          --markdown-out samples/comparison.md
+          --json-out samples/comparison.json
 
       - name: Verify generated files
         run: git diff --exit-code

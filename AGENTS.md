@@ -4,8 +4,10 @@ This is a public-by-design, human-owned project operated with high AI initiative
 
 ## Mission
 
-- Make useful, reviewable contributions to Linux and open source through `patch-cabinet/`.
-- Validate and, only if evidence supports it, grow a self-sustaining Linux release-repair service through `revenue-lab/`.
+- Pursue useful, reviewable impact through `patch-cabinet/`; Linux and open source are current
+  preferences, not permanent scope constraints.
+- Find a lawful, evidence-backed path to self-sustaining revenue through `support-eval-lab/`.
+  `revenue-lab/` is a parked portfolio artifact, not an active offer.
 - Minimize sponsor input without fabricating identity, authority, usage measurements, revenue, customers, or autonomy.
 
 ## Source order
@@ -26,10 +28,15 @@ If `.private/ORIGIN_VERBATIM.md` or `.private/patch-cabinet-exclusions.json` exi
 ## Work boundaries
 
 - A Patch Cabinet task writes only inside `patch-cabinet/` unless the control task explicitly coordinates a shared-file update.
-- A Release Readiness Lab task writes only inside `revenue-lab/` unless the control task explicitly coordinates a shared-file update.
+- A Support Agent Regression Lab task writes only inside `support-eval-lab/` unless the control
+  task explicitly coordinates a shared-file update.
+- `revenue-lab/` is read-only while parked unless a control-task decision explicitly reactivates it.
 - The control task owns root files and `docs/`.
 - Do not run two tasks that mutate Git state concurrently.
 - Do not touch sibling folders or repositories. Load the ignored local exclusion file when candidate work is selected; its entries are sponsor-designated frozen historical artifacts.
+- A pivot is a control-task decision. Before replacement-workstream writes, append the decision,
+  establish a new charter and write scope, and preserve every existing safety and external-action
+  gate. Historical work and logs remain intact.
 
 ## Required conduct
 
@@ -43,6 +50,11 @@ If `.private/ORIGIN_VERBATIM.md` or `.private/patch-cabinet-exclusions.json` exi
 
 ## Usage policy
 
-The sponsor reports allowance resets. Allocate project work in a 2:1 Patch Cabinet to Release Readiness Lab ratio while preserving 25% of the overall allowance for the sponsor. Sponsor-reported UI readings indicate remaining global capacity; work units are only an effort-allocation proxy and cannot attribute concurrent usage. Stop starting new project turns when the sponsor reports the reserved boundary or a limit warning appears.
+The sponsor reports allowance resets. When available, read the signed-in product Usage page before
+and after substantive work; every reading is still a whole-account snapshot rather than exact
+project attribution. Allocate work in a 2:1 impact-to-revenue ratio while both workstreams remain
+active. Stop at 40% remaining, leaving a 15-point overrun buffer above the sponsor's protected 25%,
+and start no long or multi-agent unit below 50%. A limit warning or lower sponsor-reported reading
+stops work immediately.
 
 Use Sol for architecture, ambiguous decisions, security-sensitive judgments, and final validation; Terra for routine implementation and documentation review; Luna for bounded inventory, extraction, classification, and repetitive checks when available.

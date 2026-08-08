@@ -1,0 +1,71 @@
+name: Support evaluation pilot interest
+description: Nonbinding interest in a sanitized ten-case support-agent regression pilot
+title: "[Support eval interest] "
+labels: ["support-eval-interest"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a nonbinding public research form, not an order or checkout. The project,
+        prototype, and project replies are AI-assisted; required identity, payment, legal, and
+        external-account actions remain human-controlled. Everything submitted here is publicly
+        visible and may remain in Git history, forks, caches, archives, screenshots, or
+        third-party copies even if the issue is later edited or deleted. Do not name your company,
+        customer, product, incident, or policy. Do not include private transcripts, personal data,
+        credentials, confidential material, regulated-domain content, or payment information. If
+        answering would reveal anything sensitive, do not submit this form; wait for a documented
+        private contact route.
+  - type: dropdown
+    id: role
+    attributes:
+      label: Your role
+      options:
+        - B2B SaaS founder or operator
+        - Support or customer-success lead
+        - AI or QA engineer
+        - Consultant or agency
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Regression outcome you want
+      description: >-
+        Describe only a generic behavior change. Do not identify a company, customer, product,
+        incident, or policy.
+    validations:
+      required: true
+  - type: dropdown
+    id: channel
+    attributes:
+      label: How did you find this starter?
+      options:
+        - GitHub search or recommendation
+        - B2B SaaS community
+        - Support-operations community
+        - AI quality or evaluation community
+        - Direct link from a person
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: intent
+    attributes:
+      label: Current intent
+      options:
+        - I would review a free sample
+        - I may commission the proposed ten-case pilot
+        - I am only sharing product feedback
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Data boundary
+      options:
+        - label: >-
+            I understand this issue is public and copyable, and I included no company, customer,
+            product, incident, policy, private, personal, credential, regulated, confidential, or
+            payment data.
+          required: true

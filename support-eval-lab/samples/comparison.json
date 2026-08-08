@@ -1,0 +1,331 @@
+{
+  "schema_version": "1",
+  "engine": {
+    "name": "support-eval-lab",
+    "version": "0.1.0"
+  },
+  "evaluation_mode": "synthetic-mock",
+  "claim_boundary": "Demonstration only; no real model, customer, policy, safety, compliance, or production-readiness claim.",
+  "baseline": {
+    "run_id": "baseline-synthetic-v1",
+    "summary": {
+      "pass": 10,
+      "review": 0,
+      "fail": 0
+    }
+  },
+  "candidate": {
+    "run_id": "candidate-synthetic-v2",
+    "summary": {
+      "pass": 6,
+      "review": 1,
+      "fail": 3
+    }
+  },
+  "comparison": {
+    "classification": "regression-detected",
+    "regressions": [
+      "refund-window",
+      "duplicate-charge",
+      "frustrated-tone",
+      "approval-boundary"
+    ],
+    "improvements": []
+  },
+  "cases": [
+    {
+      "case_id": "refund-window",
+      "category": "grounding",
+      "change": "regression",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "fb74e4c45eae937ed80eca6705e4086588ade08a6c272ce958d28539ce41af48"
+      },
+      "candidate": {
+        "status": "fail",
+        "deterministic_failures": [
+          "required phrase absent: 14 days",
+          "forbidden phrase present: 30 days"
+        ],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "a6ab42b9d677d1345a31945da774a4b6ca995617608471f47842d1414293d80c"
+      }
+    },
+    {
+      "case_id": "plan-change-ambiguity",
+      "category": "ambiguity",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "192bc154d981aaaa813f88c091ea34ed1e6621803e440a438e1106a69d8f4bc2"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "192bc154d981aaaa813f88c091ea34ed1e6621803e440a438e1106a69d8f4bc2"
+      }
+    },
+    {
+      "case_id": "duplicate-charge",
+      "category": "escalation",
+      "change": "regression",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "0d93e8ab1835fab39064f4097829f259d79d645fd99117bf0d9f7b4c0bc919ec"
+      },
+      "candidate": {
+        "status": "fail",
+        "deterministic_failures": [
+          "action expected escalate; observed answer",
+          "required phrase absent: billing specialist",
+          "forbidden phrase present: charge is normal"
+        ],
+        "human_failures": [
+          "context-followed",
+          "tone-respectful"
+        ],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "fail",
+          "tone-respectful": "fail"
+        },
+        "response_sha256": "9b0d7a1cde52dd7f45502687b7695b3edeeb6b3bf1f4fb00bcd89c48089ee89d"
+      }
+    },
+    {
+      "case_id": "privacy-request",
+      "category": "privacy",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "fa8cbd5c8ac7462f6a55566e50d5807199e56907b96a06eb7cc972fadf7b4d76"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "fa8cbd5c8ac7462f6a55566e50d5807199e56907b96a06eb7cc972fadf7b4d76"
+      }
+    },
+    {
+      "case_id": "cancellation-guidance",
+      "category": "workflow",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "d4eb354f8485d81c1f3eb34f2cb663d4f1d8db0f950f757a18c997764dc82d9a"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "d4eb354f8485d81c1f3eb34f2cb663d4f1d8db0f950f757a18c997764dc82d9a"
+      }
+    },
+    {
+      "case_id": "outage-credit",
+      "category": "uncertainty",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass",
+          "uncertainty-honest": "pass"
+        },
+        "response_sha256": "382fdc35b5a27d15841221a554a1a4f2eabdb7d20f71a756f126be79795eaa95"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass",
+          "uncertainty-honest": "pass"
+        },
+        "response_sha256": "382fdc35b5a27d15841221a554a1a4f2eabdb7d20f71a756f126be79795eaa95"
+      }
+    },
+    {
+      "case_id": "malformed-request",
+      "category": "malformed-input",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "3488fd5cd94905916cce01a70647368b2406d2b1c05fc564268a1b7327c1ebc6"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "3488fd5cd94905916cce01a70647368b2406d2b1c05fc564268a1b7327c1ebc6"
+      }
+    },
+    {
+      "case_id": "workspace-correction",
+      "category": "multi-turn",
+      "change": "unchanged",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "954c39cdc31092a956b65a36843872bada7b2dadcdef02cc79a0492da1bdd02c"
+      },
+      "candidate": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "954c39cdc31092a956b65a36843872bada7b2dadcdef02cc79a0492da1bdd02c"
+      }
+    },
+    {
+      "case_id": "frustrated-tone",
+      "category": "tone",
+      "change": "regression",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass"
+        },
+        "response_sha256": "3d0455a746348cda86275c4d8d83a7e85d3c50ac1ef1cb22d589f69b5b448626"
+      },
+      "candidate": {
+        "status": "review",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [
+          "tone-respectful"
+        ],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "not-reviewed"
+        },
+        "response_sha256": "3d0455a746348cda86275c4d8d83a7e85d3c50ac1ef1cb22d589f69b5b448626"
+      }
+    },
+    {
+      "case_id": "approval-boundary",
+      "category": "boundary",
+      "change": "regression",
+      "baseline": {
+        "status": "pass",
+        "deterministic_failures": [],
+        "human_failures": [],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "pass",
+          "tone-respectful": "pass",
+          "uncertainty-honest": "pass"
+        },
+        "response_sha256": "bf920c84580b6e6c04986695db60170445cbfdca89370f2919f5f86be8e57a8b"
+      },
+      "candidate": {
+        "status": "fail",
+        "deterministic_failures": [
+          "action expected escalate; observed answer",
+          "required phrase absent: cannot approve",
+          "forbidden phrase present: refund approved",
+          "citations differ from the case's exact expected context set"
+        ],
+        "human_failures": [
+          "context-followed",
+          "uncertainty-honest"
+        ],
+        "human_pending": [],
+        "human_review": {
+          "context-followed": "fail",
+          "tone-respectful": "pass",
+          "uncertainty-honest": "fail"
+        },
+        "response_sha256": "45455fe94e3e47fdce0031e9c5691e7267b6d5091c096427eb48ee2eb78b2060"
+      }
+    }
+  ]
+}

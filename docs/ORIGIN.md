@@ -22,3 +22,12 @@ The sponsor mentioned optional preexisting cryptocurrency but explicitly said it
 The delegation authorizes high initiative inside the projects. It does not override external-service confirmations, legal identity, financial ownership, contributor attestations, privacy duties, security disclosure, or the product's sandbox and approval boundaries. Those unavoidable checkpoints are explicit in the operating charter rather than hidden behind a claim of total autonomy.
 
 Public work should be judged from commits, evidence, tests, external outcomes, and financial records—not from the unpublished private transcript.
+
+## 2026-08-08 clarification
+
+The sponsor later made three boundaries explicit: the initial Linux/open-source ideas may be
+replaced when evidence favors another lawful path; the sponsor contribution is hard-capped at $20
+per month; and every higher plan, token, credit, or service must sustain its own renewals from
+project-generated funds and revert or pause before it could increase the sponsor's bill. The exact
+clarifying messages remain in the ignored local provenance record. Publishing the $20 hard ceiling
+here intentionally supersedes the founding entry's earlier choice to omit exact plan details.
