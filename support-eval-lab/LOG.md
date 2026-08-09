@@ -60,3 +60,17 @@ Append-only project record.
   qualified view; channel-path traffic starts only from a separately recorded activation window.
 - This publication completes the one already recorded revenue unit; it is not an additional work
   unit. No marketing channel was activated and no private or customer input was received.
+
+## 2026-08-08 - GitHub-native channel prepared
+
+- Selected one project-owned, 14-day GitHub discovery experiment after independent policy and
+  channel review. Added a unique unlisted entry path and an append-only measurement record. The
+  planned release links only to the free synthetic starter and public feedback form; it contains no
+  purchase, price, checkout, binary, mention, or private-input request.
+- The experiment adds only `ai-evaluation`, `llm-evaluation`, `customer-support`,
+  `support-automation`, `software-testing`, and `python`; existing accurate repository topics stay
+  in place. No other project's issue, pull request, discussion, comment, direct message, scraped
+  contact, or social account is part of this test.
+- Activation waits for this exact change to pass review, protected CI, and merge. Until the
+  pre-release exists, raw views, qualified views, interest, orders, payments, and cleared revenue
+  remain zero. This preparation and its later same-design activation are one revenue work unit.

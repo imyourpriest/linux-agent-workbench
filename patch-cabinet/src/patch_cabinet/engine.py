@@ -6,8 +6,8 @@ from importlib.metadata import version
 
 
 ENGINE_NAME = "patch-cabinet"
-ENGINE_VERSION = "0.2.0"
-OUTPUT_SCHEMA_VERSION = "1"
+ENGINE_VERSION = "0.3.0"
+OUTPUT_SCHEMA_VERSION = "2"
 EXPECTED_DEPENDENCIES = {"packaging": "26.3"}
 
 

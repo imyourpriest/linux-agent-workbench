@@ -1,0 +1,10 @@
+{
+  "schema_version": "1",
+  "bundle": "2026-08-08-agent-consent-scan",
+  "files": {
+    "patch-cabinet/data/candidates/2026-08-08-agent-consent-scan.json": "f21d8ade0e522e60b9eb12b28b0a1672f19651880efc3eb13378ef2861a93d56",
+    "patch-cabinet/evidence/2026-08-08-agent-consent-scan.md": "f0ea1bda157399c4f706023b85d57883f0a6f9cc55ac6844b9a99ccf9a1b0457",
+    "patch-cabinet/evidence/2026-08-08-agent-consent-scan-policy.json": "8b8b26738b2d675a2accfef7aee7da5dce7b5d6a0bfa15074288d24483da85b7",
+    "patch-cabinet/evidence/2026-08-08-agent-consent-scan-policy.md": "8a98a271d8a166badf17e859a1b6c613301e893f5e4d688e82c5e28849747d25"
+  }
+}

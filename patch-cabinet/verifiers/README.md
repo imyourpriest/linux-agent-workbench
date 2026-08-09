@@ -21,6 +21,9 @@ so a new engine cannot enter the registry without exercising its serializer and 
 
 Historical capsules are immutable and replay-only. New output uses only the registry's active
 engine. Missing, unknown, mismatched, corrupt, unreferenced, or path-escaping entries fail closed.
+Some frozen capsule notes describe an engine as active because that was its status when the note
+was created. The current `mode` in `index.json` is authoritative; historical wording is preserved
+so its registered digest and evidence remain reproducible.
 
 Run the complete offline replay from the repository root:
 

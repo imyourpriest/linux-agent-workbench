@@ -57,4 +57,9 @@ active. Stop at 40% remaining, leaving a 15-point overrun buffer above the spons
 and start no long or multi-agent unit below 50%. A limit warning or lower sponsor-reported reading
 stops work immediately.
 
+For the remainder of reset period R-002 only, D-024 records the sponsor's explicit one-time request
+to continue toward the protected 25% floor. During that exception, start no long or multi-agent
+unit below 40%, start no new work unit at or below 30%, and stop immediately at 25% or any warning.
+The ordinary 40% stop automatically returns at the next reset.
+
 Use Sol for architecture, ambiguous decisions, security-sensitive judgments, and final validation; Terra for routine implementation and documentation review; Luna for bounded inventory, extraction, classification, and repetitive checks when available.

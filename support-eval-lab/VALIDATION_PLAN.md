@@ -40,9 +40,11 @@ GitHub documents that repository Traffic retains visitors, referring sites, and 
 for the previous 14 days and updates popular content daily:
 <https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository>.
 
-At 45 calendar days or 100 qualified views, whichever comes first, require at least three genuine
-inbound interest signals and one explicit request to buy or commission the ten-case pilot. The
-interest record captures buyer role, desired outcome, and discovery channel. If the gate is not
-met, change the buyer, outcome, price, or channel before building a larger product. No result is
-backfilled from likes, bot traffic, ambiguous engagement, or private messages that cannot be
-retained lawfully.
+At 45 calendar days or 100 qualified views, whichever comes first, require at least three
+qualifying self-reported interest issues and one selection of the nonbinding option requesting a
+future private route to discuss commissioning the ten-case pilot. Count only an in-window public
+form issue from a non-owner, non-bot account with the boundary acknowledgement and a generic
+in-scope outcome; count at most one signal per GitHub account per channel. These statements are not
+identity-verified. If the gate is not met, change the buyer, outcome, price, or channel before
+building a larger product. No result is backfilled from duplicates, owner actions, reactions, bot
+traffic, ambiguous engagement, or private messages that cannot be retained lawfully.

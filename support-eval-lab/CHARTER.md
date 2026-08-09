@@ -63,9 +63,15 @@ totals, CI, and paths with no retained GitHub record do not count. GitHub's aggr
 prove a viewer's identity, intent, or uniqueness or exclude every bot, so these remain views - not
 people - and the separate human-interest gate is mandatory.
 
-At 45 calendar days or 100 qualified views, whichever comes first, require at least three genuine
-inbound interest signals and one explicit request to buy or commission the ten-case pilot. The
-nonbinding interest form records buyer role, desired outcome, and discovery channel without
-accepting private data or payment. If the gate fails, change buyer, problem, product, channel, or
-price before adding infrastructure. After three paid deliveries, compare actual time, rework,
-support burden, refunds, satisfaction, and net margin before automating or expanding.
+At 45 calendar days or 100 qualified views, whichever comes first, require at least three
+qualifying self-reported interest signals and one selection of the nonbinding option requesting a
+future private route to discuss commissioning the ten-case pilot. A qualifying signal is a public
+issue opened through the form during an active window by a non-owner, non-bot account, with the
+data-boundary acknowledgement and a generic in-scope outcome. Count one signal per GitHub account
+per channel; duplicates, owner previews, bots, reactions, and out-of-bound submissions count zero.
+These are unverified account-level statements, not authenticated people, buyers, orders, or
+customers. The form requests only role, generic desired outcome, and discovery channel; it does
+not request private data or payment. Because it creates an editable public issue, warnings cannot
+technically guarantee a clean submission. If the gate fails, change buyer, problem, product,
+channel, or price before adding infrastructure. After three paid deliveries, compare actual time,
+rework, support burden, refunds, satisfaction, and net margin before automating or expanding.
