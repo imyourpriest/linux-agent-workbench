@@ -74,3 +74,23 @@ Append-only project record.
 - Activation waits for this exact change to pass review, protected CI, and merge. Until the
   pre-release exists, raw views, qualified views, interest, orders, payments, and cleared revenue
   remain zero. This preparation and its later same-design activation are one revenue work unit.
+
+## 2026-08-09 - GitHub-native channel activated
+
+- PR 7 passed all protected Python, Windows, generated-evidence, and CodeQL checks and was
+  squash-merged as `2b162ce572379a10a61007a722a7ba7e23d43f75`. Main-branch CI, CodeQL, and
+  dependency-graph runs passed again on that exact commit before activation.
+- Published `support-eval-starter-v0.1.0` as a source-only research pre-release pinned to the
+  merge commit. The release is not a draft, has no uploaded assets, and its body exactly matches
+  the reviewed template after the single SHA substitution. Corrected the repository description
+  and added only the six predeclared topics while preserving the five existing topics.
+- The frozen observation window runs from `2026-08-09T00:33:48Z` through
+  `2026-08-23T00:33:48Z`, followed by the next available daily traffic refresh. No browser preview
+  of the entry page was performed by the operating task before or at activation.
+- At the activation checkpoint there was no labeled interest issue, customer, order, checkout,
+  payment, merchant account, purchase, private input, or cleared revenue. Revenue remains $0.00.
+  No domain, subscription, wallet, XLM, social account, external post, message, or third-party
+  project interaction changed.
+- This activates the already recorded revenue unit; it is not an additional unit. Traffic and
+  form observations will be recorded under the frozen measurement rules rather than inferred
+  from repository totals.
