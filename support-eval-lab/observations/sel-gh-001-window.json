@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "record_id": "sel-gh-001-window-record",
+  "experiment_id": "sel-gh-001",
+  "source_mode": "operator_recorded_unverified",
+  "captured_at": "2026-08-09T00:50:13Z",
+  "configuration_observation": {
+    "target_commit": "2b162ce572379a10a61007a722a7ba7e23d43f75",
+    "entry_sha256": "276ee4506b1d94a9e97e00859d28a4e501563076670b924149f2b6ce6ec9a51b",
+    "release_body_sha256": "9c2db782538e604c05188525fbb7c39424d16e33287ff867118cf285a5a03acd",
+    "issue_form_sha256": "e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e",
+    "frozen_description": "Auditable AI-directed experiments in open-source impact and support-agent regression evaluation",
+    "frozen_topics": [
+      "ai-agents",
+      "ai-evaluation",
+      "customer-support",
+      "github-actions",
+      "linux",
+      "llm-evaluation",
+      "open-source",
+      "python",
+      "reproducible-research",
+      "software-testing",
+      "support-automation"
+    ]
+  },
+  "owner_preview_events": [],
+  "traffic_observations": [
+    {
+      "event_id": "traffic-activation",
+      "checkpoint": "activation",
+      "captured_at": "2026-08-09T00:50:13Z",
+      "row_state": "not-checked",
+      "captured_path": null,
+      "raw_views": null,
+      "retained_window_start": null,
+      "retained_window_end": null
+    }
+  ],
+  "issue_observations": []
+}

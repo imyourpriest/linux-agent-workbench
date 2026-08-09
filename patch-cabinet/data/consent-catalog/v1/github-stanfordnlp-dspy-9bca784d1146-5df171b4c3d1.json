@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+  "repository": "stanfordnlp/dspy",
+  "repository_url": "https://github.com/stanfordnlp/dspy",
+  "commit_sha": "9bca784d114641d25b6745e79df0c3f533576708",
+  "policy_source_url": "https://github.com/stanfordnlp/dspy/blob/9bca784d114641d25b6745e79df0c3f533576708/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9",
+  "observed_at": "2026-08-08",
+  "reviewed_at": "2026-08-08",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "explicitly_disallows",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned guide bars fully autonomous AI agents from issues, pull requests, and reviews."
+}

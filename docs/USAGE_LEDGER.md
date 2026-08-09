@@ -82,6 +82,11 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
   its main-branch CI, CodeQL, and dependency-graph runs passed; 46% remained after the reviewed
   GitHub-native pre-release and metadata were activated. These are whole-account snapshots and no
   delta is attributed to an individual action.
+- Final-cycle observations: 45% remained before the two Patch impact units and one Support revenue
+  unit began; 40% remained after their first implementations and review dispatch; 27% remained
+  after adversarial corrections and repository-wide verification. These are direct whole-account
+  snapshots. No delta is attributed to a workstream, unit, tool call, or project action. At 27%,
+  D-024 prohibits new work; only review resolution, publication, and closeout remain.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -92,7 +97,10 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 | 2026-08-08 | Patch Cabinet | 1 | Autonomous-contribution consent scan with no ready canary | post-unit snapshot: 60% |
 | 2026-08-08 | Patch Cabinet | 1 | Consent-policy engine 0.3.0 and historical replay preservation | post-unit snapshot: 59% |
 | 2026-08-08 | Support Agent Regression Lab | 1 | GitHub-native discovery channel preparation and same-design activation | pre-publication 49%; post-merge 47%; post-activation 46% |
+| 2026-08-09 | Patch Cabinet | 1 | Strict non-authorizing contribution-consent catalog and adversarial correction | combined final-cycle snapshots: 45%, 40%, 27% |
+| 2026-08-09 | Patch Cabinet | 1 | Four pinned consent records, acquisition receipt, and deterministic index | combined final-cycle snapshots: 45%, 40%, 27% |
+| 2026-08-09 | Support Agent Regression Lab | 1 | Strict offline SEL-GH-001 observation normalizer and activation record | combined final-cycle snapshots: 45%, 40%, 27% |
 
-R-002 has four Patch Cabinet units and two Support Agent Regression Lab units, preserving the 2:1
-period ratio. Across both periods, the dedicated totals are twelve impact units and six revenue
+R-002 has six Patch Cabinet units and three Support Agent Regression Lab units, preserving the 2:1
+period ratio. Across both periods, the dedicated totals are fourteen impact units and seven revenue
 units. Publication and shared governance are not backfilled as extra dedicated work units.

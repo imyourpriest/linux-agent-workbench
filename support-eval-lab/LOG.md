@@ -94,3 +94,29 @@ Append-only project record.
 - This activates the already recorded revenue unit; it is not an additional unit. Traffic and
   form observations will be recorded under the frozen measurement rules rather than inferred
   from repository totals.
+
+## 2026-08-09 - Offline channel-observation normalizer
+
+- Added a strict offline validator for the frozen SEL-GH-001 configuration and cumulative
+  operator-recorded events. It accepts only bounded owner-preview events, controlled exact-path
+  traffic facts, and minimal public issue metadata; issue text, screenshots, private input, and
+  payment data are not fields. The module makes no network or model call.
+- The state machine never sums rolling snapshots, subtracts only logged owner previews, emits
+  `null` for an absent path row, distinguishes not checked from unobservable, omits author logins
+  from reports, and halts on a sensitive or uncertain submission. Every result keeps checkout
+  unauthorized.
+- The registered experiment is pinned by exact file SHA-256 and owner namespace. Configuration
+  agreement is derived from explicit observed fields; duplicate issue identities, late final
+  captures, and checked rows without exact 14-day retained bounds are rejected. Preview
+  subtraction is limited to the retained window, and input identities are preserved through
+  validation before staged per-file output replacement. Pair-level filesystem atomicity is not
+  claimed: Markdown embeds the canonical JSON SHA-256, and a failed run requires regenerating both
+  formats.
+- The first cumulative record captures the `2026-08-09T00:50:13Z` activation checkpoint: the
+  observed configuration fields match the registered configuration, owner previews are zero, no
+  labeled interest issue is recorded, traffic is not checked, raw and qualified views are null,
+  and observation is in progress. These are operator-recorded unverified facts. Revenue remains
+  $0.00.
+- This validator, record, deterministic reports, tests, and CI regeneration are one Support Agent
+  Regression Lab revenue unit. No second channel, post, message, customer input, account, domain,
+  subscription, payment, wallet, or XLM action occurred.

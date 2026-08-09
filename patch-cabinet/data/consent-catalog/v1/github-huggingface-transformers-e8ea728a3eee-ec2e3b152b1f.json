@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+  "repository": "huggingface/transformers",
+  "repository_url": "https://github.com/huggingface/transformers",
+  "commit_sha": "e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+  "policy_source_url": "https://github.com/huggingface/transformers/blob/e8ea728a3eeeb903e77c7d1bd29267c80a1be71f/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6",
+  "observed_at": "2026-08-08",
+  "reviewed_at": "2026-08-08",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "explicitly_disallows",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned guide asks autonomous agents and first-time code-agent users not to open issues or pull requests."
+}

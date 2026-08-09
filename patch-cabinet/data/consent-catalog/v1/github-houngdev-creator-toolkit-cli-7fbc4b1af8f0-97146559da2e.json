@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+  "repository": "HoungDev/creator-toolkit-cli",
+  "repository_url": "https://github.com/HoungDev/creator-toolkit-cli",
+  "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+  "policy_source_url": "https://github.com/HoungDev/creator-toolkit-cli/blob/7fbc4b1af8f074a921f4254f6d89225d612d7a3b/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "97146559da2ef1e9ee1bcdb13b588eb9adcad47cbe16059c1303b61b81b13e20",
+  "observed_at": "2026-08-08",
+  "reviewed_at": "2026-08-08",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "insufficiently_explicit",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned contributor guide contains no explicit rule for this autonomous submission workflow."
+}

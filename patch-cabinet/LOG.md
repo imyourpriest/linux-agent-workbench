@@ -170,3 +170,30 @@ Append-only project record.
   workers passed and both immutable candidate bundles replayed exactly.
 - This is one Patch Cabinet policy-maintenance work unit. No upstream contribution, target-code
   execution, account action, payment, expense, XLM movement, or external contact occurred.
+
+## 2026-08-09 - Strict contribution-consent catalog
+
+- Added a separate schema-1 offline catalog validator rather than making historical policy reviews
+  part of candidate eligibility. It rejects duplicate and non-standard JSON, numbers, unknown
+  fields, controls and bidirectional formatting, noncanonical repository/commit/path bindings,
+  null digests, unsafe files, output aliases, excessive inputs, and invalid successor chains.
+- A record is one manual review of one pinned public file. The component emits no eligibility or
+  readiness field, marks records stale after seven days at the explicit index date, retains
+  disallowed and insufficient classifications, and cannot bypass engine 0.3.0 or the manual gates.
+  This validator and its adversarial test surface are one Patch Cabinet impact unit.
+
+## 2026-08-09 - Initial consent catalog evidence
+
+- Added four 2026-08-08 pinned policy records from the completed consent scan: Creator Toolkit CLI
+  and LoopGate Harness are `insufficiently_explicit` for the exact autonomous workflow; Hugging
+  Face Transformers and DSPy `explicitly_disallow` it. There is intentionally no
+  `explicitly_allows` entry. The catalog stores source hashes and links, not policy copies or
+  excerpts.
+- Generated deterministic JSON and Markdown indexes and added CI regeneration. This evidence set
+  is a second Patch Cabinet impact unit. It did not reclassify a candidate, touch historical
+  engine/evidence bundles, clone or execute target code, contact upstream, or create an issue or
+  pull request.
+- A separate acquisition receipt records the exact public GitHub Contents API retrieval at
+  `2026-08-09T01:01:18Z`, including commit refs, byte counts, Git blob identifiers, and decoded-byte
+  SHA-256 values for all four files. It is traceability evidence, not a signature or permission
+  claim, and no third-party policy text is copied into the repository.

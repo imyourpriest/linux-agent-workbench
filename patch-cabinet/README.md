@@ -49,6 +49,17 @@ Published evidence remains replayable through hash-pinned, offline engine capsul
 repository root, run `python tools/check_evidence_bundles.py`; see the
 [versioned verifier design](verifiers/README.md) for the trust boundary and migration rules.
 
+The separate [contribution-consent catalog](CONSENT_CATALOG.md) preserves strict, commit-pinned
+manual reviews of upstream policy files, including explicit rejects and insufficient rules. It is
+historical evidence, not an automatic permission or eligibility source. Regenerate its
+deterministic index with:
+
+```sh
+python -m patch_cabinet.consent_catalog data/consent-catalog/v1 --as-of 2026-08-08 \
+  --json-out samples/consent-catalog-index.json \
+  --markdown-out samples/consent-catalog-index.md
+```
+
 ## Success measures
 
 - maintainer-accepted patches and documented upstream outcomes;

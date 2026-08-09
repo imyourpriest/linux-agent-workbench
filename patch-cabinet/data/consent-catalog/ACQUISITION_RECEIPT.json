@@ -1,0 +1,49 @@
+{
+  "schema_version": "1",
+  "receipt_id": "consent-catalog-initial-source-acquisition-2026-08-09",
+  "retrieved_at": "2026-08-09T01:01:18Z",
+  "method": "github-contents-api-base64-decoded-source-bytes",
+  "claim_boundary": "This receipt records deterministic bytes returned for exact public commit refs; it is not a signature, current permission, or semantic interpretation.",
+  "sources": [
+    {
+      "record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+      "repository": "HoungDev/creator-toolkit-cli",
+      "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/HoungDev/creator-toolkit-cli/contents/CONTRIBUTING.md?ref=7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+      "git_blob_sha1": "aeac5f1186a27b427fae90a4da0be1874792ffe8",
+      "source_bytes": 3316,
+      "source_sha256": "97146559da2ef1e9ee1bcdb13b588eb9adcad47cbe16059c1303b61b81b13e20"
+    },
+    {
+      "record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+      "repository": "rxdt/loopgate_harness",
+      "commit_sha": "8e5c49be960d656cba5dbae7724d8a6aeef5acb3",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/rxdt/loopgate_harness/contents/CONTRIBUTING.md?ref=8e5c49be960d656cba5dbae7724d8a6aeef5acb3",
+      "git_blob_sha1": "32620cb981144690600f7b5ad8ee706e4dee13d6",
+      "source_bytes": 4091,
+      "source_sha256": "af55310e4fefac168ad6d17c17c309e74850b3022f2a4805fde73b233bedfbfe"
+    },
+    {
+      "record_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+      "repository": "huggingface/transformers",
+      "commit_sha": "e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/huggingface/transformers/contents/CONTRIBUTING.md?ref=e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+      "git_blob_sha1": "e34a00f84b76d0c14c42be496ee1be79f954ebf6",
+      "source_bytes": 14468,
+      "source_sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6"
+    },
+    {
+      "record_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+      "repository": "stanfordnlp/dspy",
+      "commit_sha": "9bca784d114641d25b6745e79df0c3f533576708",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/stanfordnlp/dspy/contents/CONTRIBUTING.md?ref=9bca784d114641d25b6745e79df0c3f533576708",
+      "git_blob_sha1": "08dc8de2d6f3dc263289ebbac58ab8882f36c5c9",
+      "source_bytes": 6831,
+      "source_sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9"
+    }
+  ]
+}
