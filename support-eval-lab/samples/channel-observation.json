@@ -1,0 +1,45 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "support-channel-observation",
+    "version": "0.1.0"
+  },
+  "claim_boundary": "Operator-recorded, unverified platform observations. This report does not prove identity, unique people, attribution, buyer intent, customer status, revenue, or authorization.",
+  "experiment": {
+    "experiment_id": "sel-gh-001",
+    "record_id": "sel-gh-001-window-record",
+    "source_mode": "operator_recorded_unverified",
+    "repository": "imyourpriest/linux-agent-workbench",
+    "target_commit": "2b162ce572379a10a61007a722a7ba7e23d43f75",
+    "entry_path": "support-eval-lab/channels/github-native-v0.1.0.md",
+    "entry_url": "https://github.com/imyourpriest/linux-agent-workbench/blob/2b162ce572379a10a61007a722a7ba7e23d43f75/support-eval-lab/channels/github-native-v0.1.0.md",
+    "release_url": "https://github.com/imyourpriest/linux-agent-workbench/releases/tag/support-eval-starter-v0.1.0",
+    "window_start": "2026-08-09T00:33:48Z",
+    "window_end": "2026-08-23T00:33:48Z",
+    "final_capture_deadline": "2026-08-25T00:33:48Z",
+    "configuration_sha256": "264c8b90a6709bcced722c6e394f2beb7896d99d408bf20f628c56e83af4be51",
+    "configuration_matches": true,
+    "captured_at": "2026-08-09T00:50:13Z",
+    "as_of": "2026-08-09T00:50:13Z"
+  },
+  "state": "active",
+  "traffic": {
+    "latest_checkpoint": "activation",
+    "row_state": "not-checked",
+    "raw_views": null,
+    "owner_previews_through_checkpoint": 0,
+    "qualified_views": null,
+    "view_observability": "not-observed",
+    "retained_window_start": null,
+    "retained_window_end": null,
+    "warning": "Popular-content evidence was not checked at this checkpoint"
+  },
+  "interest": {
+    "raw_issue_observations": 0,
+    "qualifying_unverified_signals": 0,
+    "future_private_route_selections": 0,
+    "dispositions": []
+  },
+  "channel_result": "observation-in-progress",
+  "checkout_authorized": false
+}

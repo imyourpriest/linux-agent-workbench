@@ -25,7 +25,8 @@ The human sponsor is the legal owner and accountable operator. The AI selects wo
   active; stop at 40% remaining to protect the sponsor's final 25% with an additional buffer.
 - Cryptocurrency: **not in scope for launch**. The sponsor's existing XLM remains untouched.
 - External accounts: this public GitHub repository plus its retained private CI-staging repository;
-  no domain, merchant account, sale, advertisement, or upstream pull request exists.
+  one project-owned research pre-release is active; no domain, merchant account, sale, paid
+  advertisement, external outreach, or upstream pull request exists.
 - Public repository: [linux-agent-workbench](https://github.com/imyourpriest/linux-agent-workbench),
   with private vulnerability reporting, hosted CI, CodeQL, dependency/secret safeguards, and
   protected `main` enabled at launch.

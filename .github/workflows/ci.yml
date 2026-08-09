@@ -123,6 +123,15 @@ jobs:
           --markdown-out samples/candidate-ranking.md
           --json-out samples/candidate-ranking.json
 
+      - name: Regenerate Patch Cabinet consent catalog
+        working-directory: patch-cabinet
+        run: >-
+          python -m patch_cabinet.consent_catalog
+          data/consent-catalog/v1
+          --as-of 2026-08-08
+          --markdown-out samples/consent-catalog-index.md
+          --json-out samples/consent-catalog-index.json
+
       - name: Regenerate Release Readiness Lab sample
         working-directory: revenue-lab
         run: >-
@@ -144,6 +153,16 @@ jobs:
           samples/candidate.jsonl
           --markdown-out samples/comparison.md
           --json-out samples/comparison.json
+
+      - name: Regenerate Support channel observation
+        working-directory: support-eval-lab
+        run: >-
+          python -m support_eval_lab.observation
+          experiments/sel-gh-001.json
+          observations/sel-gh-001-window.json
+          --as-of 2026-08-09T00:50:13Z
+          --markdown-out samples/channel-observation.md
+          --json-out samples/channel-observation.json
 
       - name: Verify generated files
         run: git diff --exit-code

@@ -1,0 +1,87 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "patch-consent-catalog",
+    "version": "0.1.0"
+  },
+  "as_of": "2026-08-08",
+  "claim_boundary": "Pinned historical manual reviews; not current permission, automatic interpretation, candidate eligibility, or authorization to contact or submit upstream.",
+  "summary": {
+    "records": 4,
+    "current_for_7_day_candidate_window": 4,
+    "stale": 0,
+    "explicitly_allows": 0,
+    "explicitly_disallows": 2,
+    "insufficiently_explicit": 2
+  },
+  "records": [
+    {
+      "record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+      "repository": "HoungDev/creator-toolkit-cli",
+      "repository_url": "https://github.com/HoungDev/creator-toolkit-cli",
+      "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+      "policy_source_url": "https://github.com/HoungDev/creator-toolkit-cli/blob/7fbc4b1af8f074a921f4254f6d89225d612d7a3b/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "97146559da2ef1e9ee1bcdb13b588eb9adcad47cbe16059c1303b61b81b13e20",
+      "observed_at": "2026-08-08",
+      "reviewed_at": "2026-08-08",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "insufficiently_explicit",
+      "freshness": "current_for_7_day_candidate_window",
+      "age_days_at_as_of": 0,
+      "supersedes": null,
+      "notes": "The pinned contributor guide contains no explicit rule for this autonomous submission workflow."
+    },
+    {
+      "record_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+      "repository": "huggingface/transformers",
+      "repository_url": "https://github.com/huggingface/transformers",
+      "commit_sha": "e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+      "policy_source_url": "https://github.com/huggingface/transformers/blob/e8ea728a3eeeb903e77c7d1bd29267c80a1be71f/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6",
+      "observed_at": "2026-08-08",
+      "reviewed_at": "2026-08-08",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "explicitly_disallows",
+      "freshness": "current_for_7_day_candidate_window",
+      "age_days_at_as_of": 0,
+      "supersedes": null,
+      "notes": "The pinned guide asks autonomous agents and first-time code-agent users not to open issues or pull requests."
+    },
+    {
+      "record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+      "repository": "rxdt/loopgate_harness",
+      "repository_url": "https://github.com/rxdt/loopgate_harness",
+      "commit_sha": "8e5c49be960d656cba5dbae7724d8a6aeef5acb3",
+      "policy_source_url": "https://github.com/rxdt/loopgate_harness/blob/8e5c49be960d656cba5dbae7724d8a6aeef5acb3/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "af55310e4fefac168ad6d17c17c309e74850b3022f2a4805fde73b233bedfbfe",
+      "observed_at": "2026-08-08",
+      "reviewed_at": "2026-08-08",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "insufficiently_explicit",
+      "freshness": "current_for_7_day_candidate_window",
+      "age_days_at_as_of": 0,
+      "supersedes": null,
+      "notes": "The guide expects reviewed AI assistance but does not explicitly authorize this autonomous submission workflow."
+    },
+    {
+      "record_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+      "repository": "stanfordnlp/dspy",
+      "repository_url": "https://github.com/stanfordnlp/dspy",
+      "commit_sha": "9bca784d114641d25b6745e79df0c3f533576708",
+      "policy_source_url": "https://github.com/stanfordnlp/dspy/blob/9bca784d114641d25b6745e79df0c3f533576708/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9",
+      "observed_at": "2026-08-08",
+      "reviewed_at": "2026-08-08",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "explicitly_disallows",
+      "freshness": "current_for_7_day_candidate_window",
+      "age_days_at_as_of": 0,
+      "supersedes": null,
+      "notes": "The pinned guide bars fully autonomous AI agents from issues, pull requests, and reviews."
+    }
+  ]
+}

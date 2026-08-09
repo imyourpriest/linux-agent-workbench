@@ -9,7 +9,7 @@ customer.
 
 ## SEL-GH-001 - GitHub-native pre-release discovery
 
-- Status: prepared; not active until the pre-release is published
+- Initial status before the activation record below: prepared; not yet active
 - Entry path: `support-eval-lab/channels/github-native-v0.1.0.md`
 - Channel: one project-owned GitHub pre-release plus accurate repository topics
 - Planned window: 14-day UTC observation window from the recorded release publication time
@@ -74,7 +74,8 @@ the channel, and escalate to the human owner for GitHub's private support or con
 
 - Current status: active; frozen observation window in progress
 - Published: `2026-08-09T00:33:48Z`
-- Observation end: `2026-08-23T00:33:48Z`, followed by the next available daily traffic refresh
+- Observation end: `2026-08-23T00:33:48Z`; final retained-row capture must occur no later than
+  `2026-08-25T00:33:48Z`
 - Repository owner and authenticated actor: `imyourpriest`; repository was public and
   owner-administered at the pre-action checkpoint
 - Sponsor authorization: the current autonomous-project mandate and the one-reset D-024 usage
@@ -105,3 +106,12 @@ The release body exactly matched the versioned template after replacing its sing
 placeholder. The lightweight tag resolved directly to the target commit. GitHub's latest-release
 endpoint returned no latest release, as expected for this pre-release. These checks establish the
 published configuration, not discovery, attribution, buyer intent, or future availability.
+
+At `2026-08-09T00:50:13Z`, a second public-issue query still found no issue carrying the frozen
+interest label. The strict cumulative observation record therefore contains zero issue events,
+zero owner-preview events, and an activation traffic event marked `not-checked`. Its deterministic
+report says `not-observed` with `null` raw and qualified views; it does not convert missing
+measurement into zero. The registered configuration is SHA-256 pinned, the record repeats the
+observed frozen fields instead of supplying an "unchanged" boolean, and any checked row must bind
+one exact 14-day retained window. The validator and record are documented in
+`OBSERVATION_RECORDS.md`.

@@ -273,3 +273,43 @@ existing validation and first-sale gates.
 are the narrowest platform-native discovery test that does not impose on another community or
 pretend to have demand. Its likely low reach is a measured baseline, not evidence for spamming a
 larger channel.
+
+## 2026-08-09 - D-027 - Consent catalog is historical evidence, never automatic permission
+
+**Decision:** Maintain a separate strict, offline catalog of manually reviewed public upstream
+contribution-policy files. Each record binds one repository, exact commit, canonical file URL,
+source-byte SHA-256, date, exact autonomous-workflow scope, controlled classification, and short
+non-quoting rationale. Published records are not edited; a later policy becomes a validated
+successor. The generated index marks records stale after seven days at its explicit as-of date.
+
+The catalog never makes a candidate eligible or authorizes contact, implementation, or submission.
+It does not fetch source or interpret prose. Every live candidate retains the current engine's own
+policy fields plus the complete manual issue, competition, scope, security, attestation, and local
+exclusion review.
+
+**Why:** The bounded scan repeatedly encountered the same important distinction between human-led
+AI assistance and autonomous-agent submission. Preserving pinned manual rejects and uncertainties
+reduces rediscovery without turning an aging spreadsheet into a misleading permission directory.
+
+## 2026-08-09 - D-028 - Channel observations are offline unverified evidence
+
+**Decision:** Normalize SEL-GH-001 observations with a strict offline configuration and cumulative
+event record. The schema accepts no issue title, body, comment, excerpt, screenshot, customer
+input, or payment data. It never calls GitHub. It derives controlled state, subtracts logged owner
+previews from one retained exact-path row without adding rolling snapshots, and represents an
+absent row as `null` and `unobservable`, never zero. A sensitive or uncertain issue accepts only
+its public URL, timestamps, and disposition and halts the channel.
+
+The active experiment file is SHA-256 pinned in the validator, its repository owner must equal the
+declared owner, and the cumulative record repeats the observed configuration fields rather than
+asserting an opaque unchanged flag. Every checked traffic row binds an exact 14-day retained
+window; the final row has a two-day post-window deadline. Duplicate issue identities are rejected,
+and only owner previews inside the selected retained window are subtracted.
+
+Qualifying interest remains operator-recorded and unverified. Author logins are used only to apply
+the one-per-account rule and are omitted from generated reports. No channel result authorizes
+checkout or supersedes the charter gate.
+
+**Why:** Manual platform observations are easy to overcount or narrate into buyer evidence. A
+closed schema and deterministic state machine preserve the measurement boundary while avoiding a
+network integration or collection of submitted content.

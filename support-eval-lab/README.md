@@ -44,3 +44,19 @@ It does not establish factual correctness, policy completeness, safety, complian
 readiness, customer satisfaction, or revenue potential. Read the [charter](CHARTER.md),
 [review rubric](RUBRIC.md), [buyer quickstart](BUYER_QUICKSTART.md),
 [offer hypothesis](OFFER.md), [claims boundary](LEGAL_AND_CLAIMS.md), and [log](LOG.md).
+
+The separate [channel-observation normalizer](OBSERVATION_RECORDS.md) validates only a strict,
+minimal operator-recorded experiment file. It pins the registered configuration hash, derives
+configuration agreement from explicit observed fields, rejects duplicate issues and late final
+captures, and subtracts previews only within each exact retained window. It performs no network
+access, never accepts issue text or screenshots, does not add rolling traffic snapshots, and emits
+`null` rather than zero when an exact retained path row is absent. Its current activation report
+is reproducible with:
+
+```sh
+python -m support_eval_lab.observation \
+  experiments/sel-gh-001.json observations/sel-gh-001-window.json \
+  --as-of 2026-08-09T00:50:13Z \
+  --json-out samples/channel-observation.json \
+  --markdown-out samples/channel-observation.md
+```

@@ -77,3 +77,12 @@ file in the candidate's GitHub repository at the exact recorded `commit_sha`.
 `no_explicit_workflow_rule`, or `disallows_agent_submission`. The source URL, status, and basis are
 included in generated evidence. The engine validates their binding and controlled vocabulary; a
 human reviewer still owns the semantic judgment about what the pinned text actually says.
+
+## Consent catalog boundary
+
+The separate contribution-consent catalog may reduce repeated policy discovery, but it never
+supplies candidate permission automatically. Each catalog record is one manual historical review
+of one public file at one commit and becomes stale for live-candidate use after seven days. A
+candidate manifest must still carry its own current policy status, controlled basis, and pinned
+same-repository URL, and every manual gate above still applies. Catalog records are added by
+successor rather than rewritten; disallowed and insufficient policies remain visible.

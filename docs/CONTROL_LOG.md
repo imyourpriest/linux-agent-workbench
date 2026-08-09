@@ -401,3 +401,50 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - No customer, qualifying interest, order, payment, expense, subscription, domain, wallet
   movement, XLM use, private input, external marketing post, direct message, or third-party
   project interaction occurred. Revenue remains $0.00.
+
+## 2026-08-09 - Session 014 - Consent catalog and channel-observation closeout
+
+- Began the final bounded R-002 cycle from public `main`
+  `d8bde52d96bd2247a1cc62d5de80a8f2d84b585e` on local branch
+  `agent/r003-catalog-observation`. This cycle contains two Patch Cabinet impact units and one
+  Support Agent Regression Lab revenue unit. No additional unit began after the direct Usage-page
+  reading reached 27% remaining.
+- Added the separate strict contribution-consent catalog. Its schema binds repository, exact
+  commit, canonical pinned policy path, source SHA-256, manual review dates, exact workflow,
+  controlled classification, immutable successor history, and a non-authorizing claim boundary.
+  Future dates, invalid chronology, unsafe Markdown, malformed JSON, unsafe files, and output/input
+  aliases fail closed. The generated index makes no eligibility or permission claim.
+- Added four conservative records from the completed public scan: Creator Toolkit CLI and
+  LoopGate Harness remain `insufficiently_explicit`; Hugging Face Transformers and DSPy are
+  `explicitly_disallows`. There is intentionally no `explicitly_allows` record. A separate
+  acquisition receipt binds all four exact GitHub Contents API refs, Git blob identifiers, byte
+  counts, and decoded-byte SHA-256 values while explicitly disclaiming signatures and semantic
+  interpretation. Historical engine bundles and replay capsules were byte-preserved.
+- Added the offline SEL-GH-001 channel-observation normalizer and minimal activation record. The
+  registered configuration is file-hash and owner-namespace bound; configuration agreement is
+  derived from repeated observed fields. Checked traffic binds one exact retained 14-day window,
+  owner previews are subtracted only inside that window, duplicate issues and late final captures
+  are rejected, absent rows remain null/unobservable, and every output keeps checkout false.
+  The record contains no issue text, screenshot, customer/private input, or payment data.
+- Independent review reproduced four catalog P2s and three Support P1/two P2 findings. Corrections
+  added real-date bounds, inert CommonMark/GFM note encoding, chronological successors, a source
+  receipt, registered configuration/owner binding, duplicate-issue rejection, final deadlines,
+  retained-window arithmetic, and input/output identity checks. A final Support P2 showed that
+  portable two-file replacement is not transactional; the tool now claims only staged per-file
+  replacement, embeds the canonical JSON SHA-256 in Markdown, and requires full regeneration on
+  failure. Both independent final re-reviews reported no surviving P0-P2.
+- Final local verification passed 40 Patch tests with one expected Windows symlink-privilege skip,
+  41 Release Readiness tests with one expected skip, 35 Support tests with one expected skip, and
+  19 replay-control tests with one expected directory-symlink skip. All three Patch engines and
+  both immutable candidate bundles replayed; regenerated artifacts, compilation, dependency,
+  whitespace, and historical-evidence comparisons passed. Immediately before this log entry, the
+  bounded public-tree heuristic covered 126 files / 1062509 bytes / six signature families; it is
+  not a privacy guarantee.
+- Direct whole-account Usage readings during this cycle were 45%, 40%, and 27% remaining. No
+  change is attributed to an individual action. At 27%, D-024 permits only review resolution,
+  publication, and closeout and protects the 25% floor. R-002 now contains six impact and three
+  revenue units; cumulative dedicated totals are fourteen and seven, preserving 2:1.
+- At this pre-publication checkpoint the branch remains local and uncommitted. Revenue and cleared
+  receipts remain $0.00. No customer, qualifying interest, order, checkout, payment, merchant
+  account, purchase, subscription, domain, wallet movement, XLM use, private input, upstream
+  contact, pull request, social post, advertisement, or direct message occurred in this cycle.
