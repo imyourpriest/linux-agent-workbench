@@ -449,19 +449,22 @@ class ObservationTests(unittest.TestCase):
         project = Path(__file__).resolve().parents[1]
         actual_config = project / "experiments" / "sel-gh-001.json"
         actual_record = project / "observations" / "sel-gh-001-window.json"
-        alias = self.root / "alias.json"
-        os.link(actual_record, alias)
-        with self.assertRaisesRegex(ValueError, "aliases"):
-            observation.main(
-                [
-                    str(actual_config),
-                    str(actual_record),
-                    "--as-of",
-                    "2026-08-09T00:50:13Z",
-                    "--json-out",
-                    str(alias),
-                ]
-            )
+        # GitHub's Windows checkout and the default temporary directory can use different drives;
+        # hard links require the alias fixture to live on the input's filesystem.
+        with tempfile.TemporaryDirectory(dir=project) as same_volume_directory:
+            alias = Path(same_volume_directory) / "alias.json"
+            os.link(actual_record, alias)
+            with self.assertRaisesRegex(ValueError, "aliases"):
+                observation.main(
+                    [
+                        str(actual_config),
+                        str(actual_record),
+                        "--as-of",
+                        "2026-08-09T00:50:13Z",
+                        "--json-out",
+                        str(alias),
+                    ]
+                )
 
     def test_output_is_deterministic_lf_only_and_omits_author_login(self) -> None:
         project = Path(__file__).resolve().parents[1]
