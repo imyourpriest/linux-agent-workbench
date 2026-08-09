@@ -107,3 +107,11 @@ Pause the affected action or project when:
 - metrics show the offer is not creating value at its written validation gate.
 
 Pausing one unsafe action does not prevent useful local work elsewhere.
+
+### One-time R-002 usage exception
+
+D-024 supersedes only the numeric Usage stop for the remainder of reset period R-002 after the
+sponsor explicitly requested continued work toward the protected 25% floor. During this exception,
+start no long or multi-agent unit below 40%, start no new work unit at or below 30%, and stop at 25%
+or any lower sponsor report or limit warning. Every other stop condition remains unchanged. The
+ordinary 40%/50% thresholds automatically resume at the next reset.

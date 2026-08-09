@@ -55,6 +55,10 @@ BASE = {
     "has_tests": True,
     "has_contributing": True,
     "ai_policy": "allows",
+    "ai_policy_basis": "explicitly_allows_agent_submission",
+    "ai_policy_source_url": (
+        "https://github.com/example/tool/blob/" + "a" * 40 + "/CONTRIBUTING.md"
+    ),
     "requires_human_attestation": False,
     "sensitive_subsystem": False,
     "requires_secrets": False,
@@ -68,6 +72,17 @@ class CandidatePolicyTests(unittest.TestCase):
     def candidate(self, **changes):
         candidate = deepcopy(BASE)
         candidate.update(changes)
+        if (
+            "ai_policy_source_url" not in changes
+            and ({"repository", "commit_sha"} & changes.keys())
+        ):
+            candidate["ai_policy_source_url"] = (
+                "https://github.com/"
+                + candidate["repository"]
+                + "/blob/"
+                + candidate["commit_sha"]
+                + "/CONTRIBUTING.md"
+            )
         return candidate
 
     def test_strong_candidate_is_ready(self):
@@ -115,23 +130,54 @@ class CandidatePolicyTests(unittest.TestCase):
                 self.assertIn(expected, " ".join(result.reasons))
 
     def test_upstream_ai_prohibition_is_rejected(self):
-        result = evaluate_candidate(self.candidate(ai_policy="disallows"))
+        result = evaluate_candidate(
+            self.candidate(
+                ai_policy="disallows",
+                ai_policy_basis="disallows_agent_submission",
+            )
+        )
         self.assertFalse(result.eligible)
         self.assertIn("disallows", " ".join(result.reasons))
 
-    def test_human_attestation_and_unknown_policy_reduce_score(self):
+    def test_human_attestation_requires_investigation(self):
         result = evaluate_candidate(
-            self.candidate(requires_human_attestation=True, ai_policy="unknown")
+            self.candidate(requires_human_attestation=True)
         )
         self.assertTrue(result.eligible)
-        self.assertEqual(result.score, 85)
+        self.assertEqual(result.score, 90)
         self.assertEqual(result.band, "investigate")
-        self.assertEqual(len(result.cautions), 2)
+        self.assertEqual(len(result.cautions), 1)
 
-    def test_unknown_ai_policy_can_never_be_ready(self):
-        result = evaluate_candidate(self.candidate(ai_policy="unknown"))
-        self.assertEqual(result.score, 95)
-        self.assertEqual(result.band, "investigate")
+    def test_unknown_ai_policy_is_not_consent(self):
+        result = evaluate_candidate(
+            self.candidate(
+                ai_policy="unknown",
+                ai_policy_basis="no_explicit_workflow_rule",
+            )
+        )
+        self.assertFalse(result.eligible)
+        self.assertEqual(result.score, 0)
+        self.assertEqual(result.band, "ineligible")
+        self.assertIn("no explicit upstream policy permits", " ".join(result.reasons))
+
+    def test_ai_policy_assertion_is_bound_to_matching_pinned_source(self):
+        with self.assertRaisesRegex(ValueError, "ai_policy_basis"):
+            evaluate_candidate(
+                self.candidate(ai_policy_basis="no_explicit_workflow_rule")
+            )
+        for source in (
+            "https://github.com/example/tool/blob/main/CONTRIBUTING.md",
+            "https://github.com/another/tool/blob/" + "a" * 40 + "/CONTRIBUTING.md",
+            "https://github.com/example/tool/blob/" + "b" * 40 + "/CONTRIBUTING.md",
+            "https://github.com/example/tool/blob/" + "a" * 40 + "/../main/CONTRIBUTING.md",
+            "https://github.com/example/tool/blob/" + "a" * 40 + "/%2e%2e/main/CONTRIBUTING.md",
+            "https://github.com/example/tool/blob/" + "a" * 40 + "/docs%2f..%2fCONTRIBUTING.md",
+            "https://github.com/example/tool/blob/" + "a" * 40 + "/docs\\CONTRIBUTING.md",
+            "https://github.com//example/tool/blob/" + "a" * 40 + "/CONTRIBUTING.md",
+        ):
+            with self.subTest(source=source):
+                with self.assertRaisesRegex(ValueError, "pin a file|canonically pin"):
+                    evaluate_candidate(self.candidate(ai_policy_source_url=source))
 
     def test_invalid_spdx_expression_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "SPDX"):
@@ -148,6 +194,11 @@ class CandidatePolicyTests(unittest.TestCase):
         result = evaluate_candidate(self.candidate())
         serialized = result.to_dict()
         self.assertEqual(serialized["normalized_inputs"]["public"], True)
+        self.assertEqual(
+            serialized["evidence"]["ai_policy_basis"],
+            "explicitly_allows_agent_submission",
+        )
+        self.assertIn("/blob/" + "a" * 40 + "/", serialized["evidence"]["ai_policy_source_url"])
         self.assertEqual(sum(item["delta"] for item in serialized["score_trace"]), result.score)
 
     def test_results_are_deterministic(self):
@@ -274,7 +325,7 @@ class CandidatePolicyTests(unittest.TestCase):
             self.assertNotIn(str(root), markdown)
 
     def test_active_engine_dependency_identity_matches_runtime(self):
-        self.assertEqual(ENGINE_VERSION, "0.2.0")
+        self.assertEqual(ENGINE_VERSION, "0.3.0")
         self.assertEqual(EXPECTED_DEPENDENCIES, {"packaging": "26.3"})
         self.assertEqual(validate_runtime_dependencies(), EXPECTED_DEPENDENCIES)
 

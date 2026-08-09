@@ -1,0 +1,27 @@
+[
+  {
+    "repository": "HoungDev/creator-toolkit-cli",
+    "url": "https://github.com/HoungDev/creator-toolkit-cli",
+    "observed_at": "2026-08-08",
+    "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+    "public": true,
+    "archived": false,
+    "license_spdx": "MIT",
+    "linux_relevance": "ecosystem",
+    "maintainer_signal": "help_wanted",
+    "issue_url": "https://github.com/HoungDev/creator-toolkit-cli/issues/18",
+    "task_type": "documentation",
+    "last_activity_at": "2026-08-07",
+    "estimated_hours": 2,
+    "has_reproduction": false,
+    "has_tests": true,
+    "has_contributing": true,
+    "ai_policy": "unknown",
+    "requires_human_attestation": false,
+    "sensitive_subsystem": false,
+    "requires_secrets": false,
+    "requires_production_access": false,
+    "requires_network_probe": false,
+    "open_pull_requests": 1
+  }
+]

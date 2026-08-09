@@ -17,6 +17,8 @@
     "has_tests": true,
     "has_contributing": true,
     "ai_policy": "unknown",
+    "ai_policy_basis": "no_explicit_workflow_rule",
+    "ai_policy_source_url": "https://github.com/example-linux/quiet-cli/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md",
     "requires_human_attestation": false,
     "sensitive_subsystem": false,
     "requires_secrets": false,

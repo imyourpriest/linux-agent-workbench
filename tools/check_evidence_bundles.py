@@ -27,6 +27,7 @@ SHA256 = re.compile(r"^[0-9a-f]{64}$")
 SEMVER = re.compile(r"^(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)$")
 ADAPTER_ID = re.compile(r"^replay-v[1-9][0-9]*$")
 VERSION_TEXT = re.compile(r"^[0-9]+(?:\.[0-9]+){1,2}$")
+SUPPORTED_OUTPUT_SCHEMAS = {"1", "2"}
 
 
 @dataclass(frozen=True)
@@ -203,7 +204,7 @@ def _load_registry(root: Path) -> dict[str, object]:
             raise ValueError(f"engine {engine_version}: descriptor differs")
         if engine["engine_name"] != "patch-cabinet" or engine["engine_version"] != engine_version:
             raise ValueError(f"engine {engine_version}: identity differs")
-        if engine["output_schema_version"] != "1":
+        if engine["output_schema_version"] not in SUPPORTED_OUTPUT_SCHEMAS:
             raise ValueError(f"engine {engine_version}: output schema differs")
         if engine["mode"] not in {"active", "replay-only"}:
             raise ValueError(f"engine {engine_version}: mode differs")

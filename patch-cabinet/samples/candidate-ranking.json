@@ -1,12 +1,12 @@
 {
-  "schema_version": "1",
+  "schema_version": "2",
   "engine": {
     "name": "patch-cabinet",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "policy": {
-    "version": "season-1.2",
-    "source_sha256": "f65055c2c771296958b4bc6fc464ba79f48af756b6d2a47404ca78042bc7582a",
+    "version": "season-1.3",
+    "source_sha256": "f42dd4acb1541bf0041e2f2f1551bc87693b5070ea8ae7820cb6b9467076450d",
     "as_of": "2026-08-07",
     "evaluation_mode": "historical"
   },
@@ -17,26 +17,23 @@
   "results": [
     {
       "repository": "example-linux/quiet-cli",
-      "eligible": true,
-      "score": 95,
-      "band": "investigate",
+      "eligible": false,
+      "score": 0,
+      "band": "ineligible",
       "reasons": [
-        "explicit issue invites the work",
-        "Linux relevance is direct",
-        "estimated scope is 2 hours",
-        "last recorded activity was 14 days before observation"
+        "no explicit upstream policy permits this AI-operated contribution workflow"
       ],
-      "cautions": [
-        "upstream AI-contribution policy is unknown",
-        "historical evaluation cannot be labeled ready"
-      ],
+      "cautions": [],
       "evidence": {
         "url": "https://example.invalid/example-linux/quiet-cli",
         "observed_at": "2026-08-07",
         "commit_sha": "0123456789abcdef0123456789abcdef01234567",
         "issue_url": "https://example.invalid/example-linux/quiet-cli/issues/12",
         "license_spdx": "MIT",
-        "task_type": "bugfix"
+        "task_type": "bugfix",
+        "ai_policy": "unknown",
+        "ai_policy_basis": "no_explicit_workflow_rule",
+        "ai_policy_source_url": "https://github.com/example-linux/quiet-cli/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md"
       },
       "normalized_inputs": {
         "repository": "example-linux/quiet-cli",
@@ -56,6 +53,8 @@
         "has_tests": true,
         "has_contributing": true,
         "ai_policy": "unknown",
+        "ai_policy_basis": "no_explicit_workflow_rule",
+        "ai_policy_source_url": "https://github.com/example-linux/quiet-cli/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md",
         "requires_human_attestation": false,
         "sensitive_subsystem": false,
         "requires_secrets": false,
@@ -66,40 +65,7 @@
         "evaluation_mode": "historical",
         "last_activity_days": 14
       },
-      "score_trace": [
-        {
-          "rule": "maintainer signal",
-          "delta": 30
-        },
-        {
-          "rule": "Linux relevance",
-          "delta": 20
-        },
-        {
-          "rule": "reproduction recorded",
-          "delta": 15
-        },
-        {
-          "rule": "automated tests recorded",
-          "delta": 10
-        },
-        {
-          "rule": "activity recency",
-          "delta": 10
-        },
-        {
-          "rule": "bounded scope",
-          "delta": 10
-        },
-        {
-          "rule": "contribution guide recorded",
-          "delta": 5
-        },
-        {
-          "rule": "AI policy unknown",
-          "delta": -5
-        }
-      ]
+      "score_trace": []
     }
   ]
 }

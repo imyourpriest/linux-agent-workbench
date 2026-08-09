@@ -26,6 +26,13 @@ comparison report.
 Response hashes are stable identifiers, not encryption or a confidentiality guarantee. Short,
 common, or otherwise predictable responses may be recoverable by guessing and hashing candidates.
 
+The public interest form requests no private data or payment, but it cannot technically prevent a
+person from entering prohibited content into an editable public GitHub issue. If suspected private,
+personal, credential, confidential, payment, incident, or regulated content appears, do not quote
+or copy it into project logs or replies. Minimize any response, advise the submitter to remove the
+content through GitHub, and pause the channel while the repository owner uses GitHub's private
+support or content-removal route as appropriate.
+
 ## Before any custom work
 
 - Use only a customer-owned or authorized policy source that is already public and explicitly

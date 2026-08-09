@@ -67,8 +67,17 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
   change is not attributed to a particular project action.
 - Final publication-audit direct browser observation: 67% remaining after preparing the public
   merge receipt. This is a whole-account snapshot and is not attributed to a particular action.
-- Operational stop: 40% remaining; no long or multi-agent unit begins below 50%.
-- Ending UI reading: 67% remaining, directly observed during the final publication audit.
+- Ordinary operational stop: 40% remaining; no long or multi-agent unit begins below 50%.
+- Prior closeout UI reading: 67% remaining, directly observed before the continuation request.
+- Continuation authorization: the sponsor then explicitly requested continued work until only 25%
+  remains for R-002. D-024 temporarily replaces the 40% stop with a 25% hard floor for this reset
+  only; the first direct reading after reopening the Usage page was 64% remaining.
+- Continuation impact observations: 60% remained after the autonomous-contribution consent scan;
+  59% remained after the consent-policy engine migration. Both are whole-account snapshots, and
+  neither delta is attributed to an individual action.
+- Review observations: 54% remained after the first adversarial correction passes, and 49%
+  remained after the final local verification before publication. These are also whole-account
+  snapshots with no per-action attribution.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -76,7 +85,10 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 | 2026-08-08 | Patch Cabinet | 1 | Versioned 0.1.0 replay capsule and active 0.2.0 migration | combined post-Patch snapshot: 83% |
 | 2026-08-08 | Patch Cabinet | 1 | Adversarial execution, path-containment, and active-vector correction | combined post-Patch snapshot: 83% |
 | 2026-08-08 | Support Agent Regression Lab | 1 | Narrowed ten-case regression starter, local comparison path, and adversarial correction | post-unit snapshot: 73% |
+| 2026-08-08 | Patch Cabinet | 1 | Autonomous-contribution consent scan with no ready canary | post-unit snapshot: 60% |
+| 2026-08-08 | Patch Cabinet | 1 | Consent-policy engine 0.3.0 and historical replay preservation | post-unit snapshot: 59% |
+| 2026-08-08 | Support Agent Regression Lab | 1 | GitHub-native discovery channel preparation and same-design activation | final unit snapshot pending activation |
 
-R-002 has two Patch Cabinet units and one Support Agent Regression Lab unit, preserving the 2:1
-period ratio. Across both periods, the dedicated totals are ten impact units and five revenue
+R-002 has four Patch Cabinet units and two Support Agent Regression Lab units, preserving the 2:1
+period ratio. Across both periods, the dedicated totals are twelve impact units and six revenue
 units. Publication and shared governance are not backfilled as extra dedicated work units.

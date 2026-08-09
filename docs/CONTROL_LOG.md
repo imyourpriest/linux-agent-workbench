@@ -322,3 +322,43 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   completion work, not another dedicated unit. Revenue remains $0.00. No customer, interest
   submission, marketing post, checkout, payment, merchant account, purchase, domain, wallet, XLM,
   subscription, upstream contact, or customer/private input changed.
+
+## 2026-08-08 - Session 012 - Consent gate and first channel local checkpoint
+
+- D-024 records the sponsor's one-time request to continue R-002 toward, but not below, the 25%
+  protected floor. Direct whole-account readings during this continuation were 64%, 60%, 59%,
+  54%, and 49% remaining. No delta is attributed to an individual action.
+- Completed one bounded, public, read-only Patch candidate scan. Creator Toolkit CLI issue 18
+  remained `investigate` because no explicit policy permits this AI-operated workflow. LoopGate
+  issue 2 had explicit AI rules but no bounded remaining patch and possible contributor overlap.
+  Several near-matches expressly barred autonomous submissions. No upstream repository was
+  cloned, downloaded, executed, contacted, assigned, reacted to, or modified.
+- Added a second immutable candidate bundle under engine 0.2.0, then migrated new output to engine
+  0.3.0, policy `season-1.3`, and schema 2. The consent status and controlled basis must now bind
+  to a same-repository GitHub policy file at the exact candidate commit and are emitted in result
+  evidence. Canonical-path validation rejects wrong repositories, wrong commits, raw or encoded
+  traversal, backslashes, dot components, and doubled leading separators. Historical engines
+  0.1.0 and 0.2.0 and both prior bundles remain replay-only and byte-preserved.
+- Independent security review first reproduced the unbound-enum weakness, then raw/encoded path
+  traversal and doubled-leading-separator cases. Independent final review found no surviving
+  P0-P2 issue after schema binding, frozen replay-v2, canonical URL validation, regression tests,
+  and registry/hash updates.
+- Prepared D-026's first revenue channel: one SHA-pinned project-owned GitHub pre-release, six
+  accurate added topics, one corrected repository description, and one unique public entry path.
+  It offers only the free synthetic starter, has no uploaded assets or checkout, and uses no other
+  project's issues, comments, discussions, direct messages, scraped contacts, or bulk outreach.
+  Measurement treats missing top-path rows as unobservable, subtracts owner previews, freezes the
+  issue form, and counts only unverified, in-window, boundary-compliant, non-owner/non-bot form
+  issues once per account. The public-submission incident path fails closed. Independent final
+  channel review found no surviving P0-P2 issue.
+- Final local checks passed: Patch Cabinet 27/27; Release Readiness Lab 41 tests with one expected
+  Windows privilege-dependent symlink skip; Support Agent Regression Lab 17/17; replay controls
+  19 tests with one expected Windows symlink skip. All three registered Patch engines and both
+  immutable evidence bundles replayed. Generated samples, compilation, package checks, diff
+  checks, and the original bundle byte-comparison passed. The pre-log bounded public-tree scan
+  covered 109 files / 914263 bytes / six signature families.
+- This records two Patch units and one Support Agent Regression Lab unit, bringing R-002 to a 4:2
+  ratio and the cumulative dedicated totals to 12 impact and 6 revenue units. The branch is still
+  local and uncommitted at this checkpoint; the release and topics are not active. Revenue,
+  interest, orders, payments, expenses, subscriptions, domains, wallet movements, and XLM use
+  remain $0 or absent.

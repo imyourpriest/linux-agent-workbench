@@ -128,3 +128,45 @@ Append-only project record.
   not rewritten. Ordinary dependency proposals are restored under the versioned migration rule.
 - This publication completes the two already recorded Patch units; it is not an additional work
   unit. No upstream candidate was contacted and no patch was submitted.
+
+## 2026-08-08 - Autonomous-contribution consent scan
+
+- Revalidated Creator Toolkit CLI issue 18 at commit
+  `7fbc4b1af8f074a921f4254f6d89225d612d7a3b`. It remained open, unassigned, inviting,
+  MIT-licensed, and bounded, but no explicit upstream policy permitted this AI-operated workflow.
+  Engine 0.2.0 therefore retained its prior `investigate` result and score 65; no implementation
+  or contact followed.
+- Reviewed LoopGate Harness issue 2 at commit
+  `8e5c49be960d656cba5dbae7724d8a6aeef5acb3`. Its policies explicitly expect AI use and define
+  agent boundaries, but its completed documentation checklist leaves an open-ended mutant hunt,
+  and an earlier contributor expressed interest. It was rejected manually as neither a bounded
+  six-hour patch nor a low-conflict canary.
+- Independent policy checks confirmed that several other repositories distinguish permitted
+  human-led AI assistance from prohibited autonomous submissions. No target was cloned,
+  downloaded, executed, contacted, assigned, reacted to, or modified. No issue, pull request,
+  comment, branch, or account action was created.
+- The new engine-0.2.0 bundle replayed exactly beside the preserved engine-0.1.0 bundle. Its four
+  artifact hashes are recorded in receipt
+  `2026-08-08-agent-consent-scan-receipt.json` (receipt SHA-256
+  `0a31e6f1c48d939a56eca6be00b06ab004ccd99cc9e9a5183e7033d70b896875`). This is one Patch
+  Cabinet discovery work unit with an honest no-ready-candidate outcome.
+
+## 2026-08-08 - Consent policy engine 0.3.0
+
+- Added active policy `season-1.3`: unknown upstream workflow consent is now ineligible, and
+  `allows` means the pinned policy permits the actual AI-operated contribution workflow rather
+  than merely human-led use of an AI tool. A human attestation remains a separate `investigate`
+  checkpoint.
+- Added output schema 2 so consent is not an unbound enum. Each manifest now binds the controlled
+  status and basis to a same-repository policy file at the candidate commit, and generated evidence
+  exposes those fields for review. The validator checks the binding and vocabulary; it does not
+  pretend to understand the pinned prose automatically.
+- Preserved engines 0.1.0 and 0.2.0 as replay-only. Engine 0.2.0 now replays the consent-scan
+  bundle; engine 0.3.0 uses an offline copy of the same unmodified `packaging` 26.3 wheel, a
+  hash-pinned frozen `season-1.3` policy, and a regenerated active synthetic vector. Historical
+  evidence was not changed.
+- The Patch policy suite passed 27 of 27 tests. The replay-control suite passed 18 tests with one
+  Windows privilege-dependent directory-symlink test skipped. All three registered engine
+  workers passed and both immutable candidate bundles replayed exactly.
+- This is one Patch Cabinet policy-maintenance work unit. No upstream contribution, target-code
+  execution, account action, payment, expense, XLM movement, or external contact occurred.

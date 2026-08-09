@@ -66,7 +66,7 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
         self.write_json(self.receipt_path, receipt)
 
     def test_public_repository_replays_every_registered_engine(self) -> None:
-        self.assertEqual(checker.verify(ROOT), 1)
+        self.assertEqual(checker.verify(ROOT), 2)
 
     def test_unknown_artifact_engine_fails_closed(self) -> None:
         policy = self.read_json(self.policy_path)
@@ -105,8 +105,8 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
     def test_registry_rejects_duplicate_keys(self) -> None:
         raw = self.registry_path.read_text(encoding="utf-8")
         raw = raw.replace(
-            '"active_engine": "0.2.0",',
-            '"active_engine": "0.1.0",\n  "active_engine": "0.2.0",',
+            '"active_engine": "0.3.0",',
+            '"active_engine": "0.1.0",\n  "active_engine": "0.3.0",',
             1,
         )
         self.registry_path.write_text(raw, encoding="utf-8", newline="\n")
@@ -142,6 +142,7 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
     def test_adapter_lock_and_capsule_note_integrity_fail_closed(self) -> None:
         paths = [
             self.root / "patch-cabinet" / "verifiers" / "replay_v1.py",
+            self.root / "patch-cabinet" / "verifiers" / "replay_v2.py",
             self.root / "patch-cabinet" / "verifiers" / "0.1.0" / "requirements.lock",
             self.root / "patch-cabinet" / "verifiers" / "0.1.0" / "CAPSULE.md",
         ]
@@ -196,7 +197,7 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
     def test_active_source_must_match_registry(self) -> None:
         engine_source = self.root / "patch-cabinet" / "src" / "patch_cabinet" / "engine.py"
         engine_source.write_text(
-            engine_source.read_text(encoding="utf-8").replace('"0.2.0"', '"0.3.0"'),
+            engine_source.read_text(encoding="utf-8").replace('"0.3.0"', '"0.4.0"'),
             encoding="utf-8",
             newline="\n",
         )
@@ -237,12 +238,12 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
         payload["results"][0]["score"] += 1
         self.write_json(vector, payload)
         registry = self.read_json(self.registry_path)
-        registry["engines"]["0.2.0"]["test_vector"]["policy"]["sha256"] = hashlib.sha256(
+        registry["engines"]["0.3.0"]["test_vector"]["policy"]["sha256"] = hashlib.sha256(
             vector.read_bytes()
         ).hexdigest()
         self.write_json(self.registry_path, registry)
         with self.assertRaisesRegex(ValueError, "canonical JSON"):
-            checker._replay_engine(self.root, "0.2.0")
+            checker._replay_engine(self.root, "0.3.0")
 
     def test_symlinked_evidence_directory_fails_before_read(self) -> None:
         evidence = self.root / "patch-cabinet" / "evidence"

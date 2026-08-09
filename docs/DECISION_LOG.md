@@ -210,3 +210,66 @@ comes first, under the operational view definition in the charter.
 test output and overstated example labels as completed human review. A smaller, explicit,
 review-ready pilot is both more useful and more honest, while preserving the no-private-data and
 no-production-access boundary.
+
+## 2026-08-08 - D-024 - One-time R-002 work may approach the protected floor
+
+**Decision:** For the remainder of reset period R-002 only, supersede D-020's 40% operational stop
+after the sponsor explicitly requested continued work until only 25% remains. Preserve 25% as the
+hard floor: read the signed-in Usage page before and after bounded units, begin no long or
+multi-agent unit below 40%, begin no new work unit at or below 30%, and stop immediately at 25%, a
+limit warning, or a lower sponsor report. The ordinary 40% stop and 50% long-unit threshold return
+automatically at the next reset.
+
+**Why:** The earlier buffer protected the sponsor after an unexplained overshoot. The sponsor now
+knowingly authorizes use of that buffer for this reset while retaining the original 25% personal
+reserve. Shorter endgame work and direct UI checks reduce, but cannot eliminate, delayed-meter
+risk; no exact per-action usage is inferred.
+
+## 2026-08-08 - D-025 - Autonomous contribution consent is a hard eligibility gate
+
+**Decision:** Preserve Patch Cabinet engines 0.1.0 and 0.2.0 as replay-only. Make engine 0.3.0 with
+policy `season-1.3` the active generator, retaining `packaging==26.3`. Under the new policy,
+`ai_policy: allows` means pinned upstream text permits this actual AI-operated workflow: the AI
+chooses and prepares the change, discloses its assistance, and a human performs only required
+identity or attestation steps. Permission for human-led AI assistance is insufficient when the
+same policy bars autonomous agents from opening issues or pull requests. `unknown` is ineligible,
+not a scoring caution; `disallows` records an explicit conflict. Schema 2 requires a
+same-repository policy-file URL pinned to the candidate commit and a controlled basis matching the
+status, and emits all three as evidence. The engine verifies that binding and vocabulary; manual
+review remains responsible for interpreting the pinned text.
+
+Engine 0.2.0 retains the immutable autonomous-consent scan bundle created before this migration,
+so its prior `investigate` treatment of unknown policy remains exactly replayable. Engine 0.3.0
+owns a new hash-bound synthetic vector. No prior evidence or frozen policy is rewritten.
+
+**Why:** Independent candidate scans found projects that welcome disclosed AI assistance while
+explicitly prohibiting autonomous-agent submissions. A single generic AI-policy label could hide
+that distinction. Treating silence as consent would create avoidable maintainer burden and weaken
+the project's claim to be upstream-compatible.
+
+## 2026-08-08 - D-026 - First revenue channel is a project-owned GitHub pre-release
+
+**Decision:** Run one 14-day GitHub-native discovery experiment for Support Agent Regression Lab.
+Create one unique channel-entry path not intentionally linked from standard navigation, accurately
+classify the project with six added repository topics, and publish one pre-release targeting the
+exact merge commit. The release is the only intentional direct link to the entry page; topics are
+classification and discovery metadata, and views are not attributed exclusively to the release.
+Correct the repository description once so it names both the open-source-impact and
+support-agent-evaluation workstreams. The release offers the free synthetic starter, not a
+purchase, and contains no uploaded asset, price, checkout, mention, discussion post, or request for
+private input. Do not promote through another repository's issues, pull requests, comments,
+discussions, direct messages, scraped contacts, or bulk outreach.
+
+Record path-level GitHub Traffic observations on days 1, 7, 13, and 14 when available; subtract
+logged owner previews and retain GitHub's measurement limitations. A missing top-path row is
+unobservable, not zero. Freeze copy, issue form, and topics for the window except for platform,
+privacy, security, or misleading-claim corrections. A retained row below ten qualified views or
+zero qualifying self-reported interest signals at the day-14 observation ends this channel as
+insufficient signal. Qualifying signals follow the charter's non-owner, non-bot, one-per-account,
+boundary-compliant definition and remain unverified. No outcome activates checkout or bypasses the
+existing validation and first-sale gates.
+
+**Why:** The repository has no established audience. A project-owned release and accurate topics
+are the narrowest platform-native discovery test that does not impose on another community or
+pretend to have demand. Its likely low reach is a measured baseline, not evidence for spamming a
+larger channel.
