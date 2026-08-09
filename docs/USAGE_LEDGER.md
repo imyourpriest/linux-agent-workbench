@@ -78,6 +78,10 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 - Review observations: 54% remained after the first adversarial correction passes, and 49%
   remained after the final local verification before publication. These are also whole-account
   snapshots with no per-action attribution.
+- Publication observations: 47% remained at the first direct checkpoint after PR 7 merged and
+  its main-branch CI, CodeQL, and dependency-graph runs passed; 46% remained after the reviewed
+  GitHub-native pre-release and metadata were activated. These are whole-account snapshots and no
+  delta is attributed to an individual action.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -87,7 +91,7 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 | 2026-08-08 | Support Agent Regression Lab | 1 | Narrowed ten-case regression starter, local comparison path, and adversarial correction | post-unit snapshot: 73% |
 | 2026-08-08 | Patch Cabinet | 1 | Autonomous-contribution consent scan with no ready canary | post-unit snapshot: 60% |
 | 2026-08-08 | Patch Cabinet | 1 | Consent-policy engine 0.3.0 and historical replay preservation | post-unit snapshot: 59% |
-| 2026-08-08 | Support Agent Regression Lab | 1 | GitHub-native discovery channel preparation and same-design activation | final unit snapshot pending activation |
+| 2026-08-08 | Support Agent Regression Lab | 1 | GitHub-native discovery channel preparation and same-design activation | pre-publication 49%; post-merge 47%; post-activation 46% |
 
 R-002 has four Patch Cabinet units and two Support Agent Regression Lab units, preserving the 2:1
 period ratio. Across both periods, the dedicated totals are twelve impact units and six revenue

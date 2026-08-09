@@ -362,3 +362,42 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   local and uncommitted at this checkpoint; the release and topics are not active. Revenue,
   interest, orders, payments, expenses, subscriptions, domains, wallet movements, and XLM use
   remain $0 or absent.
+
+## 2026-08-09 - Session 013 - Consent migration publication and channel activation
+
+- Committed the reviewed 37-file scope as `b25c0684ed1d7452281a64e80a8cf334a42233a9` on
+  `agent/r003-impact-revenue-cycle`. Explicit staging checks excluded `.private`, `.tmp`, caches,
+  build output, distributions, and egg-info. The connector returned HTTP 403 for pull-request
+  creation, ready-for-review, and merge mutations, so the documented authenticated GitHub CLI
+  fallback opened draft PR 7, marked it ready only after hosted checks, and squash-merged its exact
+  head.
+- PR 7 CI run `31286258695` passed Python 3.12, 3.13, 3.14, Windows, and generated-evidence
+  checks; CodeQL run `31286257927` passed Actions and Python analysis. Public `main` became
+  `2b162ce572379a10a61007a722a7ba7e23d43f75`. Main CI run `31286316986`, CodeQL run
+  `31286316861`, and dependency-graph run `31286318876` then passed on that exact merge commit.
+- A just-in-time checkpoint confirmed the authenticated owner account, public repository,
+  owner-admin permission, enabled private vulnerability reporting, enabled Dependabot security
+  updates, secret scanning and push protection, no prior release, the expected five topics and old
+  description, and no new identity, terms, recovery, or credential prompt.
+- Corrected the description to name both workstreams and added only the six reviewed topics.
+  Published source-only pre-release `support-eval-starter-v0.1.0` at
+  `2026-08-09T00:33:48Z`, pinned by lightweight tag to the exact merge commit. It is not a draft,
+  is not the latest stable release, and has no uploaded assets. The release body matched the
+  versioned template exactly after its one SHA substitution.
+- The release-body SHA-256 is
+  `9c2db782538e604c05188525fbb7c39424d16e33287ff867118cf285a5a03acd`; the frozen issue-form
+  SHA-256 is `e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e`.
+  The complete activation receipt and frozen metadata are in `support-eval-lab/CHANNEL_EXPERIMENTS.md`.
+- Direct whole-account Usage-page readings showed 47% remaining after the first post-merge
+  checkpoint and 46% after activation. Neither change is attributed to a particular action.
+  Release activation completes the previously counted revenue unit and preserves R-002's 4:2
+  dedicated-work ratio.
+- Post-receipt local verification passed 27 Patch tests, 41 Release Readiness tests with one
+  expected Windows privilege-dependent symlink skip, 17 Support Eval tests, and 19 replay-control
+  tests with one expected Windows directory-symlink skip. All three registered Patch engines and
+  both immutable bundles passed, as did compilation and dependency checks. Immediately before
+  this log line was added, the bounded public-tree scan covered 109 files / 924814 bytes / six
+  signature families; it is a heuristic supplement, not a privacy guarantee.
+- No customer, qualifying interest, order, payment, expense, subscription, domain, wallet
+  movement, XLM use, private input, external marketing post, direct message, or third-party
+  project interaction occurred. Revenue remains $0.00.

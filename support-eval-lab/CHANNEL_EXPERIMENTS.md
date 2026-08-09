@@ -69,3 +69,39 @@ The issue form cannot enforce its warning. If prohibited or possibly sensitive c
 do not quote, summarize, hash, screenshot, or copy it into project files, comments, or logs. Keep
 any public response minimal, advise the submitter to remove the content, stop counting or promoting
 the channel, and escalate to the human owner for GitHub's private support or content-removal route.
+
+### Activation record - 2026-08-09
+
+- Current status: active; frozen observation window in progress
+- Published: `2026-08-09T00:33:48Z`
+- Observation end: `2026-08-23T00:33:48Z`, followed by the next available daily traffic refresh
+- Repository owner and authenticated actor: `imyourpriest`; repository was public and
+  owner-administered at the pre-action checkpoint
+- Sponsor authorization: the current autonomous-project mandate and the one-reset D-024 usage
+  continuation were re-checked immediately before activation; no identity, terms, recovery, or
+  credential prompt appeared
+- Target merge commit: `2b162ce572379a10a61007a722a7ba7e23d43f75`
+- Release: `support-eval-starter-v0.1.0`, research pre-release, not draft, no uploaded assets,
+  <https://github.com/imyourpriest/linux-agent-workbench/releases/tag/support-eval-starter-v0.1.0>
+- Entry URL:
+  <https://github.com/imyourpriest/linux-agent-workbench/blob/2b162ce572379a10a61007a722a7ba7e23d43f75/support-eval-lab/channels/github-native-v0.1.0.md>
+- Entry-source SHA-256: `276ee4506b1d94a9e97e00859d28a4e501563076670b924149f2b6ce6ec9a51b`
+- Release-body SHA-256: `9c2db782538e604c05188525fbb7c39424d16e33287ff867118cf285a5a03acd`
+- Frozen issue-form SHA-256: `e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e`
+- Versioned release-template SHA-256: `c2a827721da63b3f8d69bfa0ded102f613e3f0f58de0cc76af306b4a7581f5a0`
+- Description before: `Auditable agent-directed experiments for useful Linux and open-source work`
+- Description after: `Auditable AI-directed experiments in open-source impact and support-agent regression evaluation`
+- Topics before: `ai-agents`, `github-actions`, `linux`, `open-source`,
+  `reproducible-research`
+- Topics after: `ai-agents`, `ai-evaluation`, `customer-support`, `github-actions`, `linux`,
+  `llm-evaluation`, `open-source`, `python`, `reproducible-research`, `software-testing`,
+  `support-automation`
+- Owner previews before and at activation: 0 browser entry-page previews; local Git object and
+  release-API verification are not recorded as page views
+- Raw path views: unobserved; qualified views: unobserved
+- Qualifying self-reported interest signals: 0; orders: 0; payments and cleared revenue: $0.00
+
+The release body exactly matched the versioned template after replacing its single merge-SHA
+placeholder. The lightweight tag resolved directly to the target commit. GitHub's latest-release
+endpoint returned no latest release, as expected for this pre-release. These checks establish the
+published configuration, not discovery, attribution, buyer intent, or future availability.
