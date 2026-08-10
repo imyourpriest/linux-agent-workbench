@@ -87,6 +87,12 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
   after adversarial corrections and repository-wide verification. These are direct whole-account
   snapshots. No delta is attributed to a workstream, unit, tool call, or project action. At 27%,
   D-024 prohibits new work; only review resolution, publication, and closeout remain.
+- Later whole-account snapshots: the sponsor reported 14% remaining and explicitly authorized use
+  of the remaining ten percentage points for one bounded source check, review, publication, and
+  closeout. The first direct Usage-page reading soon afterward showed 12% remaining, a reset at
+  August 15, 2026 4:22 PM, no reset available, and zero credits. D-029 targets approximately 4%
+  remaining for this one-time extension. These readings are not attributed to this project or an
+  individual action, and the extension is not a new work unit.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -100,6 +106,7 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 | 2026-08-09 | Patch Cabinet | 1 | Strict non-authorizing contribution-consent catalog and adversarial correction | combined final-cycle snapshots: 45%, 40%, 27% |
 | 2026-08-09 | Patch Cabinet | 1 | Four pinned consent records, acquisition receipt, and deterministic index | combined final-cycle snapshots: 45%, 40%, 27% |
 | 2026-08-09 | Support Agent Regression Lab | 1 | Strict offline SEL-GH-001 observation normalizer and activation record | combined final-cycle snapshots: 45%, 40%, 27% |
+| 2026-08-10 | Shared closeout | 0 | Source-limited SEL-GH-001 checkpoint and measurement-boundary correction | 14% sponsor report; 12% browser observed; one-time target approximately 4% |
 
 R-002 has six Patch Cabinet units and three Support Agent Regression Lab units, preserving the 2:1
 period ratio. Across both periods, the dedicated totals are fourteen impact units and seven revenue

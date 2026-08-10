@@ -46,3 +46,19 @@ registered frozen configuration, no owner browser entry preview was made, no lab
 issue was present at the recorded checkpoint, and traffic had not been checked. Its view result is
 therefore unobserved, not zero. These are operator-recorded assertions; the offline normalizer does
 not independently query GitHub.
+
+## Source-limited platform captures
+
+The current checked-row contract is stronger than GitHub's Popular content response. GitHub
+describes the endpoint as returning up to ten popular content paths over the last 14 days, but the
+response does not expose an exact window start, end, or cutoff. Capture time must not be substituted
+for that undisclosed boundary. A capture without exact source bounds therefore stays outside the
+normalizer and cannot update the cumulative observation. The current normalized report remains
+unchanged with `null` raw and qualified views and a `not-observed` state; the ad hoc receipt does
+not validate those values.
+
+The `2026-08-10` source check is recorded separately in
+`observations/sel-gh-001-source-check-2026-08-10.json`. Its absent exact-path result means only that
+the target was not among the returned top paths at capture time. It does not mean zero views, fewer
+than ten views, a unique-person count, or an exact day-one bucket. Any broader source schema must be
+introduced prospectively and must not reinterpret historical normalizer records.

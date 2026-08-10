@@ -313,3 +313,30 @@ checkout or supersedes the charter gate.
 **Why:** Manual platform observations are easy to overcount or narrate into buyer evidence. A
 closed schema and deterministic state machine preserve the measurement boundary while avoiding a
 network integration or collection of submitted content.
+
+## 2026-08-10 - D-029 - One-time R-002 usage extension for source-limited closeout
+
+**Decision:** For this bounded SEL-GH-001 source check, its review, publication, and closeout only,
+the sponsor's explicit request to use the remaining ten percentage points supersedes D-024's 25%
+floor. Target approximately 4% remaining from the sponsor-reported 14% snapshot, use direct Usage
+page checks when available, and stop on any limit warning or lower sponsor report. This is not a
+new work unit and creates no automatic exception for a future reset or continuation.
+
+**Why:** The sponsor knowingly authorized a small final evidence pass before the imminent reset.
+The dashboard remains a delayed, whole-account measure, so neither the reported 14% nor the later
+direct 12% snapshot can be attributed to this project or any individual action.
+
+## 2026-08-10 - D-030 - GitHub traffic source limits override inferred window bounds
+
+**Decision:** Do not fabricate exact retained-window start or end timestamps for GitHub's Popular
+content endpoint. GitHub describes that endpoint as the top ten popular contents over the last 14
+days, but its response exposes only path, title, count, and uniques. A source capture that lacks an
+exact cutoff stays outside the current observation normalizer, whose checked-row contract requires
+an exact 14-day window ending at capture time. An absent exact target is `unobservable`, not zero;
+the existing normalized report remains unchanged with `null` raw and qualified views and a
+`not-observed` state. The ad hoc source receipt does not validate those values. Any schema redesign
+applies only prospectively and must preserve historical records.
+
+**Why:** The current normalizer contract is stronger than the available source. Treating capture
+time as GitHub's undisclosed cutoff would turn an implementation assumption into evidence and
+could misclassify an absent top-ten row as measured traffic.

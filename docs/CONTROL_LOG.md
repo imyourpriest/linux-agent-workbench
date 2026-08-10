@@ -448,3 +448,39 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   receipts remain $0.00. No customer, qualifying interest, order, checkout, payment, merchant
   account, purchase, subscription, domain, wallet movement, XLM use, private input, upstream
   contact, pull request, social post, advertisement, or direct message occurred in this cycle.
+
+## 2026-08-10 - Session 015 - Source-limited traffic checkpoint prepared
+
+- D-029 records the sponsor's one-time authorization to continue from a reported 14% toward
+  approximately 4% remaining for this bounded checkpoint, review, publication, and closeout. A
+  direct Usage-page reading soon afterward showed 12% remaining, an August 15, 2026 4:22 PM reset,
+  no reset available, and zero credits. Both are whole-account snapshots; no change is attributed
+  to this project or any action, and no new work unit is counted.
+- At `2026-08-10T22:33:36Z`, the authenticated GitHub Popular content request returned three
+  top-path rows and no exact match for the frozen SEL-GH-001 entry path. The endpoint supplies no
+  exact retained-window cutoff, so D-030 keeps this source-limited receipt outside the current
+  normalizer. The absent top-ten row is unobservable, not zero; the current normalized report
+  remains unchanged with null raw and qualified views and a not-observed state. The new receipt
+  does not validate those values.
+- The `2026-08-10T22:34:53Z` through `2026-08-10T22:35:05Z` configuration recheck found the public
+  repository, frozen description and topics, default `main`, source-only research pre-release,
+  lightweight tag target, and issue-form hash unchanged. The bounded GitHub Search query from
+  `2026-08-10T22:44:57Z` through `2026-08-10T22:44:58Z` returned `total_count: 0`,
+  `incomplete_results: false`, and zero returned items for issues with the frozen interest label.
+  This is not proof of no private or off-platform interest. These checks establish observed
+  configuration and source response only, not traffic, attribution, or buyer intent.
+- Completed local evidence checks: the receipt invariants and `git diff --check` passed; the
+  Support Eval suite ran 35 tests with 34 passing and one expected Windows link-privilege skip.
+  The bounded public-tree heuristic passed over 127 files / 1077209 bytes / six signature
+  families; it is not a privacy guarantee. An independent security reviewer initially found two
+  P2 claim and provenance issues. After correction, its focused re-review reported no surviving
+  P0-P2 issue in this seven-file scope. Remote facts remain time-bound API/operator evidence, and
+  the ad hoc receipt has no schema or consumer. These local checks are not production proof.
+- This documentation-and-evidence branch is local and uncommitted at this checkpoint. Separately
+  from the source check, the AI operating task's session ledger records that it neither initiated
+  nor received a sale, customer inquiry, qualifying-interest event, order, checkout, payment,
+  expense, private input, upstream contact, social post, advertisement, or direct message, and did
+  not create or change a merchant account, purchase, subscription, or domain and did not perform a
+  wallet movement or use XLM.
+  This is a project/session ledger assertion, not an inference from the source receipt. Cleared
+  revenue remains $0.00.

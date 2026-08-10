@@ -115,3 +115,23 @@ measurement into zero. The registered configuration is SHA-256 pinned, the recor
 observed frozen fields instead of supplying an "unchanged" boolean, and any checked row must bind
 one exact 14-day retained window. The validator and record are documented in
 `OBSERVATION_RECORDS.md`.
+
+### Source-limited checkpoint - 2026-08-10
+
+At `2026-08-10T22:33:36Z`, a request to GitHub's Popular content endpoint using API version
+`2022-11-28` returned three top-path rows. The exact frozen entry path was absent. GitHub documents
+the response as at most the ten popular contents over the last 14 days, but does not expose the
+window's exact start, end, or cutoff in the response. This is therefore an `unobservable`
+top-ten-absence checkpoint, not a zero-view measurement and not a checked row for the current
+normalizer. The current normalized report remains unchanged with `null` raw and qualified views
+and a `not-observed` state; this ad hoc receipt does not validate those values.
+
+A configuration recheck from `2026-08-10T22:34:53Z` through `2026-08-10T22:35:05Z` found the
+repository public with the frozen description, topics, default branch, pre-release state, tag
+target, and issue-form hash unchanged. The release remained a non-draft research pre-release with
+no uploaded assets. The bounded GitHub Search query from `2026-08-10T22:44:57Z` through
+`2026-08-10T22:44:58Z` returned `total_count: 0`, `incomplete_results: false`, and zero returned
+items for issues carrying `support-eval-interest`; this is not proof of no private or off-platform
+interest. The source receipt is
+`observations/sel-gh-001-source-check-2026-08-10.json`. It records only source and configuration
+facts and does not establish viewers, attribution, buyer intent, customers, or revenue.
