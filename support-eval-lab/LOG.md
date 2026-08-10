@@ -120,3 +120,21 @@ Append-only project record.
 - This validator, record, deterministic reports, tests, and CI regeneration are one Support Agent
   Regression Lab revenue unit. No second channel, post, message, customer input, account, domain,
   subscription, payment, wallet, or XLM action occurred.
+
+## 2026-08-10 - Source-limited traffic checkpoint
+
+- Captured one authenticated GitHub Popular content response for SEL-GH-001. The endpoint returned
+  three top-path rows, none matching the frozen entry path. Because GitHub does not return an exact
+  retained-window cutoff, this absence is unobservable rather than zero and remains outside the
+  current normalizer's stronger exact-window contract.
+- Rechecked the public repository, frozen description and topics, default branch, release state,
+  tag target, and issue-form hash. A bounded GitHub Search query returned `total_count: 0` for the
+  labeled-interest issue query; this is not proof of no private or off-platform interest. The
+  source receipt preserves the exact query, timestamps, and claim limits without altering the
+  historical cumulative observation.
+- This is documentation and closeout evidence, not a new revenue work unit. As a separate
+  project/session ledger assertion, the AI operating task records that it neither initiated nor
+  received a customer inquiry, qualifying-interest event, order, checkout, payment, cleared
+  revenue, or private input during this session, did not create or change a subscription or domain,
+  and did not perform a wallet movement or use XLM. That status is not something the source receipt
+  records or proves. Cleared revenue remains $0.00.

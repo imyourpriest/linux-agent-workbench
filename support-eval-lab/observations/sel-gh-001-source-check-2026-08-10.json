@@ -1,0 +1,90 @@
+{
+  "schema_version": "1",
+  "record_type": "source_limited_traffic_checkpoint",
+  "record_id": "sel-gh-001-source-check-2026-08-10",
+  "experiment_id": "sel-gh-001",
+  "source_mode": "authenticated_github_rest_operator_capture",
+  "traffic_request": {
+    "endpoint": "GET /repos/imyourpriest/linux-agent-workbench/traffic/popular/paths",
+    "requested_api_version": "2022-11-28",
+    "captured_at": "2026-08-10T22:33:36Z",
+    "returned_row_count": 3,
+    "target_path": "/imyourpriest/linux-agent-workbench/blob/2b162ce572379a10a61007a722a7ba7e23d43f75/support-eval-lab/channels/github-native-v0.1.0.md",
+    "exact_target_match_count": 0,
+    "target_result": "absent_from_returned_top_paths"
+  },
+  "source_semantics": {
+    "github_description": "top 10 popular contents over the last 14 days",
+    "response_fields": [
+      "path",
+      "title",
+      "count",
+      "uniques"
+    ],
+    "exact_window_start_exposed": false,
+    "exact_window_end_exposed": false,
+    "exact_window_cutoff_exposed": false,
+    "documentation_urls": [
+      "https://docs.github.com/en/rest/metrics/traffic?apiVersion=2022-11-28",
+      "https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository?apiVersion=2022-11-28"
+    ]
+  },
+  "configuration_recheck": {
+    "started_at": "2026-08-10T22:34:53Z",
+    "completed_at": "2026-08-10T22:35:05Z",
+    "repository_visibility": "public",
+    "default_branch": "main",
+    "description": "Auditable AI-directed experiments in open-source impact and support-agent regression evaluation",
+    "topics": [
+      "ai-agents",
+      "ai-evaluation",
+      "customer-support",
+      "github-actions",
+      "linux",
+      "llm-evaluation",
+      "open-source",
+      "python",
+      "reproducible-research",
+      "software-testing",
+      "support-automation"
+    ],
+    "release": {
+      "tag": "support-eval-starter-v0.1.0",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-08-09T00:33:48Z",
+      "uploaded_asset_count": 0,
+      "lightweight_tag_target_commit": "2b162ce572379a10a61007a722a7ba7e23d43f75"
+    },
+    "issue_form": {
+      "sha256": "e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e",
+      "decoded_byte_count": 2692
+    }
+  },
+  "interest_query": {
+    "endpoint": "GET /search/issues",
+    "requested_api_version": "2022-11-28",
+    "query": "repo:imyourpriest/linux-agent-workbench is:issue label:\"support-eval-interest\"",
+    "per_page": 1,
+    "started_at": "2026-08-10T22:44:57Z",
+    "completed_at": "2026-08-10T22:44:58Z",
+    "returned_total_count": 0,
+    "incomplete_results": false,
+    "returned_item_count": 0,
+    "claim_limit": "not proof of no private or off-platform interest"
+  },
+  "normalizer_disposition": {
+    "ingest_into_current_normalizer": false,
+    "reason": "source_does_not_expose_exact_retained_window_bounds_required_by_checked_row_contract",
+    "current_normalizer_record_unchanged": true,
+    "current_report_view_state": "not-observed",
+    "current_report_raw_views": null,
+    "current_report_qualified_views": null
+  },
+  "claim_limits": [
+    "absence from returned top paths is not zero views",
+    "capture time is not the source window cutoff",
+    "uniques is only a GitHub-reported metric",
+    "this record does not establish identity, attribution, buyer intent, customers, orders, payments, or revenue"
+  ]
+}
