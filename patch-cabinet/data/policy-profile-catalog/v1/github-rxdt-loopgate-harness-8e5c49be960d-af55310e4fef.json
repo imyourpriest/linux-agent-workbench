@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+  "consent_record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+  "repository": "rxdt/loopgate_harness",
+  "commit_sha": "8e5c49be960d656cba5dbae7724d8a6aeef5acb3",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "af55310e4fefac168ad6d17c17c309e74850b3022f2a4805fde73b233bedfbfe",
+  "dimensions": {
+    "autonomous_issue_submission": "not_explicit",
+    "autonomous_pr_submission": "not_explicit",
+    "human_review": "required",
+    "disclosure": "not_explicit",
+    "human_accountability": "required",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned guide assigns review and accountability to a human contributor."
+}

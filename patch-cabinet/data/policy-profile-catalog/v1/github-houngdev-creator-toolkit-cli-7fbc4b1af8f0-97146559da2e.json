@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+  "consent_record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+  "repository": "HoungDev/creator-toolkit-cli",
+  "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "97146559da2ef1e9ee1bcdb13b588eb9adcad47cbe16059c1303b61b81b13e20",
+  "dimensions": {
+    "autonomous_issue_submission": "not_explicit",
+    "autonomous_pr_submission": "not_explicit",
+    "human_review": "not_explicit",
+    "disclosure": "not_explicit",
+    "human_accountability": "not_explicit",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "No profile dimension is explicit in the pinned guide."
+}

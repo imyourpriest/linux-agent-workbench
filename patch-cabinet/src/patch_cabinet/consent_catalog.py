@@ -12,7 +12,7 @@ import stat
 import tempfile
 import unicodedata
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -23,7 +23,13 @@ MAX_FILE_BYTES = 65_536
 MAX_RECORDS = 100
 MAX_JSON_DEPTH = 12
 MAX_NOTE_CHARS = 400
-REPOSITORY = re.compile(r"^[A-Za-z0-9](?:[A-Za-z0-9_.-]{0,98}[A-Za-z0-9])?/[A-Za-z0-9](?:[A-Za-z0-9_.-]{0,98}[A-Za-z0-9])?$")
+MAX_RECEIPT_BYTES = 262_144
+MAX_RECEIPT_SOURCES = 100
+MAX_SOURCE_BYTES = 10_000_000
+REPOSITORY = re.compile(
+    r"^[A-Za-z0-9](?:[A-Za-z0-9_.-]{0,98}[A-Za-z0-9])?/"
+    r"[A-Za-z0-9](?:[A-Za-z0-9_.-]{0,98}[A-Za-z0-9])?$"
+)
 COMMIT = re.compile(r"^[0-9a-f]{40}$")
 DIGEST = re.compile(r"^[0-9a-f]{64}$")
 RECORD_ID = re.compile(r"^github-[a-z0-9-]{1,150}-[0-9a-f]{12}-[0-9a-f]{12}$")
@@ -56,6 +62,26 @@ EXPECTED_FIELDS = {
     "supersedes",
     "notes",
 }
+RECEIPT_FIELDS = {
+    "schema_version",
+    "receipt_id",
+    "retrieved_at",
+    "method",
+    "claim_boundary",
+}
+RECEIPT_SOURCE_FIELDS = {
+    "record_id",
+    "repository",
+    "commit_sha",
+    "policy_path",
+    "api_url",
+    "git_blob_sha1",
+    "source_bytes",
+    "source_sha256",
+}
+RECEIPT_ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+UTC_TIMESTAMP = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
+SHA1 = re.compile(r"^[0-9a-f]{40}$")
 
 
 @dataclass(frozen=True)
@@ -111,6 +137,15 @@ def _reject_number(_value: str) -> object:
     raise ValueError("JSON numbers are not part of the consent-record schema")
 
 
+def _parse_receipt_integer(value: str) -> int:
+    if len(value) > 8:
+        raise ValueError("receipt integer exceeds the bounded digit limit")
+    parsed = int(value)
+    if parsed < 1 or parsed > MAX_SOURCE_BYTES:
+        raise ValueError("receipt integer is outside the source-byte limit")
+    return parsed
+
+
 def _validate_json_depth(text: str) -> None:
     depth = 0
     in_string = False
@@ -162,6 +197,45 @@ def _safe_read(path: Path) -> bytes:
     return payload
 
 
+def _unsafe_directory(path: Path, inspected: os.stat_result) -> bool:
+    if path.is_symlink():
+        return True
+    is_junction = getattr(path, "is_junction", None)
+    if callable(is_junction) and is_junction():
+        return True
+    reparse_flag = getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0)
+    attributes = getattr(inspected, "st_file_attributes", 0)
+    return bool(reparse_flag and attributes & reparse_flag)
+
+
+def _safe_read_receipt(path: Path) -> bytes:
+    try:
+        before = path.lstat()
+    except OSError as error:
+        raise ValueError("acquisition receipt cannot be inspected") from error
+    if path.is_symlink() or not stat.S_ISREG(before.st_mode):
+        raise ValueError("acquisition receipts must be nonsymlink regular files")
+    flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0)
+    try:
+        descriptor = os.open(path, flags)
+    except OSError as error:
+        raise ValueError("acquisition receipt cannot be opened safely") from error
+    try:
+        opened = os.fstat(descriptor)
+        if (
+            not stat.S_ISREG(opened.st_mode)
+            or (before.st_dev, before.st_ino) != (opened.st_dev, opened.st_ino)
+        ):
+            raise ValueError("acquisition receipt changed during safe open")
+        with os.fdopen(descriptor, "rb", closefd=False) as stream:
+            payload = stream.read(MAX_RECEIPT_BYTES + 1)
+    finally:
+        os.close(descriptor)
+    if len(payload) > MAX_RECEIPT_BYTES:
+        raise ValueError(f"acquisition receipt exceeds {MAX_RECEIPT_BYTES} bytes")
+    return payload
+
+
 def _parse_date(value: object, field: str) -> date:
     if type(value) is not str:
         raise ValueError(f"{field} must be a canonical YYYY-MM-DD date")
@@ -182,6 +256,20 @@ def _plain_text(value: object, field: str) -> str:
     ):
         raise ValueError(f"{field} contains unsafe whitespace or formatting characters")
     return value
+
+
+def _reject_unsafe_strings(value: object) -> None:
+    if type(value) is str and any(
+        unicodedata.category(character) in {"Cc", "Cf", "Zl", "Zp"} for character in value
+    ):
+        raise ValueError("acquisition receipt contains unsafe control or formatting characters")
+    if type(value) is dict:
+        for key, child in value.items():
+            _reject_unsafe_strings(key)
+            _reject_unsafe_strings(child)
+    elif type(value) is list:
+        for child in value:
+            _reject_unsafe_strings(child)
 
 
 def _slug(repository: str) -> str:
@@ -208,7 +296,11 @@ def _parse_record(record: dict[str, Any]) -> ConsentRecord:
         raise ValueError("source_sha256 cannot use the null digest sentinel")
     record_id = record["record_id"]
     expected_id = expected_record_id(repository, commit_sha, source_sha256)
-    if type(record_id) is not str or RECORD_ID.fullmatch(record_id) is None or record_id != expected_id:
+    if (
+        type(record_id) is not str
+        or RECORD_ID.fullmatch(record_id) is None
+        or record_id != expected_id
+    ):
         raise ValueError("record_id does not match the canonical record identity")
     repository_url = record["repository_url"]
     if repository_url != f"https://github.com/{repository}":
@@ -297,8 +389,8 @@ def load_catalog(directory: Path) -> list[ConsentRecord]:
         inspected = directory.lstat()
     except OSError as error:
         raise ValueError("catalog directory cannot be inspected") from error
-    if directory.is_symlink() or not stat.S_ISDIR(inspected.st_mode):
-        raise ValueError("catalog input must be a nonsymlink directory")
+    if _unsafe_directory(directory, inspected) or not stat.S_ISDIR(inspected.st_mode):
+        raise ValueError("catalog input must be a non-link regular directory")
     paths: list[Path] = []
     with os.scandir(directory) as entries:
         for entry in entries:
@@ -316,7 +408,9 @@ def load_catalog(directory: Path) -> list[ConsentRecord]:
     by_id = {record.record_id: record for record in records}
     if len(by_id) != len(records):
         raise ValueError("catalog record_id values must be unique")
-    identities = [(item.repository.casefold(), item.commit_sha, item.policy_path) for item in records]
+    identities = [
+        (item.repository.casefold(), item.commit_sha, item.policy_path) for item in records
+    ]
     if len(identities) != len(set(identities)):
         raise ValueError("catalog cannot duplicate a repository, commit, and policy path")
     successor_counts: dict[str, int] = {}
@@ -344,7 +438,115 @@ def load_catalog(directory: Path) -> list[ConsentRecord]:
                 raise ValueError("catalog supersession cycle detected")
             seen.add(current.record_id)
             current = by_id[current.supersedes]
-    return sorted(records, key=lambda item: (item.repository.casefold(), item.reviewed_at, item.record_id))
+    return sorted(
+        records,
+        key=lambda item: (item.repository.casefold(), item.reviewed_at, item.record_id),
+    )
+
+
+def _validate_receipt_source(
+    source: object, *, records_by_id: dict[str, ConsentRecord]
+) -> dict[str, object]:
+    if type(source) is not dict or set(source) != RECEIPT_SOURCE_FIELDS:
+        raise ValueError("acquisition receipt source fields differ")
+    record_id = source["record_id"]
+    if type(record_id) is not str or RECORD_ID.fullmatch(record_id) is None:
+        raise ValueError("acquisition receipt record_id is not canonical")
+    record = records_by_id.get(record_id)
+    if record is None:
+        raise ValueError("acquisition receipt references an unknown consent record")
+    if (
+        source["repository"] != record.repository
+        or source["commit_sha"] != record.commit_sha
+        or source["policy_path"] != record.policy_path
+        or source["source_sha256"] != record.source_sha256
+    ):
+        raise ValueError("acquisition receipt provenance differs from its consent record")
+    expected_api_url = (
+        f"https://api.github.com/repos/{record.repository}/contents/{record.policy_path}"
+        f"?ref={record.commit_sha}"
+    )
+    if type(source["api_url"]) is not str or source["api_url"] != expected_api_url:
+        raise ValueError("acquisition receipt API URL is not canonically bound")
+    if any(value in source["api_url"] for value in ("%", "\\", "#")):
+        raise ValueError("acquisition receipt API URL contains a noncanonical component")
+    blob = source["git_blob_sha1"]
+    if type(blob) is not str or SHA1.fullmatch(blob) is None or blob == "0" * 40:
+        raise ValueError("acquisition receipt Git blob SHA-1 is invalid")
+    source_bytes = source["source_bytes"]
+    if type(source_bytes) is not int or not 1 <= source_bytes <= MAX_SOURCE_BYTES:
+        raise ValueError("acquisition receipt source_bytes is outside the bounded integer range")
+    digest = source["source_sha256"]
+    if type(digest) is not str or DIGEST.fullmatch(digest) is None or digest == "0" * 64:
+        raise ValueError("acquisition receipt source SHA-256 is invalid")
+    return dict(source)
+
+
+def load_acquisition_receipt(
+    path: Path,
+    records: list[ConsentRecord],
+    *,
+    now_utc: datetime | None = None,
+) -> dict[str, object]:
+    payload = _safe_read_receipt(path)
+    try:
+        text = payload.decode("utf-8")
+    except UnicodeDecodeError as error:
+        raise ValueError("acquisition receipts must be UTF-8") from error
+    if text.startswith("\ufeff"):
+        raise ValueError("acquisition receipts cannot contain a UTF-8 BOM")
+    try:
+        _validate_json_depth(text)
+        raw = json.loads(
+            text,
+            object_pairs_hook=_reject_duplicate_object,
+            parse_constant=_reject_constant,
+            parse_float=_reject_number,
+            parse_int=_parse_receipt_integer,
+        )
+    except (json.JSONDecodeError, RecursionError, ValueError) as error:
+        raise ValueError("acquisition receipt is not valid strict JSON") from error
+    if type(raw) is not dict:
+        raise ValueError("acquisition receipt must be a JSON object")
+    _reject_unsafe_strings(raw)
+    has_sources = "sources" in raw
+    has_source = "source" in raw
+    expected_fields = RECEIPT_FIELDS | ({"sources"} if has_sources else {"source"})
+    if has_sources == has_source or set(raw) != expected_fields:
+        raise ValueError("acquisition receipt envelope fields differ")
+    if raw["schema_version"] != "1":
+        raise ValueError("acquisition receipt schema version differs")
+    receipt_id = raw["receipt_id"]
+    if type(receipt_id) is not str or RECEIPT_ID.fullmatch(receipt_id) is None:
+        raise ValueError("acquisition receipt_id is not canonical")
+    retrieved_at = raw["retrieved_at"]
+    if type(retrieved_at) is not str or UTC_TIMESTAMP.fullmatch(retrieved_at) is None:
+        raise ValueError("acquisition receipt retrieved_at must be canonical UTC")
+    try:
+        retrieved = datetime.strptime(retrieved_at, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=timezone.utc
+        )
+    except ValueError as error:
+        raise ValueError("acquisition receipt retrieved_at is invalid") from error
+    comparison_time = now_utc if now_utc is not None else datetime.now(timezone.utc)
+    if comparison_time.tzinfo is None or comparison_time.utcoffset() != timedelta(0):
+        raise ValueError("now_utc must be timezone-aware UTC")
+    if retrieved > comparison_time:
+        raise ValueError("acquisition receipt retrieved_at cannot be in the future")
+    if raw["method"] != "github-contents-api-base64-decoded-source-bytes":
+        raise ValueError("acquisition receipt method differs")
+    _plain_text(raw["claim_boundary"], "claim_boundary")
+    source_values = raw["sources"] if has_sources else [raw["source"]]
+    if type(source_values) is not list or not 1 <= len(source_values) <= MAX_RECEIPT_SOURCES:
+        raise ValueError("acquisition receipt source inventory is invalid")
+    records_by_id = {record.record_id: record for record in records}
+    sources = [
+        _validate_receipt_source(source, records_by_id=records_by_id) for source in source_values
+    ]
+    source_ids = [source["record_id"] for source in sources]
+    if len(source_ids) != len(set(source_ids)):
+        raise ValueError("acquisition receipt source record_ids must be unique")
+    return dict(raw)
 
 
 def build_index(records: list[ConsentRecord], *, as_of: date) -> dict[str, object]:

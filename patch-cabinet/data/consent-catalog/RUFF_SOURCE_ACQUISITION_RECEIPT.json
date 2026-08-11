@@ -1,0 +1,17 @@
+{
+  "schema_version": "1",
+  "receipt_id": "consent-catalog-ruff-source-acquisition-2026-08-10",
+  "retrieved_at": "2026-08-11T00:12:54Z",
+  "method": "github-contents-api-base64-decoded-source-bytes",
+  "claim_boundary": "This receipt records bytes returned for one exact public commit ref; it is not a signature, current permission, semantic interpretation, or submission authorization.",
+  "source": {
+    "record_id": "github-astral-sh-ruff-2a42ea550b99-a03a4ebf8e8f",
+    "repository": "astral-sh/ruff",
+    "commit_sha": "2a42ea550b9911a9908213397f064665fd99764e",
+    "policy_path": "CONTRIBUTING.md",
+    "api_url": "https://api.github.com/repos/astral-sh/ruff/contents/CONTRIBUTING.md?ref=2a42ea550b9911a9908213397f064665fd99764e",
+    "git_blob_sha1": "3ebd8d449be8fb8ac25e971c51bd76745a4e84e8",
+    "source_bytes": 50349,
+    "source_sha256": "a03a4ebf8e8fe60b7d36ffcba25a019f5acde2f37badfcb9d90f1c0a61b2cbe5"
+  }
+}

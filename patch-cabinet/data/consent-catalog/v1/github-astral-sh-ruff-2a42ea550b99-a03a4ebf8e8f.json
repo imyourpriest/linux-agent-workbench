@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-astral-sh-ruff-2a42ea550b99-a03a4ebf8e8f",
+  "repository": "astral-sh/ruff",
+  "repository_url": "https://github.com/astral-sh/ruff",
+  "commit_sha": "2a42ea550b9911a9908213397f064665fd99764e",
+  "policy_source_url": "https://github.com/astral-sh/ruff/blob/2a42ea550b9911a9908213397f064665fd99764e/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "a03a4ebf8e8fe60b7d36ffcba25a019f5acde2f37badfcb9d90f1c0a61b2cbe5",
+  "observed_at": "2026-08-10",
+  "reviewed_at": "2026-08-10",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "insufficiently_explicit",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned file delegates substantive AI rules to an external policy that is not bound by this record."
+}

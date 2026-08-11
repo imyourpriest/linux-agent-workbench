@@ -30,7 +30,7 @@ From `patch-cabinet/`:
 
 ```sh
 python -m patch_cabinet.consent_catalog data/consent-catalog/v1 \
-  --as-of 2026-08-08 \
+  --as-of 2026-08-10 \
   --json-out samples/consent-catalog-index.json \
   --markdown-out samples/consent-catalog-index.md
 ```
@@ -39,3 +39,19 @@ The initial records were manually checked through GitHub's public content API. T
 `data/consent-catalog/ACQUISITION_RECEIPT.json` records the exact retrieval timestamp, commit refs,
 API paths, decoded byte lengths, Git blob identifiers, and SHA-256 values. The catalog stores
 hashes and pinned links, not copies or excerpts of third-party policy text.
+
+The later Ruff source capture has its own
+`data/consent-catalog/RUFF_SOURCE_ACQUISITION_RECEIPT.json`; the initial receipt and its four-source
+inventory remain unchanged. Both receipts are retrieval traceability, not signatures or permission.
+The validator strictly loads both receipt shapes, bounds their bytes, depth, source count, and
+integer byte counts, and binds every source to an exact catalog record and canonical GitHub API
+URL. This validates the recorded shape and internal provenance only; it does not authenticate the
+remote response or grant permission.
+
+The [manual policy-profile catalog](POLICY_PROFILE_CATALOG.md) is a separate experiment that binds
+eight controlled, manually normalized dimensions to exact consent records. It cannot change a
+consent classification, candidate result, or authorization boundary.
+
+CLI output parents are trusted local filesystems. Atomic replacement limits partial output, but
+the catalog does not claim to resist an adversary replacing an output parent between validation
+and writing. Do not direct output into attacker-controlled directories.

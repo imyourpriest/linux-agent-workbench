@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+  "consent_record_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+  "repository": "huggingface/transformers",
+  "commit_sha": "e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6",
+  "dimensions": {
+    "autonomous_issue_submission": "disallowed",
+    "autonomous_pr_submission": "disallowed",
+    "human_review": "required",
+    "disclosure": "required",
+    "human_accountability": "required",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned guide bars autonomous submissions and requires disclosed human-owned review."
+}

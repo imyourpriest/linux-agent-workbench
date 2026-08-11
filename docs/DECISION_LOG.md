@@ -340,3 +340,45 @@ applies only prospectively and must preserve historical records.
 **Why:** The current normalizer contract is stronger than the available source. Treating capture
 time as GitHub's undisclosed cutoff would turn an implementation assumption into evidence and
 could misclassify an absent top-ten row as measured traffic.
+
+## 2026-08-10 - D-031 - Manual policy profiles are non-authorizing historical facts
+
+**Decision:** Add a standalone schema-1 manual policy-profile catalog that binds exactly one
+profile to one immutable consent record through the repeated repository, commit, policy path, and
+source SHA-256. Normalize only eight controlled dimensions with manual semantic review and strict
+offline validation. The catalog is not part of the candidate engine or versioned verifier and
+does not automatically interpret or detect prose, establish current permission, make a candidate
+eligible or ready, or authorize contact, implementation, issue creation, pull-request creation,
+security reporting, or submission. Every live candidate retains the active engine and all current
+manual policy, issue, competition, scope, security, attestation, and local-exclusion gates.
+
+**Why:** Repeated policy review yields useful distinctions beyond one consent classification, but
+turning those historical notes into engine authority would overstate aging evidence. Strict
+provenance binding and a non-authorizing output boundary preserve the observations without
+creating a permission directory.
+
+**Post-review boundary:** A profile successor must exactly match the bound consent record's
+successor, including `null`. The two checked-in acquisition-receipt shapes receive strict bounded
+JSON and provenance validation, but a receipt remains a local record rather than a remote
+signature. Catalog input directories reject links, Windows junctions, and detected reparse-point
+directories. CLI output parents are trusted local filesystems; atomic replacement is not claimed
+as protection against adversarial parent replacement between validation and writing.
+
+## 2026-08-10 - D-032 - Payment channel remains provisional and human-owned
+
+**Decision:** Record the active Support Agent Regression Lab's current primary-source comparison
+as a provisional sequence only. If a payment test later passes the existing legal, validation,
+reserve, and human-action gates, a public project-owned GitHub release or issue funnel leading to a
+human-owned Ko-fi route currently appears to have the lowest upfront cost. GitHub Sponsors,
+Gumroad, and GitHub Marketplace currently add greater identity, fee, setup, or adoption burdens for
+this experiment. The dated official-source inventory is in `support-eval-lab/LOG.md`. Revalidate
+every platform's current terms, fees, eligibility, and product fit immediately before any action.
+
+This decision creates no merchant or payment account, checkout, listing, release, issue, or
+external action. It does not activate a payment test, spend money, change the frozen SEL-GH-001
+release/form/window, or establish buyer demand.
+It does not pivot or reactivate the parked Revenue Lab.
+
+**Why:** Preserving a bounded next-channel hypothesis reduces future rediscovery without turning a
+source comparison into authorization or traction. Financial ownership and every platform
+confirmation remain human checkpoints.
