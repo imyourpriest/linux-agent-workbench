@@ -382,3 +382,54 @@ It does not pivot or reactivate the parked Revenue Lab.
 **Why:** Preserving a bounded next-channel hypothesis reduces future rediscovery without turning a
 source comparison into authorization or traction. Financial ownership and every platform
 confirmation remain human checkpoints.
+
+## 2026-08-10 - D-033 - Maintainer declarations are a 30-day prototype, not a standard
+
+**Decision:** Run a 30-day local/public prototype for explicit trusted-local maintainer policy
+declarations. The standalone schema validates structure and repeated commit-pinned fields and
+renders deterministic cards. It does not fetch or parse policy prose, detect AI use, verify
+repository ownership, authorship, source truth, current policy, or permission, score work,
+authorize contact, feed Patch Cabinet candidate eligibility, or act as a CI merge gate.
+
+This is distinct from `AGENTS.md`: that convention supplies repository-local instructions to
+agents, while this prototype records a maintainer/operator declaration about contribution
+practices. It is not a standard or proposed standard. Current public context captured on
+2026-08-10 is listed in `patch-cabinet/MAINTAINER_POLICY_DECLARATION.md`, including AGENTS.md and
+its issue 135, GitHub Community discussion 185387, LLVM, Home Assistant, The Carpentries, and
+OpenSSF sources. Those projects do not endorse this prototype.
+
+Success requires 3-5 maintainers, at least three unaided complete profiles in 15 minutes or less,
+all seeded structural/provenance errors caught, faithful rendering, at least two reports of reuse
+or time benefit, and no permission confusion. Stop without building beyond the prototype if fewer
+than three maintainers participate, completion exceeds 20 minutes per profile, semantic
+disagreement would force automated prose inference, authorization confusion occurs, or no
+reuse/time benefit is reported.
+
+**Why:** Public contribution policies expose repeated distinctions, but normalizing them without
+an explicit declarant risks inventing semantics. A small, reversible, measured prototype can test
+whether maintainers benefit from declaring the facts themselves without changing the candidate
+engine or claiming a new ecosystem convention.
+
+## 2026-08-10 - D-034 - Project declarations remain unauthenticated and unverified
+
+**Decision:** Correct D-033's ambiguous identity wording. Accepted project records are
+maintainer- or operator-supplied, unauthenticated/unverified declarations. Structural acceptance
+does not authenticate the supplier, establish maintainer status or authority, verify the assertion
+or source, show current permission, or authorize contact or submission. This correction supersedes
+D-033 wherever that entry could be read as reserving verified maintainer authority.
+
+Synthetic examples use only the reserved `example.invalid` namespace and render their source as
+inert text. They make no existence or identity assertion and cannot transition into project
+records. Project records retain exact same-repository, commit-pinned GitHub provenance but remain
+unverified. Canonical IDs now hash the complete canonical identity, and successors preserve record
+kind and assertion basis.
+
+Independent review found no P0-P2 issue in the reviewed scope but held publication for five P3
+corrections: identity wording, synthetic namespace isolation, collision-resistant identity,
+kind-preserving lineage, and an unaided schema/starter reference. The corrections and validation
+are local only; hosted CI has not yet evaluated them. Local symlink tests may skip when Windows
+does not grant link-creation privilege, and local structural tests are not production enforcement.
+
+**Why:** A declaration format must not manufacture identity or authority through labels, URLs, or
+rendering. Explicit unauthenticated/unverified language and namespace separation keep the
+prototype's claim boundary aligned with what local structural validation can actually establish.

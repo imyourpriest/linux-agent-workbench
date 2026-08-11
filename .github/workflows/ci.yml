@@ -143,6 +143,17 @@ jobs:
           --markdown-out samples/policy-profile-catalog-index.md
           --json-out samples/policy-profile-catalog-index.json
 
+      - name: Regenerate Patch Cabinet maintainer declaration prototype
+        working-directory: patch-cabinet
+        run: |
+          python -m patch_cabinet.maintainer_policy_declaration render \
+            data/maintainer-policy-declarations/synthetic/v1 \
+            --markdown-out samples/maintainer-policy-declaration-index.md \
+            --json-out samples/maintainer-policy-declaration-index.json
+          python -m patch_cabinet.maintainer_policy_declaration starter \
+            unverified_project_declaration \
+            > samples/maintainer-policy-declaration-starter.json
+
       - name: Regenerate Release Readiness Lab sample
         working-directory: revenue-lab
         run: >-

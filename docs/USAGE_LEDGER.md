@@ -132,6 +132,14 @@ units. Publication and shared governance are not backfilled as extra dedicated w
 - A later direct whole-account snapshot after remediation and independent clean re-review showed
   73% remaining, the next reset at August 17, 2026 6:00 PM, no reset available, and zero credits.
   No delta or amount is attributed to this project, workstream, unit, agent, tool call, or action.
+- Later direct whole-account snapshots showed 70% remaining after PR 11 publication and 68%
+  remaining after the declaration-policy research phase, with the next reset at August 17, 2026
+  6:00 PM, no reset available, and zero credits. No delta or amount is attributed to this project,
+  workstream, unit, agent, tool call, or action.
+- A later direct whole-account snapshot after declaration-prototype validation showed 62%
+  remaining, with the same reset, reset availability, and credit state. This is a combined
+  whole-account observation only; no delta or amount is attributed to this repository, workstream,
+  unit, agent, tool call, test, or action, and no work-unit total changes.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -139,7 +147,12 @@ units. Publication and shared governance are not backfilled as extra dedicated w
 | 2026-08-10 | Patch Cabinet | 1 | Current autonomous-workflow candidate scan and review correction; no ready candidate | not individually measured |
 | 2026-08-10 | Patch Cabinet | 1 | Standalone manual policy-profile experiment and adversarial hardening | not individually measured |
 | 2026-08-10 | Support Agent Regression Lab | 1 | Current primary-source payment/distribution channel comparison; no activation | not individually measured |
+| 2026-08-10 | Shared publication | 0 | PR 11 publication and exact hosted-check receipt | post-publication whole-account snapshot: 70% |
+| 2026-08-10 | Patch Cabinet | 1 | Isolated maintainer policy declaration prototype | not individually measured |
+| 2026-08-10 | Patch Cabinet | 1 | Declaration-policy public-context research and 30-day gate | not individually measured |
+| 2026-08-10 | Support Agent Regression Lab | 1 | Future AI Contribution Policy Starter + Audit research; no activation | not individually measured |
 
-R-003 has two Patch Cabinet impact units and one Revenue unit, preserving the 2:1 period ratio.
-The only post-batch direct snapshot is the combined 86% whole-account reading above. Cumulative
-dedicated totals are sixteen impact units and eight revenue units.
+R-003 has four Patch Cabinet impact units and two Support Agent Regression Lab revenue units,
+preserving the 2:1 period ratio. The later combined post-research snapshot is 68%; no per-unit
+usage is inferred. The later post-validation whole-account snapshot is 62%, also without
+attribution. Cumulative dedicated totals are eighteen impact units and nine revenue units.

@@ -236,3 +236,41 @@ Append-only project record.
 - Catalog output parents are explicitly trusted-local scope. Atomic replacement avoids partial
   output but is not claimed to enforce against adversarial parent replacement. This correction is
   review remediation for the two recorded impact units, not an additional work unit.
+
+## 2026-08-10 - Maintainer policy declaration prototype
+
+- Added standalone schema-1/component-0.1.0 trusted-local declaration cards with strict JSON,
+  canonical same-repository commit-pinned fields, controlled dimensions, disclosure consistency,
+  immutable successor chains, link/junction/reparse rejection, deterministic LF output, inert
+  notes, and an explicitly invalid starter template.
+- The component is isolated from the candidate engine and policy CLI. It never fetches or parses
+  policy prose, detects AI use, proves repository ownership/authorship/source truth/current
+  permission, scores work, authorizes contact, or serves as a CI merge gate. The checked-in record
+  is unmistakably synthetic and non-real. This implementation is one Patch Cabinet impact unit.
+
+## 2026-08-10 - Maintainer declaration public-context research
+
+- Recorded a 30-day local/public prototype gate informed by current public AGENTS.md, GitHub
+  Community, LLVM, Home Assistant, The Carpentries, and OpenSSF materials linked in
+  `MAINTAINER_POLICY_DECLARATION.md`. This is a research prototype, not a standard or endorsement.
+- Distinguished declaration cards from `AGENTS.md`: one records explicitly supplied contribution
+  practices; the other gives repository-local operating instructions to agents. Success and stop
+  thresholds require maintainer usability, structural/provenance error capture, faithful rendering,
+  reuse/time benefit, and no permission confusion. This research is one Patch Cabinet impact unit.
+- No maintainer was contacted, no repository declaration was solicited, and no issue, pull request,
+  release, account, listing, payment, or other external action occurred in these two units.
+
+## 2026-08-10 - Declaration prototype P3 remediation
+
+- Independent review reported no P0-P2 issue in scope and held publication for five P3
+  corrections. D-034 corrects the earlier ambiguous wording: accepted project records are
+  maintainer- or operator-supplied and unauthenticated/unverified. Structural validation does not
+  establish supplier identity, maintainer authority, source truth, current permission, or
+  authorization.
+- Reserved synthetic provenance to `example.invalid`, rendered it without a live link, replaced
+  punctuation-folded identifiers with full canonical-identity SHA-256 identifiers, preserved
+  record kind and assertion basis across successor chains, and added an explicit kind-specific
+  starter plus a complete schema/vocabulary reference. Synthetic records make no existence or
+  identity assertion.
+- Remediation and tests were local only. No contact, publication, account, issue, pull request,
+  payment, or other external action occurred. This correction is not an additional work unit.

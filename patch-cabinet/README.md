@@ -71,6 +71,21 @@ python -m patch_cabinet.policy_profile_catalog data/policy-profile-catalog/v1 \
   --markdown-out samples/policy-profile-catalog-index.md
 ```
 
+The [maintainer policy declaration prototype](MAINTAINER_POLICY_DECLARATION.md) renders explicitly
+supplied trusted-local declaration JSON into deterministic review cards. Accepted project records
+are maintainer- or operator-supplied and unauthenticated/unverified; validation does not establish
+identity or authority. It is a 30-day local/public prototype, not a standard, permission source,
+candidate-engine input, or CI gate.
+
+```sh
+python -m patch_cabinet.maintainer_policy_declaration render \
+  data/maintainer-policy-declarations/synthetic/v1 \
+  --json-out samples/maintainer-policy-declaration-index.json \
+  --markdown-out samples/maintainer-policy-declaration-index.md
+python -m patch_cabinet.maintainer_policy_declaration starter \
+  unverified_project_declaration
+```
+
 ## Success measures
 
 - maintainer-accepted patches and documented upstream outcomes;
