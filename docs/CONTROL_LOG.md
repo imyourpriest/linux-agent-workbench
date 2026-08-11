@@ -549,3 +549,45 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - A direct whole-account Usage-page snapshot after remediation and clean re-review showed 73%
   remaining, the next reset at August 17, 2026 6:00 PM, no reset available, and zero credits. No
   delta or amount is attributed to this project, workstream, unit, agent, tool call, or action.
+
+## 2026-08-10 - Session 019 - PR 11 publication and declaration-policy batch
+
+- PR 11 published exact head `240f639b3fe6b643da059f12128a5bfb3cc87bb9`. PR CI run
+  `31448798931` and CodeQL run `31448797163` passed on that head. The pull request was
+  squash-merged at `2026-08-11T01:18:19Z` as public `main`
+  `d7330d84df969b60e31132bf6039eb2403e25376`; post-main CI run `31448891667` and CodeQL run
+  `31448891498` passed on that exact commit. These hosted results establish only the named
+  workflows' observed outcomes on those commits, not production enforcement.
+- A direct whole-account Usage-page snapshot after publication showed 70% remaining, the next
+  reset at August 17, 2026 6:00 PM, no reset available, and zero credits. A later direct snapshot
+  after the declaration-policy research phase showed 68% remaining with the same reset, reset
+  availability, and credit state. No delta or amount is attributed to this project, workstream,
+  unit, agent, tool call, or action.
+- Completed two Patch Cabinet impact units: the isolated maintainer policy declaration prototype
+  and its bounded public-context research. Completed one Support Agent Regression Lab revenue
+  research unit for the future public-source-only AI Contribution Policy Starter + Audit. This
+  preserves the R-003 and cumulative 2:1 ratios. Governance, review, and publication are not extra
+  work units.
+- Revenue and cleared receipts remain `$0.00`. Beyond the recorded project PR publication, no
+  maintainer/customer contact, account, listing, checkout, payment, purchase, subscription,
+  release, issue, form, external post, wallet movement, XLM use, private input, or other external
+  action occurred in this batch. SEL-GH-001 and the parked Revenue Lab remain unchanged.
+
+## 2026-08-10 - Session 020 - Declaration prototype independent-review remediation
+
+- Independent review found no P0-P2 issue in the reviewed scope and held publication for five P3
+  corrections: ambiguous identity wording, synthetic use of a live-provider namespace,
+  punctuation-folded identifiers, successor kind transitions, and insufficient unaided starter
+  guidance. D-034 and the Patch Cabinet log explicitly correct rather than silently rewrite the
+  earlier append-only description.
+- Accepted project records are now described as maintainer- or operator-supplied and
+  unauthenticated/unverified. Reserved `example.invalid` synthetic provenance is inert, canonical
+  IDs hash the complete identity, lineage preserves record kind and basis, and the starter and
+  schema reference expose exact controlled values. These are local structural controls, not
+  authentication, authority, source-truth, current-permission, or production-enforcement proof.
+- Local validation retains honest platform boundaries: link tests may skip when Windows denies
+  symlink creation, hosted CI has not yet run on the remediation, and local passing tests do not
+  establish production enforcement. No external action or additional work unit occurred.
+- A direct whole-account Usage-page snapshot after validation showed 62% remaining, the next reset
+  at August 17, 2026 6:00 PM, no reset available, and zero credits. No delta or amount is attributed
+  to this repository, workstream, unit, agent, tool call, test, or action.

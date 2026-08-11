@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "declaration_id": "<replace-with-derived-declaration-id>",
+  "record_kind": "unverified_project_declaration",
+  "assertion_basis": "trusted_local_operator_supplied_unverified_declaration",
+  "repository": "<owner/repository>",
+  "repository_url": "<https://github.com/owner/repository>",
+  "commit_sha": "<40-lowercase-hex-commit>",
+  "policy_source_url": "<https://github.com/owner/repository/blob/commit/path>",
+  "policy_path": "<repository-relative-policy-path>",
+  "source_sha256": "<64-lowercase-hex-source-digest>",
+  "observed_at": "<YYYY-MM-DD-local-date>",
+  "dimensions": {
+    "ai_assisted_code": "<allowed|conditional|disallowed|not_declared>",
+    "ai_assisted_documentation": "<allowed|conditional|disallowed|not_declared>",
+    "ai_authored_issue_text": "<allowed|conditional|disallowed|not_declared>",
+    "ai_authored_pr_text": "<allowed|conditional|disallowed|not_declared>",
+    "autonomous_issue_submission": "<allowed|conditional|disallowed|not_declared>",
+    "autonomous_pr_submission": "<allowed|conditional|disallowed|not_declared>",
+    "automated_review_comments": "<allowed|conditional|disallowed|not_declared>",
+    "good_first_issue_automation": "<allowed|conditional|disallowed|not_declared>",
+    "security_report_automation": "<allowed|conditional|disallowed|not_declared>",
+    "disclosure": "<not_declared|recommended|required>",
+    "human_review": "<not_declared|recommended|required>",
+    "human_accountability": "<not_declared|recommended|required>",
+    "license_ip_checks": "<not_declared|recommended|required>"
+  },
+  "disclosure_location": "<commit_trailer|either|not_declared|pr_description|project_defined>",
+  "enforcement": "<close_or_reject|label_or_flag|maintainer_discretion|not_declared|request_changes>",
+  "supersedes": null,
+  "notes": "Starter only; not structurally validated until every placeholder is replaced. See MAINTAINER_POLICY_DECLARATION.md for field rules."
+}

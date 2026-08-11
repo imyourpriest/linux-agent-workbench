@@ -166,3 +166,30 @@ Append-only project record.
   release, form, configuration, and observation window were unchanged. Revenue and cleared
   receipts remain $0.00. This comparison is one R-003 Support Agent Regression Lab revenue unit;
   it does not pivot or reactivate the parked Revenue Lab.
+
+## 2026-08-10 - AI Contribution Policy Starter + Audit research
+
+- Recorded a future public-source-only offer hypothesis for the active Support Agent Regression
+  Lab: an **AI Contribution Policy Starter + Audit** containing a decision matrix, paste-ready
+  `CONTRIBUTING`/issue/pull-request snippets, a ten-point evidence-linked audit, and an asynchronous
+  handoff. It excludes private repositories, secrets, legal advice, copyright clearance, AI-use
+  detection, compliance certification, and enforcement guarantees.
+- Pricing is inference only: `$39` self-serve, `$79` with one revision, and `$149` for a human audit
+  only after demand. There is no verified willingness to pay. A future zero-upfront test would
+  require 100 targeted impressions, eight qualified visits, three substantive replies, and one
+  explicit precommit; stop or pivot after two scoped tests without signal. Every threshold and
+  price remains provisional and must be revalidated before action.
+- Official/public research sources captured as current on 2026-08-10:
+  - GitHub Community discussion: https://github.com/orgs/community/discussions/185387
+  - GitHub review guidance: https://docs.github.com/en/copilot/tutorials/review-ai-generated-code
+  - Qdrant contribution guide: https://github.com/qdrant/qdrant/blob/master/docs/CONTRIBUTING.md
+  - Drupal AI contribution policy: https://www.drupal.org/docs/develop/issues/issue-procedures-and-etiquette/policy-on-the-use-of-ai-when-contributing-to-drupal
+  - Research paper: https://arxiv.org/abs/2605.16706
+  - Ko-fi fees: https://help.ko-fi.com/hc/en-us/articles/360002506494-Does-Ko-fi-take-a-fee
+  - Gumroad pricing: https://gumroad.com/pricing
+  - GitHub Sponsors fees: https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/about-sponsorships-fees-and-taxes
+  - IRS Gig Economy Tax Center: https://www.irs.gov/businesses/gig-economy-tax-center
+- No offer was activated, no contact occurred, and no account, listing, checkout, payment, release,
+  issue, form, or external post was created or changed. SEL-GH-001 and the parked Revenue Lab remain
+  unchanged. Revenue and cleared receipts remain `$0.00`. This research is one R-003 Support Agent
+  Regression Lab revenue unit.
