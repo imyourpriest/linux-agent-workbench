@@ -1,0 +1,123 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "patch-policy-profile-catalog",
+    "version": "0.1.0"
+  },
+  "claim_boundary": "Historical manually normalized facts only; no automatic prose interpretation or detection, current permission, candidate eligibility, contact, or submission authorization.",
+  "summary": {
+    "profiles": 5
+  },
+  "profiles": [
+    {
+      "profile_id": "github-astral-sh-ruff-2a42ea550b99-a03a4ebf8e8f",
+      "consent_record_id": "github-astral-sh-ruff-2a42ea550b99-a03a4ebf8e8f",
+      "repository": "astral-sh/ruff",
+      "commit_sha": "2a42ea550b9911a9908213397f064665fd99764e",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "a03a4ebf8e8fe60b7d36ffcba25a019f5acde2f37badfcb9d90f1c0a61b2cbe5",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "not_explicit",
+        "disclosure": "not_explicit",
+        "human_accountability": "not_explicit",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned file delegates substantive AI rules to an external policy that is not bound here."
+    },
+    {
+      "profile_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+      "consent_record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
+      "repository": "HoungDev/creator-toolkit-cli",
+      "commit_sha": "7fbc4b1af8f074a921f4254f6d89225d612d7a3b",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "97146559da2ef1e9ee1bcdb13b588eb9adcad47cbe16059c1303b61b81b13e20",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "not_explicit",
+        "disclosure": "not_explicit",
+        "human_accountability": "not_explicit",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "No profile dimension is explicit in the pinned guide."
+    },
+    {
+      "profile_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+      "consent_record_id": "github-huggingface-transformers-e8ea728a3eee-ec2e3b152b1f",
+      "repository": "huggingface/transformers",
+      "commit_sha": "e8ea728a3eeeb903e77c7d1bd29267c80a1be71f",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "ec2e3b152b1f15990cb8fad7b1f3144d051f4e27574b66d2ec023058038040c6",
+      "dimensions": {
+        "autonomous_issue_submission": "disallowed",
+        "autonomous_pr_submission": "disallowed",
+        "human_review": "required",
+        "disclosure": "required",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide bars autonomous submissions and requires disclosed human-owned review."
+    },
+    {
+      "profile_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+      "consent_record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
+      "repository": "rxdt/loopgate_harness",
+      "commit_sha": "8e5c49be960d656cba5dbae7724d8a6aeef5acb3",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "af55310e4fefac168ad6d17c17c309e74850b3022f2a4805fde73b233bedfbfe",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "required",
+        "disclosure": "not_explicit",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide assigns review and accountability to a human contributor."
+    },
+    {
+      "profile_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+      "consent_record_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+      "repository": "stanfordnlp/dspy",
+      "commit_sha": "9bca784d114641d25b6745e79df0c3f533576708",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9",
+      "dimensions": {
+        "autonomous_issue_submission": "disallowed",
+        "autonomous_pr_submission": "disallowed",
+        "human_review": "required",
+        "disclosure": "required",
+        "human_accountability": "required",
+        "license_ip_checks": "required",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide bars autonomous submissions and requires disclosed, reviewed, licensed work."
+    }
+  ]
+}

@@ -77,11 +77,13 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install and test revenue prototypes
+      - name: Install and test project packages
         run: |
-          python -m pip install ./revenue-lab ./support-eval-lab
+          python -m pip install ./patch-cabinet ./revenue-lab ./support-eval-lab
+          patch-cabinet --help
           release-readiness --help
           support-eval --help
+          python -m unittest discover -s patch-cabinet/tests -v
           python -m unittest discover -s revenue-lab/tests -v
           python -m unittest discover -s support-eval-lab/tests -v
 
@@ -128,9 +130,18 @@ jobs:
         run: >-
           python -m patch_cabinet.consent_catalog
           data/consent-catalog/v1
-          --as-of 2026-08-08
+          --as-of 2026-08-10
           --markdown-out samples/consent-catalog-index.md
           --json-out samples/consent-catalog-index.json
+
+      - name: Regenerate Patch Cabinet manual policy-profile catalog
+        working-directory: patch-cabinet
+        run: >-
+          python -m patch_cabinet.policy_profile_catalog
+          data/policy-profile-catalog/v1
+          --consent-records data/consent-catalog/v1
+          --markdown-out samples/policy-profile-catalog-index.md
+          --json-out samples/policy-profile-catalog-index.json
 
       - name: Regenerate Release Readiness Lab sample
         working-directory: revenue-lab

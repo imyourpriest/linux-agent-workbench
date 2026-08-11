@@ -66,7 +66,7 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
         self.write_json(self.receipt_path, receipt)
 
     def test_public_repository_replays_every_registered_engine(self) -> None:
-        self.assertEqual(checker.verify(ROOT), 2)
+        self.assertEqual(checker.verify(ROOT), 3)
 
     def test_unknown_artifact_engine_fails_closed(self) -> None:
         policy = self.read_json(self.policy_path)

@@ -55,9 +55,20 @@ historical evidence, not an automatic permission or eligibility source. Regenera
 deterministic index with:
 
 ```sh
-python -m patch_cabinet.consent_catalog data/consent-catalog/v1 --as-of 2026-08-08 \
+python -m patch_cabinet.consent_catalog data/consent-catalog/v1 --as-of 2026-08-10 \
   --json-out samples/consent-catalog-index.json \
   --markdown-out samples/consent-catalog-index.md
+```
+
+The separate [manual policy-profile catalog](POLICY_PROFILE_CATALOG.md) records eight controlled,
+manually normalized dimensions bound to those consent records. It is historical evidence only and
+has no engine authority. Regenerate it with:
+
+```sh
+python -m patch_cabinet.policy_profile_catalog data/policy-profile-catalog/v1 \
+  --consent-records data/consent-catalog/v1 \
+  --json-out samples/policy-profile-catalog-index.json \
+  --markdown-out samples/policy-profile-catalog-index.md
 ```
 
 ## Success measures

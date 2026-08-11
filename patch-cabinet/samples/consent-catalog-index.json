@@ -4,17 +4,34 @@
     "name": "patch-consent-catalog",
     "version": "0.1.0"
   },
-  "as_of": "2026-08-08",
+  "as_of": "2026-08-10",
   "claim_boundary": "Pinned historical manual reviews; not current permission, automatic interpretation, candidate eligibility, or authorization to contact or submit upstream.",
   "summary": {
-    "records": 4,
-    "current_for_7_day_candidate_window": 4,
+    "records": 5,
+    "current_for_7_day_candidate_window": 5,
     "stale": 0,
     "explicitly_allows": 0,
     "explicitly_disallows": 2,
-    "insufficiently_explicit": 2
+    "insufficiently_explicit": 3
   },
   "records": [
+    {
+      "record_id": "github-astral-sh-ruff-2a42ea550b99-a03a4ebf8e8f",
+      "repository": "astral-sh/ruff",
+      "repository_url": "https://github.com/astral-sh/ruff",
+      "commit_sha": "2a42ea550b9911a9908213397f064665fd99764e",
+      "policy_source_url": "https://github.com/astral-sh/ruff/blob/2a42ea550b9911a9908213397f064665fd99764e/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "a03a4ebf8e8fe60b7d36ffcba25a019f5acde2f37badfcb9d90f1c0a61b2cbe5",
+      "observed_at": "2026-08-10",
+      "reviewed_at": "2026-08-10",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "insufficiently_explicit",
+      "freshness": "current_for_7_day_candidate_window",
+      "age_days_at_as_of": 0,
+      "supersedes": null,
+      "notes": "The pinned file delegates substantive AI rules to an external policy that is not bound by this record."
+    },
     {
       "record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
       "repository": "HoungDev/creator-toolkit-cli",
@@ -28,7 +45,7 @@
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
       "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "age_days_at_as_of": 2,
       "supersedes": null,
       "notes": "The pinned contributor guide contains no explicit rule for this autonomous submission workflow."
     },
@@ -45,7 +62,7 @@
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
       "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "age_days_at_as_of": 2,
       "supersedes": null,
       "notes": "The pinned guide asks autonomous agents and first-time code-agent users not to open issues or pull requests."
     },
@@ -62,7 +79,7 @@
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
       "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "age_days_at_as_of": 2,
       "supersedes": null,
       "notes": "The guide expects reviewed AI assistance but does not explicitly authorize this autonomous submission workflow."
     },
@@ -79,7 +96,7 @@
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
       "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "age_days_at_as_of": 2,
       "supersedes": null,
       "notes": "The pinned guide bars fully autonomous AI agents from issues, pull requests, and reviews."
     }

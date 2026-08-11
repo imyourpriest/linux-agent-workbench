@@ -138,3 +138,31 @@ Append-only project record.
   revenue, or private input during this session, did not create or change a subscription or domain,
   and did not perform a wallet movement or use XLM. That status is not something the source receipt
   records or proves. Cleared revenue remains $0.00.
+
+## 2026-08-10 - Provisional payment and distribution channel comparison
+
+- The active Support Agent Regression Lab completed one bounded primary-source comparison of
+  potential payment and distribution routes. A later public project-owned GitHub release or issue
+  funnel leading to a human-owned Ko-fi route is the provisional lowest-upfront-cost option if a
+  payment test is separately authorized. GitHub Sponsors, Gumroad, and GitHub Marketplace
+  currently impose greater identity, fee, setup, or adoption burdens for this experiment.
+- Official sources captured as current on 2026-08-10:
+  - GitHub Sponsors personal-account setup: https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account
+  - GitHub Sponsors identity and additional terms: https://docs.github.com/en/site-policy/github-terms/github-sponsors-additional-terms
+  - GitHub Sponsors fees and taxes: https://docs.github.com/en/sponsors/sponsoring-open-source-contributors/about-sponsorships-fees-and-taxes
+  - GitHub Marketplace app-listing requirements: https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app
+  - GitHub Marketplace Action listing: https://docs.github.com/en/actions/how-tos/create-and-publish-actions/publish-in-github-marketplace?learn=create_actions
+  - Ko-fi fees: https://help.ko-fi.com/hc/en-us/articles/360002506494-Does-Ko-fi-take-a-fee
+  - Ko-fi Shop: https://help.ko-fi.com/hc/en-us/articles/360009712917-Ko-fi-Shop-Sell-digital-physical-products
+  - Ko-fi discovery limits: https://help.ko-fi.com/hc/en-us/articles/27035616108957-Can-I-search-for-creators-on-Ko-fi
+  - Gumroad fees: https://gumroad.com/help/article/66-gumroads-fees.html
+  - Gumroad payout and identity settings: https://gumroad.com/help/article/260-your-payout-settings-page.html
+  - Gumroad tax and merchant-of-record treatment: https://gumroad.com/help/article/121-sales-tax-on-gumroad
+- This dated comparison is provisional, not authorization or demand evidence. Revalidate platform
+  terms, fees, eligibility, and product fit immediately before any action. Every account, identity,
+  merchant, tax, billing, and payment checkpoint remains human-owned.
+- No merchant or payment account, checkout, listing, release, issue, purchase, subscription,
+  customer contact, private input, wallet movement, or XLM use occurred. The frozen SEL-GH-001
+  release, form, configuration, and observation window were unchanged. Revenue and cleared
+  receipts remain $0.00. This comparison is one R-003 Support Agent Regression Lab revenue unit;
+  it does not pivot or reactivate the parked Revenue Lab.

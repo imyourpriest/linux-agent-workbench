@@ -93,6 +93,9 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
   August 15, 2026 4:22 PM, no reset available, and zero credits. D-029 targets approximately 4%
   remaining for this one-time extension. These readings are not attributed to this project or an
   individual action, and the extension is not a new work unit.
+- Final direct browser observation: 2% remained after PR 10 merged and its exact merge commit was
+  validated on public `main`. This is a whole-account snapshot; the source cannot attribute the
+  change to this project or any individual action.
 
 | Date | Workstream | Work units | Outcome | Usage-page snapshots |
 |---|---:|---:|---|---|
@@ -111,3 +114,32 @@ allocated 2/3 to Patch Cabinet and 1/3 to the Lab rather than being counted as a
 R-002 has six Patch Cabinet units and three Support Agent Regression Lab units, preserving the 2:1
 period ratio. Across both periods, the dedicated totals are fourteen impact units and seven revenue
 units. Publication and shared governance are not backfilled as extra dedicated work units.
+
+### R-003 — reported 2026-08-10
+
+- Starting capacity: sponsor reported 100% after reset.
+- First direct browser observation: 99% remaining after reset verification and work setup, with
+  the next reset shown as August 17, 2026 6:01 PM, no reset available, and zero credits. This is a
+  whole-account snapshot; no cause or project attribution is inferred from the one-point
+  difference from the sponsor report.
+- D-024 and D-029 were one-reset R-002 exceptions and have expired. The ordinary rules resume:
+  maintain the 2:1 impact-to-revenue ratio while both workstreams remain active, start no long or
+  multi-agent unit below 50%, stop at 40%, and protect the final 25%.
+- No substantive R-003 work unit began before this reset record.
+- A direct whole-account reading after the complete two-impact/one-revenue batch showed 86%
+  remaining. This combined snapshot is not attributed to any project, workstream, unit, agent,
+  tool call, or action; no per-unit reading is invented.
+- A later direct whole-account snapshot after remediation and independent clean re-review showed
+  73% remaining, the next reset at August 17, 2026 6:00 PM, no reset available, and zero credits.
+  No delta or amount is attributed to this project, workstream, unit, agent, tool call, or action.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-10 | Shared control | 0 | Reset verification and ordinary-policy restoration | 100% sponsor report; 99% browser observed |
+| 2026-08-10 | Patch Cabinet | 1 | Current autonomous-workflow candidate scan and review correction; no ready candidate | not individually measured |
+| 2026-08-10 | Patch Cabinet | 1 | Standalone manual policy-profile experiment and adversarial hardening | not individually measured |
+| 2026-08-10 | Support Agent Regression Lab | 1 | Current primary-source payment/distribution channel comparison; no activation | not individually measured |
+
+R-003 has two Patch Cabinet impact units and one Revenue unit, preserving the 2:1 period ratio.
+The only post-batch direct snapshot is the combined 86% whole-account reading above. Cumulative
+dedicated totals are sixteen impact units and eight revenue units.

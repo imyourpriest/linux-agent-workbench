@@ -197,3 +197,42 @@ Append-only project record.
   `2026-08-09T01:01:18Z`, including commit refs, byte counts, Git blob identifiers, and decoded-byte
   SHA-256 values for all four files. It is traceability evidence, not a signature or permission
   claim, and no third-party policy text is copied into the repository.
+
+## 2026-08-10 - Current autonomous-workflow scan
+
+- Reviewed LoopGate Harness issue 2 and Ruff issue 27602 from public read-only evidence captured
+  between `2026-08-11T00:12:49Z` and `2026-08-11T00:13:11Z` UTC, with local policy as-of date
+  `2026-08-10`. The explicit operator-controlled exclusion file was applied without publishing its
+  entries.
+- LoopGate was ineligible because its eight-hour estimate exceeded the Season 1 scope and its
+  pinned contributor guide did not explicitly authorize this autonomous workflow. Ruff was
+  ineligible because its pinned contributor guide requires substantive human review and editorial
+  judgment that conflict with the project's human-only identity and attestation checkpoint.
+- The active engine 0.3.0 bundle records no ready candidate and no investigate claim. No target
+  code or policy was acquired for execution, and no upstream contact, issue, comment, reaction,
+  assignment, branch, pull request, or submission occurred. This is one Patch Cabinet impact unit.
+
+## 2026-08-10 - Manual policy-profile experiment
+
+- Added a separate strict offline profile catalog that binds eight manually normalized policy
+  dimensions to exact immutable consent records. It rejects unsafe JSON and files, provenance
+  mismatches, aliases, duplicate bindings, and invalid or cross-lineage successor chains.
+- Added profiles for all five consent records and deterministic JSON/Markdown generation. The
+  profiles are historical manual facts only: they do not interpret prose automatically, alter the
+  active engine, establish current permission or candidate eligibility, or authorize contact or
+  submission. This is one Patch Cabinet impact unit.
+
+## 2026-08-10 - Post-review provenance and catalog correction
+
+- Corrected the Ruff review to the evidence actually pinned in this repository. The exact
+  `CONTRIBUTING.md` delegates substantive AI-use rules to a different repository at a mutable
+  branch URL; that external policy has no commit pin or source receipt here. Ruff is therefore
+  `unknown` and `insufficiently_explicit`, all eight Ruff profile dimensions are `not_explicit`,
+  and the active engine still rejects it. No cross-repository policy claim or permission was
+  imported.
+- Required profile successor values to exactly match their consent records, including `null`;
+  rejected catalog junction/reparse directory boundaries; and added strict bounded validation for
+  both acquisition-receipt shapes and their exact record/API provenance.
+- Catalog output parents are explicitly trusted-local scope. Atomic replacement avoids partial
+  output but is not claimed to enforce against adversarial parent replacement. This correction is
+  review remediation for the two recorded impact units, not an additional work unit.

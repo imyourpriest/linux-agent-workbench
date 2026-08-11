@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+  "consent_record_id": "github-stanfordnlp-dspy-9bca784d1146-5df171b4c3d1",
+  "repository": "stanfordnlp/dspy",
+  "commit_sha": "9bca784d114641d25b6745e79df0c3f533576708",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "5df171b4c3d124a1a2c5f669e2e884c5f9e5efddc083d0feab18a206ffb32fe9",
+  "dimensions": {
+    "autonomous_issue_submission": "disallowed",
+    "autonomous_pr_submission": "disallowed",
+    "human_review": "required",
+    "disclosure": "required",
+    "human_accountability": "required",
+    "license_ip_checks": "required",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned guide bars autonomous submissions and requires disclosed, reviewed, licensed work."
+}

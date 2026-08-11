@@ -4,9 +4,10 @@ import copy
 import html
 import json
 import os
+import subprocess
 import tempfile
 import unittest
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from patch_cabinet import consent_catalog
@@ -82,11 +83,11 @@ class ConsentCatalogTests(unittest.TestCase):
     def test_repository_catalog_has_expected_conservative_counts(self) -> None:
         project = Path(__file__).resolve().parents[1]
         loaded = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 8))
-        self.assertEqual(report["summary"]["records"], 4)
+        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 10))
+        self.assertEqual(report["summary"]["records"], 5)
         self.assertEqual(report["summary"]["explicitly_allows"], 0)
         self.assertEqual(report["summary"]["explicitly_disallows"], 2)
-        self.assertEqual(report["summary"]["insufficiently_explicit"], 2)
+        self.assertEqual(report["summary"]["insufficiently_explicit"], 3)
 
     def test_strict_json_rejects_duplicate_nonstandard_and_numeric_values(self) -> None:
         valid = json.dumps(self._record())
@@ -162,9 +163,33 @@ class ConsentCatalogTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "regular JSON"):
             consent_catalog.load_catalog(self.records)
 
+    @unittest.skipUnless(os.name == "nt", "Windows junction test")
+    def test_junctioned_catalog_directory_is_rejected(self) -> None:
+        outside = self.root / "outside-records"
+        outside.mkdir()
+        junction = self.root / "linked-records"
+        result = subprocess.run(
+            ["cmd.exe", "/c", "mklink", "/J", str(junction), str(outside)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            self.skipTest(f"junction creation unavailable: {result.stderr.strip()}")
+        try:
+            self.assertTrue(junction.is_junction())
+            with self.assertRaisesRegex(ValueError, "non-link regular directory"):
+                consent_catalog.load_catalog(junction)
+        finally:
+            os.rmdir(junction)
+
     def test_missing_forked_and_cyclic_successors_are_rejected(self) -> None:
         first = self._record()
-        missing = self._record(commit="c" * 40, digest="d" * 64, supersedes="github-missing-" + "1" * 12 + "-" + "2" * 12)
+        missing = self._record(
+            commit="c" * 40,
+            digest="d" * 64,
+            supersedes="github-missing-" + "1" * 12 + "-" + "2" * 12,
+        )
         self._write(first)
         self._write(missing)
         with self.assertRaisesRegex(ValueError, "different catalog record"):
@@ -211,13 +236,14 @@ class ConsentCatalogTests(unittest.TestCase):
         self.assertEqual(html.unescape(encoded), note)
         self.assertEqual(rendered.count("[source](https://"), 1)
 
-    def test_initial_acquisition_receipt_binds_every_catalog_record(self) -> None:
+    def test_acquisition_receipts_bind_every_catalog_record(self) -> None:
         project = Path(__file__).resolve().parents[1]
         records = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        receipt = json.loads(
-            (project / "data" / "consent-catalog" / "ACQUISITION_RECEIPT.json").read_text(
-                encoding="utf-8"
-            )
+        now_utc = datetime(2026, 8, 11, 1, 0, 0, tzinfo=timezone.utc)
+        receipt = consent_catalog.load_acquisition_receipt(
+            project / "data" / "consent-catalog" / "ACQUISITION_RECEIPT.json",
+            records,
+            now_utc=now_utc,
         )
         self.assertEqual(
             set(receipt),
@@ -226,8 +252,9 @@ class ConsentCatalogTests(unittest.TestCase):
         self.assertEqual(receipt["schema_version"], "1")
         self.assertIn("not a signature", receipt["claim_boundary"])
         by_id = {item["record_id"]: item for item in receipt["sources"]}
-        self.assertEqual(set(by_id), {item.record_id for item in records})
-        for record in records:
+        initial_records = [item for item in records if item.repository != "astral-sh/ruff"]
+        self.assertEqual(set(by_id), {item.record_id for item in initial_records})
+        for record in initial_records:
             source = by_id[record.record_id]
             self.assertEqual(source["repository"], record.repository)
             self.assertEqual(source["commit_sha"], record.commit_sha)
@@ -240,6 +267,89 @@ class ConsentCatalogTests(unittest.TestCase):
             )
             self.assertRegex(source["git_blob_sha1"], r"^[0-9a-f]{40}$")
             self.assertGreater(source["source_bytes"], 0)
+
+        ruff_receipt = consent_catalog.load_acquisition_receipt(
+            project / "data" / "consent-catalog" / "RUFF_SOURCE_ACQUISITION_RECEIPT.json",
+            records,
+            now_utc=now_utc,
+        )
+        self.assertEqual(
+            set(ruff_receipt),
+            {"schema_version", "receipt_id", "retrieved_at", "method", "claim_boundary", "source"},
+        )
+        self.assertIn("not a signature", ruff_receipt["claim_boundary"])
+        ruff = next(item for item in records if item.repository == "astral-sh/ruff")
+        source = ruff_receipt["source"]
+        self.assertEqual(source["record_id"], ruff.record_id)
+        self.assertEqual(source["repository"], ruff.repository)
+        self.assertEqual(source["commit_sha"], ruff.commit_sha)
+        self.assertEqual(source["policy_path"], ruff.policy_path)
+        self.assertEqual(source["source_sha256"], ruff.source_sha256)
+        self.assertEqual(source["git_blob_sha1"], "3ebd8d449be8fb8ac25e971c51bd76745a4e84e8")
+        self.assertEqual(source["source_bytes"], 50349)
+        source_ids = [item["record_id"] for item in receipt["sources"]]
+        source_ids.append(ruff_receipt["source"]["record_id"])
+        self.assertEqual(len(source_ids), len(set(source_ids)))
+        self.assertEqual(set(source_ids), {record.record_id for record in records})
+
+    def test_acquisition_receipt_strict_json_and_fields_fail_closed(self) -> None:
+        project = Path(__file__).resolve().parents[1]
+        records = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
+        now_utc = datetime(2026, 8, 11, 1, 0, 0, tzinfo=timezone.utc)
+        source_path = project / "data" / "consent-catalog" / "RUFF_SOURCE_ACQUISITION_RECEIPT.json"
+        valid_text = source_path.read_text(encoding="utf-8")
+        valid = json.loads(valid_text)
+        probes: dict[str, bytes] = {
+            "duplicate": valid_text.replace(
+                '"method":', '"method": "duplicate", "method":', 1
+            ).encode(),
+            "constant": valid_text.replace('"source_bytes": 50349', '"source_bytes": NaN').encode(),
+            "float": valid_text.replace('"source_bytes": 50349', '"source_bytes": 1.5').encode(),
+            "number-field": valid_text.replace(
+                '"schema_version": "1"', '"schema_version": 1'
+            ).encode(),
+            "deep": ("[" * 20 + "]" * 20).encode(),
+            "bom": b"\xef\xbb\xbf" + valid_text.encode(),
+            "oversize": b" " * (consent_catalog.MAX_RECEIPT_BYTES + 1),
+        }
+        wrong_field = copy.deepcopy(valid)
+        wrong_field["source"]["extra"] = "unexpected"
+        probes["wrong-field"] = json.dumps(wrong_field).encode()
+        wrong_url = copy.deepcopy(valid)
+        wrong_url["source"]["api_url"] = (
+            "https://api.github.com/repos/astral-sh/.github/contents/AI_POLICY.md?ref=main"
+        )
+        probes["wrong-url"] = json.dumps(wrong_url).encode()
+        zero_digest = copy.deepcopy(valid)
+        zero_digest["source"]["git_blob_sha1"] = "0" * 40
+        probes["zero-digest"] = json.dumps(zero_digest).encode()
+        unsafe = copy.deepcopy(valid)
+        unsafe["claim_boundary"] = "safe\u202eunsafe"
+        probes["unsafe-control"] = json.dumps(unsafe).encode()
+        for label, payload in probes.items():
+            with self.subTest(label=label):
+                path = self.root / f"{label}.json"
+                path.write_bytes(payload)
+                with self.assertRaises(ValueError):
+                    consent_catalog.load_acquisition_receipt(path, records, now_utc=now_utc)
+
+    def test_acquisition_receipt_rejects_future_utc_timestamp(self) -> None:
+        project = Path(__file__).resolve().parents[1]
+        records = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
+        source_path = project / "data" / "consent-catalog" / "RUFF_SOURCE_ACQUISITION_RECEIPT.json"
+        receipt = json.loads(source_path.read_text(encoding="utf-8"))
+        receipt["retrieved_at"] = "2026-08-11T01:00:01Z"
+        mutated = self.root / "future.json"
+        mutated.write_text(json.dumps(receipt), encoding="utf-8")
+        now_utc = datetime(2026, 8, 11, 1, 0, 0, tzinfo=timezone.utc)
+        with self.assertRaisesRegex(ValueError, "future"):
+            consent_catalog.load_acquisition_receipt(mutated, records, now_utc=now_utc)
+        with self.assertRaisesRegex(ValueError, "timezone-aware UTC"):
+            consent_catalog.load_acquisition_receipt(
+                mutated,
+                records,
+                now_utc=datetime(2026, 8, 11, 1, 0, 2),
+            )
 
     def test_output_alias_and_catalog_directory_output_are_rejected(self) -> None:
         source = self._write(self._record())

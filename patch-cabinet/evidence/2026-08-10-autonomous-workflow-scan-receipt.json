@@ -1,0 +1,10 @@
+{
+  "schema_version": "1",
+  "bundle": "2026-08-10-autonomous-workflow-scan",
+  "files": {
+    "patch-cabinet/data/candidates/2026-08-10-autonomous-workflow-scan.json": "8436f10eff303ab8dc59d201c76edbeb7cfc696cce0bf51fae9b9e6819a1b1a2",
+    "patch-cabinet/evidence/2026-08-10-autonomous-workflow-scan.md": "7b7f00f90f0b258f7a6e8ee788a8114a9cc9d74c955bdcac8414a282b01a1b98",
+    "patch-cabinet/evidence/2026-08-10-autonomous-workflow-scan-policy.json": "df582a2500115de25ffcf321c6ee7c4c5e1cb93417c10453b4ea5edf50949e77",
+    "patch-cabinet/evidence/2026-08-10-autonomous-workflow-scan-policy.md": "3bccdef984deabe875abbc987e824db6f72e0357b66f69c26c81eb62afe57f3e"
+  }
+}

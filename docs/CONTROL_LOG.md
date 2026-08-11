@@ -484,3 +484,68 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   wallet movement or use XLM.
   This is a project/session ledger assertion, not an inference from the source receipt. Cleared
   revenue remains $0.00.
+
+## 2026-08-10 - Session 016 - PR 10 publication and R-003 reset
+
+- PR [10](https://github.com/imyourpriest/linux-agent-workbench/pull/10) merged its exact head
+  `35b443a887af4c6cc6a9fe945079b65a8dda8df7` at `2026-08-10T22:50:51Z` as public `main`
+  `508404db5e0757f51b9ac677c432b2dfac995ffe`.
+- PR CI run `31439874809` and CodeQL run `31439872974` passed on the exact PR head. Post-merge
+  `main` CI run `31439983239` and CodeQL run `31439983110` passed on the exact merge commit. These
+  hosted checks establish the reported workflows' results on those commits; they are not a claim
+  of production enforcement.
+- The final direct R-002 Usage-page reading after merge and `main` validation showed 2% remaining.
+  The source is a whole-account snapshot and cannot attribute the change to this project or any
+  individual action.
+- The sponsor then reported the R-003 reset at 100%. The first direct Usage-page reading after
+  reset verification and setup showed 99% remaining, the next reset at August 17, 2026 6:01 PM,
+  no reset available, and zero credits. This is also a whole-account snapshot with no project or
+  action attribution. No substantive R-003 work unit began before this record.
+- D-024 and D-029 were one-reset R-002 exceptions and are now expired. Ordinary controls resume:
+  maintain the 2:1 impact-to-revenue ratio while both workstreams remain active, start no long or
+  multi-agent unit below 50%, stop at 40%, and protect the final 25%.
+- Revenue and cleared receipts remain $0.00. No customer, qualifying interest, order, checkout,
+  payment, merchant account, purchase, expense, subscription, domain, wallet movement, XLM use,
+  private input, upstream contact, social post, advertisement, or direct message was recorded in
+  this publication/reset closeout.
+
+## 2026-08-10 - Session 017 - R-003 three-unit batch and review correction
+
+- Completed two Patch Cabinet impact units: the current autonomous-workflow candidate scan and the
+  standalone manual policy-profile experiment. Completed one Support Agent Regression Lab revenue
+  unit: the current primary-source payment/distribution channel comparison. This batch establishes
+  the required 2:1 period ratio; it does not assign usage to any unit or reactivate the parked
+  Revenue Lab.
+- Post-review correction made Ruff fail closed because its pinned contributor file delegates
+  substantive AI rules to an unbound cross-repository mutable policy. The receipt, successor, and
+  junction/reparse boundaries were corrected and tested. The output-parent claim was narrowed and
+  documented as trusted-local scope rather than adversarially tested. No prior frozen evidence,
+  engine, verifier, parked Revenue Lab input, SEL-GH-001 release, form, configuration, or
+  observation window changed.
+- The direct Usage-page reading after the complete three-unit batch showed 86% remaining. This is
+  one whole-account snapshot; no delta or amount is attributed to a project, workstream, unit,
+  agent, tool call, or action.
+- The active Support Agent Regression Lab payment-channel research remains provisional and does
+  not pivot or reactivate the parked Revenue Lab. No merchant or payment account, checkout,
+  listing, release, issue, customer, qualifying interest, order, payment, purchase, expense,
+  subscription, domain, wallet movement, XLM use, private input, upstream contact, social post,
+  advertisement, or direct message occurred. Revenue and cleared receipts remain $0.00.
+
+## 2026-08-10 - Session 018 - Clean re-review and pre-publication checkpoint
+
+- After remediation, an independent clean re-review reported no P0-P3 finding in its reviewed
+  scope. This is a bounded review verdict, not proof that the repository or production environment
+  is free of defects.
+- Primary local reruns passed: Patch Cabinet discovered 59 tests, with 57 passing and two
+  privilege-dependent symlink skips; both Windows junction tests ran and passed. Tools discovered
+  19 tests, with 18 passing and one privilege-dependent symlink skip. Revenue Lab discovered 41
+  tests, with 40 passing and one privilege-dependent symlink skip. Support Agent Regression Lab
+  discovered 35 tests, with 34 passing and one privilege-dependent symlink skip. All three
+  immutable candidate bundles replayed successfully.
+- The bounded public-tree heuristic passed across 144 files / 1,182,984 bytes / six
+  secret-signature families, and `git diff --check` passed. The public-tree result is a heuristic,
+  not a privacy guarantee. Hosted CI has not yet run on these uncommitted changes, and external
+  platform facts remain provisional and require revalidation before action.
+- A direct whole-account Usage-page snapshot after remediation and clean re-review showed 73%
+  remaining, the next reset at August 17, 2026 6:00 PM, no reset available, and zero credits. No
+  delta or amount is attributed to this project, workstream, unit, agent, tool call, or action.
