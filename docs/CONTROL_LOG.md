@@ -621,3 +621,15 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - This correction changes no work-unit count and records no final post-work Usage reading. No
   commit, publication, customer/contact/payment action, private input, or external state change is
   claimed by this local remediation entry.
+
+## 2026-08-12 - Session 023 - PR 13 Windows test-fixture correction
+
+- Exact PR head `42d300254b64bfb8bf3d7b40f2aed2d99f4389f3` failed CI run `31650000604`,
+  protected Windows job `94292016466`. Linux, CodeQL, and generated-freshness checks passed.
+- The failure was in test setup, not an observed verifier acceptance: `os.link` crossed from the
+  `D:` checkout to the `C:` temporary volume and raised WinError 17 before validation. The local
+  test now creates both hard-link names on the same temporary volume, confirms shared identity and
+  link count, and exercises the unchanged verifier rejection.
+- No hosted rerun success is claimed by this entry. No production code, work-unit total, Usage
+  reading, commit, publication, customer/contact/payment action, private input, or external state
+  changed during this local correction.

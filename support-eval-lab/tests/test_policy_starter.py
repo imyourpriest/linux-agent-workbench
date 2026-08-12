@@ -237,10 +237,21 @@ class PolicyStarterTests(unittest.TestCase):
 
     def test_hardlink_alias_fails(self) -> None:
         target = self.pack / "README.md"
-        target.unlink()
-        os.link(self.source / "README.md", target)
-        with self.assertRaisesRegex(ValueError, "hard-link"):
-            policy_starter.validate_pack(self.pack)
+        alias = self.root / "README-hardlink-alias.md"
+        try:
+            os.link(target, alias)
+            target_stat = target.stat()
+            alias_stat = alias.stat()
+            self.assertEqual(
+                (target_stat.st_dev, target_stat.st_ino),
+                (alias_stat.st_dev, alias_stat.st_ino),
+            )
+            self.assertGreaterEqual(target_stat.st_nlink, 2)
+            self.assertGreaterEqual(alias_stat.st_nlink, 2)
+            with self.assertRaisesRegex(ValueError, "hard-link"):
+                policy_starter.validate_pack(self.pack)
+        finally:
+            alias.unlink(missing_ok=True)
 
     def test_module_has_no_network_model_or_subprocess_runtime(self) -> None:
         source = Path(policy_starter.__file__).read_text(encoding="utf-8")

@@ -223,3 +223,15 @@ Append-only project record.
   anchor. This is remediation of the already counted revenue unit, not a new unit or activation.
   No post-work Usage reading, customer, contact, offer, checkout, payment, private input, or
   external action is claimed.
+
+## 2026-08-12 - Windows hard-link test fixture correction
+
+- PR 13 head `42d300254b64bfb8bf3d7b40f2aed2d99f4389f3` had a Windows failure in CI run
+  `31650000604`, protected job `94292016466`. The policy-starter hard-link test attempted to link
+  the repository fixture on the `D:` checkout volume to a target in the `C:` temporary directory;
+  Windows rejected fixture creation with WinError 17 before the verifier assertion ran.
+- Corrected only the test fixture: it now keeps the copied pack file as the first name and creates
+  a sibling alias under the same temporary root, proves matching file identity and link count,
+  then verifies the unchanged runtime rejects the pack. The alias is removed in a `finally` block.
+- This records the failed hosted run and local correction only. It does not claim a later hosted
+  success, production enforcement, a new work unit, Usage reading, or external action.
