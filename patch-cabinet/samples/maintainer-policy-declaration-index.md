@@ -2,7 +2,7 @@
 
 > Structural validation only. Project records are maintainer- or operator-supplied and unauthenticated/unverified. Validation does not verify supplier identity or authority, assertions, source truth, authorship, repository ownership, current policy, or permission to contact or submit.
 
-- Component: <code>maintainer-policy-declaration 0.1.0</code>
+- Component: <code>maintainer-policy-declaration 0.2.0</code>
 - Structurally validated records: 1
 
 ## <code>synthetic/maintainer-policy-declaration-demo</code>

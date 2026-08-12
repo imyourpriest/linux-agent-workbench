@@ -14,6 +14,7 @@ dependencies = ["packaging==26.3"]
 
 [project.scripts]
 patch-cabinet = "patch_cabinet.cli:main"
+maintainer-policy-declaration = "patch_cabinet.maintainer_policy_declaration:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

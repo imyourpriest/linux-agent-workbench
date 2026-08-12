@@ -151,8 +151,13 @@ units. Publication and shared governance are not backfilled as extra dedicated w
 | 2026-08-10 | Patch Cabinet | 1 | Isolated maintainer policy declaration prototype | not individually measured |
 | 2026-08-10 | Patch Cabinet | 1 | Declaration-policy public-context research and 30-day gate | not individually measured |
 | 2026-08-10 | Support Agent Regression Lab | 1 | Future AI Contribution Policy Starter + Audit research; no activation | not individually measured |
+| 2026-08-12 | Shared control | 0 | R-006 exception and exact PR 12 publication receipt | batch-start whole-account snapshot: 55%; reset Aug 17 6:01 PM; zero credits |
+| 2026-08-12 | Patch Cabinet | 1 | Fresh fail-closed no-ready policy scan | not individually measured |
+| 2026-08-12 | Patch Cabinet | 1 | Portable one-record declaration validator and deterministic receipt | not individually measured |
+| 2026-08-12 | Support Agent Regression Lab | 1 | Non-activated fully synthetic policy-starter pack and audit verifier | not individually measured |
 
-R-003 has four Patch Cabinet impact units and two Support Agent Regression Lab revenue units,
+R-003 has six Patch Cabinet impact units and three Support Agent Regression Lab revenue units,
 preserving the 2:1 period ratio. The later combined post-research snapshot is 68%; no per-unit
 usage is inferred. The later post-validation whole-account snapshot is 62%, also without
-attribution. Cumulative dedicated totals are eighteen impact units and nine revenue units.
+attribution. The R-006 batch-start snapshot is 55%, with no final post-work reading yet and no
+attribution. Cumulative dedicated totals are twenty impact units and ten revenue units.

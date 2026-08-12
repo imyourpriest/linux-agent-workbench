@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import html
 import json
 import os
+import re
 import subprocess
 import tempfile
 import unittest
@@ -80,7 +82,7 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
         first = declaration.build_index(loaded)
         second = declaration.build_index(loaded)
         self.assertEqual(first, second)
-        self.assertEqual(first["component"]["version"], "0.1.0")
+        self.assertEqual(first["component"]["version"], "0.2.0")
         self.assertIn("Structural validation only", first["claim_boundary"])
         self.assertIn("does not verify", first["claim_boundary"])
         forbidden = {"eligible", "ready", "authorized", "candidate", "scoring"}
@@ -108,6 +110,7 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
             (project / "samples" / "maintainer-policy-declaration-index.json").read_bytes(),
             (json.dumps(report, indent=2) + "\n").encode(),
         )
+
         self.assertEqual(
             (project / "samples" / "maintainer-policy-declaration-index.md").read_bytes(),
             declaration.render_markdown(report).encode(),
@@ -116,6 +119,27 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
             (project / "samples" / "maintainer-policy-declaration-starter.json").read_bytes(),
             declaration.render_starter("unverified_project_declaration").encode(),
         )
+        record_path = next(record_dir.glob("*.json"))
+        self.assertEqual(
+            (
+                project / "samples" / "maintainer-policy-declaration-validation-receipt.json"
+            ).read_bytes(),
+            (
+                json.dumps(declaration.build_validation_receipt(record_path), indent=2) + "\n"
+            ).encode(),
+        )
+
+    def test_documented_component_version_matches_runtime(self) -> None:
+        project = Path(__file__).resolve().parents[1]
+        documentation = (project / "MAINTAINER_POLICY_DECLARATION.md").read_text(
+            encoding="utf-8"
+        )
+        match = re.search(
+            r"Component `maintainer-policy-declaration` version `([^`]+)`, schema `1`\.",
+            documentation,
+        )
+        self.assertIsNotNone(match)
+        self.assertEqual(match.group(1), declaration.COMPONENT_VERSION)
 
     def test_record_kind_and_assertion_basis_must_pair(self) -> None:
         for kind, basis in declaration.RECORD_BASES.items():
@@ -464,6 +488,36 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
         self.assertNotIn("\r\n", starter)
         with self.assertRaises(SystemExit):
             declaration.main(["starter"])
+
+    def test_one_record_receipt_reuses_payload_and_has_narrow_claims(self) -> None:
+        source = self._write(self._record(kind="synthetic_example"))
+        receipt = declaration.build_validation_receipt(source)
+        item = receipt["declaration"]
+        self.assertEqual(receipt["result"], "structurally_valid")
+        self.assertEqual(
+            item["record_file_sha256"], hashlib.sha256(source.read_bytes()).hexdigest()
+        )
+        self.assertEqual(item["record_file_sha256_label"], "recomputable_fingerprint_only")
+        boundary = receipt["claim_boundary"]
+        for excluded_claim in ("not a signature", "authentication", "authorization", "currentness"):
+            self.assertIn(excluded_claim, boundary)
+        self.assertEqual(receipt, declaration.build_validation_receipt(source))
+
+    def test_validate_command_rejects_directory_link_and_malformed_record(self) -> None:
+        source = self._write(self._record(kind="synthetic_example"))
+        with self.assertRaises(ValueError):
+            declaration.main(["validate", str(self.records)])
+        malformed = self.root / "wrong.json"
+        malformed.write_text('{"schema_version":"1","schema_version":"1"}', encoding="utf-8")
+        with self.assertRaises(ValueError):
+            declaration.main(["validate", str(malformed)])
+        linked = self.root / source.name
+        try:
+            linked.symlink_to(source)
+        except OSError:
+            return
+        with self.assertRaisesRegex(ValueError, "nonsymlink"):
+            declaration.main(["validate", str(linked)])
 
     def test_starter_is_explicitly_unvalidated_until_replaced(self) -> None:
         starter = declaration.starter_template("unverified_project_declaration")

@@ -2,7 +2,7 @@
   "schema_version": "1",
   "component": {
     "name": "maintainer-policy-declaration",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "claim_boundary": "Structural validation only. Project records are maintainer- or operator-supplied and unauthenticated/unverified. Validation does not verify supplier identity or authority, assertions, source truth, authorship, repository ownership, current policy, or permission to contact or submit.",
   "summary": {

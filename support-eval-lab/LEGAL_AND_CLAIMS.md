@@ -48,3 +48,15 @@ support or content-removal route as appropriate.
   merchant, bookkeeping, and sanctions/export checks. This draft is not legal or tax advice.
 
 No customer input, contract, payment, merchant account, or sale exists today.
+
+## Policy-starter pack boundary
+
+The policy-starter pack uses only reserved `example.invalid` provenance. Its validator checks a
+bounded flat inventory, strict JSON structure, exact boundary booleans, recomputable hashes, and
+verifier-owned exact checked-tree content digests. Those constants are local policy, not
+signatures or an external trust anchor.
+Those checks do not authenticate a supplier, maintainer, owner, record, or source; establish
+identity, authority, permission, policy truth/currentness/adoption, authorship, or copyright
+clearance; provide legal advice; detect AI use; certify compliance; guarantee enforcement; or
+prove demand, delivery quality, safety, or production readiness. Private input and payment are
+prohibited and no commercial route is active.

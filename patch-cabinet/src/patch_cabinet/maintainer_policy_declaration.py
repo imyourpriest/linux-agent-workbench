@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Any, Sequence
 
 
-COMPONENT_VERSION = "0.1.0"
+COMPONENT_VERSION = "0.2.0"
 SCHEMA_VERSION = "1"
 MAX_FILE_BYTES = 65_536
 MAX_RECORDS = 100
@@ -367,8 +367,7 @@ def _parse_declaration(raw: dict[str, Any]) -> Declaration:
     )
 
 
-def _load_declaration(path: Path) -> Declaration:
-    payload = _safe_read(path)
+def _parse_declaration_payload(payload: bytes, path: Path) -> Declaration:
     try:
         text = payload.decode("utf-8")
     except UnicodeDecodeError as error:
@@ -392,6 +391,40 @@ def _load_declaration(path: Path) -> Declaration:
     if path.name != f"{declaration.declaration_id}.json":
         raise ValueError("declaration filename must equal its canonical declaration_id")
     return declaration
+
+
+def _load_declaration_with_payload(path: Path) -> tuple[Declaration, bytes]:
+    payload = _safe_read(path)
+    return _parse_declaration_payload(payload, path), payload
+
+
+def _load_declaration(path: Path) -> Declaration:
+    declaration, _payload = _load_declaration_with_payload(path)
+    return declaration
+
+
+def build_validation_receipt(path: Path) -> dict[str, object]:
+    declaration, payload = _load_declaration_with_payload(path)
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "component": {"name": "maintainer-policy-declaration", "version": COMPONENT_VERSION},
+        "result": "structurally_valid",
+        "claim_boundary": (
+            CLAIM_BOUNDARY
+            + " The record_file_sha256 is only a recomputable file fingerprint; it is not a "
+            "signature, authentication, authorization, identity, currentness, or permission claim."
+        ),
+        "declaration": {
+            "declaration_id": declaration.declaration_id,
+            "record_kind": declaration.record_kind,
+            "assertion_basis": declaration.assertion_basis,
+            "repository": declaration.repository,
+            "observed_at": declaration.observed_at.isoformat(),
+            "source_sha256": declaration.source_sha256,
+            "record_file_sha256": hashlib.sha256(payload).hexdigest(),
+            "record_file_sha256_label": "recomputable_fingerprint_only",
+        },
+    }
 
 
 def load_declarations(directory: Path) -> list[Declaration]:
@@ -611,7 +644,7 @@ def _assert_output_paths(directory: Path, outputs: list[Path]) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="python -m patch_cabinet.maintainer_policy_declaration")
+    parser = argparse.ArgumentParser(prog="maintainer-policy-declaration")
     subparsers = parser.add_subparsers(dest="command", required=True)
     render = subparsers.add_parser("render", help="render an explicit declaration directory")
     render.add_argument("records", help="directory containing declaration JSON files")
@@ -621,6 +654,10 @@ def build_parser() -> argparse.ArgumentParser:
         "starter", help="print an unvalidated deterministic starter template"
     )
     starter.add_argument("record_kind", choices=tuple(RECORD_BASES))
+    validate = subparsers.add_parser(
+        "validate", help="validate exactly one declaration and print a structural receipt"
+    )
+    validate.add_argument("record_file", help="one declaration JSON file")
     return parser
 
 
@@ -628,6 +665,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     if args.command == "starter":
         print(render_starter(args.record_kind), end="")
+        return 0
+    if args.command == "validate":
+        receipt = build_validation_receipt(Path(args.record_file))
+        print(json.dumps(receipt, indent=2) + "\n", end="")
         return 0
     directory = Path(args.records)
     outputs = [Path(value) for value in (args.json_out, args.markdown_out) if value]

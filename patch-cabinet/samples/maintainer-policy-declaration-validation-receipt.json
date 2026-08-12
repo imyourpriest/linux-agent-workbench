@@ -1,0 +1,19 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "maintainer-policy-declaration",
+    "version": "0.2.0"
+  },
+  "result": "structurally_valid",
+  "claim_boundary": "Structural validation only. Project records are maintainer- or operator-supplied and unauthenticated/unverified. Validation does not verify supplier identity or authority, assertions, source truth, authorship, repository ownership, current policy, or permission to contact or submit. The record_file_sha256 is only a recomputable file fingerprint; it is not a signature, authentication, authorization, identity, currentness, or permission claim.",
+  "declaration": {
+    "declaration_id": "mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a",
+    "record_kind": "synthetic_example",
+    "assertion_basis": "synthetic_example_not_a_maintainer_assertion",
+    "repository": "synthetic/maintainer-policy-declaration-demo",
+    "observed_at": "2026-08-10",
+    "source_sha256": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+    "record_file_sha256": "18fc07ce63a5083c767c6e8d4f6cfd95068d155fba03b039a831f154c8628add",
+    "record_file_sha256_label": "recomputable_fingerprint_only"
+  }
+}

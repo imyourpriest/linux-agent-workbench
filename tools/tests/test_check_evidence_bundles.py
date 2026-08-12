@@ -68,6 +68,37 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
     def test_public_repository_replays_every_registered_engine(self) -> None:
         self.assertEqual(checker.verify(ROOT), 3)
 
+    def test_exact_standalone_narrative_is_allowed_but_near_name_is_not(self) -> None:
+        registry = checker._load_registry(self.root)
+        self.assertEqual(len(checker._verify_inventory(self.root, registry)), 3)
+        evidence = self.root / "patch-cabinet" / "evidence"
+        exact = evidence / "2026-08-12-no-ready-policy-gate.md"
+        exact.write_bytes(exact.read_bytes() + b"\nchanged narrative\n")
+        with self.assertRaisesRegex(ValueError, "narrative digest"):
+            checker._verify_inventory(self.root, registry)
+        shutil.copy2(ROOT / "patch-cabinet" / "evidence" / exact.name, exact)
+        near_name = evidence / "2026-08-12-no-ready-policy-gates.md"
+        near_name.write_text("near-name orphan\n", encoding="utf-8", newline="\n")
+        with self.assertRaisesRegex(ValueError, "orphan"):
+            checker._verify_inventory(self.root, registry)
+
+    def test_candidate_bundle_cannot_share_standalone_narrative_stem(self) -> None:
+        candidate = self.root / "patch-cabinet" / "data" / "candidates"
+        source = candidate / "2026-08-08-initial-shortlist.json"
+        conflicting = candidate / "2026-08-12-no-ready-policy-gate.json"
+        shutil.copy2(source, conflicting)
+        with self.assertRaisesRegex(ValueError, "reserved standalone narrative stem"):
+            checker._verify_inventory(self.root, checker._load_registry(self.root))
+
+    def test_evidence_capacity_includes_only_exact_narrative_allowlist(self) -> None:
+        self.assertEqual(
+            checker._evidence_entry_limit(),
+            checker.MAX_BUNDLES * 4 + len(checker.STANDALONE_EVIDENCE_NARRATIVES),
+        )
+        self.assertEqual(checker._evidence_entry_limit(0), 1)
+        with self.assertRaises(ValueError):
+            checker._evidence_entry_limit(True)
+
     def test_unknown_artifact_engine_fails_closed(self) -> None:
         policy = self.read_json(self.policy_path)
         policy["engine"]["version"] = "9.9.9"

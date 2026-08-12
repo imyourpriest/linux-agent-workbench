@@ -22,6 +22,11 @@ MAX_REGISTRY_BYTES = 200_000
 MAX_REGISTERED_FILE_BYTES = 5_000_000
 MAX_ENGINES = 20
 MAX_BUNDLES = 100
+STANDALONE_EVIDENCE_NARRATIVES = {
+    "2026-08-12-no-ready-policy-gate.md": (
+        "bbcb324bfe007d957bc177c2d3eedb6386b89eb1f3522a07744ba27f389fd077"
+    )
+}
 REPLAY_TIMEOUT_SECONDS = 60
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
 SEMVER = re.compile(r"^(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)$")
@@ -36,6 +41,12 @@ class Bundle:
     policy_path: Path
     markdown_path: Path
     engine_version: str
+
+
+def _evidence_entry_limit(bundle_limit: int = MAX_BUNDLES) -> int:
+    if type(bundle_limit) is not int or bundle_limit < 0:
+        raise ValueError("bundle limit must be a nonnegative integer")
+    return bundle_limit * 4 + len(STANDALONE_EVIDENCE_NARRATIVES)
 
 
 def _reject_duplicate_object(pairs: list[tuple[str, object]]) -> dict[str, object]:
@@ -427,7 +438,7 @@ def _verify_inventory(root: Path, registry: dict[str, object]) -> list[Bundle]:
     evidence_dir = _scoped_directory(root, "patch-cabinet/evidence")
     evidence_entries = _bounded_regular_entries(
         evidence_dir,
-        limit=MAX_BUNDLES * 4,
+        limit=_evidence_entry_limit(),
         label="evidence directory",
     )
     candidate_entries = _bounded_regular_entries(
@@ -447,6 +458,8 @@ def _verify_inventory(root: Path, registry: dict[str, object]) -> list[Bundle]:
         raise ValueError("no current-candidate evidence manifest is present")
     if len(manifests) > MAX_BUNDLES:
         raise ValueError("candidate evidence inventory exceeds its bundle limit")
+    if any(f"{manifest.stem}.md" in STANDALONE_EVIDENCE_NARRATIVES for manifest in manifests):
+        raise ValueError("candidate bundle cannot share a reserved standalone narrative stem")
 
     bundles: list[Bundle] = []
     expected_evidence: set[str] = set()
@@ -537,7 +550,15 @@ def _verify_inventory(root: Path, registry: dict[str, object]) -> list[Bundle]:
             )
         )
 
-    actual_evidence = {path.name for path in evidence_entries}
+    actual_evidence = {
+        path.name
+        for path in evidence_entries
+        if path.name not in STANDALONE_EVIDENCE_NARRATIVES
+    }
+    for path in evidence_entries:
+        expected_narrative_digest = STANDALONE_EVIDENCE_NARRATIVES.get(path.name)
+        if expected_narrative_digest is not None and _digest(path) != expected_narrative_digest:
+            raise ValueError("standalone narrative digest differs from the exact allowlist")
     if actual_evidence != expected_evidence:
         raise ValueError("evidence directory contains an orphan or misses a receipted artifact")
     return bundles

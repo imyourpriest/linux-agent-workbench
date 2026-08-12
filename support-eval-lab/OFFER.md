@@ -33,3 +33,10 @@ No credentials, production access, private transcripts, personal data, regulated
 financial/employment material, penetration testing, vulnerability work, compliance/certification,
 model hosting, uptime promise, automated deployment gate, guaranteed accuracy, or guaranteed
 business result. The buyer remains responsible for product policy and release decisions.
+
+## AI Contribution Policy Starter + Audit hypothesis
+
+The checked-in `policy-starter/` pack is a non-activated, synthetic demonstration. A single `$79`
+hypothesis may be evaluated later only after separate authorization and every existing revenue,
+identity, terms, tax, merchant, privacy, refund, delivery, and support gate. It is not currently
+offered for sale; there is no listing, contact route, checkout, payment, order, or customer.
