@@ -1,0 +1,65 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "policy-starter-pack-verifier",
+    "version": "0.1.0"
+  },
+  "result": "structurally_valid_synthetic_pack",
+  "claim_boundary": "Structural and hash-consistency validation of a bounded reserved example.invalid synthetic pack only. Manifest and file SHA-256 values are recomputable consistency fingerprints, not signatures, authentication, authorization, identity, ownership, policy adoption or currentness, legal advice, AI-use detection, compliance, enforcement, safety, payment, customer, demand, or production-readiness evidence. The verifier-owned canonical SHA-256 constants bind this checked-tree example only; they are not signatures or an external trust anchor.",
+  "pack_id": "policy-starter-synthetic-v1",
+  "status": "non_activated_synthetic_hypothesis",
+  "canonical_binding": "verifier_owned_checked_tree_sha256_constants",
+  "manifest_sha256": "6e249d5718bd7f2fb5b9c2d02c32aa95db7cacf40d4da98f9ef389e84a012b5a",
+  "manifest_sha256_label": "recomputable_consistency_fingerprint_only",
+  "files": [
+    {
+      "path": "ASYNC_HANDOFF.md",
+      "sha256": "3e14b80b1954091b7e7631d6d75b5da731506546ef46de1fa951a2bc9dd7a24b",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "AUDIT.md",
+      "sha256": "aa508d6b54a10bf69ab2ea4c1495b658b57a170ba71ea340cd9f55bd220d9acc",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha256": "6ec40971a70a44c550f485719d06c57b8520e89a2c4468247830b35b69ae28bd",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "DECISION_MATRIX.md",
+      "sha256": "4ba802ef135cc38396b0deb89e64c5045f1ec826964efb9d8bbf44ce54be2430",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "ISSUE_PR_CHECKLIST.md",
+      "sha256": "7bcb5c45de7cfe54adf285b93d6f4825cd476bb4e6c308773176d6f44d6ab066",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "README.md",
+      "sha256": "182f03509fa6641e7f7a0ac9a22c0a7505e2399a75364fdf3e549e526f8ff3f0",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "SCOPE.md",
+      "sha256": "5cd975948e37da195a679c5d4eda33597a838deddb99c2491b78644286fbbff8",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    },
+    {
+      "path": "mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json",
+      "sha256": "19f5af9b1897e771742f36f10adff74f7406ed92b2a26f46ee91d70bef044e3d",
+      "sha256_label": "recomputable_consistency_fingerprint_only"
+    }
+  ],
+  "boundaries": {
+    "activated": false,
+    "payment_or_checkout": false,
+    "private_input": false,
+    "identity_or_authority_verified": false,
+    "legal_or_compliance_result": false,
+    "ai_use_detection": false,
+    "enforcement_guarantee": false
+  }
+}

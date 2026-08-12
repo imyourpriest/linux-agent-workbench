@@ -84,7 +84,15 @@ python -m patch_cabinet.maintainer_policy_declaration render \
   --markdown-out samples/maintainer-policy-declaration-index.md
 python -m patch_cabinet.maintainer_policy_declaration starter \
   unverified_project_declaration
+maintainer-policy-declaration validate \
+  data/maintainer-policy-declarations/synthetic/v1/mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a.json \
+  > samples/maintainer-policy-declaration-validation-receipt.json
 ```
+
+The installed `validate` command accepts exactly one record file and prints a deterministic
+structural-validation receipt. Its raw-file SHA-256 is labeled only as a recomputable fingerprint;
+neither that digest nor validation establishes authentication, authorization, identity,
+maintainer approval, source truth, policy currentness, or permission to submit.
 
 ## Success measures
 

@@ -591,3 +591,33 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - A direct whole-account Usage-page snapshot after validation showed 62% remaining, the next reset
   at August 17, 2026 6:00 PM, no reset available, and zero credits. No delta or amount is attributed
   to this repository, workstream, unit, agent, tool call, test, or action.
+
+## 2026-08-12 - Session 021 - PR 12 publication receipt and R-006 batch start
+
+- PR 12 published exact head `830f3d39575518517264f0853126bec308527a6a`. PR CI run
+  `31451569534` and CodeQL run `31451568339` passed on that head. The pull request was
+  squash-merged at `2026-08-11T02:12:24Z` as public `main`
+  `6d2acca70dbeed4f6df658c0055acb97cd84068e`; post-main CI run `31451666188` and CodeQL run
+  `31451666248` passed on that exact commit. These hosted results establish only the observed
+  named workflow outcomes on those commits, not production enforcement.
+- The new R-006/R-003 batch began from an observed whole-account Usage snapshot of 55% remaining,
+  next reset August 17, 2026 at 6:01 PM, no additional reset available, and zero credits. No delta
+  or amount is attributed to this project, batch, workstream, unit, agent, tool call, test, or
+  action. D-035 records the sponsor's one-reset 15% floor and start/closeout thresholds.
+- D-036 selects two Patch impact units and one Support revenue unit with local-only non-activation
+  boundaries. No final post-work Usage reading is recorded here; that reading remains pending.
+
+## 2026-08-12 - Session 022 - R-006 independent-review remediation
+
+- Independent review identified two P2 publication blockers: mutable-manifest content was not
+  independently bound before the policy-starter receipt emitted fixed boundaries, and the
+  declaration reference still named component 0.1.0. It also identified an evidence-directory
+  preflight capacity edge after the exact narrative exception.
+- Remediation binds every canonical pack content file to verifier-owned checked-tree digests,
+  derives declaration identity from canonical semantics, ties the documented declaration version
+  to runtime, and accounts for only the exact name-and-digest narrative allowlist in evidence
+  capacity. The
+  verifier constants are local checked-tree policy, not signatures or an external trust anchor.
+- This correction changes no work-unit count and records no final post-work Usage reading. No
+  commit, publication, customer/contact/payment action, private input, or external state change is
+  claimed by this local remediation entry.

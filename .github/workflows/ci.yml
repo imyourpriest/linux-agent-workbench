@@ -39,6 +39,7 @@ jobs:
       - name: Smoke-test installed entry points
         run: |
           patch-cabinet --help
+          maintainer-policy-declaration --help
           release-readiness --help
           support-eval --help
 
@@ -81,6 +82,7 @@ jobs:
         run: |
           python -m pip install ./patch-cabinet ./revenue-lab ./support-eval-lab
           patch-cabinet --help
+          maintainer-policy-declaration --help
           release-readiness --help
           support-eval --help
           python -m unittest discover -s patch-cabinet/tests -v
@@ -153,6 +155,9 @@ jobs:
           python -m patch_cabinet.maintainer_policy_declaration starter \
             unverified_project_declaration \
             > samples/maintainer-policy-declaration-starter.json
+          maintainer-policy-declaration validate \
+            data/maintainer-policy-declarations/synthetic/v1/mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a.json \
+            > samples/maintainer-policy-declaration-validation-receipt.json
 
       - name: Regenerate Release Readiness Lab sample
         working-directory: revenue-lab
@@ -175,6 +180,15 @@ jobs:
           samples/candidate.jsonl
           --markdown-out samples/comparison.md
           --json-out samples/comparison.json
+
+      - name: Regenerate synthetic policy-starter receipt
+        working-directory: support-eval-lab
+        run: |
+          python -m support_eval_lab.policy_starter policy-starter \
+            --json-out samples/policy-starter-validation-receipt.json
+          maintainer-policy-declaration validate \
+            policy-starter/mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json \
+            > /tmp/policy-starter-declaration-receipt.json
 
       - name: Regenerate Support channel observation
         working-directory: support-eval-lab

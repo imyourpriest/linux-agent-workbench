@@ -60,3 +60,26 @@ python -m support_eval_lab.observation \
   --json-out samples/channel-observation.json \
   --markdown-out samples/channel-observation.md
 ```
+
+## Non-activated policy-starter pack
+
+The [`policy-starter/`](policy-starter/) subtree is a fully synthetic, reserved
+`example.invalid` **AI Contribution Policy Starter + Audit** hypothesis. Its strict manifest and
+verifier-owned checked-tree SHA-256 constants jointly bind an exact flat inventory: scope/readme,
+one declaration record, a decision matrix, cautious
+`CONTRIBUTING` snippet, issue/PR checklist, ten-point evidence-linked audit, and asynchronous
+handoff. Validate it offline and regenerate the deterministic receipt with:
+
+```sh
+python -m support_eval_lab.policy_starter policy-starter \
+  --json-out samples/policy-starter-validation-receipt.json
+maintainer-policy-declaration validate \
+  policy-starter/mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json
+```
+
+The pack is not activated. `$79` is one unvalidated hypothesis, not a listing or price promise.
+No checkout, payment, customer input, identity/authority verification, legal advice, AI-use
+detection, compliance result, or enforcement guarantee exists. The receipt hashes are only
+recomputable consistency fingerprints, not signatures or authentication.
+The verifier-owned constants are local checked-tree policy, not signatures or an external trust
+anchor, and changing the example requires an intentional verifier release and review.

@@ -274,3 +274,30 @@ Append-only project record.
   identity assertion.
 - Remediation and tests were local only. No contact, publication, account, issue, pull request,
   payment, or other external action occurred. This correction is not an additional work unit.
+
+## 2026-08-12 - Fail-closed policy-gated scan and portable declaration receipt
+
+- Recorded a fresh no-ready scan in `evidence/2026-08-12-no-ready-policy-gate.md`. The strongest
+  new public near-miss, `jazzband/pip-tools` at exact commit
+  `e7f9099f5a87e5c08fbdd9b6e6d7b8f2132cb8d4`, explicitly does not permit autonomous pull-request
+  submission without human review. The operator exclusion baseline was applied without exposing
+  its entries. The scan stopped at policy, before issue/competition checks or candidate scoring.
+- Advanced only the isolated maintainer-declaration component to 0.2.0 and added an installed
+  one-record `validate` command. Its deterministic receipt reuses the safe-open payload for strict
+  validation and raw-file SHA-256, labels that digest only as a recomputable fingerprint, and
+  establishes no identity, authority, authorization, currentness, source truth, or permission.
+- These are two Patch Cabinet impact units. No candidate-engine/package version, active policy,
+  versioned verifier, existing evidence bundle, target code, upstream contact, or external state
+  changed.
+
+## 2026-08-12 - R-006 declaration and evidence-control correction
+
+- Corrected the declaration reference's normative component version from 0.1.0 to 0.2.0 and added
+  a test that ties the documented value to the runtime constant.
+- Corrected evidence-directory preflight capacity to reserve exactly one slot for the exact
+  name-and-digest narrative allowlist. Tests now cover the allowed narrative, same-name content
+  tampering, a near-name orphan, a candidate
+  bundle attempting to share its stem, and deterministic maximum-cap arithmetic. The three
+  immutable bundle inventories and replay requirements remain exact and unchanged.
+- This is review remediation of the two already counted Patch units, not another work unit. No
+  candidate, upstream contact, publication, or external action occurred.

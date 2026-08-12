@@ -433,3 +433,37 @@ does not grant link-creation privilege, and local structural tests are not produ
 **Why:** A declaration format must not manufacture identity or authority through labels, URLs, or
 rendering. Explicit unauthenticated/unverified language and namespace separation keep the
 prototype's claim boundary aligned with what local structural validation can actually establish.
+
+## 2026-08-12 - D-035 - One-time R-003 usage exception with a 15% floor
+
+**Decision:** For reset period R-003 only, the sponsor explicitly authorized spending up to 40
+percentage points from the directly verified 55% whole-account reading while preserving a 15%
+floor and the 2:1 impact-to-revenue ratio. Start no new three-unit batch at or below 30%. Below
+30%, continue only already-started review, remediation, publication, and closeout. Stop immediately
+at 15%, any product limit warning, or a lower sponsor reading. This exception expires at reset and
+does not alter any other safety, authorization, financial, privacy, or external-action gate.
+
+The signed-in Usage UI contradicted the earlier "likely tomorrow" estimate: the observed reset is
+August 17, 2026 at 6:01 PM. The 55% reading is a whole-account snapshot and no portion is attributed
+to this repository, batch, workstream, agent, tool call, test, or action.
+
+**Why:** The sponsor knowingly authorized one bounded continuation with a larger reserve than the
+prior period's final exception. Explicit start and stop thresholds prevent that authorization from
+becoming an open-ended permission.
+
+## 2026-08-12 - D-036 - Select one non-activated policy-starter batch
+
+**Decision:** Select exactly two Patch Cabinet impact units and one Support Agent Regression Lab
+revenue unit: a fail-closed no-ready scan, portable one-record declaration validation, and a fully
+synthetic AI Contribution Policy Starter + Audit pack. The batch may change local source, tests,
+samples, CI regeneration, and append-only documentation only.
+
+The batch does not activate an offer, channel, listing, checkout, payment, contact route, customer
+input, maintainer outreach, issue, pull request, release, account, domain, subscription, wallet, or
+other external action. It does not verify identity or authority, give legal advice, detect AI use,
+certify compliance, guarantee enforcement, change the candidate engine, or reactivate the parked
+Revenue Lab. `$79` is a single unvalidated hypothesis.
+
+**Why:** The three units preserve the period's 2:1 allocation while producing reusable local
+evidence and a bounded revenue hypothesis without crossing identity, policy, private-input,
+payment, or publication gates.

@@ -14,7 +14,7 @@ treated as proof of identity, authority, or permission.
 
 ## Prototype boundary
 
-- Component `maintainer-policy-declaration` version `0.1.0`, schema `1`.
+- Component `maintainer-policy-declaration` version `0.2.0`, schema `1`.
 - Local/public 30-day prototype, not a standard or proposed standard.
 - Inputs must be explicitly supplied trusted-local JSON. No network, subprocess, policy-prose parser, AI detector, or candidate-engine integration exists.
 - The checked-in example uses the reserved `example.invalid` synthetic namespace. It makes no
@@ -23,6 +23,17 @@ treated as proof of identity, authority, or permission.
 - Output parents are trusted local filesystems. Atomic replacement limits partial output but does not defend against adversarial parent replacement between validation and writing.
 
 ## Commands
+
+Installed one-record validation is available after package installation:
+
+```sh
+maintainer-policy-declaration validate path/to/mpd-v1-<digest>.json
+```
+
+This command safely opens the file once and uses that same payload for strict validation and the
+raw-file SHA-256 in its deterministic JSON receipt. That digest is only a recomputable fingerprint,
+not a signature. The receipt establishes no supplier identity, authority, authorization, source
+truth, policy currentness, or permission to contact or submit.
 
 From `patch-cabinet/`:
 

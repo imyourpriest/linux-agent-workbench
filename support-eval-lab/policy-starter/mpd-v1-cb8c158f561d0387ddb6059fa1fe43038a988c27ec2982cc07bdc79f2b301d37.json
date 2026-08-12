@@ -1,0 +1,32 @@
+{
+  "schema_version": "1",
+  "declaration_id": "mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37",
+  "record_kind": "synthetic_example",
+  "assertion_basis": "synthetic_example_not_a_maintainer_assertion",
+  "repository": "reserved/policy-starter",
+  "repository_url": "https://example.invalid/reserved/policy-starter",
+  "commit_sha": "1111111111111111111111111111111111111111",
+  "policy_source_url": "https://example.invalid/reserved/policy-starter/blob/1111111111111111111111111111111111111111/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "6ec40971a70a44c550f485719d06c57b8520e89a2c4468247830b35b69ae28bd",
+  "observed_at": "2026-08-12",
+  "dimensions": {
+    "ai_assisted_code": "conditional",
+    "ai_assisted_documentation": "conditional",
+    "ai_authored_issue_text": "conditional",
+    "ai_authored_pr_text": "conditional",
+    "autonomous_issue_submission": "not_declared",
+    "autonomous_pr_submission": "not_declared",
+    "automated_review_comments": "not_declared",
+    "good_first_issue_automation": "not_declared",
+    "security_report_automation": "disallowed",
+    "disclosure": "required",
+    "human_review": "required",
+    "human_accountability": "required",
+    "license_ip_checks": "required"
+  },
+  "disclosure_location": "pr_description",
+  "enforcement": "maintainer_discretion",
+  "supersedes": null,
+  "notes": "Reserved example.invalid fixture for structural testing; not an adopted policy or maintainer assertion."
+}
