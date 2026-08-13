@@ -94,3 +94,21 @@ adoption claim, or GitHub release, and revenue remains `$0.00`.
 The experiment directory is trusted-local scope. Generation and validation reject links and
 irregular directories and use exclusive random staging, but do not claim protection if an
 adversary can replace the trusted parent after inspection.
+
+## Inert synthetic public policy audit
+
+The isolated [`public-policy-audit/`](public-policy-audit/) subproject is a project-owned synthetic
+demonstration distinct from `policy-starter/`. It produces a cautious evidence table, gaps, human
+decisions, patch-ready suggestions, manifest, and provenance receipt with no score or grade. It has
+no production-module network, subprocess, checkout, authentication, real-input, activation,
+listing, payment, outreach, or platform-write path. A Windows-only rejection test uses `cmd.exe`
+solely to create and remove a temporary junction fixture.
+
+```sh
+python -m support_eval_lab.public_policy_audit --project .
+python -m support_eval_lab.public_policy_audit --project . --check
+```
+
+Real public input remains stopped until SEL-GH-001 final capture, a new prospective control
+decision, and acquisition/privacy/rights-and-terms validation. The existing `$79` hypothesis is
+unvalidated and not offered; revenue remains `$0.00`.

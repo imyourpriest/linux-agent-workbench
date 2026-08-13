@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "maintainer-policy-declaration-interop",
+    "version": "0.1.0"
+  },
+  "result": "corpus_matches_authoritative_parser_expectations",
+  "independent_json_schema_validator_tested": false,
+  "claim_boundary": "Prototype structural interoperability evidence only; the strict Python parser is authoritative. No standard, independent-validator conformance, source truth, identity, authority, current permission, authorization, detection, or enforcement is established.",
+  "schema_sha256": "1582238b1ac144c9df0dc58e1252da67bf41c4851f39aa2386ae2dc06a6f28a2",
+  "corpus_sha256": "280d9d2aca66844e5fc03d6ae907e74e0dd54a8ab5f82e1daa29b8ad31a3ed2a",
+  "manifest_sha256": "e270414012e66429de36d5dbd7645deda6f7456fd6df7529a195ba48a1e89e68",
+  "vectors": [
+    {
+      "id": "valid-reserved-synthetic",
+      "classification": "valid",
+      "structural_profile_expectation": "accept",
+      "strict_parser_expected": "accept",
+      "strict_parser_observed": "accept",
+      "payload_sha256": "c13bf8e3a6fc905786529fcb9ead69402b46a092c937c194f6458838101475b4"
+    },
+    {
+      "id": "invalid-missing-notes",
+      "classification": "invalid",
+      "structural_profile_expectation": "reject",
+      "strict_parser_expected": "reject",
+      "strict_parser_observed": "reject",
+      "payload_sha256": "5e8693161ce3c913ee2ba9a48f9ba4ee386d8e23a6f49eeab96bae5f08878ead"
+    },
+    {
+      "id": "ambiguous-derived-id",
+      "classification": "ambiguous",
+      "structural_profile_expectation": "accept",
+      "strict_parser_expected": "reject",
+      "strict_parser_observed": "reject",
+      "payload_sha256": "de1f807b469e1172226875d3b581bea434d1a88e1cbdda25ba9b7183bfbac726"
+    },
+    {
+      "id": "invalid-duplicate-key",
+      "classification": "invalid",
+      "structural_profile_expectation": "ambiguous",
+      "strict_parser_expected": "reject",
+      "strict_parser_observed": "reject",
+      "payload_sha256": "fe3bb2999224a831b864d2fd5017df4e7ee593ff4c2b31e91da3176331b954a8"
+    },
+    {
+      "id": "invalid-nonstandard-number",
+      "classification": "invalid",
+      "structural_profile_expectation": "ambiguous",
+      "strict_parser_expected": "reject",
+      "strict_parser_observed": "reject",
+      "payload_sha256": "8a7ed23b7b7c48e38a73f0a0ef0e7f73fa38cbde7bc7d811d281c2b534ddd824"
+    }
+  ]
+}

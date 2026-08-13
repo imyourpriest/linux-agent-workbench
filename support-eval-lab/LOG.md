@@ -283,3 +283,40 @@ Append-only project record.
   claim protection from adversarial replacement of a trusted parent after inspection. This is
   remediation only: no new work unit, Usage reading, revenue, activation, external action, or
   production-enforcement claim.
+
+## 2026-08-13 - Inert project-owned synthetic public policy audit
+
+- Added the isolated `public-policy-audit/` demonstration, distinct from `policy-starter/`, with
+  exact project-owned synthetic inputs, a cautious evidence/gap/human-decision report, patch-ready
+  suggestions, manifest, provenance receipt, offline verifier, and adversarial tests. It emits no
+  score or grade and has no network, subprocess, checkout, authentication, real-input, customer,
+  activation, listing, payment, outreach, or platform-write path.
+- The exact-fixture evidence is not legal advice, a security assessment, compliance/certification,
+  AI-use detection, identity/authority verification, source truth, current permission, adoption,
+  or platform enforcement. The `$79` value remains the existing unvalidated, not-offered future
+  hypothesis, not a forecast or new price. Revenue and cleared receipts remain `$0.00`.
+- Any later customer-approved public input remains stopped until SEL-GH-001 final capture, a new
+  prospective control decision, and reviewed acquisition, privacy, rights/terms, retention, and
+  provenance validation. This is exactly one Support revenue unit; no external action occurred.
+
+## 2026-08-13 - R-004 public-policy-audit security-review remediation
+
+- At the reviewed pre-remediation 36-path baseline and canonical digest recorded in the Patch and
+  control logs, security review found one P2: attacker-coordinated policy files and source digests
+  could be relabeled synthetic and receive the earlier project-owned result wording.
+- The production verifier now owns the exact three-file synthetic fixture SHA-256 mapping outside
+  the artifact subtree and checks it before issuing
+  `valid_verifier_bound_checked_tree_synthetic_fixture`. A regression replaces both Markdown files
+  and every attacker-controlled digest consistently and is rejected. The binding proves equality
+  to reviewed local fixture bytes only, not real ownership, authorship, authority, or external
+  trust. Generated manifests and receipts remain self-consistency fingerprints, not trust anchors.
+- Directory chains below the explicitly trusted project boundary and output leaves are rechecked
+  around replacement. The production module remains network/subprocess free; one Windows test uses
+  `cmd.exe /c mklink /J` only to create/remove a temporary junction rejection fixture. These checks
+  do not claim race-proof containment against concurrent replacement of the trusted parent.
+- This is remediation only. No new unit, customer, input, offer, listing, payment, revenue,
+  activation, publication, or external action occurred. Totals remain 24/12 and `$0.00`.
+- Focused public-policy-audit tests ran 12: 11 passed and one Windows symlink-privilege probe
+  skipped; the Windows junction rejection ran and passed. The stable full Support suite passed 78
+  tests with five privilege-dependent skips. These are local structural results, not hosted or
+  production enforcement.

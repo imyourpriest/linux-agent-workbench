@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/patch-cabinet/maintainer-policy-declaration/structural-profile/v1",
+  "title": "Maintainer policy declaration schema-1 structural interoperability profile",
+  "description": "Prototype structural profile only. The strict Python validator remains authoritative.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "declaration_id", "record_kind", "assertion_basis", "repository",
+    "repository_url", "commit_sha", "policy_source_url", "policy_path", "source_sha256",
+    "observed_at", "dimensions", "disclosure_location", "enforcement", "supersedes", "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "1"},
+    "declaration_id": {"type": "string", "pattern": "^mpd-v1-[0-9a-f]{64}$"},
+    "record_kind": {"enum": ["synthetic_example", "unverified_project_declaration"]},
+    "assertion_basis": {"enum": ["synthetic_example_not_a_maintainer_assertion", "trusted_local_operator_supplied_unverified_declaration"]},
+    "repository": {"type": "string", "minLength": 3, "maxLength": 201},
+    "repository_url": {"type": "string", "format": "uri", "maxLength": 300},
+    "commit_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "policy_source_url": {"type": "string", "format": "uri", "maxLength": 700},
+    "policy_path": {"type": "string", "pattern": "^[A-Za-z0-9_.-]+(?:/[A-Za-z0-9_.-]+)*$", "maxLength": 300},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "observed_at": {"type": "string", "format": "date"},
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ai_assisted_code", "ai_assisted_documentation", "ai_authored_issue_text", "ai_authored_pr_text", "autonomous_issue_submission", "autonomous_pr_submission", "automated_review_comments", "good_first_issue_automation", "security_report_automation", "disclosure", "human_review", "human_accountability", "license_ip_checks"],
+      "properties": {
+        "ai_assisted_code": {"$ref": "#/$defs/policy"},
+        "ai_assisted_documentation": {"$ref": "#/$defs/policy"},
+        "ai_authored_issue_text": {"$ref": "#/$defs/policy"},
+        "ai_authored_pr_text": {"$ref": "#/$defs/policy"},
+        "autonomous_issue_submission": {"$ref": "#/$defs/policy"},
+        "autonomous_pr_submission": {"$ref": "#/$defs/policy"},
+        "automated_review_comments": {"$ref": "#/$defs/policy"},
+        "good_first_issue_automation": {"$ref": "#/$defs/policy"},
+        "security_report_automation": {"$ref": "#/$defs/policy"},
+        "disclosure": {"$ref": "#/$defs/expectation"},
+        "human_review": {"$ref": "#/$defs/expectation"},
+        "human_accountability": {"$ref": "#/$defs/expectation"},
+        "license_ip_checks": {"$ref": "#/$defs/expectation"}
+      }
+    },
+    "disclosure_location": {"enum": ["pr_description", "commit_trailer", "either", "project_defined", "not_declared"]},
+    "enforcement": {"enum": ["close_or_reject", "request_changes", "label_or_flag", "maintainer_discretion", "not_declared"]},
+    "supersedes": {"type": ["string", "null"], "pattern": "^mpd-v1-[0-9a-f]{64}$"},
+    "notes": {"type": "string", "minLength": 1, "maxLength": 500}
+  },
+  "$defs": {
+    "policy": {"enum": ["allowed", "conditional", "disallowed", "not_declared"]},
+    "expectation": {"enum": ["required", "recommended", "not_declared"]}
+  }
+}

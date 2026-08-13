@@ -332,3 +332,42 @@ Append-only project record.
 - The focused suite passed 9 tests with two Windows symlink-privilege skips. The regenerated ZIP
   remained byte-identical. This is remediation of the existing impact unit, not a new unit,
   publication, adoption, external action, Usage reading, or production-enforcement claim.
+
+## 2026-08-13 - Declaration interoperability and neutral catalog snapshot
+
+- Added one versioned JSON Schema Draft 2020-12 structural profile, fixed valid/invalid/ambiguous
+  corpus, deterministic manifest/receipt, and lossy non-authorizing AI-policy/PR-template draft
+  projections for declaration schema 1. The existing strict Python parser remains authoritative.
+  No independent JSON Schema validator was installed or tested, and no standard, detector,
+  authority, permission, currentness, authorization, ruleset, or enforcement claim is made.
+- Added one deterministic historical snapshot/query over the existing ten profile records. It
+  filters exact controlled dimensions and labels each match fresh, stale, or unknown at an
+  operator-provided canonical date using the documented seven-day window. It does not rank,
+  aggregate trust, refresh the network, establish readiness/current permission, add records, or
+  connect to the candidate engine.
+- These are exactly two Patch impact units. No target code, candidate manifest, immutable evidence,
+  frozen engine/verifier, upstream contact, issue, pull request, submission, publication, or other
+  external state changed.
+
+## 2026-08-13 - R-004 interoperability security-review remediation
+
+- The reviewed pre-remediation state was 36 content paths at canonical NUL-safe digest
+  `3277f724dfe684a4cbd7bed961f46967cb3acaec9f2ec3eddbf83c08b21823f5`, on
+  `agent/r008-policy-interop-audit` with HEAD and `origin/main` both
+  `6b9c0a506f325210482f3942cdc7f2be3331ce4d`. Diff check was clean.
+- Security review found one P2 in the corpus projection boundary: an accepted declaration could be
+  relabeled invalid or ambiguous and still supply generated text. The corpus now admits only four
+  explicit classification/structural/strict/observed tuples, and only the exact all-accept `valid`
+  tuple may become the sole projection source. Regression tests cover both relabelings and a
+  mismatched tuple.
+- Hardening replaced recursive node counting with an iterative early-fail node/depth walker and a
+  byte-bounded deep probe. `not_declared` disclosure, review, and accountability values no longer
+  become invented PR checkboxes; possible requirements are labeled independent maintainer
+  proposals. Directory chains below the explicitly trusted project boundary and output leaves are
+  rechecked around replacement. This reduces alias/reparse risk but is not race-proof against an
+  adversary that can concurrently replace the trusted project parent or its components.
+- This is remediation only: no work-unit, Usage, authorization, adoption, publication, or external
+  action changed. Cumulative totals remain 24 impact / 12 Support and revenue remains `$0.00`.
+- Focused interoperability tests passed 12/12. The stable full Patch suite passed 109 tests with
+  five Windows privilege-dependent symlink skips. Complete generation/freshness, compilation,
+  dependency, public-tree, frozen-inventory, and diff checks are recorded in the control log.

@@ -60,3 +60,13 @@ identity, authority, permission, policy truth/currentness/adoption, authorship, 
 clearance; provide legal advice; detect AI use; certify compliance; guarantee enforcement; or
 prove demand, delivery quality, safety, or production readiness. Private input and payment are
 prohibited and no commercial route is active.
+
+## Public-policy-audit demonstration boundary
+
+`public-policy-audit/` accepts only its checked-in project-owned synthetic fixture. Its evidence
+table is exact-fixture matching, not legal advice, security assessment, compliance/certification,
+AI-use detection, source-truth validation, identity/authority verification, current-permission
+evidence, policy adoption, or platform enforcement. Patch-ready suggestions require human review.
+Hashes are consistency fingerprints only. Any later customer-approved public source requires the
+SEL-GH-001 final capture, a new prospective control decision, and reviewed acquisition, privacy,
+rights/terms, retention, and provenance controls before input is accepted.

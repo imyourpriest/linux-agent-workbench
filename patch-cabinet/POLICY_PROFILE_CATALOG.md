@@ -26,6 +26,27 @@ python -m patch_cabinet.policy_profile_catalog data/policy-profile-catalog/v1 \
   --markdown-out samples/policy-profile-catalog-index.md
 ```
 
+## Neutral historical snapshot/query
+
+An optional `--as-of YYYY-MM-DD` mode labels each matched historical record `fresh`, `stale`, or
+`unknown` against the documented seven-day candidate window. An observation is fresh at age zero
+through seven days, stale after seven days, and unknown when the operator's as-of date precedes
+the recorded observation. These are date-window labels only, never a ranking, aggregate trust
+score, readiness result, current-permission claim, or authorization.
+
+Explicit controlled-dimension filters use repeated `--where DIMENSION=VALUE` arguments and combine
+with AND. The command does not refresh the network, add upstream records, or feed the candidate
+engine:
+
+```sh
+python -m patch_cabinet.policy_profile_catalog data/policy-profile-catalog/v1 \
+  --consent-records data/consent-catalog/v1 \
+  --as-of 2026-08-13 \
+  --where autonomous_pr_submission=disallowed \
+  --json-out samples/policy-profile-catalog-snapshot.json \
+  --markdown-out samples/policy-profile-catalog-snapshot.md
+```
+
 Published profile records are immutable. A later pinned policy uses a new consent successor and a matching profile successor. A profile's `supersedes` value must exactly equal its bound consent record's value, including `null`; the validator then rejects missing, forked, cyclic, or cross-lineage relationships.
 
 CLI output parents are trusted local filesystems. Atomic replacement limits partial output, but

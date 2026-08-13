@@ -197,3 +197,23 @@ usage attribution.
 - This is a whole-account snapshot only. No delta or amount is attributed to this repository,
   workstream, unit, agent, tool call, test, or action. It does not change the R-004 2/1 unit total,
   cumulative 22/11 totals, or `$0.00` revenue.
+
+#### R-004 interoperability/audit extension - 2026-08-13
+
+- A direct signed-in Usage page at extension start showed 60% weekly remaining, reset August 19,
+  2026 at 9:33 PM, no reset available, and zero credits. The sponsor authorized this one cycle to
+  a hard 30% floor; ordinary 40% reserve resumes at the next reset. No global usage or delta is
+  attributed to this repository, batch, workstream, unit, agent, tool call, test, or action.
+- PR 14 publication and hosted evidence are shared control with zero work units. No post-main
+  Dependency Graph run was observed during bounded checks; no failure is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-13 | Shared publication | 0 | PR 14 merge and named hosted-check receipt | extension-start whole-account snapshot: 60%; no attribution |
+| 2026-08-13 | Patch Cabinet | 1 | Declaration structural interoperability profile, corpus, receipt, and lossy projections | not individually measured |
+| 2026-08-13 | Patch Cabinet | 1 | Neutral historical policy-profile snapshot/query over existing records | not individually measured |
+| 2026-08-13 | Support Agent Regression Lab | 1 | Inert project-owned synthetic public-policy-audit demonstration | not individually measured |
+
+This extension adds two Patch impact units and one Support revenue unit. R-004 now has four Patch
+and two Support units; cumulative dedicated totals are twenty-four impact and twelve revenue
+units, preserving 2:1. Revenue remains `$0.00`; no per-unit usage is inferred.

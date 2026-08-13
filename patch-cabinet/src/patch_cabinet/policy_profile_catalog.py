@@ -11,6 +11,7 @@ import stat
 import tempfile
 import unicodedata
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any, Sequence
 
@@ -61,6 +62,7 @@ CLAIM_BOUNDARY = (
     "Historical manually normalized facts only; no automatic prose interpretation or detection, "
     "current permission, candidate eligibility, contact, or submission authorization."
 )
+SNAPSHOT_COMPONENT_VERSION = "0.1.0"
 
 
 @dataclass(frozen=True)
@@ -369,6 +371,77 @@ def build_index(profiles: list[PolicyProfile]) -> dict[str, object]:
     }
 
 
+def _parse_as_of(value: str) -> date:
+    try:
+        parsed = date.fromisoformat(value)
+    except ValueError as error:
+        raise ValueError("as-of must be a canonical YYYY-MM-DD date") from error
+    if parsed.isoformat() != value:
+        raise ValueError("as-of must be a canonical YYYY-MM-DD date")
+    return parsed
+
+
+def _parse_dimension_filters(values: list[str]) -> dict[str, str]:
+    filters: dict[str, str] = {}
+    for raw in values:
+        if raw.count("=") != 1:
+            raise ValueError("each dimension filter must use name=value")
+        name, value = raw.split("=", 1)
+        vocabulary = DIMENSION_VOCABULARIES.get(name)
+        if vocabulary is None or value not in vocabulary:
+            raise ValueError("dimension filter is outside the controlled vocabulary")
+        if name in filters:
+            raise ValueError("each dimension can be filtered at most once")
+        filters[name] = value
+    return filters
+
+
+def build_snapshot(
+    profiles: list[PolicyProfile],
+    consent_records: list[ConsentRecord],
+    *,
+    as_of: date,
+    filters: dict[str, str],
+) -> dict[str, object]:
+    """Build a neutral historical snapshot; it does not rank or authorize records."""
+    consent_by_id = {record.record_id: record for record in consent_records}
+    selected: list[dict[str, object]] = []
+    freshness_counts = {"fresh": 0, "stale": 0, "unknown": 0}
+    for profile in profiles:
+        if any(profile.dimensions[name] != value for name, value in filters.items()):
+            continue
+        consent = consent_by_id[profile.consent_record_id]
+        age_days = (as_of - consent.observed_at).days
+        freshness = "unknown" if age_days < 0 else "fresh" if age_days <= 7 else "stale"
+        freshness_counts[freshness] += 1
+        item = profile.to_index_dict()
+        item.update(
+            {
+                "observed_at": consent.observed_at.isoformat(),
+                "freshness": freshness,
+                "age_days_at_as_of": age_days if age_days >= 0 else None,
+            }
+        )
+        selected.append(item)
+    return {
+        "schema_version": PROFILE_SCHEMA_VERSION,
+        "component": {
+            "name": "patch-policy-profile-catalog-snapshot",
+            "version": SNAPSHOT_COMPONENT_VERSION,
+        },
+        "claim_boundary": (
+            CLAIM_BOUNDARY
+            + " Fresh, stale, and unknown are date-window labels only, not trust, readiness, "
+            "ranking, current-permission, or authorization results."
+        ),
+        "as_of": as_of.isoformat(),
+        "freshness_window_days": 7,
+        "filters": dict(sorted(filters.items())),
+        "summary": {"matched_profiles": len(selected), "freshness": freshness_counts},
+        "profiles": selected,
+    }
+
+
 def _code(value: object) -> str:
     return f"<code>{html.escape(str(value), quote=True)}</code>"
 
@@ -401,6 +474,32 @@ def render_markdown(report: dict[str, object]) -> str:
         for name in DIMENSION_VOCABULARIES:
             lines.append(f"- {_code(name)}: {_code(profile['dimensions'][name])}")
         lines.append(f"- Manual normalization note: {_inert_code(profile['notes'])}")
+    return "\n".join(lines) + "\n"
+
+
+def render_snapshot_markdown(report: dict[str, object]) -> str:
+    lines = [
+        "# Patch Cabinet historical policy-profile snapshot",
+        "",
+        f"> {html.escape(str(report['claim_boundary']))}",
+        "",
+        f"- As of: {_code(report['as_of'])}",
+        f"- Freshness window: {_code(str(report['freshness_window_days']) + ' days')}",
+        f"- Matched profiles: {report['summary']['matched_profiles']}",
+        "- Filters: " + (
+            ", ".join(f"{_code(name)}={_code(value)}" for name, value in report["filters"].items())
+            if report["filters"] else "none"
+        ),
+        "",
+        "| Repository | Observed | Freshness | Age days |",
+        "|---|---|---|---:|",
+    ]
+    for profile in report["profiles"]:
+        age = "unknown" if profile["age_days_at_as_of"] is None else profile["age_days_at_as_of"]
+        lines.append(
+            f"| {_code(profile['repository'])} | {_code(profile['observed_at'])} | "
+            f"{_code(profile['freshness'])} | {age} |"
+        )
     return "\n".join(lines) + "\n"
 
 
@@ -457,6 +556,17 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--json-out", help="write the deterministic JSON index")
     parser.add_argument("--markdown-out", help="write the deterministic Markdown index")
+    parser.add_argument(
+        "--as-of",
+        help="emit a neutral historical snapshot at canonical YYYY-MM-DD",
+    )
+    parser.add_argument(
+        "--where",
+        action="append",
+        default=[],
+        metavar="DIMENSION=VALUE",
+        help="filter an explicit controlled dimension; repeat for an AND query",
+    )
     return parser
 
 
@@ -467,12 +577,24 @@ def main(argv: Sequence[str] | None = None) -> int:
     outputs = [Path(value) for value in (args.json_out, args.markdown_out) if value]
     profiles = load_profiles(profile_directory, consent_directory)
     _assert_output_paths([profile_directory, consent_directory], outputs)
-    report = build_index(profiles)
+    if args.where and not args.as_of:
+        raise ValueError("dimension filters require --as-of snapshot mode")
+    if args.as_of:
+        report = build_snapshot(
+            profiles,
+            load_consent_catalog(consent_directory),
+            as_of=_parse_as_of(args.as_of),
+            filters=_parse_dimension_filters(args.where),
+        )
+        markdown = render_snapshot_markdown(report)
+    else:
+        report = build_index(profiles)
+        markdown = render_markdown(report)
     serialized = json.dumps(report, indent=2) + "\n"
     if args.json_out:
         _write_atomic(Path(args.json_out), serialized)
     if args.markdown_out:
-        _write_atomic(Path(args.markdown_out), render_markdown(report))
+        _write_atomic(Path(args.markdown_out), markdown)
     if not outputs:
         print(serialized, end="")
     return 0

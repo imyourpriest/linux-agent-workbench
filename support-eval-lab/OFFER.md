@@ -40,3 +40,7 @@ The checked-in `policy-starter/` pack is a non-activated, synthetic demonstratio
 hypothesis may be evaluated later only after separate authorization and every existing revenue,
 identity, terms, tax, merchant, privacy, refund, delivery, and support gate. It is not currently
 offered for sale; there is no listing, contact route, checkout, payment, order, or customer.
+
+The separate `public-policy-audit/` synthetic demonstration does not add an offer or price. It may
+reference the same `$79` amount only as an unvalidated, not-offered future hypothesis consistent
+with this section. It is not a revenue forecast, listing, activation, order, or sale.

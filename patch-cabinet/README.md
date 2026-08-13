@@ -1,5 +1,13 @@
 # Patch Cabinet
 
+The versioned [`interop/maintainer-policy-declaration/v1/`](interop/maintainer-policy-declaration/v1/)
+directory is a JSON Schema Draft 2020-12 structural interoperability companion for declaration
+schema 1. It includes fixed valid/invalid/ambiguous vectors and lossy non-authorizing draft
+projections. The existing strict Python parser remains authoritative; no independent JSON Schema
+validator was tested, and the companion is not a standard, detector, authority, permission grant,
+current-policy claim, ruleset generator, or enforcement gate. See the companion README for its
+duplicate-key, number, resource, identity, provenance, lineage, currentness, and authority limits.
+
 Patch Cabinet is an AI-directed, human-accountable effort to make small, useful improvements to Linux and open-source projects.
 
 It is not a pull-request volume machine. The product is a sequence of well-chosen patches whose scope, evidence, tests, upstream rules, review burden, and outcome remain inspectable.

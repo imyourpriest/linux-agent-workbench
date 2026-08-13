@@ -500,3 +500,34 @@ https://github.com/ossf/scorecard#scorecard-badge; GitHub releases and traffic:
 https://docs.github.com/en/rest/releases/releases and https://docs.github.com/en/rest/metrics/traffic.
 These are context, not need, adoption, or willingness-to-pay evidence; free policy references are
 alternatives rather than market validation.
+
+## 2026-08-13 - D-038 - R-004 interoperability and inert audit extension
+
+**Decision:** Select exactly two Patch Cabinet impact units and one Support revenue unit: a
+versioned JSON Schema Draft 2020-12 structural companion and conformance corpus for declaration
+schema 1; a neutral local historical policy-profile snapshot/query; and an isolated project-owned
+synthetic public-policy-audit demonstration. This decision permits local source, tests, generated
+artifacts, focused CI freshness, and append-only governance only.
+
+The declaration's strict Python parser remains authoritative. No independent JSON Schema validator
+is claimed, and no standard, detector, permission grant, authorization, current-policy claim, or
+enforcement gate is created. The catalog query does not rank, score trust, refresh the network,
+establish readiness/current permission, or feed the candidate engine. The Support demonstration
+accepts only its project-owned synthetic fixture, has no network/subprocess/activation path, score,
+or grade, and is not legal, security, compliance, certification, or detection work.
+
+Real public input remains stopped until SEL-GH-001 final capture, a new prospective control
+decision, and reviewed acquisition, privacy, rights/terms, retention, and provenance validation.
+No checkout, payment, listing, release, issue, outreach, platform write, customer, or private input
+is authorized. The existing `$79` hypothesis remains unvalidated and not offered; revenue remains
+`$0.00`.
+
+For this reset/cycle only, the sponsor authorized this cycle from the directly observed 60%
+whole-account snapshot down to a hard 30% floor. Stop at 30%, any warning, or a lower sponsor
+report; ordinary 40% reserve policy resumes at the next reset. The page showed August 19, 2026 at
+9:33 PM, no reset available, and zero credits. No global usage is attributed to this repository,
+batch, unit, agent, tool call, or action.
+
+**Why:** The batch adds non-authorizing interoperability and evidence-limited historical utility
+without changing the existing authority or execution boundaries, while preserving the cumulative
+2:1 work-unit allocation.
