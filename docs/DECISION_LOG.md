@@ -467,3 +467,36 @@ Revenue Lab. `$79` is a single unvalidated hypothesis.
 **Why:** The three units preserve the period's 2:1 allocation while producing reusable local
 evidence and a bounded revenue hypothesis without crossing identity, policy, private-input,
 payment, or publication gates.
+
+## 2026-08-13 - D-037 - R-004 prepares a portable declaration and post-SEL experiment
+
+**Decision:** Select exactly two Patch Cabinet impact units and one Support revenue-validation
+unit: a deterministic portable declaration 0.2.0 release candidate, five conservative
+commit-pinned catalog pairs, and one inert post-SEL release/feedback experiment. These units may
+change local source, tests, generated artifacts, CI freshness, and append-only governance only.
+They do not change the candidate engine/version, historical evidence, SEL-GH-001, any active form,
+release/tag/topics, payment state, or external surface.
+
+Activation is prohibited before `2026-08-25T01:00:00Z`, and time alone is insufficient. The final
+retained-row capture must exist and independently verify complete; SEL-GH-001 must remain frozen
+without incident; final release diff, metadata, privacy, and exact asset digest require review;
+and a new future control-task decision is mandatory. August 24 is unsafe.
+
+Repeated candidate scans are deprioritized because recent bounded scans repeatedly stop at the
+autonomous-submission policy gate. A broad new linter is rejected as duplicative of the existing
+strict validators, immutable-evidence replay, generated freshness, compile, dependency, and
+public-tree controls.
+
+**Why:** This smallest local-only batch preserves cumulative 2:1 while improving reuse and
+preparing a privacy-minimal measurement. Prepared artifacts are not adoption, demand,
+willingness-to-pay, revenue, or production enforcement.
+
+**Dated primary context (reviewed 2026-08-13):** GitHub repository limits and pull-request diff
+limits: https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits;
+AAIF-hosted AGENTS.md convention: https://agents.md/; GitHub rulesets:
+https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets;
+OpenSSF Scorecard and badge: https://scorecard.dev/ and
+https://github.com/ossf/scorecard#scorecard-badge; GitHub releases and traffic:
+https://docs.github.com/en/rest/releases/releases and https://docs.github.com/en/rest/metrics/traffic.
+These are context, not need, adoption, or willingness-to-pay evidence; free policy references are
+alternatives rather than market validation.

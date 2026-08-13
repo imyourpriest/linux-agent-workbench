@@ -103,3 +103,15 @@ maintainer approval, source truth, policy currentness, or permission to submit.
 - support revenue, if any, covers only documented project costs before expansion.
 
 Read [the charter](CHARTER.md), [candidate policy](CANDIDATE_POLICY.md), and [project log](LOG.md) before selecting work.
+# Portable declaration release candidate
+
+`python -m patch_cabinet.declaration_release --project .` reproducibly builds the unpublished
+0.2.0 portable candidate under `release-candidate/maintainer-policy-declaration-v0.2.0/`. The ZIP
+contains only the standalone standard-library validator, component README, specification, MIT
+license, unverified-project starter, and reserved synthetic example. It uses a fixed sorted
+allowlist, stored ZIP entries, fixed metadata, bounded canonical UTF-8/LF inputs, and rejects
+links, aliases, irregular files, traversal, and excessive size/count/depth. SHA-256 is a
+recomputable fingerprint, not a signature, attestation, release, adoption, or external trust.
+Output directories are trusted-local scope. The builder rechecks the exact directory and uses
+exclusive random staging plus atomic replacement, but does not claim protection if an adversary
+can replace the trusted parent after inspection.

@@ -633,3 +633,81 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - No hosted rerun success is claimed by this entry. No production code, work-unit total, Usage
   reading, commit, publication, customer/contact/payment action, private input, or external state
   changed during this local correction.
+
+## 2026-08-13 - Session 024 - PR 13 publication receipt and R-004 reset baseline
+
+- PR 13 was published at https://github.com/imyourpriest/linux-agent-workbench/pull/13 with reviewed
+  head `397dbe6d8fe4216e559c1c41c22e942c5aa5cc6e`, then merged at `2026-08-12T23:20:46Z` as public
+  `main` `bca18d21aa3a3df18b8a7ae32d966321681f418f`. PR CI `31650442543` and CodeQL
+  `31650438270` succeeded; post-main CI `31650541809`, CodeQL `31650540794`, and dependency graph
+  `31650543744` succeeded at that exact public SHA. These are hosted results for named commits and
+  workflows, not local tests or production enforcement.
+- The sponsor separately reported 93% whole-account Usage remaining after the reset. A later direct
+  signed-in Usage page displayed 91% remaining, reset August 19, 2026 at 9:33 PM, no reset
+  available, and zero credits. No exact capture time is claimed, the two-point difference is not
+  attributed, and no amount is attributed to this repository, batch, unit, agent, or action.
+- Before work, branch, HEAD, and `origin/main` were `agent/r007-policy-release-prep`,
+  `bca18d21aa3a3df18b8a7ae32d966321681f418f`, and the same public SHA, with a clean worktree. The
+  frozen pre-change inventory covered 107 files with fingerprint
+  `9b63fa8294e34d29bc6c8df97c19848f0b37ba27e747f5eb0a085a4cba8ac2dc`.
+
+## 2026-08-13 - Session 025 - R-004 three-unit batch prepared locally
+
+- Completed exactly two Patch impact units and one Support revenue-validation unit. R-004 totals
+  are 2/1; cumulative totals are 22 impact and 11 revenue, preserving 2:1.
+- Prepared candidates, records, form draft, and measurement contract are not publication, policy
+  adoption, demand, willingness to pay, customers, sales, listing, or production enforcement.
+  Revenue and cleared receipts remain `$0.00`.
+- No commit, push, issue, pull request, release, tag, topic, setting, account, form activation,
+  message, payment rail, purchase, wallet movement, XLM use, private-input access, or external
+  action occurred. Hosted CI has not evaluated these local changes.
+
+## 2026-08-13 - Session 026 - R-004 measurement semantics correction
+
+- Claims review identified a P3 ambiguity in how the prepared Support experiment combined its
+  metric thresholds. The corrected local validator applies explicit final-checkpoint logic:
+  success iff every success gate passes; failure iff either failure gate passes; otherwise the
+  result is inconclusive. Tests cover boundary combinations, exact source/window bindings,
+  contradictory declared results, privacy fields, paid-signal separation, and payment/channel
+  invariants.
+- This correction changes no work-unit or revenue total and does not activate any release, form,
+  channel, payment, customer contact, or external state. Hosted CI and production enforcement are
+  not claimed.
+
+## 2026-08-13 - Session 027 - R-004 usage-ledger omission corrected
+
+- The R-004 reset snapshots and work-unit totals were recorded in this control log but omitted
+  from `docs/USAGE_LEDGER.md`. The append-only R-004 ledger section now records the separate 93%
+  sponsor report and later 91% direct display, zero-unit PR 13 publication receipt, exact 2/1 batch,
+  cumulative 22/11 totals, `$0.00` revenue, and the absence of a final post-work reading or per-unit
+  attribution. Prior entries are unchanged.
+
+## 2026-08-13 - Session 028 - R-004 final assurance review remediation
+
+- Final assurance review identified predictable archive staging in both new builders (P2),
+  incomplete exact Support field/artifact binding (P2), and ignored extra `__pycache__` inventory
+  (P3). Both builders now use exclusive random descriptor-backed staging in checked trusted-local
+  directories and leave the old predictable regular/hard-link sentinel paths unchanged. Support
+  validation closes and cross-binds admitted static and generated fields and rejects all extras.
+- Focused declaration tests passed 9 with two Windows privilege skips; focused Support tests passed
+  17 with two such skips; the full Support suite passed 66 with four skips. Exact regeneration,
+  Support freshness, modified-module compilation, and diff checks passed locally. These results are
+  local structural evidence, not hosted CI or production enforcement.
+- No work-unit, Usage, or revenue total changes. No network, private input, commit, push,
+  publication, activation, payment, customer contact, or external state changed.
+
+## 2026-08-13 - Session 029 - R-004 final local verification and Usage checkpoint
+
+- The stable final working tree passed 91 Patch tests with five Windows privilege-dependent skips,
+  66 Support tests with four skips, 41 parked Revenue tests with one skip, and 22 evidence-control
+  tests with one skip. All three registered engine workers and three immutable bundles passed.
+- Twenty-five generated artifacts regenerated exactly in OS temporary copies. The bounded public-
+  tree heuristic passed across 195 files / 1,506,691 bytes / six signature families. The frozen
+  inventory remained exactly 107 files with fingerprint
+  `9b63fa8294e34d29bc6c8df97c19848f0b37ba27e747f5eb0a085a4cba8ac2dc`.
+  These are local and synthetic validation results, not hosted CI or production enforcement.
+- A later direct signed-in Usage page displayed 67% whole-account capacity remaining, with the
+  next reset shown as August 19, 2026 at 9:33 PM, no reset available, and zero credits. No delta or
+  amount is attributed to this repository, workstream, unit, agent, tool call, test, or action.
+- No work-unit or revenue total changed. No network, private input, commit, push, publication,
+  activation, payment, customer contact, or other external action occurred.

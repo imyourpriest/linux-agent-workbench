@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "status": "prepared_not_activated",
+  "earliest_activation_utc": "2026-08-25T01:00:00Z",
+  "asset_sha256": "e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a",
+  "time_alone_authorizes_activation": false,
+  "evaluation_checkpoint": "final_exact_14_day_checkpoint_only",
+  "required_gates": [
+    "sel_gh_001_final_retained_row_capture_exists",
+    "sel_gh_001_final_capture_independently_verifies_complete",
+    "sel_gh_001_frozen_and_no_incident",
+    "final_release_diff_metadata_and_privacy_review",
+    "exact_asset_digest_matches_contract",
+    "new_future_control_task_decision"
+  ],
+  "success": {
+    "operator": "all",
+    "minimum_downloads": 10,
+    "minimum_substantive_feedback_issues": 3,
+    "feedback_accounts_must_be_distinct_and_public": true,
+    "minimum_intended_adoption_or_use": 2
+  },
+  "paid_signal": {
+    "minimum_unsolicited_customization_requests_or_explicit_budget": 1,
+    "checkbox_alone_is_sufficient": false
+  },
+  "failure": {
+    "operator": "any",
+    "downloads_below": 5,
+    "zero_substantive_maintainer_feedback": true,
+    "action": "no_payment_and_revise_or_retire",
+    "second_channel_allowed": false
+  },
+  "otherwise_result": "inconclusive_no_payment_and_revise_or_retire",
+  "stop_conditions": [
+    "asset_digest_mismatch",
+    "secret_or_personal_data_leak",
+    "policy_or_legal_complaint",
+    "sel_gh_001_contamination"
+  ],
+  "payment_enabled": false,
+  "activate_command_present": false,
+  "network_code_present": false
+}

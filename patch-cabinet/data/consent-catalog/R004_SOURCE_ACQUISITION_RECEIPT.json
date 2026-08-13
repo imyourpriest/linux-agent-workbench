@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "receipt_id": "consent-catalog-r004-five-source-acquisition-2026-08-13",
+  "retrieved_at": "2026-08-13T15:06:48Z",
+  "method": "github-contents-api-base64-decoded-source-bytes",
+  "claim_boundary": "This receipt records bytes returned for five exact public commit refs; it is not a signature, attestation, current permission, semantic interpretation, candidate eligibility, contact authority, or submission authorization.",
+  "sources": [
+    {
+      "record_id": "github-bitcoin-bitcoin-11090c8bb359-768a64a24327",
+      "repository": "bitcoin/bitcoin",
+      "commit_sha": "11090c8bb359f894ef7d97b65aff52fe8191aec1",
+      "policy_path": "doc/AI_POLICY.md",
+      "api_url": "https://api.github.com/repos/bitcoin/bitcoin/contents/doc/AI_POLICY.md?ref=11090c8bb359f894ef7d97b65aff52fe8191aec1",
+      "git_blob_sha1": "fde44c4818ac54e4775c9caca1bad3b0b561e7d5",
+      "source_bytes": 2085,
+      "source_sha256": "768a64a24327141ad3b19d88bee66d045ba4122ef77f68f9886787cb39e4f0b1"
+    },
+    {
+      "record_id": "github-teamnewpipe-newpipe-881a130ab10c-4cbe4421a445",
+      "repository": "TeamNewPipe/NewPipe",
+      "commit_sha": "881a130ab10c28e19624602abb9fab82bba1b237",
+      "policy_path": ".github/CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/TeamNewPipe/NewPipe/contents/.github/CONTRIBUTING.md?ref=881a130ab10c28e19624602abb9fab82bba1b237",
+      "git_blob_sha1": "0294a72c7d30b0eb04a521420905513493cc473c",
+      "source_bytes": 9005,
+      "source_sha256": "4cbe4421a445a4a7bff861fe70222ccb3b6d107de4524ae28b0a6b4e55e8696b"
+    },
+    {
+      "record_id": "github-ggml-org-llama-cpp-0d0bfcd4fd88-f1d5f9ae0652",
+      "repository": "ggml-org/llama.cpp",
+      "commit_sha": "0d0bfcd4fd8828e3e7906b6fc4561725b534511e",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/ggml-org/llama.cpp/contents/CONTRIBUTING.md?ref=0d0bfcd4fd8828e3e7906b6fc4561725b534511e",
+      "git_blob_sha1": "003133478811b32eb969fa3994e6455ed9f2866f",
+      "source_bytes": 12725,
+      "source_sha256": "f1d5f9ae06528b260880c972fe0cbf07565ad84f4e88b360058cb4aca72759a0"
+    },
+    {
+      "record_id": "github-openttd-openttd-667a12c0c6f7-2ae5f23cb310",
+      "repository": "OpenTTD/OpenTTD",
+      "commit_sha": "667a12c0c6f7a47e892dbe532d13804b7a5cdc00",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/OpenTTD/OpenTTD/contents/CONTRIBUTING.md?ref=667a12c0c6f7a47e892dbe532d13804b7a5cdc00",
+      "git_blob_sha1": "fe1687dacac985ef7dbc2431e5a4eeab0fd58b4f",
+      "source_bytes": 15790,
+      "source_sha256": "2ae5f23cb31093fb7a4f61b7d3f61fe9a2b95086fd19fb62800041f9ce9ecf27"
+    },
+    {
+      "record_id": "github-n8n-io-n8n-6ab3f5e83eb0-060cde0b46f7",
+      "repository": "n8n-io/n8n",
+      "commit_sha": "6ab3f5e83eb0c621dd6493df05a53c5f0c4c23c8",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/n8n-io/n8n/contents/CONTRIBUTING.md?ref=6ab3f5e83eb0c621dd6493df05a53c5f0c4c23c8",
+      "git_blob_sha1": "12a2b1d63f1799166a4ee2e1c48b54d7920dd713",
+      "source_bytes": 25289,
+      "source_sha256": "060cde0b46f7b28bf58f440b0afb4992799f2721a9a60e7b0c2f86dc55af1755"
+    }
+  ]
+}

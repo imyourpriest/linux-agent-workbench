@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "maintainer-policy-declaration",
+    "version": "0.2.0"
+  },
+  "status": "release_candidate_not_published",
+  "archive_format": "zip_stored_fixed_metadata",
+  "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
+  "source_tree_fingerprint": "a8185d39c994d7bb3ac96a7c285a668cb36f1e3761922767e2dc8a02564a969a",
+  "payload": [
+    {
+      "path": "LICENSE",
+      "bytes": 1081,
+      "sha256": "11829956093397cb7749336b5677712e011194c99bd33c2dac581eedd822cdae"
+    },
+    {
+      "path": "README.md",
+      "bytes": 766,
+      "sha256": "56dadad26ecb36dc77cbdb8665248fdd5b69347726d7fb3cdc9602dc2c3688e8"
+    },
+    {
+      "path": "SPECIFICATION.md",
+      "bytes": 8255,
+      "sha256": "4175f39f8ef26a548c4365490fdd0467887900c7eccd3acaa325f00d2fd08267"
+    },
+    {
+      "path": "maintainer_policy_declaration.py",
+      "bytes": 27691,
+      "sha256": "5186bff88d0c46950a7cf938ba048fefbcf49d42fc964dd25c1326253bd42719"
+    },
+    {
+      "path": "starter-unverified-project.json",
+      "bytes": 1957,
+      "sha256": "97329d04ad8514cdf6f694a659a7a516768587e6d86178426f4e3449c5998566"
+    },
+    {
+      "path": "synthetic-example.json",
+      "bytes": 1562,
+      "sha256": "18fc07ce63a5083c767c6e8d4f6cfd95068d155fba03b039a831f154c8628add"
+    }
+  ]
+}

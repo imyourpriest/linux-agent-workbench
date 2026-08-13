@@ -301,3 +301,34 @@ Append-only project record.
   immutable bundle inventories and replay requirements remain exact and unchanged.
 - This is review remediation of the two already counted Patch units, not another work unit. No
   candidate, upstream contact, publication, or external action occurred.
+
+## 2026-08-13 - R-004 portable declaration candidate and neutral catalog expansion
+
+- Built one deterministic, self-contained, unpublished release candidate for component
+  0.2.0/schema 1. The fixed-metadata stored ZIP contains only the standalone validator, README,
+  specification, MIT license, unverified-project starter, and reserved synthetic example. Its
+  manifest does not self-hash; the external receipt/checksum bind exact archive bytes. SHA-256 is
+  a recomputable fingerprint, not a signature, attestation, or external trust.
+- Added exactly five paired consent/profile records from exact commit-pinned files observed
+  2026-08-13. Bitcoin and OpenTTD explicitly disallow the exact autonomous workflow; NewPipe,
+  llama.cpp (CONTRIBUTING.md only), and n8n remain insufficiently explicit. Missing dimensions
+  are `not_explicit`. One receipt binds returned bytes, decoded-byte SHA-256s, and Contents blob
+  SHA-1s; no third-party source text is stored or executed.
+- These are exactly two impact units. No candidate manifest, ranking, eligibility, contact, or
+  submission authority changed. No GitHub release, adoption, contact, issue, pull request, or
+  external action occurred.
+
+## 2026-08-13 - R-004 declaration archive-staging correction
+
+- Final assurance review found that the portable release builder used a predictable `.build` path
+  that ZIP creation could truncate or follow. It now creates an exclusive random staging file in
+  the checked trusted-local output directory, builds and reads through the opened descriptor,
+  verifies regular-file identity and single-link state, removes only that exact temporary name,
+  and atomically replaces final outputs. A pre-existing old predictable regular file or hard link
+  remains untouched; symlink variants are covered where platform privilege permits.
+- Output directories are explicitly checked as non-link, non-junction, non-reparse regular
+  directories. This rejects the observed staging issue but does not claim protection if an
+  adversary can replace a trusted-local parent after inspection.
+- The focused suite passed 9 tests with two Windows symlink-privilege skips. The regenerated ZIP
+  remained byte-identical. This is remediation of the existing impact unit, not a new unit,
+  publication, adoption, external action, Usage reading, or production-enforcement claim.
