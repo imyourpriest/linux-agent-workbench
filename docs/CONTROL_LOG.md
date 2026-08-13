@@ -711,3 +711,67 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   amount is attributed to this repository, workstream, unit, agent, tool call, test, or action.
 - No work-unit or revenue total changed. No network, private input, commit, push, publication,
   activation, payment, customer contact, or other external action occurred.
+
+## 2026-08-13 - Session 030 - PR 14 receipt and R-004 extension start
+
+- PR 14 was reviewed at head `64e91a6f69e9c935478e6cf4e48d0d4923b475bd` and squash-merged at
+  `2026-08-13T16:02:32Z` as public `main` `6b9c0a506f325210482f3942cdc7f2be3331ce4d`.
+  The feature and merge trees match at `70ea964d8179cb4f4a5a606f3780723f20a8957d`.
+  PR CI `31718464458`, PR CodeQL `31718462348`, post-main CI `31718633677`, and
+  post-main CodeQL `31718632949` succeeded. No post-main Dependency Graph run was observed during
+  bounded checks; absence of an observed run is not a failure claim. These hosted results establish
+  only the named workflow outcomes on the named commits, not production enforcement.
+- The branch started clean on `agent/r007-policy-release-prep` at the reviewed PR head, with local
+  `origin/main` at the exact public-main SHA. The authorized local branch
+  `agent/r008-policy-interop-audit` was created from that public-main commit. Git commands used a
+  per-command safe-directory override; no global Git trust setting changed.
+- A direct signed-in Usage page at batch start showed 60% weekly remaining, reset August 19, 2026
+  at 9:33 PM, no reset available, and zero credits. The sponsor authorized this one cycle down to
+  a hard 30% floor; ordinary 40% reserve resumes next reset. This is a whole-account snapshot and
+  no amount or delta is attributed to this repository, batch, unit, agent, tool call, or action.
+
+## 2026-08-13 - Session 031 - R-004 interoperability and inert audit batch prepared locally
+
+- Completed exactly two Patch impact units and one Support revenue unit under D-038. Cumulative
+  totals are 24 impact and 12 revenue, preserving 2:1. Revenue and cleared receipts remain `$0.00`.
+- Added a versioned declaration structural profile/corpus with authoritative-parser evidence and
+  lossy non-authorizing projections; a neutral date-window catalog snapshot/query over existing
+  records; and an isolated project-owned synthetic public-policy-audit artifact pack. No
+  independent JSON Schema validator was tested. Local structural checks are not production
+  enforcement or proof of identity, authority, current permission, adoption, or source truth.
+- No network, subprocess, target execution, third-party checkout, real/customer/private input,
+  commit, push, pull request, release, issue, ruleset, listing, checkout, payment, outreach,
+  account, credential, subscription, purchase, domain, wallet movement, XLM use, or other external
+  action occurred. SEL-GH-001, the parked Revenue Lab, and prior frozen artifacts remain unchanged.
+
+## 2026-08-13 - Session 032 - R-004 extension security-review remediation
+
+- The independently reviewed pre-remediation baseline was branch
+  `agent/r008-policy-interop-audit`, HEAD and `origin/main`
+  `6b9c0a506f325210482f3942cdc7f2be3331ce4d`, 36 expanded content paths (13 modified,
+  23 untracked), canonical path/newline/little-endian-length/content SHA-256
+  `3277f724dfe684a4cbd7bed961f46967cb3acaec9f2ec3eddbf83c08b21823f5`, and clean diff check.
+- Security review reported two P2s: the Support verifier lacked an independent checked-fixture
+  anchor, and the Patch corpus allowed accepted records with non-valid labels to supply a
+  projection. It also requested iterative structure bounds, stronger trusted-project descendant
+  path checks and honest TOCTOU scope, subprocess wording correction, and removal of invented PR
+  obligations for `not_declared` fields.
+- Remediation adds verifier-owned Support fixture digests and precise checked-tree result wording;
+  closed Patch classification/expectation/observation tuples and a valid-only projection source;
+  iterative bounded walking; output-chain/leaf rechecks; independent-maintainer-proposal wording;
+  and explicit disclosure that a Windows test invokes `cmd.exe` solely for junction setup. Local
+  constants are not external trust anchors, and descendant checks are not race-proof against a
+  concurrently hostile trusted project parent.
+- This correction adds no work unit and changes no Usage or revenue claim. Totals remain 24 Patch
+  impact / 12 Support revenue units and `$0.00`. No network, external input, commit, push,
+  publication, activation, listing, issue, payment, customer contact, or other external action
+  occurred. The production modules remain network/subprocess free; the Windows junction test
+  subprocess is test-fixture setup only.
+- Stable local validation passed: focused Patch 12/12; focused Support 12 with 11 passing and one
+  symlink-privilege skip; full Patch 109 with five skips; full Support 78 with five skips; parked
+  Revenue 41 with one skip; tools/evidence 22 with one skip. All three registered replay workers
+  and three immutable bundles passed. Complete artifact regeneration/freshness, compileall,
+  `pip check`, and `git diff --check` passed. The bounded public-tree heuristic passed 218 files /
+  1,636,596 bytes / six signature families; it is not a privacy guarantee. The 104-file frozen
+  inventory remained zero-difference at listing fingerprint
+  `10ed570e0e049d50abc242e838d8195d4ad7d532ff41d5d6cfac3d10b4eb3902`.

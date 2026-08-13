@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "maintainer-policy-declaration-interop",
+    "version": "0.1.0"
+  },
+  "profile": "JSON Schema Draft 2020-12 structural profile",
+  "authoritative_validator": "patch_cabinet.maintainer_policy_declaration",
+  "independent_json_schema_validator_tested": false,
+  "claim_boundary": "Prototype structural interoperability evidence only; the strict Python parser is authoritative. No standard, independent-validator conformance, source truth, identity, authority, current permission, authorization, detection, or enforcement is established.",
+  "files": [
+    {
+      "path": "AI_POLICY.draft.md",
+      "sha256": "573807ab7ac440408ccee983069d186e44cc7a1058cecd4b65356c4dc5c7890a",
+      "bytes": 1253
+    },
+    {
+      "path": "PULL_REQUEST_TEMPLATE.fragment.md",
+      "sha256": "083d3d66347a441d0b354cb7beae0d3429fc2870c6cc9b49ac98fa601603c3e0",
+      "bytes": 1005
+    },
+    {
+      "path": "README.md",
+      "sha256": "fbe25f6a4191515f30018737f77f5a059fe08d70ff379256c82c1ff9dbf02aa4",
+      "bytes": 3048
+    },
+    {
+      "path": "corpus.json",
+      "sha256": "280d9d2aca66844e5fc03d6ae907e74e0dd54a8ab5f82e1daa29b8ad31a3ed2a",
+      "bytes": 4274
+    },
+    {
+      "path": "schema.json",
+      "sha256": "1582238b1ac144c9df0dc58e1252da67bf41c4851f39aa2386ae2dc06a6f28a2",
+      "bytes": 3443
+    }
+  ]
+}

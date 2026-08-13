@@ -1,0 +1,74 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "public-policy-audit",
+    "version": "0.1.0"
+  },
+  "audit_id": "ppa-v1-ca58a6ba6926033344a8633e377c6e2972da25103f506f3d5a407354ab37c85b",
+  "source": {
+    "kind": "project_owned_synthetic_public_repository_demo",
+    "repository": "synthetic/acme-cli",
+    "repository_url": "https://example.invalid/synthetic/acme-cli",
+    "commit_sha": "2222222222222222222222222222222222222222",
+    "observed_at": "2026-08-13"
+  },
+  "boundaries": {
+    "legal_advice": false,
+    "security_assessment": false,
+    "compliance_or_certification": false,
+    "ai_use_detection": false,
+    "identity_or_authority_verified": false,
+    "current_permission_established": false,
+    "platform_enforcement": false,
+    "network_or_subprocess": false,
+    "real_customer_input": false,
+    "service_activated": false
+  },
+  "real_input_stop_gate": "Real input remains prohibited until SEL-GH-001 final capture, a new prospective control decision, and acquisition, privacy, rights/terms, retention, and provenance validation.",
+  "fixture_binding": "Matches verifier-owned checked-tree digests; this is local fixture identity, not real-world ownership, authorship, authority, or an external trust anchor.",
+  "evidence": [
+    {
+      "control": "human_review",
+      "status": "observed",
+      "evidence": "Exact synthetic fixture phrase observed: Human review is required"
+    },
+    {
+      "control": "ai_disclosure",
+      "status": "observed",
+      "evidence": "Exact synthetic fixture phrase observed: must disclose AI assistance"
+    },
+    {
+      "control": "human_accountability",
+      "status": "observed",
+      "evidence": "Exact synthetic fixture phrase observed: remains accountable"
+    },
+    {
+      "control": "autonomous_pr_submission",
+      "status": "gap",
+      "evidence": "Exact synthetic fixture phrase observed: does not currently declare whether autonomous"
+    },
+    {
+      "control": "security_report_automation",
+      "status": "gap",
+      "evidence": "Exact synthetic fixture phrase observed: does not currently declare rules for automated security reports"
+    },
+    {
+      "control": "license_ip_checks",
+      "status": "gap",
+      "evidence": "Exact synthetic fixture phrase observed: license and IP checks"
+    }
+  ],
+  "gaps": [
+    "autonomous_pr_submission",
+    "security_report_automation",
+    "license_ip_checks"
+  ],
+  "human_decisions": [
+    "Decide whether autonomous pull-request submission is allowed, conditional, or disallowed.",
+    "Decide the private security-report path and whether any automation is permitted.",
+    "Decide the required license and IP review evidence before adoption.",
+    "Review every suggestion against the repository's current human-owned policy before use."
+  ],
+  "price_hypothesis_usd": "79.00_unvalidated_not_offered",
+  "revenue_usd": "0.00"
+}

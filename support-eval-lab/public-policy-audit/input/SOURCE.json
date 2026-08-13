@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "source_kind": "project_owned_synthetic_public_repository_demo",
+  "repository": "synthetic/acme-cli",
+  "repository_url": "https://example.invalid/synthetic/acme-cli",
+  "commit_sha": "2222222222222222222222222222222222222222",
+  "observed_at": "2026-08-13",
+  "customer_approved_public_input": false,
+  "synthetic": true,
+  "files": {
+    "AI_POLICY.md": "ff06e4ed92fe3fcf7eeedc424d993a0df29c2982007e3fa5caab6ffe20e01631",
+    "CONTRIBUTING.md": "0f1abd2bf560496eb04a9cbfaefb7ddacc3035ca02084a46ecfb7c2d36c99544"
+  }
+}

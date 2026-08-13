@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "public-policy-audit",
+    "version": "0.1.0"
+  },
+  "result": "valid_verifier_bound_checked_tree_synthetic_fixture",
+  "audit_id": "ppa-v1-ca58a6ba6926033344a8633e377c6e2972da25103f506f3d5a407354ab37c85b",
+  "manifest_sha256": "058585c77612d5f94aab0236b2d2a637fed4ff869476e0d06dd6cbfd9114e1df",
+  "source_record_sha256": "cd56b374d5b014f83d5ffc5c50ca16cad4f3ca9b3c740f9f6f0b65e59715fa45",
+  "boundaries": {
+    "legal_advice": false,
+    "security_assessment": false,
+    "compliance_or_certification": false,
+    "ai_use_detection": false,
+    "identity_or_authority_verified": false,
+    "current_permission_established": false,
+    "platform_enforcement": false,
+    "network_or_subprocess": false,
+    "real_customer_input": false,
+    "service_activated": false
+  },
+  "real_input_stop_gate": "Real input remains prohibited until SEL-GH-001 final capture, a new prospective control decision, and acquisition, privacy, rights/terms, retention, and provenance validation.",
+  "trust_boundary": "Verifier-owned module constants bind the checked synthetic fixture. Manifest and receipt hashes are self-consistency evidence, not signatures or external trust anchors.",
+  "revenue_usd": "0.00"
+}

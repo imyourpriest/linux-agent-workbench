@@ -145,6 +145,16 @@ jobs:
           --markdown-out samples/policy-profile-catalog-index.md
           --json-out samples/policy-profile-catalog-index.json
 
+      - name: Regenerate Patch Cabinet neutral policy-profile snapshot
+        working-directory: patch-cabinet
+        run: >-
+          python -m patch_cabinet.policy_profile_catalog
+          data/policy-profile-catalog/v1
+          --consent-records data/consent-catalog/v1
+          --as-of 2026-08-13
+          --markdown-out samples/policy-profile-catalog-snapshot.md
+          --json-out samples/policy-profile-catalog-snapshot.json
+
       - name: Regenerate Patch Cabinet maintainer declaration prototype
         working-directory: patch-cabinet
         run: |
@@ -158,6 +168,10 @@ jobs:
           maintainer-policy-declaration validate \
             data/maintainer-policy-declarations/synthetic/v1/mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a.json \
             > samples/maintainer-policy-declaration-validation-receipt.json
+
+      - name: Verify declaration interoperability companion
+        working-directory: patch-cabinet
+        run: python -m patch_cabinet.declaration_interop --project . --check
 
       - name: Regenerate portable declaration release candidate
         working-directory: patch-cabinet
@@ -202,6 +216,10 @@ jobs:
         run: |
           python -m support_eval_lab.policy_release --project .
           python -m support_eval_lab.policy_release --project . --check
+
+      - name: Verify inert synthetic public policy audit
+        working-directory: support-eval-lab
+        run: python -m support_eval_lab.public_policy_audit --project . --check
 
       - name: Regenerate Support channel observation
         working-directory: support-eval-lab

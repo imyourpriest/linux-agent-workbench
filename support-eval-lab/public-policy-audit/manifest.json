@@ -1,0 +1,58 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "public-policy-audit",
+    "version": "0.1.0"
+  },
+  "inventory": [
+    {
+      "path": "README.md",
+      "sha256": "89529209323baa43ae1345cce9907daba4b45b3761d2d3a2381c6431c1c743a2",
+      "bytes": 2609
+    },
+    {
+      "path": "input/AI_POLICY.md",
+      "sha256": "ff06e4ed92fe3fcf7eeedc424d993a0df29c2982007e3fa5caab6ffe20e01631",
+      "bytes": 388
+    },
+    {
+      "path": "input/CONTRIBUTING.md",
+      "sha256": "0f1abd2bf560496eb04a9cbfaefb7ddacc3035ca02084a46ecfb7c2d36c99544",
+      "bytes": 360
+    },
+    {
+      "path": "input/SOURCE.json",
+      "sha256": "cd56b374d5b014f83d5ffc5c50ca16cad4f3ca9b3c740f9f6f0b65e59715fa45",
+      "bytes": 550
+    },
+    {
+      "path": "AUDIT.json",
+      "sha256": "33d094b2bea9776912facb2e4612af77b0c4a7009e2faf2fbe51f8784edeb0f4",
+      "bytes": 2880
+    },
+    {
+      "path": "AUDIT.md",
+      "sha256": "3e6dec5d756db4d95345b10de5a2d38e45fd24f6431f3f1c3a7e90ba827699eb",
+      "bytes": 1529
+    },
+    {
+      "path": "PATCH_SUGGESTIONS.md",
+      "sha256": "69ebd45cd5050738b5b6e79956afdae8de32daa37de697e3cea50160a78914a4",
+      "bytes": 706
+    }
+  ],
+  "boundaries": {
+    "legal_advice": false,
+    "security_assessment": false,
+    "compliance_or_certification": false,
+    "ai_use_detection": false,
+    "identity_or_authority_verified": false,
+    "current_permission_established": false,
+    "platform_enforcement": false,
+    "network_or_subprocess": false,
+    "real_customer_input": false,
+    "service_activated": false
+  },
+  "real_input_stop_gate": "Real input remains prohibited until SEL-GH-001 final capture, a new prospective control decision, and acquisition, privacy, rights/terms, retention, and provenance validation.",
+  "trust_boundary": "Verifier-owned module constants bind the checked synthetic fixture. Manifest and receipt hashes are self-consistency evidence, not signatures or external trust anchors."
+}
