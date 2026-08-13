@@ -775,3 +775,26 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   1,636,596 bytes / six signature families; it is not a privacy guarantee. The 104-file frozen
   inventory remained zero-difference at listing fingerprint
   `10ed570e0e049d50abc242e838d8195d4ad7d532ff41d5d6cfac3d10b4eb3902`.
+
+## 2026-08-13 - Session 033 - PR 15 publication receipt and R-004 extension closeout
+
+- PR [#15](https://github.com/imyourpriest/linux-agent-workbench/pull/15) was reviewed and pushed
+  at head `591aea1cf38875d5ae699e33e9c95a8cfa600f88`. PR CI run `31738504542` succeeded for
+  Python 3.12, 3.13, 3.14, Release Readiness on Windows, and Generated evidence is current. PR
+  CodeQL run `31738502560` succeeded for actions and python; the repository CodeQL check also
+  passed, with no separate run ID recorded here.
+- The PR was marked ready and squash-merged at `2026-08-13T19:59:38Z` using the exact expected-head
+  guard. Public main and the merge commit are
+  `d45af0624cfbda0ad7b9de87a3aa2f0901534578`; the feature and public-main trees both resolve to
+  `dd1366456bdff92096087dadbdbe91a0986a582a`. Post-main CI run `31738623378` succeeded, and
+  post-main CodeQL/Push run `31738623352` succeeded for actions and python. These hosted results
+  describe only the named checks on the named commits, not production enforcement.
+- Local `main` was clean after the merge and matched `origin/main` at the public-main commit.
+- A direct signed-in Usage observation after merge showed 38% weekly remaining, reset August 19,
+  2026 at 9:33 PM, and zero credits. This is global whole-account UI state; no amount or delta is
+  attributed to this task, repository, workstream, unit, agent, tool call, or action. The
+  sponsor-authorized one-cycle 30% floor was honored. The normal 40% reserve resumes next reset
+  and cycle.
+- This publication receipt adds zero Patch or Support work units. Cumulative totals remain exactly
+  24 Patch impact / 12 Support revenue units, and revenue remains `$0.00`. No release, active
+  form, payment, outreach, customer or private input, XLM movement, or other activation occurred.

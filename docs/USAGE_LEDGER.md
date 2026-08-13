@@ -217,3 +217,25 @@ usage attribution.
 This extension adds two Patch impact units and one Support revenue unit. R-004 now has four Patch
 and two Support units; cumulative dedicated totals are twenty-four impact and twelve revenue
 units, preserving 2:1. Revenue remains `$0.00`; no per-unit usage is inferred.
+
+#### R-004 PR 15 publication closeout - 2026-08-13
+
+- PR [#15](https://github.com/imyourpriest/linux-agent-workbench/pull/15) publication is shared
+  control with zero work units. Reviewed head `591aea1cf38875d5ae699e33e9c95a8cfa600f88` was
+  squash-merged at `2026-08-13T19:59:38Z` with the exact expected-head guard. Public main is
+  `d45af0624cfbda0ad7b9de87a3aa2f0901534578`, and both feature and public-main trees are
+  `dd1366456bdff92096087dadbdbe91a0986a582a`. The named PR and post-main CI and CodeQL checks
+  passed; this hosted evidence is not a usage measurement or production-enforcement claim.
+- A direct signed-in Usage observation after merge showed 38% weekly remaining, reset August 19,
+  2026 at 9:33 PM, and zero credits. It is global whole-account UI state, not attributable to this
+  task, repository, workstream, unit, agent, tool call, test, or action. The authorized one-cycle
+  30% floor was honored; the normal 40% reserve resumes next reset and cycle.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-13 | Shared publication | 0 | PR 15 merge and exact hosted-check receipt | post-merge whole-account snapshot: 38%; no attribution |
+
+This control-only receipt adds zero Patch and zero Support units. R-004 remains four Patch and two
+Support units; cumulative dedicated totals remain exactly twenty-four impact and twelve revenue
+units, preserving 2:1. Revenue remains `$0.00`. No release, active form, payment, outreach,
+customer or private input, XLM movement, or other activation occurred.
