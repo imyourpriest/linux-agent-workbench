@@ -83,3 +83,14 @@ detection, compliance result, or enforcement guarantee exists. The receipt hashe
 recomputable consistency fingerprints, not signatures or authentication.
 The verifier-owned constants are local checked-tree policy, not signatures or an external trust
 anchor, and changing the example requires an intentional verifier release and review.
+# Inert policy release experiment
+
+The isolated `policy-release-experiment/` is an inert post-SEL draft only. Regenerate it with
+`python -m support_eval_lab.policy_release --project .` and check freshness with `--check`.
+Neither command contains activation or network behavior. The earliest date is not authorization;
+all final SEL capture, independent completeness, frozen/no-incident, final review, exact digest,
+and future control-decision gates remain mandatory. It is not a listing, sale, demand result,
+adoption claim, or GitHub release, and revenue remains `$0.00`.
+The experiment directory is trusted-local scope. Generation and validation reject links and
+irregular directories and use exclusive random staging, but do not claim protection if an
+adversary can replace the trusted parent after inspection.

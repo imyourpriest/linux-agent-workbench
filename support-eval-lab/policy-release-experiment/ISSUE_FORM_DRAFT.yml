@@ -1,0 +1,32 @@
+name: AI policy starter feedback (INERT DRAFT)
+description: Public aggregate-friendly feedback; this file is not installed as an active issue form.
+title: "[policy-starter-feedback] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include names, email, phone, employer, private URLs, private repositories, secrets, security reports, payment information, or other personal/private data."
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: Generic outcome
+      options:
+        - Read or evaluated the starter
+        - Intended adoption or use
+        - Used or adapted the starter
+    validations:
+      required: true
+  - type: textarea
+    id: substantive_feedback
+    attributes:
+      label: Substantive public feedback
+      description: Describe a generic usability gap or useful aspect without identifying yourself or a private project.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Data boundary
+      options:
+        - label: I did not include prohibited private, identifying, security, or payment data.
+          required: true

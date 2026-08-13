@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-bitcoin-bitcoin-11090c8bb359-768a64a24327",
+  "consent_record_id": "github-bitcoin-bitcoin-11090c8bb359-768a64a24327",
+  "repository": "bitcoin/bitcoin",
+  "commit_sha": "11090c8bb359f894ef7d97b65aff52fe8191aec1",
+  "policy_path": "doc/AI_POLICY.md",
+  "source_sha256": "768a64a24327141ad3b19d88bee66d045ba4122ef77f68f9886787cb39e4f0b1",
+  "dimensions": {
+    "autonomous_issue_submission": "not_explicit",
+    "autonomous_pr_submission": "disallowed",
+    "human_review": "required",
+    "disclosure": "required",
+    "human_accountability": "required",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned policy requires a human author in the loop and says autonomous agents should not open or drive pull requests."
+}

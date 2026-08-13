@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "tag_name": "ai-policy-starter-v0.1.0",
+  "name": "AI Contribution Policy Starter v0.1.0 research prerelease",
+  "prerelease": true,
+  "draft_only": true,
+  "status": "prepared_not_activated",
+  "payment_enabled": false,
+  "body_path": "RELEASE_BODY.md",
+  "asset_path": "ai-policy-starter-v0.1.0.zip",
+  "checksum_path": "ai-policy-starter-v0.1.0.zip.sha256"
+}

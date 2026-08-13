@@ -1,0 +1,12 @@
+{
+  "schema_version": "1",
+  "result": "valid_inert_draft",
+  "status": "prepared_not_activated",
+  "activation_authorized": false,
+  "payment_enabled": false,
+  "demand_validated": false,
+  "revenue_usd": "0.00",
+  "asset_sha256": "e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a",
+  "manifest_sha256": "f644c46dd90de3dcda6ef82e7b0eef49990bef65946ed37c75a5e9ae4d26ea5c",
+  "claim_boundary": "Local structural and fingerprint validation only; not publication, activation, adoption, demand, sale, listing, payment, or production enforcement."
+}

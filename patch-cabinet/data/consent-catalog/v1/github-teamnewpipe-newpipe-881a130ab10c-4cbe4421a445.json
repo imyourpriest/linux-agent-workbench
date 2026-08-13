@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-teamnewpipe-newpipe-881a130ab10c-4cbe4421a445",
+  "repository": "TeamNewPipe/NewPipe",
+  "repository_url": "https://github.com/TeamNewPipe/NewPipe",
+  "commit_sha": "881a130ab10c28e19624602abb9fab82bba1b237",
+  "policy_source_url": "https://github.com/TeamNewPipe/NewPipe/blob/881a130ab10c28e19624602abb9fab82bba1b237/.github/CONTRIBUTING.md",
+  "policy_path": ".github/CONTRIBUTING.md",
+  "source_sha256": "4cbe4421a445a4a7bff861fe70222ccb3b6d107de4524ae28b0a6b4e55e8696b",
+  "observed_at": "2026-08-13",
+  "reviewed_at": "2026-08-13",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "insufficiently_explicit",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned guide controls AI-assisted work but does not expressly address the exact autonomous submission workflow."
+}

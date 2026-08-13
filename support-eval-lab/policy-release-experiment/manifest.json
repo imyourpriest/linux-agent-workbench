@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "experiment_id": "policy-release-r004",
+  "status": "prepared_not_activated",
+  "inert_location": "support-eval-lab/policy-release-experiment",
+  "asset": {
+    "path": "ai-policy-starter-v0.1.0.zip",
+    "bytes": 9433,
+    "sha256": "e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a"
+  },
+  "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
+  "static_inventory": [
+    {
+      "path": "ACTIVATION_CONTRACT.json",
+      "bytes": 1521,
+      "sha256": "0fdb0d7829364f79d28aab1755a2b9aa1025b5f20161addd0377c7ad4ddfead5"
+    },
+    {
+      "path": "ISSUE_FORM_DRAFT.yml",
+      "bytes": 1140,
+      "sha256": "abf004a183e4779bc53af6a384549ea09a3e58a8f1db1302a2b0b86127a10b5b"
+    },
+    {
+      "path": "MEASUREMENT_TEMPLATE.json",
+      "bytes": 1289,
+      "sha256": "ebe7bbdb8a5c54239cbabe49cba18bef3eb1f9a82c9179692c6401ade0d0046d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1309,
+      "sha256": "a65fa245bf04dc0b6f2636ca7befc475986d3ab09b90fdb2cb6dfa0d1e4a9e3d"
+    },
+    {
+      "path": "RELEASE.json",
+      "bytes": 391,
+      "sha256": "86cde277eb197924cb0a29e8f1f2af0da9f8d467e6db2113ae65db2b0d513717"
+    },
+    {
+      "path": "RELEASE_BODY.md",
+      "bytes": 1188,
+      "sha256": "ff2925f70876c3881ca515084b5cc86e08bf2be0a8f4ff63479f6e9dfa4b60c3"
+    }
+  ]
+}

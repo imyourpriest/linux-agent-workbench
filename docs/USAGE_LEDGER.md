@@ -161,3 +161,39 @@ preserving the 2:1 period ratio. The later combined post-research snapshot is 68
 usage is inferred. The later post-validation whole-account snapshot is 62%, also without
 attribution. The R-006 batch-start snapshot is 55%, with no final post-work reading yet and no
 attribution. Cumulative dedicated totals are twenty impact units and ten revenue units.
+
+### R-004 - reported 2026-08-13
+
+- Starting capacity: the sponsor reported 93% remaining after reset.
+- A later direct signed-in Usage page displayed 91% remaining, with the next reset shown as
+  August 19, 2026 at 9:33 PM, no reset available, and zero credits. No exact capture time is
+  recorded. No cause, project attribution, per-unit attribution, or other inference is made for
+  the two-point difference from the sponsor's report.
+- PR 13 publication and its hosted evidence receipt are shared control with zero work units in
+  R-004; publication and governance are not backfilled as dedicated work units.
+- No final post-work Usage reading is available yet. Every R-004 unit is therefore recorded as
+  not individually measured, and no usage is attributed to a project, workstream, unit, agent,
+  tool call, test, or action.
+- Revenue and cleared receipts remain `$0.00`.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-13 | Shared publication | 0 | PR 13 publication and exact hosted-check receipt | 93% sponsor-reported reset baseline; later 91% direct display; no per-action attribution |
+| 2026-08-13 | Patch Cabinet | 1 | Reproducible portable maintainer-policy-declaration 0.2.0 release candidate; not published | not individually measured |
+| 2026-08-13 | Patch Cabinet | 1 | Five-source neutral commit-pinned policy catalog expansion; non-authorizing | not individually measured |
+| 2026-08-13 | Support Agent Regression Lab | 1 | Inert post-SEL release/feedback experiment; prepared, not activated | not individually measured |
+
+R-004 has two Patch Cabinet impact units and one Support Agent Regression Lab revenue-validation
+unit, preserving the 2:1 period ratio. Cumulative dedicated totals are twenty-two impact units and
+eleven revenue units. Revenue remains `$0.00`; there is no final post-work reading and no per-unit
+usage attribution.
+
+#### R-004 later direct checkpoint - 2026-08-13
+
+- Superseding only the earlier statement that no final post-work reading was available, a later
+  direct signed-in Usage page displayed 67% remaining after implementation, adversarial
+  remediation, independent clean re-review, and the final local validation matrix. The same page
+  showed the next reset as August 19, 2026 at 9:33 PM, no reset available, and zero credits.
+- This is a whole-account snapshot only. No delta or amount is attributed to this repository,
+  workstream, unit, agent, tool call, test, or action. It does not change the R-004 2/1 unit total,
+  cumulative 22/11 totals, or `$0.00` revenue.

@@ -83,11 +83,11 @@ class ConsentCatalogTests(unittest.TestCase):
     def test_repository_catalog_has_expected_conservative_counts(self) -> None:
         project = Path(__file__).resolve().parents[1]
         loaded = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 10))
-        self.assertEqual(report["summary"]["records"], 5)
+        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 13))
+        self.assertEqual(report["summary"]["records"], 10)
         self.assertEqual(report["summary"]["explicitly_allows"], 0)
-        self.assertEqual(report["summary"]["explicitly_disallows"], 2)
-        self.assertEqual(report["summary"]["insufficiently_explicit"], 3)
+        self.assertEqual(report["summary"]["explicitly_disallows"], 4)
+        self.assertEqual(report["summary"]["insufficiently_explicit"], 6)
 
     def test_strict_json_rejects_duplicate_nonstandard_and_numeric_values(self) -> None:
         valid = json.dumps(self._record())
@@ -239,7 +239,7 @@ class ConsentCatalogTests(unittest.TestCase):
     def test_acquisition_receipts_bind_every_catalog_record(self) -> None:
         project = Path(__file__).resolve().parents[1]
         records = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        now_utc = datetime(2026, 8, 11, 1, 0, 0, tzinfo=timezone.utc)
+        now_utc = datetime(2026, 8, 13, 16, 0, 0, tzinfo=timezone.utc)
         receipt = consent_catalog.load_acquisition_receipt(
             project / "data" / "consent-catalog" / "ACQUISITION_RECEIPT.json",
             records,
@@ -252,7 +252,11 @@ class ConsentCatalogTests(unittest.TestCase):
         self.assertEqual(receipt["schema_version"], "1")
         self.assertIn("not a signature", receipt["claim_boundary"])
         by_id = {item["record_id"]: item for item in receipt["sources"]}
-        initial_records = [item for item in records if item.repository != "astral-sh/ruff"]
+        initial_names = {
+            "HoungDev/creator-toolkit-cli", "rxdt/loopgate_harness",
+            "huggingface/transformers", "stanfordnlp/dspy",
+        }
+        initial_records = [item for item in records if item.repository in initial_names]
         self.assertEqual(set(by_id), {item.record_id for item in initial_records})
         for record in initial_records:
             source = by_id[record.record_id]
@@ -289,6 +293,14 @@ class ConsentCatalogTests(unittest.TestCase):
         self.assertEqual(source["source_bytes"], 50349)
         source_ids = [item["record_id"] for item in receipt["sources"]]
         source_ids.append(ruff_receipt["source"]["record_id"])
+        r004_receipt = consent_catalog.load_acquisition_receipt(
+            project / "data" / "consent-catalog" / "R004_SOURCE_ACQUISITION_RECEIPT.json",
+            records,
+            now_utc=now_utc,
+        )
+        self.assertEqual(len(r004_receipt["sources"]), 5)
+        self.assertIn("not a signature", r004_receipt["claim_boundary"])
+        source_ids.extend(item["record_id"] for item in r004_receipt["sources"])
         self.assertEqual(len(source_ids), len(set(source_ids)))
         self.assertEqual(set(source_ids), {record.record_id for record in records})
 

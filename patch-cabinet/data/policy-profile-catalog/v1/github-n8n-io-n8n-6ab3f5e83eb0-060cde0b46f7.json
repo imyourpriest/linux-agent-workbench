@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-n8n-io-n8n-6ab3f5e83eb0-060cde0b46f7",
+  "consent_record_id": "github-n8n-io-n8n-6ab3f5e83eb0-060cde0b46f7",
+  "repository": "n8n-io/n8n",
+  "commit_sha": "6ab3f5e83eb0c621dd6493df05a53c5f0c4c23c8",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "060cde0b46f7b28bf58f440b0afb4992799f2721a9a60e7b0c2f86dc55af1755",
+  "dimensions": {
+    "autonomous_issue_submission": "not_explicit",
+    "autonomous_pr_submission": "not_explicit",
+    "human_review": "not_explicit",
+    "disclosure": "not_explicit",
+    "human_accountability": "not_explicit",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned guide does not expressly address AI-assisted or autonomous issue or pull-request submission."
+}

@@ -132,7 +132,7 @@ jobs:
         run: >-
           python -m patch_cabinet.consent_catalog
           data/consent-catalog/v1
-          --as-of 2026-08-10
+          --as-of 2026-08-13
           --markdown-out samples/consent-catalog-index.md
           --json-out samples/consent-catalog-index.json
 
@@ -158,6 +158,13 @@ jobs:
           maintainer-policy-declaration validate \
             data/maintainer-policy-declarations/synthetic/v1/mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a.json \
             > samples/maintainer-policy-declaration-validation-receipt.json
+
+      - name: Regenerate portable declaration release candidate
+        working-directory: patch-cabinet
+        run: >-
+          python -m patch_cabinet.declaration_release
+          --project .
+          --output release-candidate/maintainer-policy-declaration-v0.2.0
 
       - name: Regenerate Release Readiness Lab sample
         working-directory: revenue-lab
@@ -189,6 +196,12 @@ jobs:
           maintainer-policy-declaration validate \
             policy-starter/mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json \
             > /tmp/policy-starter-declaration-receipt.json
+
+      - name: Regenerate inert policy release experiment
+        working-directory: support-eval-lab
+        run: |
+          python -m support_eval_lab.policy_release --project .
+          python -m support_eval_lab.policy_release --project . --check
 
       - name: Regenerate Support channel observation
         working-directory: support-eval-lab

@@ -6,7 +6,7 @@
   },
   "claim_boundary": "Historical manually normalized facts only; no automatic prose interpretation or detection, current permission, candidate eligibility, contact, or submission authorization.",
   "summary": {
-    "profiles": 5
+    "profiles": 10
   },
   "profiles": [
     {
@@ -30,6 +30,50 @@
       "reviewer_basis": "manual_pinned_text_normalization",
       "supersedes": null,
       "notes": "The pinned file delegates substantive AI rules to an external policy that is not bound here."
+    },
+    {
+      "profile_id": "github-bitcoin-bitcoin-11090c8bb359-768a64a24327",
+      "consent_record_id": "github-bitcoin-bitcoin-11090c8bb359-768a64a24327",
+      "repository": "bitcoin/bitcoin",
+      "commit_sha": "11090c8bb359f894ef7d97b65aff52fe8191aec1",
+      "policy_path": "doc/AI_POLICY.md",
+      "source_sha256": "768a64a24327141ad3b19d88bee66d045ba4122ef77f68f9886787cb39e4f0b1",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "disallowed",
+        "human_review": "required",
+        "disclosure": "required",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned policy requires a human author in the loop and says autonomous agents should not open or drive pull requests."
+    },
+    {
+      "profile_id": "github-ggml-org-llama-cpp-0d0bfcd4fd88-f1d5f9ae0652",
+      "consent_record_id": "github-ggml-org-llama-cpp-0d0bfcd4fd88-f1d5f9ae0652",
+      "repository": "ggml-org/llama.cpp",
+      "commit_sha": "0d0bfcd4fd8828e3e7906b6fc4561725b534511e",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "f1d5f9ae06528b260880c972fe0cbf07565ad84f4e88b360058cb4aca72759a0",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "not_explicit",
+        "disclosure": "required",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "This record binds only CONTRIBUTING.md; it requires disclosure and accountability but delegates further rules and does not expressly address autonomous submission."
     },
     {
       "profile_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
@@ -76,6 +120,50 @@
       "notes": "The pinned guide bars autonomous submissions and requires disclosed human-owned review."
     },
     {
+      "profile_id": "github-n8n-io-n8n-6ab3f5e83eb0-060cde0b46f7",
+      "consent_record_id": "github-n8n-io-n8n-6ab3f5e83eb0-060cde0b46f7",
+      "repository": "n8n-io/n8n",
+      "commit_sha": "6ab3f5e83eb0c621dd6493df05a53c5f0c4c23c8",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "060cde0b46f7b28bf58f440b0afb4992799f2721a9a60e7b0c2f86dc55af1755",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "not_explicit",
+        "disclosure": "not_explicit",
+        "human_accountability": "not_explicit",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide does not expressly address AI-assisted or autonomous issue or pull-request submission."
+    },
+    {
+      "profile_id": "github-openttd-openttd-667a12c0c6f7-2ae5f23cb310",
+      "consent_record_id": "github-openttd-openttd-667a12c0c6f7-2ae5f23cb310",
+      "repository": "OpenTTD/OpenTTD",
+      "commit_sha": "667a12c0c6f7a47e892dbe532d13804b7a5cdc00",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "2ae5f23cb31093fb7a4f61b7d3f61fe9a2b95086fd19fb62800041f9ce9ecf27",
+      "dimensions": {
+        "autonomous_issue_submission": "disallowed",
+        "autonomous_pr_submission": "disallowed",
+        "human_review": "required",
+        "disclosure": "not_explicit",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide asks contributors not to submit issues or pull requests generated by LLMs or fully automated tools."
+    },
+    {
       "profile_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
       "consent_record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
       "repository": "rxdt/loopgate_harness",
@@ -118,6 +206,28 @@
       "reviewer_basis": "manual_pinned_text_normalization",
       "supersedes": null,
       "notes": "The pinned guide bars autonomous submissions and requires disclosed, reviewed, licensed work."
+    },
+    {
+      "profile_id": "github-teamnewpipe-newpipe-881a130ab10c-4cbe4421a445",
+      "consent_record_id": "github-teamnewpipe-newpipe-881a130ab10c-4cbe4421a445",
+      "repository": "TeamNewPipe/NewPipe",
+      "commit_sha": "881a130ab10c28e19624602abb9fab82bba1b237",
+      "policy_path": ".github/CONTRIBUTING.md",
+      "source_sha256": "4cbe4421a445a4a7bff861fe70222ccb3b6d107de4524ae28b0a6b4e55e8696b",
+      "dimensions": {
+        "autonomous_issue_submission": "not_explicit",
+        "autonomous_pr_submission": "not_explicit",
+        "human_review": "required",
+        "disclosure": "not_explicit",
+        "human_accountability": "required",
+        "license_ip_checks": "not_explicit",
+        "good_first_issue_automation": "not_explicit",
+        "security_report_automation": "not_explicit"
+      },
+      "semantic_review": "manual",
+      "reviewer_basis": "manual_pinned_text_normalization",
+      "supersedes": null,
+      "notes": "The pinned guide controls AI-assisted work but does not expressly address the exact autonomous submission workflow."
     }
   ]
 }

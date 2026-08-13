@@ -235,3 +235,51 @@ Append-only project record.
   then verifies the unchanged runtime rejects the pack. The alias is removed in a `finally` block.
 - This records the failed hosted run and local correction only. It does not claim a later hosted
   success, production enforcement, a new work unit, Usage reading, or external action.
+
+## 2026-08-13 - Inert post-SEL policy release experiment prepared
+
+- Added isolated unpublished prerelease metadata/body, deterministic asset ZIP/checksum,
+  privacy-minimal issue-form draft outside `.github/ISSUE_TEMPLATE`, aggregate measurement
+  template, strict activation contract, manifest, validation receipt, and offline validator.
+- Activation is blocked before `2026-08-25T01:00:00Z`, and time alone never authorizes it. Every
+  final SEL capture, independent verification, frozen/no-incident, final review, exact digest, and
+  future control-decision gate remains mandatory. August 24 is unsafe. There is no activation
+  command or network code; payment is disabled.
+- This prepared, unactivated, demand-unvalidated experiment is exactly one revenue-validation
+  unit. It is not a release, active form, second channel, listing, adoption, demand, sale, customer,
+  or production-enforcement result. Revenue remains `$0.00`; no external or frozen SEL state changed.
+
+## 2026-08-13 - R-004 measurement-operator clarification
+
+- Review found the prepared experiment's threshold values individually correct but the exact
+  final-checkpoint Boolean operators and inconclusive state insufficiently explicit. The closed
+  measurement shape now binds one exact 14-day window, GitHub release ID/tag/asset, REST release
+  asset `download_count`, and the exact activated feedback-form route/window.
+- Success is all three thresholds; failure is fewer than five downloads or zero substantive
+  feedback; the sets cannot overlap and every other completed outcome is inconclusive. Failure and
+  inconclusive both mean no payment, revise or retire, and no second channel. Success also keeps
+  payment disabled pending a future decision. A paid signal remains separate and derives only from
+  at least one unsolicited customization request or explicit budget; a checkbox never counts.
+- Counts are aggregate only and retain no usernames or links. Downloads are downloads, not unique
+  people or exact attribution. This is remediation of the already counted revenue-validation unit,
+  not activation or another unit; no external or frozen SEL state changed.
+
+## 2026-08-13 - R-004 final assurance remediation
+
+- Final assurance review found two P2s and one P3: predictable truncating asset staging, admitted
+  release/contract fields without exact validation and generated cross-binding, and validation
+  that ignored `__pycache__`. Asset generation now uses exclusive random descriptor-backed staging
+  with identity/link checks and exact cleanup; old predictable regular and hard-link sentinels are
+  untouched. The experiment directory is checked as a non-link/non-junction/non-reparse directory.
+- Contract, release, and measurement schema versions, ordered stop conditions, release tag/name,
+  body/asset/checksum paths, activation digest, manifest asset path/digest/size, exact checksum line,
+  static inventory, and receipt are closed and mutually bound. Mutated schema, stop order, paths,
+  URLs, manifest, checksum, and receipt fail before `valid_inert_draft`.
+- Validation now rejects every extra file or directory, including `__pycache__` and nested oversized
+  data, rather than ignoring or copying it. The focused 17-test suite passed with two Windows
+  symlink-privilege skips; the full Support suite passed 66 tests with four privilege skips.
+  Regeneration, freshness check, modified-module compilation, and diff check passed.
+- Trusted-local directory checks and exclusive staging address the reviewed defects but do not
+  claim protection from adversarial replacement of a trusted parent after inspection. This is
+  remediation only: no new work unit, Usage reading, revenue, activation, external action, or
+  production-enforcement claim.
