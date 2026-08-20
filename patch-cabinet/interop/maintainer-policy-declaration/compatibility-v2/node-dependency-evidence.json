@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "dependency": "fast-uri",
+  "registry_metadata_source": "https://registry.npmjs.org/fast-uri/3.1.5",
+  "observed_at": "2026-08-20",
+  "version": "3.1.5",
+  "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.5.tgz",
+  "integrity": "sha512-gHwA1O9LDIcKunMKhObS/HimwtehO1nPUECKAu5TpKgaO19fcWEl4bliWe1jWxVFvIXztJjjQ4L8XQ1EU9f7Jw==",
+  "registry_shasum": "610f37419a030270430cecd68d74e3d4d96725d0",
+  "license": "BSD-3-Clause",
+  "install_script_observed": false,
+  "engines_field_observed": false,
+  "claim_boundary": "Selected fields transcribed from official npm registry metadata; this is not a raw response archive and does not establish downloaded bytes, runtime behavior, exploitation resistance, isolation, future availability, or production security."
+}

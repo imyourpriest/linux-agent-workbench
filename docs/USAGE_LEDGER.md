@@ -312,3 +312,22 @@ to this repository, task, workstream, unit, agent, tool, test, or action, and no
 inferred. Ordinary Usage policy resumes at R-005 closeout. No candidate selection, release, form,
 offer, contact, analytics, customer/private input, checkout, payment, account, merchant, tax,
 XLM, or other activation occurred.
+
+#### R-010 additive fast-uri security/control maintenance - 2026-08-20
+
+- D-042's documentation-only PR 20 and its direct required-check liveness observation closed R-005
+  without another work unit. R-010/D-043 is zero-unit urgent security/control maintenance: it
+  prepares an additive compatibility-v2 successor and preserves compatibility-v1 byte-for-byte.
+- No new Usage snapshot was taken. The last sponsor report remains 67% whole-account Usage, and
+  the sponsor's current instruction permits continued project work only down to the hard 35%
+  floor. No amount or delta is attributed to this repository, task, workstream, unit, agent, tool,
+  test, or action; no per-unit usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-20 | Shared security/control maintenance | 0 | Additive compatibility-v2 fast-uri 3.1.5 migration prepared locally; no publication yet | no new snapshot; last sponsor report 67% whole-account, no attribution |
+
+R-010 adds zero Patch and zero Support units. Cumulative dedicated totals remain twenty-six impact
+and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No candidate, release, tag,
+form, offer, contact, analytics, customer/private input, checkout, payment, account, merchant, tax,
+XLM, or other activation occurred.

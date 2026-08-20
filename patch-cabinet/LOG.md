@@ -442,3 +442,39 @@ Append-only project record.
   now independently derive the source URL and NUL-joined declaration ID and invoke the
   authoritative parser to require its canonical `..` path rejection. Artifact semantics,
   expected structural results, work units, activation, and revenue are unchanged.
+
+## 2026-08-20 - R-010 additive fast-uri security migration prepared locally
+
+- Added a separate compatibility-v2 closed harness rather than changing the published v1 record.
+  All 11 compatibility-v1 files retain their exact recorded byte lengths and SHA-256 values.
+- V2 keeps Ajv `8.20.0` and the unchanged Python adapter lock, schema, corpus, expected outcomes,
+  and structural semantics. Its Node lock and runner require `fast-uri@3.1.5`. Official GitHub
+  Advisory Database records reviewed on 2026-08-20 support the selection:
+  https://github.com/advisories/GHSA-q3j6-qgpj-74h6,
+  https://github.com/advisories/GHSA-v39h-62p7-jpjc,
+  https://github.com/advisories/GHSA-4c8g-83qw-93j6,
+  https://github.com/advisories/GHSA-v2hh-gcrm-f6hx, and
+  https://github.com/advisories/GHSA-7p8r-x3mc-p8w7. A separate verifier-owned record binds only
+  selected fields transcribed from official npm registry metadata: its source/date, exact tarball
+  URL, SHA-512 integrity, registry shasum, BSD-3-Clause license, and absence of an observed install
+  script/engines field. It is not a raw response archive or runtime proof. The generator validates
+  that evidence, the exact whole v1-derived package lock, and exact v1-derived runner
+  transformations before producing a manifest. The Node runner verifies the complete five-package
+  installed inventory before dynamically importing Ajv.
+- The protected workflow retains its exact job IDs/names, broad pull-request and main-push
+  triggers, read-only permissions, pinned actions, timeouts, pre-install freshness/integrity
+  ordering, and no-lifecycle-script acquisition flags while routing both adapters to v2. Ordinary
+  generated-evidence CI retains the direct v1 freshness check and adds an independent v2 check.
+- Double generation was byte-identical, and the prepared v2 receipt remains `not_observed` with
+  manifest SHA-256 `013a9704723cf8cdbde62007df74e5717477006fa87a7ff2ba1cdffd1a8a1d66`.
+  Focused tests passed 14/14; the full Patch suite passed 127 tests with five Windows privilege
+  skips; evidence-control passed 22 tests with one Windows privilege skip. Engine/bundle replay,
+  public-tree review, in-memory compilation, dependency consistency, freshness, closed-inventory,
+  and diff checks passed. The historical frozen selector reproduced its exact 99 rows and
+  `756910a774d9988a4f4e7bd0444b2ff84f83e7cdf2a92e605e5b4fd4b9df055f` fingerprint with zero
+  worktree difference.
+- No third-party validator or tarball was downloaded, installed, imported, or executed locally;
+  npm was not run and no `node_modules` exists. These local static and synthetic checks do not
+  establish exploitation resistance, isolation, hosted behavior, future availability, or
+  production security/enforcement. This correction adds no work unit, activation, customer,
+  payment, or revenue; totals remain 26 impact / 13 revenue and `$0.00`.
