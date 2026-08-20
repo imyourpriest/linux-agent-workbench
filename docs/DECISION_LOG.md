@@ -667,3 +667,63 @@ decision. No receipt-only pull request or other external action is authorized.
 **Why:** Required contexts must be created reliably on every event they protect. Removing only the
 filters preserves the already reviewed jobs and evidence boundaries while restoring liveness
 without weakening branch protection or inventing a bypass signal.
+
+## 2026-08-20 - D-042 - Final R-005 publication receipt and direct liveness probe
+
+**Decision:** Authorize one zero-unit, control-only final receipt for R-005 and D-041, plus a
+direct documentation-only required-check liveness probe. The exact base is public-main commit
+`6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`, the exact branch is
+`agent/r009-publication-receipt`, and write ownership is limited to
+`docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`.
+
+The committed receipt must cover PR 17 and public-main commit
+`f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`, and PR 19 and public-main commit
+`6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`, including their exact reviewed heads, named hosted
+runs and jobs, protection read-backs, squash merges, tree/fingerprint bindings, and post-main
+checks. The receipt pull request changes only the three named documents and changes no workflow,
+compatibility, code, generated, or any other path. Both exact required contexts, `Python
+jsonschema 4.26.0 structural
+compatibility` and `Node Ajv 8.20.0 structural compatibility`, must nevertheless be created and
+pass on its exact documentation-only head. That is the direct observation required for
+unrelated-path liveness. All normal checks must also pass, and main protection must remain the
+same exact nine GitHub-Actions-app-bound contexts with strict status checks, admin enforcement,
+linear history, conversation resolution, and force-push/deletion protections unchanged. Bypass,
+context removal, app-binding substitution, or any protection weakening is rejected.
+
+D-042 authorizes exactly one initial local commit, one initial push of
+`agent/r009-publication-receipt`, and at most one draft pull request for these three documents.
+The exact reviewed head must receive fresh local validation, an exact three-path raw-byte
+fingerprint, independent review, every normal hosted check, both compatibility contexts, and an
+unchanged protection read-back. The pull request may be marked ready and protected-squash-merged
+only while those conditions remain clean, followed by public-main verification. If a concrete
+hosted failure occurs, at most one additional remediation commit and one additional push may
+update the same branch and same pull request, limited to the same three documents and only after
+fresh validation, fingerprint, and independent review; all hosted checks must rerun on the new
+exact head. Any further failure, scope expansion, branch or pull-request change, or weakened
+control stops this path pending a new prospective decision.
+
+The receipt pull request's hosted checks are its merge gate and the direct liveness evidence. Its
+eventual merge is intentionally non-recursive: it will be recorded in the next ordinary control
+cycle rather than creating another receipt pull request. No receipt-only continuation or other
+external action is authorized here.
+
+This control receipt adds no Patch or Support unit and no revenue. R-005 remains exactly two Patch
+impact units and one Support revenue unit; cumulative totals remain 26 impact / 13 revenue units,
+and revenue remains `$0.00`. The last sponsor report remains 67% whole-account Usage with the
+hard 35% floor and no attribution or per-unit inference; ordinary Usage policy resumes at R-005
+closeout. Every claim boundary, August 25 gate, SEL final-capture and frozen/no-incident gate,
+exclusive-selection requirement, legal/terms/privacy/merchant/payment review, and future exact
+activation authorization remains unchanged. Time alone is insufficient, and no candidate,
+release, tag, form, offer, contact route, analytics, customer/private input, checkout, payment,
+account, merchant, tax, or other activation is authorized.
+
+Hosted successes establish only the named configured structural results on their exact commits,
+runs, and jobs. They do not establish semantic correctness, provenance, path safety, privacy,
+isolation, permission, adoption, availability on future runs, or production enforcement;
+dependency acquisition remains network-enabled and registry/runner availability remains
+external.
+
+**Why:** A three-document pull request can directly test whether both globally required contexts
+are created without a workflow or compatibility-path change, while the final receipt closes the
+already authorized publication record without inventing another unit, activation, or recursive
+receipt chain.

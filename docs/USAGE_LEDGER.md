@@ -279,3 +279,36 @@ per-unit usage is inferred.
   R-005 remains exactly two Patch impact units and one Support revenue unit; cumulative dedicated
   totals remain twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains
   `$0.00`.
+
+#### R-005 shared-publication closeout - 2026-08-20
+
+- PR [#17](https://github.com/imyourpriest/linux-agent-workbench/pull/17) published the reviewed
+  R-005 source at public-main commit `f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`. Exact-head
+  compatibility run `32338864302` passed with Python job `96333710802` and Node job
+  `96333710934`; CI `32338864285` and CodeQL `32338861676` passed. Post-main compatibility run
+  `32339607078` passed with jobs `96335871240` and `96335871030`, alongside CI `32339607075` and
+  CodeQL `32339607118`.
+- PR [#19](https://github.com/imyourpriest/linux-agent-workbench/pull/19) corrected globally
+  required-check liveness and was protected-squash-merged to public-main commit
+  `6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`. Exact-head compatibility run `32341778112` passed
+  with Python job `96342171877` and Node job `96342172017`; CI `32341778115` and CodeQL
+  `32341776026` passed. Post-main compatibility run `32342366128` passed with jobs `96343870980`
+  and `96343870760`, alongside CI `32342366132` and CodeQL `32342365738`.
+- Protection read-back retained exactly the original seven contexts plus the two compatibility
+  contexts, all GitHub-Actions-app-bound, with strict checks, admin enforcement, linear history,
+  conversation resolution, and force-push/deletion protections unchanged. These named hosted and
+  protection observations are publication/control evidence, not Usage measurement, semantic
+  correctness, privacy, availability on future runs, or production-enforcement evidence.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-20 | Shared publication | 0 | PR 17 / `f9e4830` and PR 19 / `6c7ea98` hosted, protection, and merge closeout | no new snapshot; last sponsor report 67% whole-account, no attribution |
+
+This shared-publication closeout adds zero Patch and zero Support units. R-005 remains exactly two
+Patch impact units and one Support revenue unit; cumulative dedicated totals remain twenty-six
+impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. The last sponsor
+report remains 67% whole-account Usage with the hard 35% floor; no amount or delta is attributed
+to this repository, task, workstream, unit, agent, tool, test, or action, and no per-unit usage is
+inferred. Ordinary Usage policy resumes at R-005 closeout. No candidate selection, release, form,
+offer, contact, analytics, customer/private input, checkout, payment, account, merchant, tax,
+XLM, or other activation occurred.
