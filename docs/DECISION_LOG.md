@@ -785,3 +785,85 @@ security/enforcement. Dependency acquisition remains network-enabled.
 by addition rather than in-place replacement. The versioned successor moves the active hosted
 adapter to the first reviewed 3.x version patched for all five cited advisories while preserving
 the immutable v1 record and its auditability.
+
+## 2026-08-20 - D-044 - Dependabot alert scope for immutable compatibility-v1 evidence
+
+**Decision:** Treat the five remaining `fast-uri@3.1.0` Dependabot alerts as exact-path execution-
+scope records, not as evidence that their immutable v1 bytes were fixed. PR 21 was protected-
+squash-merged at public-main commit `7dafa1b4fcaceca59912265ccf03c9ac6de785a4`; active
+compatibility Python/Node acquisition and structural-adapter execution route exclusively to
+`compatibility-v2`, whose locked Node inventory retains Ajv `8.20.0` and requires
+`fast-uri@3.1.5`. The preserved
+`patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/package-lock.json` still
+records `fast-uri@3.1.0` as immutable historical evidence. Active compatibility Python/Node
+acquisition and structural adapters route only to compatibility-v2. No active workflow, Python
+package, or release path npm-installs, imports, or executes the compatibility-v1 Node dependency
+tree or v1 structural adapters. Ordinary CI does execute the first-party standard-library v1
+freshness/binding checker; that checker reads and strict-validates v1 contracts, locks, manifests,
+receipts, and runner bytes as inert data without installing, importing, or executing the v1
+adapters or `fast-uri`. The v2 generator separately reads exact SHA-bound v1 lock and runner bytes
+as data for its exact-transform checks. This is an active project-path observation, not a claim
+that a manual user or future change can never run v1. Exact-head PR and post-main compatibility,
+CI, and CodeQL jobs passed, but those hosted observations establish only their named configured
+outcomes on their named commits and runs. They do not prove broad production security,
+exploitation resistance, isolation, semantic correctness, future availability, or production
+enforcement.
+
+After this D-044 documentation-only change is independently reviewed at an exact head, every
+required check passes, it is protected-squash-merged, and every post-main check passes on the
+merge commit, authorize dismissal of exactly these five alerts and no others, each only at the
+exact v1 lock path above and only with GitHub's `not_used` reason:
+
+- alert 1 / `GHSA-4c8g-83qw-93j6`;
+- alert 2 / `GHSA-v2hh-gcrm-f6hx`;
+- alert 3 / `GHSA-7p8r-x3mc-p8w7`;
+- alert 4 / `GHSA-v39h-62p7-jpjc`; and
+- alert 5 / `GHSA-q3j6-qgpj-74h6`.
+
+Each dismissal must use this exact substantive comment, optionally prefixed only by its matching
+alert/GHSA identifier:
+
+> fast-uri@3.1.0 exists only in immutable compatibility-v1 historical evidence. Active Node
+> compatibility jobs install and execute compatibility-v2 with fast-uri@3.1.5 (PR #21; code
+> merge 7dafa1b4fcaceca59912265ccf03c9ac6de785a4). No active workflow, Python package, or release
+> path npm-installs, imports, or executes the compatibility-v1 Node dependency tree or structural
+> adapters; first-party standard-library freshness and exact-transform checks only read v1 files
+> as inert bytes or data. Reopen before merging any change that causes an active project workflow,
+> package, release, or automated execution path to install, import, or execute the v1 Node
+> dependency tree or adapters. This not_used dismissal does not claim the v1 bytes were fixed.
+
+The dismissals must never use `fixed` or `inaccurate`. They are auditable and reopenable, and hide
+the records only from GitHub's default open-alert view; they do not remove a vulnerability from
+the immutable bytes. PATCH exactly the five individually—never by bulk selection—then read back
+each alert's number, state, actor, dismissal time, reason, comment, dependency path, package, and
+GHSA identifier. Leave every other alert, Dependabot setting/configuration, repository setting,
+and branch-protection control untouched. Before merging any future change that causes an active
+project workflow, package, release, or automated execution path to install, import, or execute the
+v1 Node dependency tree or adapters, reopen every affected alert and obtain a fresh security
+review. This mandatory control applies before, not after, such an active path is merged.
+
+The exact base is public-main commit `7dafa1b4fcaceca59912265ccf03c9ac6de785a4`, the exact branch
+is `agent/r010-dependabot-alert-scope`, and write ownership is limited to append-only changes in
+`docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`. D-044 authorizes local
+documentation validation; one initial local commit and push; at most one draft pull request; a
+ready-for-review transition after independent exact-head review; an exact-head protected squash
+merge under unchanged protection after all required checks pass; post-main check observation;
+and only then the five exact dismissals and read-backs above. No remediation commit is anticipated.
+Any hosted failure, source or alert mismatch, scope change, protection change, or comment/reason
+constraint prevents further action and requires a new prospective decision. The feature branch
+must be retained. No force push, bypass, branch deletion, tag, release, receipt pull request,
+activation, payment, contact, account action, or unrelated mutation is authorized.
+
+This is zero-unit security/control maintenance. Cumulative totals remain 26 Patch impact / 13
+Support revenue units and revenue remains `$0.00`. No new Usage snapshot is taken; the last
+sponsor report remains 67% whole-account Usage, the current hard floor remains 35%, and no amount
+or delta is attributed to this repository, cycle, workstream, unit, agent, tool, test, or action.
+Every August 25, SEL final-capture, frozen/no-incident, exclusive-selection,
+legal/terms/privacy/merchant/payment, and activation gate remains unchanged. The D-044 merge and
+five dismissal read-backs are intentionally non-recursive and will be recorded in the next
+ordinary control cycle, not in a receipt pull request.
+
+**Why:** The active reviewed Node compatibility dependency and adapter-execution path no longer
+uses the vulnerable transitive version, but the immutable v1 evidence must remain byte-for-byte
+auditable. Exact `not_used` dismissals preserve that distinction without presenting historical
+bytes as remediated or weakening the mandatory reopen-before-reactivation control.
