@@ -24,7 +24,7 @@
     {"id":"declaration-id-pattern-reject","operations":[{"op":"set","pointer":"/declaration_id","value":"mpd-v1-NOTHEX"}]},
     {"id":"commit-pattern-reject","operations":[{"op":"set","pointer":"/commit_sha","value":"abc"}]},
     {"id":"source-pattern-reject","operations":[{"op":"set","pointer":"/source_sha256","value":"abc"}]},
-    {"id":"policy-path-pattern-reject","operations":[{"op":"set","pointer":"/policy_path","value":"../POLICY.md"}]},
+    {"id":"policy-path-dot-segment-structural-accept","operations":[{"op":"set","pointer":"/policy_path","value":"../POLICY.md"},{"op":"set","pointer":"/policy_source_url","value":"https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/../POLICY.md"},{"op":"set","pointer":"/declaration_id","value":"mpd-v1-210fdb5e9a2767e702e231035be4bf447d93eb6b2d93cb9a16c04729ba831f36"}]},
     {"id":"supersedes-null-accept","operations":[{"op":"set","pointer":"/supersedes","value":null}]},
     {"id":"supersedes-string-accept","operations":[{"op":"set","pointer":"/supersedes","value":"mpd-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}]},
     {"id":"supersedes-pattern-reject","operations":[{"op":"set","pointer":"/supersedes","value":"mpd-v1-bad"}]},

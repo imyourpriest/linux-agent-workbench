@@ -27,7 +27,7 @@
     {"id":"declaration-id-pattern-reject","parse":"accept","schema":"reject","structural_agreement_denominator":true},
     {"id":"commit-pattern-reject","parse":"accept","schema":"reject","structural_agreement_denominator":true},
     {"id":"source-pattern-reject","parse":"accept","schema":"reject","structural_agreement_denominator":true},
-    {"id":"policy-path-pattern-reject","parse":"accept","schema":"reject","structural_agreement_denominator":true},
+    {"id":"policy-path-dot-segment-structural-accept","parse":"accept","schema":"accept","structural_agreement_denominator":true},
     {"id":"supersedes-null-accept","parse":"accept","schema":"accept","structural_agreement_denominator":true},
     {"id":"supersedes-string-accept","parse":"accept","schema":"accept","structural_agreement_denominator":true},
     {"id":"supersedes-pattern-reject","parse":"accept","schema":"reject","structural_agreement_denominator":true},

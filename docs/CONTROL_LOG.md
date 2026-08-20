@@ -948,3 +948,29 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   hosted success, activation, release, candidate selection, customer/private input, payment, or
   revenue; cumulative totals remain 26 impact / 13 revenue units and revenue remains `$0.00`.
   All D-039/D-040 claim limits and future gates remain unchanged.
+
+## 2026-08-20 - Session 038 - R-005 hosted compatibility remediation cycle 2
+
+- On exact head `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`, hosted compatibility run
+  `32337297322` completed preflight and exact locked dependency installation. Python job
+  `96329209177` and Node job `96329208990` both ran their structural adapters and found the same
+  incorrect expected result for `policy-path-pattern-reject`: both observed schema acceptance
+  where the prepared contract expected rejection. This is an expected-outcome defect, not
+  validator divergence. No hosted structural success is claimed.
+- The frozen v1 schema pattern structurally accepts dot-only path segments, while the authoritative
+  declaration parser separately rejects `.` and `..`. Draft 2020-12 pattern behavior and review of
+  pinned python-jsonschema 4.26.0 `_keywords.py` and Ajv 8.20.0 JSON Schema documentation support
+  schema acceptance: https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3.
+  The corrected cross-field-consistent vector records this gap without claiming path safety,
+  authoritative-parser acceptance, semantics, permission, or production enforcement.
+- Ordinary CI run `32337297321` and CodeQL run `32337294075` passed all their checks on exact head
+  `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`. Compatibility still has no successful hosted run.
+  This is remediation cycle 2 and the final cycle authorized by D-040; another failure stops this
+  path pending a new prospective decision.
+- This correction adds zero Patch or Support units, activation, release, candidate selection,
+  customer/private input, payment, or revenue. Cumulative totals remain 26 impact / 13 revenue
+  units and `$0.00`; all D-039/D-040 claim limits and future gates remain unchanged.
+- Final review found the new vector's cross-field regression checks were literal-only. The test now
+  independently derives its source URL and exact NUL-joined declaration ID and requires the
+  authoritative parser's canonical `..` path rejection. No artifact semantic/result, hosted
+  outcome, unit, activation, or revenue claim changed.

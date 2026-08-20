@@ -1,12 +1,14 @@
 from __future__ import annotations
 
+import copy
+import hashlib
 import json
 import shutil
 import tempfile
 import unittest
 from pathlib import Path
 
-from patch_cabinet import declaration_compatibility
+from patch_cabinet import declaration_compatibility, maintainer_policy_declaration
 
 
 class DeclarationCompatibilityTests(unittest.TestCase):
@@ -50,6 +52,80 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.assertEqual([item["id"] for item in bound], [item["id"] for item in expected["vectors"]])
         self.assertTrue(all(len(item["raw_payload_sha256"]) == 64 for item in bound))
 
+    def test_dot_segment_structural_accept_is_exact_and_bound(self) -> None:
+        identifier = "policy-path-dot-segment-structural-accept"
+        obsolete = "policy-path-pattern-reject"
+        supplemental = json.loads((self.root / "supplemental-corpus.json").read_text())
+        expected = json.loads((self.root / "expected-results.json").read_text())
+        manifest = json.loads((self.root / "manifest.json").read_text())
+        vector = next(item for item in supplemental["vectors"] if item["id"] == identifier)
+        self.assertEqual(
+            vector["operations"],
+            [
+                {"op": "set", "pointer": "/policy_path", "value": "../POLICY.md"},
+                {
+                    "op": "set",
+                    "pointer": "/policy_source_url",
+                    "value": "https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/../POLICY.md",
+                },
+                {
+                    "op": "set",
+                    "pointer": "/declaration_id",
+                    "value": "mpd-v1-210fdb5e9a2767e702e231035be4bf447d93eb6b2d93cb9a16c04729ba831f36",
+                },
+            ],
+        )
+        expected_by_id = {item["id"]: item for item in expected["vectors"]}
+        self.assertEqual(
+            expected_by_id[identifier],
+            {
+                "id": identifier,
+                "parse": "accept",
+                "schema": "accept",
+                "structural_agreement_denominator": True,
+            },
+        )
+        self.assertNotIn(obsolete, {item["id"] for item in supplemental["vectors"]})
+        self.assertNotIn(obsolete, expected_by_id)
+        payload = copy.deepcopy(supplemental["base_payload"])
+        for operation in vector["operations"]:
+            payload[operation["pointer"][1:]] = operation["value"]
+        expected_source_url = (
+            f"https://example.invalid/{payload['repository']}/blob/"
+            f"{payload['commit_sha']}/{payload['policy_path']}"
+        )
+        self.assertEqual(payload["policy_source_url"], expected_source_url)
+        identity = "\0".join(
+            (
+                "mpd-v1",
+                payload["repository"].casefold(),
+                payload["record_kind"],
+                payload["commit_sha"],
+                payload["policy_path"],
+                payload["source_sha256"],
+            )
+        )
+        expected_declaration_id = f"mpd-v1-{hashlib.sha256(identity.encode('utf-8')).hexdigest()}"
+        self.assertEqual(payload["declaration_id"], expected_declaration_id)
+        with self.assertRaisesRegex(
+            ValueError, "policy_path must be a canonical ASCII repository-relative path"
+        ):
+            maintainer_policy_declaration._parse_declaration(payload)
+        raw = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+        bound_by_id = {
+            item["id"]: item for item in manifest["bindings"]["vector_contracts"]
+        }
+        self.assertEqual(
+            bound_by_id[identifier],
+            {
+                "id": identifier,
+                "raw_payload_sha256": hashlib.sha256(raw.encode("utf-8")).hexdigest(),
+                "parse_expected": "accept",
+                "schema_expected": "accept",
+                "structural_agreement_denominator": True,
+            },
+        )
+
     def test_unknown_reference_and_duplicate_expected_id_fail_closed(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             project = self.copy_project(temporary)
@@ -59,7 +135,6 @@ class DeclarationCompatibilityTests(unittest.TestCase):
             schema_path.write_text(json.dumps(schema))
             binding_path = project / "interop/maintainer-policy-declaration/compatibility-v1/base-corpus-binding.json"
             binding = json.loads(binding_path.read_text())
-            import hashlib
             binding["schema"]["sha256"] = hashlib.sha256(schema_path.read_bytes()).hexdigest()
             binding_path.write_text(json.dumps(binding))
             with self.assertRaisesRegex(ValueError, "binding|reference"):

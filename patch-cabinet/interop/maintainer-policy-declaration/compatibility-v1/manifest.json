@@ -9,7 +9,7 @@
   "bindings": {
     "schema_sha256": "1582238b1ac144c9df0dc58e1252da67bf41c4851f39aa2386ae2dc06a6f28a2",
     "base_corpus_sha256": "280d9d2aca66844e5fc03d6ae907e74e0dd54a8ab5f82e1daa29b8ad31a3ed2a",
-    "supplemental_corpus_sha256": "7a8b127507d6417e9d7f13a74b4beec63a9efda834de4ef26c4e91912dedbb3d",
+    "supplemental_corpus_sha256": "2d92b036bf285269260f4dc222f77ca087a41fcf28a93823a66d76c82ad23e2c",
     "vector_ids": [
       "valid-reserved-synthetic",
       "invalid-missing-notes",
@@ -33,7 +33,7 @@
       "declaration-id-pattern-reject",
       "commit-pattern-reject",
       "source-pattern-reject",
-      "policy-path-pattern-reject",
+      "policy-path-dot-segment-structural-accept",
       "supersedes-null-accept",
       "supersedes-string-accept",
       "supersedes-pattern-reject",
@@ -204,10 +204,10 @@
         "structural_agreement_denominator": true
       },
       {
-        "id": "policy-path-pattern-reject",
-        "raw_payload_sha256": "8644a8640147513fc5a6cd92b9c1f75a2c5d994c41e73b8cfcf7d190230083c8",
+        "id": "policy-path-dot-segment-structural-accept",
+        "raw_payload_sha256": "1419dd06f2d9bc515381b1ba7938704fd6a620d9d0f9fe3825ee1062b9ddb15e",
         "parse_expected": "accept",
-        "schema_expected": "reject",
+        "schema_expected": "accept",
         "structural_agreement_denominator": true
       },
       {
@@ -306,8 +306,8 @@
   "inventory": [
     {
       "path": "README.md",
-      "sha256": "6ee2dff1e63111d439338feaf02aec426a199237e7766145072ae3d71fa0da17",
-      "bytes": 1134
+      "sha256": "2b19da00eac6f8b138d383ef185632d302b7c8abe2917fae259bb878e81f7ced",
+      "bytes": 1574
     },
     {
       "path": "base-corpus-binding.json",
@@ -316,8 +316,8 @@
     },
     {
       "path": "expected-results.json",
-      "sha256": "e5148d363d5d1399ddc436046a2155450d218ccd949c25fbc134425fc9e3c2f9",
-      "bytes": 4708
+      "sha256": "b0a34e4101026be4daf4683ad6f319f15e1ad6dc9d3f95783d2c77912308c0b5",
+      "bytes": 4723
     },
     {
       "path": "node_runner.mjs",
@@ -346,8 +346,8 @@
     },
     {
       "path": "supplemental-corpus.json",
-      "sha256": "7a8b127507d6417e9d7f13a74b4beec63a9efda834de4ef26c4e91912dedbb3d",
-      "bytes": 5219
+      "sha256": "2d92b036bf285269260f4dc222f77ca087a41fcf28a93823a66d76c82ad23e2c",
+      "bytes": 5539
     }
   ]
 }

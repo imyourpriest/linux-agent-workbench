@@ -417,3 +417,28 @@ Append-only project record.
   unit, hosted success, activation, adoption, customer, revenue, or production-enforcement claim;
   revenue remains `$0.00`, and the third-party validator observations remain `not_observed` until
   an exact hosted head/run succeeds.
+
+## 2026-08-20 - R-005 hosted compatibility remediation cycle 2
+
+- On exact head `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`, hosted compatibility run
+  `32337297322` completed the preflight and exact locked installs. Python job `96329209177` and
+  Node job `96329208990` both executed their structural adapters, and both reported the same
+  mismatch: vector `policy-path-pattern-reject` structurally accepted where the prepared contract
+  incorrectly expected rejection. This was an expected-outcome defect, not validator divergence,
+  and no hosted structural success is claimed.
+- The frozen v1 pattern accepts dot-only path segments. The authoritative declaration parser has
+  a separate semantic guard that rejects `.` and `..`. Draft 2020-12 pattern behavior and review
+  of pinned python-jsonschema 4.26.0 `_keywords.py` and Ajv 8.20.0 JSON Schema documentation support
+  recording schema acceptance: https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3.
+- The one vector is renamed `policy-path-dot-segment-structural-accept` and made cross-field
+  consistent with its source URL and NUL-derived declaration ID. Its contract is now strict JSON
+  parse `accept`, schema `accept`, and included in the agreement denominator. This records a
+  structural-profile gap only; it is not authoritative-parser, path-safety, or semantic acceptance.
+- Ordinary CI run `32337297321` and CodeQL run `32337294075` passed all their checks on exact head
+  `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`. This is the second and final authorized remediation
+  cycle. Any next failure stops this path pending a new prospective decision. No unit, activation,
+  adoption, customer, or revenue claim is added; revenue remains `$0.00`.
+- Final review found that the cross-field regression assertions compared only fixed literals. They
+  now independently derive the source URL and NUL-joined declaration ID and invoke the
+  authoritative parser to require its canonical `..` path rejection. Artifact semantics,
+  expected structural results, work units, activation, and revenue are unchanged.

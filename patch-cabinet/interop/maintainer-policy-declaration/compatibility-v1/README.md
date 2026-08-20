@@ -11,6 +11,12 @@ parse and schema result with `expected-results.json`. Duplicate-key and NaN vect
 observations and are excluded from the structural-agreement denominator. Date `format` is
 deliberately ignored by both exact configurations.
 
+Compatibility `parse` means acceptance by the strict JSON decoder only; it does not mean
+acceptance by the authoritative declaration parser. The frozen v1 schema's character/shape
+pattern structurally accepts dot-only path segments, including the `..` segment in this corpus,
+while the authoritative parser separately rejects `.` and `..` segments. Recording that gap is
+not path-safety evidence or semantic acceptance of the declaration.
+
 A hosted success could establish only the configured structural results for its named commit and
 run. It would not establish attestation, authentication, semantic correctness, provenance,
 freshness, privacy, isolation, standard adoption, source truth, permission, or production
