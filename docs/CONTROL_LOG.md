@@ -1008,3 +1008,36 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - Independent review found the initial literal workflow guard insufficient. The final test now
   binds the full raw workflow digest plus the canonical trigger block and each adjacent job
   ID/name header; no hosted result, work-unit, activation, or revenue claim changed.
+
+## 2026-08-20 - Session 040 - D-041 merge receipt and D-042 direct liveness pre-action
+
+- D-041's independently reviewed exact head was
+  `b709b91f417c12aa460a3e613a6e55f0d266ed3b`, with four-path ordinal raw-byte fingerprint
+  `1b0d3a7f00e835c13a4825920db4ec71d59493d629651557d9ec0b0350678b37`. PR 19 compatibility
+  run `32341778112` passed on that head: Python job `96342171877` and Node job `96342172017`
+  completed the closed-harness preflight, exact locked acquisition, and configured structural
+  adapters. CI run `32341778115` and CodeQL run `32341776026` also passed on the exact head.
+- Protection read-back before merge retained exactly the original seven required contexts plus
+  the two compatibility contexts, all bound to the GitHub Actions app. Strict status checks,
+  admin enforcement, linear history, conversation resolution, review settings, and force-push
+  and deletion protections remained unchanged; no bypass or protection weakening was used.
+- PR 19 was protected-squash-merged at `2026-08-20T07:04:55Z` to public-main commit
+  `6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`, with one parent
+  `f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`. The merge tree and reviewed-head tree were both
+  `5299ceae68142a1739f1730172918e2caad08cfa`; the exact four paths and reviewed fingerprint were
+  reproduced from the merged blobs. Both feature branches were retained.
+- Post-main compatibility run `32342366128` passed on exact commit
+  `6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`; Python job `96343870980` and Node job
+  `96343870760` passed. Post-main CI run `32342366132` and CodeQL run `32342365738` also passed.
+  These hosted observations establish only their named configured checks on the named commits,
+  runs, and jobs. They do not establish semantic correctness, provenance, path safety, privacy,
+  isolation, permission, adoption, future availability, or production enforcement; acquisition
+  remained network-enabled and runner/registry availability remains external.
+- D-042 authorizes a three-document, zero-unit final publication receipt on branch
+  `agent/r009-publication-receipt` at exact public-main base
+  `6c7ea98c76cc99b28b2adadfdea5ac53ec06aaa6`. Because it changes no workflow, compatibility,
+  code, or generated path, both required compatibility contexts must still be created and pass on
+  its exact head as the direct unrelated-path liveness observation, alongside every normal check
+  and an unchanged nine-context protection read-back. Its eventual protected merge is
+  non-recursive and will be recorded in the next ordinary control cycle rather than spawning
+  another receipt. No new unit, revenue, activation, or other external action is claimed here.
