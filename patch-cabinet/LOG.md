@@ -371,3 +371,26 @@ Append-only project record.
 - Focused interoperability tests passed 12/12. The stable full Patch suite passed 109 tests with
   five Windows privilege-dependent symlink skips. Complete generation/freshness, compilation,
   dependency, public-tree, frozen-inventory, and diff checks are recorded in the control log.
+
+## 2026-08-19 - R-005 structural compatibility and exact projection contract
+
+- Prepared two genuinely separate hosted-only structural adapters for the frozen declaration
+  schema: Python `jsonschema==4.26.0` and Node Ajv `8.20.0`. The new workflow uses separate jobs,
+  pinned actions, read-only contents permissions, exact validator configurations, hash-locked
+  Python 3.13/Linux-x64 distributions, a private exact Node package lock, no lifecycle scripts,
+  and no remote validator loader. Dependency acquisition is honestly network-enabled.
+- Bound the frozen schema/base corpus, a supplemental corpus covering required/additional fields,
+  enum/type/pattern/null-string/ignored-format/boundary cases, both runner sources, dependency
+  locks, validator configurations, every vector ID, raw-payload digest, parse/schema expectation,
+  and denominator status. Duplicate-key and NaN vectors remain decoder-boundary observations and
+  are excluded from the structural-agreement denominator.
+- Added a machine-readable projection contract covering every authoritative top-level declaration
+  field and all thirteen nested dimensions exactly once by JSON Pointer. It derives values only
+  from the one accepted synthetic declaration and verifier-owned mapping, binds source/mapping/
+  output digests, fails on missing/duplicate/unknown mappings or stale output, and never converts
+  `not_declared` into a contributor obligation or checklist.
+- These are exactly two Patch impact units. The third-party validators were not installed,
+  imported, or executed locally; hosted observations remain `not_observed`. Any later hosted
+  success would establish only the named configured structural outcome on its named commit/run,
+  not attestation, authentication, semantics, provenance, freshness, privacy, isolation,
+  standard adoption, source truth, permission, or production enforcement.

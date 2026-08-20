@@ -1,0 +1,14 @@
+{
+  "schema_version": "1",
+  "result": "field_complete_projection_prepared",
+  "source_sha256": "18fc07ce63a5083c767c6e8d4f6cfd95068d155fba03b039a831f154c8628add",
+  "output_sha256": "d849691d410acfba0d62ec3a1200f15ced8e578fad5eaf9ff21d1172d7b736e7",
+  "manifest_sha256": "4938571fffa0e47a1580bad2d639664b35e6137e83f4fe7b41b2546b8a3eeeac",
+  "non_established_claims": [
+    "identity",
+    "authority",
+    "currentness",
+    "permission",
+    "enforcement_or_adoption"
+  ]
+}

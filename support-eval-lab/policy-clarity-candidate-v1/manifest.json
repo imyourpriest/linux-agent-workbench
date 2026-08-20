@@ -1,0 +1,78 @@
+{
+  "schema_version": "1",
+  "candidate_id": "maintainer-ai-policy-clarity-synthetic-v1",
+  "status": "inert_successor_pending_future_exclusive_selection",
+  "claim_boundary": "Inert public draft and unpromoted direct successor only; no activation, private input, contact, analytics, listing, checkout, payment, customer, demand, or production-enforcement claim.",
+  "registry_sha256": "b57bd6df53e033c89139568040cacdf2018178fc225328008428763ec72cd616",
+  "predecessor_release_binding": {
+    "location": "support-eval-lab/policy-release-experiment",
+    "experiment_id": "policy-release-r004",
+    "status": "prepared_not_activated",
+    "tag": "ai-policy-starter-v0.1.0",
+    "asset": {
+      "path": "ai-policy-starter-v0.1.0.zip",
+      "bytes": 9433,
+      "sha256": "e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a"
+    },
+    "checksum": {
+      "path": "ai-policy-starter-v0.1.0.zip.sha256",
+      "line": "e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a  ai-policy-starter-v0.1.0.zip\n",
+      "sha256": "3c65fff0ccc9184d0b91f08b9e0f798d26c2128e063bab81c55c08846d79f7d1"
+    },
+    "files": {
+      "ACTIVATION_CONTRACT.json": "0fdb0d7829364f79d28aab1755a2b9aa1025b5f20161addd0377c7ad4ddfead5",
+      "ISSUE_FORM_DRAFT.yml": "abf004a183e4779bc53af6a384549ea09a3e58a8f1db1302a2b0b86127a10b5b",
+      "MEASUREMENT_TEMPLATE.json": "ebe7bbdb8a5c54239cbabe49cba18bef3eb1f9a82c9179692c6401ade0d0046d",
+      "README.md": "a65fa245bf04dc0b6f2636ca7befc475986d3ab09b90fdb2cb6dfa0d1e4a9e3d",
+      "RELEASE.json": "86cde277eb197924cb0a29e8f1f2af0da9f8d467e6db2113ae65db2b0d513717",
+      "RELEASE_BODY.md": "ff2925f70876c3881ca515084b5cc86e08bf2be0a8f4ff63479f6e9dfa4b60c3",
+      "manifest.json": "f644c46dd90de3dcda6ef82e7b0eef49990bef65946ed37c75a5e9ae4d26ea5c",
+      "validation-receipt.json": "8db6456407a45ea2019e945c32f18f7d6c96349ff093797143710b99365e141f"
+    },
+    "hash_boundary": "recomputable_consistency_fingerprints_not_signatures_or_external_trust"
+  },
+  "predecessor_release_binding_sha256": "6fd0f2919f4fd1d7162253d9f2e453af095c4aeed990a0ad0bd1bd11f44876f6",
+  "generator": {
+    "path": "src/support_eval_lab/policy_successor.py",
+    "sha256": "8fb9815b628d08f220757865526e73e9e622c545ecd421eaf9f94aa895f9d871"
+  },
+  "sources": [
+    {
+      "path": "ISSUE_FORM_DRAFT.yml",
+      "sha256": "dabec597d50448a9cac98b84717abb694175de8e2a7a141e894e9490d15f0f1e",
+      "bytes": 570
+    },
+    {
+      "path": "LANDING_DRAFT.md",
+      "sha256": "674b7def0e52895003a567ff821e91eaeb22c4fba63c823b8450776517191d84",
+      "bytes": 504
+    },
+    {
+      "path": "MEASUREMENT_CONTRACT.json",
+      "sha256": "3ecdb5bb1cbe87f236db30c2b71e77191c01163352d402a0657ededa007c1ebd",
+      "bytes": 640
+    },
+    {
+      "path": "README.md",
+      "sha256": "61c9559ed3bace65c34b44c980cea6a0a6cb3065faa5908b2722e93500bf45a6",
+      "bytes": 574
+    },
+    {
+      "path": "SCOPE_LIMITS.md",
+      "sha256": "fac8528211b2aa3e92811e11c1e787ea227b9296e61df34ec73d91f98628692c",
+      "bytes": 559
+    },
+    {
+      "path": "SUCCESSOR_CONTRACT.json",
+      "sha256": "fa686a87da311560f16b80c3b208620633b8fe974f2dbb26988f78aa7cd9ff2b",
+      "bytes": 3009
+    }
+  ],
+  "archive": {
+    "path": "maintainer-ai-policy-clarity-v0.1.0.zip",
+    "sha256": "6da0f6a145425b88f52ecb92dc6f730abe83ec9ed068a747d91dbe4615c3f899",
+    "bytes": 6550,
+    "compression": "ZIP_STORED",
+    "fixed_timestamp": "1980-01-01T00:00:00"
+  }
+}

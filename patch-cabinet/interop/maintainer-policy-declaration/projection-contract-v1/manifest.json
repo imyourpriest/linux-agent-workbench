@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "20f39f1c4f1bc6bf8e1e416440cf1912edc71a3706eb3fb2c1c540b60370fab5"
+    },
+    {
+      "path": "mapping.json",
+      "sha256": "6d9eb9c689cde02c4e357d6300697393c281fb6fbfafb61d88e443e9a1757722"
+    },
+    {
+      "path": "AI_POLICY.projected.md",
+      "sha256": "d849691d410acfba0d62ec3a1200f15ced8e578fad5eaf9ff21d1172d7b736e7"
+    },
+    {
+      "path": "projection-contract.json",
+      "sha256": "8cba1540868bbb2d8307d4f99e354edea9be3ae2dde0f1533dc6f007b734fd43"
+    }
+  ]
+}

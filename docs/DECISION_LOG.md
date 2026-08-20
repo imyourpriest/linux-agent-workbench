@@ -531,3 +531,93 @@ batch, unit, agent, tool call, or action.
 **Why:** The batch adds non-authorizing interoperability and evidence-limited historical utility
 without changing the existing authority or execution boundaries, while preserving the cumulative
 2:1 work-unit allocation.
+
+## 2026-08-19 - D-039 - R-005 structural compatibility and one inert policy successor
+
+**Decision:** Select exactly two Patch Cabinet impact units and one Support Agent Regression Lab
+revenue unit. The Patch units are (1) two genuinely separate hosted structural-compatibility jobs
+for the declaration schema using Python `jsonschema` 4.26.0 and Node Ajv 8.20.0 with exact reviewed
+configurations, and (2) a machine-readable, field-by-field projection contract derived only from
+the one accepted declaration and verifier-owned mappings. The Support unit is one uniquely
+identified, inert direct successor in the existing `$79` AI Contribution Policy Starter + Audit
+hypothesis lineage. It is a non-activated successor, not a pivot, replacement workstream, competing
+offer, or second simultaneous candidate.
+
+This local-only batch may add isolated source, tests, deterministic generated artifacts, narrowly
+scoped CI preparation/freshness checks, two separate hosted compatibility adapters, and append-only
+governance records. It may not activate a form, release, listing, contact route, analytics,
+checkout, payment, customer-input path, account, package locally, or other external state. The
+existing candidate engine, evidence, consent/profile catalogs, declaration interoperability `v1`,
+SEL-GH-001 experiment/observations/channel records, the complete policy-release experiment, and
+all parked Revenue Lab files are frozen. Revenue and cleared receipts remain `$0.00`; `$79` remains
+one unvalidated, not-offered hypothesis.
+
+Any future activation remains stopped until the complete SEL final capture is independently
+verified, SEL stays frozen without incident, the exact final diff/privacy/digests receive review,
+a new prospective control decision selects exactly one candidate and marks the other inert or
+retired, separate legal/terms/privacy/merchant/payment review completes, and a new external-action
+decision authorizes the exact action. Time alone never authorizes activation.
+
+Hosted successes, if later observed, could establish only the named configured structural outcomes
+on a named commit and run. They would not establish attestation, authentication, semantic
+correctness, provenance, freshness, privacy, isolation, standard adoption, source truth,
+permission, or production enforcement. Dependency acquisition is network-enabled; neither local
+preparation nor a hosted validator result changes these claim boundaries.
+
+**Why:** Independent validators can expose accidental schema-dialect or implementation divergence,
+and an exact projection contract can make lossy transformations reviewable. Keeping the one
+Support successor inside the existing hypothesis tests a clearer inert artifact without inventing
+a new offer, demand, revenue, authority, or permission. The three units preserve the cumulative
+2:1 impact-to-revenue allocation.
+
+## 2026-08-19 - D-040 - Prospective R-005 source-review publication and closeout
+
+**Decision:** The sponsor now reports 67% whole-account Usage remaining and renews the standing
+mandate for this already-started R-005 publication and closeout down to a hard 35% floor. This
+exception starts no new three-unit batch at or below 45% and stops immediately at 35%, any Usage
+warning, or any lower sponsor report. The ordinary Usage policy resumes at reset or R-005
+closeout, whichever comes first. This whole-account reading and any later delta are not attributed
+to this repository, task, workstream, unit, agent, tool, test, or action; no per-unit usage is
+inferred.
+
+D-040 supersedes only D-039's local-only and no-external-mutation restriction for the exact R-005
+source-review publication path. It authorizes exactly one initial local commit on
+`agent/r009-policy-compatibility`, descended from the verified public-main base
+`0ecc40ee1935abd88a309ac3a61134b9357db624`, and one initial push of that branch to the already
+project-owned public repository; creating at most one draft pull request; and permitting only the
+prepared, exact, locked hosted compatibility jobs and the repository's normal project checks.
+If a concrete hosted failure occurs, at most two additional in-scope remediation commits and
+pushes may update that same branch and same single draft pull request. Each remediation must be
+caused by the observed failure, must not expand R-005 scope, must rerun the affected local
+validation and freshness checks, and must receive a new exact whole-tree fingerprint and
+independent review before push. All hosted checks must rerun on each new exact head. A third
+hosted-failure cycle, any scope expansion, branch or pull-request change, or inability to retain
+the controls stops this path pending a new prospective decision. The pull request may be marked
+ready and squash-merged only if all required checks pass on the exact reviewed head. Afterward,
+public `main` must be verified and exact publication, hosted-check, merge, and post-main receipts
+appended. Any hosted failure blocks merge until an authorized remediation succeeds on a newly
+reviewed exact head.
+
+Only after both new compatibility job contexts succeed on the exact pull-request head, D-040 also
+authorizes adding exactly `Python jsonschema 4.26.0 structural compatibility` and
+`Node Ajv 8.20.0 structural compatibility` to `main`'s required status-check contexts. That
+protection change must be additive: no existing required context or other branch protection may
+be removed, bypassed, or weakened. The additive result must be verified before merge. If it cannot
+be made and verified without weakening an existing control, stop rather than merge.
+
+This authorization is inert source publication and structural validation only. It does not
+authorize candidate selection, a release or tag, an active issue form, a listing, an offer, a
+topic/description/analytics change, contact or outreach, customer or private input, checkout or
+payment, account/merchant/tax action, or any other activation. All August 25 SEL final-capture,
+frozen/no-incident, exact final diff/privacy/digest review, future exclusive-selection,
+legal/terms/privacy/merchant/payment, and exact external-action gates remain. Time alone never
+authorizes activation.
+
+Hosted outcomes can establish only the named configured structural checks on the named run and
+commit. They do not establish attestation, authentication, semantic correctness, provenance,
+freshness, privacy, isolation, standard adoption, source truth, permission, production
+enforcement, or any other boundary excluded by D-039.
+
+**Why:** The bounded source-review path can obtain the hosted evidence that cannot be observed
+locally while retaining an exact-head merge gate, a hard Usage floor, and every candidate,
+commercial, privacy, and activation restriction.

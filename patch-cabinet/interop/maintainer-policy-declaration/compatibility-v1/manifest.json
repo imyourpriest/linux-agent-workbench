@@ -1,0 +1,353 @@
+{
+  "schema_version": "1",
+  "component": {
+    "name": "maintainer-policy-declaration-compatibility",
+    "version": "1"
+  },
+  "status": "prepared_not_executed_locally",
+  "claim_boundary": "Prepared structural compatibility only. Hosted observations are not observed locally and would not establish attestation, authentication, semantic correctness, provenance, freshness, privacy, isolation, standard adoption, source truth, permission, or production enforcement. Dependency acquisition is network-enabled.",
+  "bindings": {
+    "schema_sha256": "1582238b1ac144c9df0dc58e1252da67bf41c4851f39aa2386ae2dc06a6f28a2",
+    "base_corpus_sha256": "280d9d2aca66844e5fc03d6ae907e74e0dd54a8ab5f82e1daa29b8ad31a3ed2a",
+    "supplemental_corpus_sha256": "7a8b127507d6417e9d7f13a74b4beec63a9efda834de4ef26c4e91912dedbb3d",
+    "vector_ids": [
+      "valid-reserved-synthetic",
+      "invalid-missing-notes",
+      "ambiguous-derived-id",
+      "invalid-duplicate-key",
+      "invalid-nonstandard-number",
+      "supplemental-valid",
+      "schema-const-reject",
+      "required-missing-notes",
+      "additional-top-level",
+      "same-key-distinct-nested-objects",
+      "additional-nested-dimension",
+      "record-kind-enum-reject",
+      "assertion-basis-enum-reject",
+      "policy-enum-reject",
+      "expectation-enum-reject",
+      "disclosure-location-enum-reject",
+      "enforcement-enum-reject",
+      "dimensions-type-reject",
+      "notes-type-reject",
+      "declaration-id-pattern-reject",
+      "commit-pattern-reject",
+      "source-pattern-reject",
+      "policy-path-pattern-reject",
+      "supersedes-null-accept",
+      "supersedes-string-accept",
+      "supersedes-pattern-reject",
+      "format-deliberately-ignored",
+      "uri-formats-deliberately-ignored",
+      "repository-minlength-reject",
+      "repository-maxlength-reject",
+      "repository-url-maxlength-reject",
+      "policy-source-url-maxlength-reject",
+      "policy-path-maxlength-reject",
+      "notes-minlength-reject",
+      "notes-boundary-500-accept",
+      "notes-boundary-501-reject"
+    ],
+    "vector_contracts": [
+      {
+        "id": "valid-reserved-synthetic",
+        "raw_payload_sha256": "c13bf8e3a6fc905786529fcb9ead69402b46a092c937c194f6458838101475b4",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "invalid-missing-notes",
+        "raw_payload_sha256": "5e8693161ce3c913ee2ba9a48f9ba4ee386d8e23a6f49eeab96bae5f08878ead",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "ambiguous-derived-id",
+        "raw_payload_sha256": "de1f807b469e1172226875d3b581bea434d1a88e1cbdda25ba9b7183bfbac726",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "invalid-duplicate-key",
+        "raw_payload_sha256": "fe3bb2999224a831b864d2fd5017df4e7ee593ff4c2b31e91da3176331b954a8",
+        "parse_expected": "reject",
+        "schema_expected": "not_run",
+        "structural_agreement_denominator": false
+      },
+      {
+        "id": "invalid-nonstandard-number",
+        "raw_payload_sha256": "8a7ed23b7b7c48e38a73f0a0ef0e7f73fa38cbde7bc7d811d281c2b534ddd824",
+        "parse_expected": "reject",
+        "schema_expected": "not_run",
+        "structural_agreement_denominator": false
+      },
+      {
+        "id": "supplemental-valid",
+        "raw_payload_sha256": "c3956ef4ef8c2e93a3ab897ce2d27b98a67be0a9aa56478da0671f5d78a7319f",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "schema-const-reject",
+        "raw_payload_sha256": "57de191718d189bf94f527a04205262dfc3966b6751075593c1f3db584b71424",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "required-missing-notes",
+        "raw_payload_sha256": "4c4ac98a976c4e5bea53b056840ab92e02b1835406abc1b59b027573a75d91f7",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "additional-top-level",
+        "raw_payload_sha256": "efa7b140c01b31ffa812d2e2a097fbebabdaa493c6f481468eb91e0d1dcfaa88",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "same-key-distinct-nested-objects",
+        "raw_payload_sha256": "32673be55b3af80a74abd612880bbb0d18b7d82cc040c457fd812635e6f90d46",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "additional-nested-dimension",
+        "raw_payload_sha256": "64a0b1133bf7e00250ec8fa2da61567f2db04523d78415614f10f05bacb2878e",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "record-kind-enum-reject",
+        "raw_payload_sha256": "4d1b7fdbb7ecbd965d42d94ad723188a7a1352012da913e1ad72e6568df4e0e3",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "assertion-basis-enum-reject",
+        "raw_payload_sha256": "f8cfefd04cdc0fe2d1836e59c63d138a3b01bcbf7a301f765536ca89cde20956",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "policy-enum-reject",
+        "raw_payload_sha256": "d9ce17ee7a07de9b3de0c9993cf2c7a679c89d72a77dee45fe5a48fd21eecc31",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "expectation-enum-reject",
+        "raw_payload_sha256": "0754120f7636ca5579e692210ae5f1bfc26b5b0fb0ef635c3a561c4957b4e8be",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "disclosure-location-enum-reject",
+        "raw_payload_sha256": "1c3a48aed74ee7e6a3ce8f08e11bd0345774df16ec7bc25418bf4e056ef056b2",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "enforcement-enum-reject",
+        "raw_payload_sha256": "47b6e585af84b88fcb20cb86ae040f06814b1a66acde29deaf8da435d396abc4",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "dimensions-type-reject",
+        "raw_payload_sha256": "6773e338d39c5e832e9404fdaea98b59222c1dc79e214db1fc7ddf29efbff25d",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "notes-type-reject",
+        "raw_payload_sha256": "d62084cd2d441b30fb1cbca41546939701986004d8ecb19925010918991b2c8b",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "declaration-id-pattern-reject",
+        "raw_payload_sha256": "5fa51f25c36421aab4b18ccd1d960b9446c6319924c64708d8066e9c6d47f815",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "commit-pattern-reject",
+        "raw_payload_sha256": "f9ad8b94d5b781028e5614361a3d356a7f8568b36ab0bd95ad89176c517a41ac",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "source-pattern-reject",
+        "raw_payload_sha256": "47a3def858f070dacfb7517f344cb560a89dc76c58ca493e9d87c7e4a0caaa94",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "policy-path-pattern-reject",
+        "raw_payload_sha256": "8644a8640147513fc5a6cd92b9c1f75a2c5d994c41e73b8cfcf7d190230083c8",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "supersedes-null-accept",
+        "raw_payload_sha256": "c3956ef4ef8c2e93a3ab897ce2d27b98a67be0a9aa56478da0671f5d78a7319f",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "supersedes-string-accept",
+        "raw_payload_sha256": "cd9f5715ff2c164c9bcd8bf57e309a1afb7268a77252e3961cea14ebffe9695f",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "supersedes-pattern-reject",
+        "raw_payload_sha256": "2517a44886c0c54b9bce9ecfbc0b3cb93e6848aca104dbb674cdd14cd33745d8",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "format-deliberately-ignored",
+        "raw_payload_sha256": "bca6113f502e585f69cbb3f477b4eadc45031d0617726902886b050893dbfcbd",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "uri-formats-deliberately-ignored",
+        "raw_payload_sha256": "167f294e0d3980a793e63d69dfa85587feb2e5c00ebb00d73b1a647929d3a51e",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "repository-minlength-reject",
+        "raw_payload_sha256": "410b53cf13bc5256800bcbe83d55737a1c9fc21b3af50a26e1281ff71d17c841",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "repository-maxlength-reject",
+        "raw_payload_sha256": "d60277b54ca832fe1f4e15147989046353225e165f62d85f26c5c5cadbaff4dd",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "repository-url-maxlength-reject",
+        "raw_payload_sha256": "3902cdf17ca4844966c4e3401849aa9d9d2fef26e2b41c18677a2346453dd368",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "policy-source-url-maxlength-reject",
+        "raw_payload_sha256": "fcc29a3db2976c93a7000f4d1179e9931430f1a85cc09b899637996f2e980657",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "policy-path-maxlength-reject",
+        "raw_payload_sha256": "5100275197f4ae7ed3dc5b3f642f4ff6f7f3b03c6be4538a351f70517fb7d42b",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "notes-minlength-reject",
+        "raw_payload_sha256": "452795e381e65bb34c2b5e9e5a58a6ae7e18e5f9e1e945655c24b174c1dbe6cd",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "notes-boundary-500-accept",
+        "raw_payload_sha256": "94414232479d56e125fba587ec81fe67899cba9365a1bb7377696260efb85bce",
+        "parse_expected": "accept",
+        "schema_expected": "accept",
+        "structural_agreement_denominator": true
+      },
+      {
+        "id": "notes-boundary-501-reject",
+        "raw_payload_sha256": "9015521f4ea77cf6e95288ec14fd28a15247b5f4c83e5df80dc3d7015a55705e",
+        "parse_expected": "accept",
+        "schema_expected": "reject",
+        "structural_agreement_denominator": true
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "path": "README.md",
+      "sha256": "6ee2dff1e63111d439338feaf02aec426a199237e7766145072ae3d71fa0da17",
+      "bytes": 1134
+    },
+    {
+      "path": "base-corpus-binding.json",
+      "sha256": "2fb480e9c62c5b08d02951d97ff2870287a19a226ff4382f3613796b2b24848b",
+      "bytes": 472
+    },
+    {
+      "path": "expected-results.json",
+      "sha256": "e5148d363d5d1399ddc436046a2155450d218ccd949c25fbc134425fc9e3c2f9",
+      "bytes": 4708
+    },
+    {
+      "path": "node_runner.mjs",
+      "sha256": "8d4f7233905b6b640a65d536f6c52a19a7c79c78c45fedafa55246a2df808e04",
+      "bytes": 8063
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "58fffd062e7152bd07a1dfefb91082a1715126094e9d2321fd034a3a266cf543",
+      "bytes": 1620
+    },
+    {
+      "path": "package.json",
+      "sha256": "144e118542bec9d8ccfd24800f733b0f487e1e2846223bc40fc2b8eac0913fab",
+      "bytes": 161
+    },
+    {
+      "path": "python_runner.py",
+      "sha256": "182c674dc7fb0f583a316e9cef95136ebe9d354a6bc3efbd843b58b85576d777",
+      "bytes": 6117
+    },
+    {
+      "path": "requirements.lock",
+      "sha256": "05bae31857a05a9c7a8a2cd779caf2b54b2705e975a15d36dce8f1040dea12ae",
+      "bytes": 502
+    },
+    {
+      "path": "supplemental-corpus.json",
+      "sha256": "7a8b127507d6417e9d7f13a74b4beec63a9efda834de4ef26c4e91912dedbb3d",
+      "bytes": 5219
+    }
+  ]
+}

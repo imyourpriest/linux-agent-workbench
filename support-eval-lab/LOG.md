@@ -320,3 +320,25 @@ Append-only project record.
   skipped; the Windows junction rejection ran and passed. The stable full Support suite passed 78
   tests with five privilege-dependent skips. These are local structural results, not hosted or
   production enforcement.
+
+## 2026-08-19 - One inert direct policy-clarity successor prepared
+
+- Added a strict two-record candidate registry containing predecessor
+  `policy-starter-synthetic-v1` and exactly one direct successor,
+  `maintainer-ai-policy-clarity-synthetic-v1`, in the same AI Contribution Policy Starter + Audit
+  lineage. `selected_for_activation` is `null`; both records remain inert pending a future
+  exclusive selection. This is not a pivot, fork, competing offer, or second active candidate.
+- Prepared the closed `policy-clarity-candidate-v1/` public inert draft and unpromoted bundle with
+  an issue-form draft outside `.github/ISSUE_TEMPLATE`, landing and scope drafts, exact successor
+  and measurement contracts, deterministic fixed-metadata `ZIP_STORED` archive, checksum,
+  non-self-hashing manifest, and external receipt. Verifier-owned source and predecessor fixture
+  digests, exact predecessor/output mapping, generator digest, registry digest, archive safety,
+  and fixed inventory are checked.
+- There is no activation command, network/subprocess path, real/private input, contact route,
+  analytics, listing, release, checkout, payment, account, order, or customer. Future activation
+  still requires the complete independently verified SEL final capture, frozen/no-incident state,
+  exact final diff/privacy/digest review, a new prospective exclusive-selection decision, separate
+  legal/terms/privacy/merchant/payment review, and a new external-action decision. Time alone is
+  insufficient.
+- This is exactly one Support revenue unit. `$79` remains the single unvalidated, not-offered
+  hypothesis; revenue and cleared receipts remain `$0.00`.

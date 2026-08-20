@@ -1,0 +1,13 @@
+name: Inert policy clarity feedback draft
+description: Not installed; future public aggregate feedback only after every activation gate.
+body:
+  - type: markdown
+    attributes:
+      value: Do not submit private data, credentials, payment information, legal questions, or confidential repository material.
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Boundary acknowledgement
+      options:
+        - label: I understand this route is not active and would accept only generic public feedback after separate authorization.
+          required: true

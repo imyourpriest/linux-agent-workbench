@@ -798,3 +798,128 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - This publication receipt adds zero Patch or Support work units. Cumulative totals remain exactly
   24 Patch impact / 12 Support revenue units, and revenue remains `$0.00`. No release, active
   form, payment, outreach, customer or private input, XLM movement, or other activation occurred.
+
+## 2026-08-19 - Session 034 - Corrected R-005 local batch start
+
+- Public `main` and the clean local baseline were verified at
+  `0ecc40ee1935abd88a309ac3a61134b9357db624`; the local work branch is
+  `agent/r009-policy-compatibility`. Git commands use a per-command safe-directory override; no
+  global Git trust setting changed.
+- Before the first write, the frozen baseline contained 99 tracked files. Its sorted Git
+  `ls-tree` inventory fingerprint was
+  `756910a774d9988a4f4e7bd0444b2ff84f83e7cdf2a92e605e5b4fd4b9df055f`. The inventory covers the
+  frozen declaration `v1`, candidate/evidence/verifier/catalog surfaces, SEL-GH-001 records and
+  channels, the complete policy-release experiment, and all parked Revenue Lab files.
+- A whole-account start snapshot reported 88% weekly remaining, reset August 26, 2026 at 9:34 PM,
+  no resets available, and zero credits. This is a whole-account snapshot only; no amount or delta
+  is attributed to this repository, batch, workstream, unit, agent, tool call, test, or action.
+- D-039 authorizes only the local two-Patch/one-Support R-005 preparation. No external mutation,
+  package execution, activation, revenue, or customer input is authorized.
+
+## 2026-08-19 - Session 035 - Corrected R-005 batch prepared locally
+
+- Completed exactly two Patch impact units and one Support revenue unit under D-039, bringing
+  cumulative dedicated totals to 26 impact / 13 revenue and preserving 2:1. Revenue remains
+  `$0.00`.
+- Prepared two separate hosted structural-compatibility jobs, one exact field-by-field projection
+  contract, and one uniquely identified inert direct successor in the existing `$79` hypothesis
+  lineage. The third-party validators were not installed, imported, or executed locally. Their
+  prepared receipt states both hosted observations are `not_observed`.
+- Public package metadata/artifacts used only to prepare reviewed locks were downloaded in a
+  disposable temporary area with user configuration disabled and scripts disabled. No downloaded
+  validator package was installed or executed. Node/npm was unavailable locally; exact Ajv and
+  transitive lock resolution/integrity metadata was obtained directly from the HTTPS npm registry
+  and inspected statically.
+- No commit, push, pull request, release, form activation, account, checkout, payment, customer
+  input, private input, contact, analytics, package execution, or other external mutation occurred.
+  Local structural and synthetic validation is not hosted CI or production enforcement.
+- Stable local validation passed: 119 Patch tests with five Windows privilege-dependent skips, 84
+  Support tests with five skips, 41 parked Revenue tests with one skip, and 22 evidence-control
+  tests with one skip. All three registered engine replay workers and all three immutable candidate
+  bundles passed. The three new deterministic freshness checks, compileall, `pip check`,
+  `git diff --check`, and the bounded six-family public-tree heuristic passed.
+- The frozen surfaces remained zero-difference at 99 tracked files with the original sorted
+  `ls-tree` fingerprint
+  `756910a774d9988a4f4e7bd0444b2ff84f83e7cdf2a92e605e5b4fd4b9df055f`. These local checks do not
+  prove hosted behavior, privacy, isolation, or production enforcement.
+- The final signed-in Usage snapshot showed 79% weekly remaining, reset August 26, 2026 at
+  9:34 PM, no usage-limit resets available, and zero credits. This is whole-account state only.
+  The observed nine-point delta is not attributable to this repository, task, workstream, unit,
+  agent, tool call, test, or action; no per-unit usage is inferred.
+- The first static review found two hosted-harness issues: each hosted job lacked its own
+  pre-acquisition closed-harness check, and the Node duplicate-key preflight incorrectly treated
+  equal keys in distinct objects as duplicates while runner results omitted complete expected/
+  observed bindings. Primary trace review also found an unsupported predecessor experiment label.
+  All three findings were remediated locally: both jobs now self-check,
+  runner outputs and verifier-owned configurations are fully bound, the Node parser is
+  object-scoped with a closed counterexample, and the predecessor now binds the exact frozen
+  `policy-release-r004` release. Independent re-review remains required. No Usage snapshot, work
+  unit, revenue, activation, or external-action claim changed.
+- The first re-review found the frozen predecessor `README.md` and `ISSUE_FORM_DRAFT.yml` were
+  closed-inventory and manifest-covered but not directly rehashed by the successor verifier. Both
+  files now have exact verifier-owned SHA-256 bindings and byte-mutation regression cases. Final
+  independent re-review remains required; Usage, work-unit, revenue, activation, and external-
+  action claims remain unchanged.
+
+## 2026-08-19 - Session 036 - D-040 pre-action publication control
+
+- The sponsor reports 67% whole-account Usage remaining and authorizes the already-started R-005
+  publication and closeout down to a hard 35% floor. Start no new three-unit batch at or below
+  45%; stop immediately at 35%, any Usage warning, or any lower sponsor report. Ordinary Usage
+  policy resumes at reset or R-005 closeout, whichever comes first. The reading and any delta are
+  whole-account state only and are not attributed to this repository, task, workstream, unit,
+  agent, tool, test, or action; no per-unit usage is inferred.
+- D-040 prospectively permits only the exact R-005 source-review path: one initial local commit on
+  `agent/r009-policy-compatibility` descended from public-main base
+  `0ecc40ee1935abd88a309ac3a61134b9357db624`, one initial branch push to the existing project-owned
+  public repository, and at most one draft pull request. At most two additional in-scope commits
+  and pushes may address concrete hosted failures on that same branch and same pull request; each
+  requires affected local validation/freshness reruns, a new exact whole-tree fingerprint and
+  independent review before push, and all hosted checks rerun on the new exact head. All required
+  checks must pass before ready/squash-merge, and publication/hosted/merge/post-main receipts remain
+  required. A third cycle, scope expansion, branch or pull-request change, or inability to retain
+  controls stops the path pending a new prospective decision.
+- Only after both new compatibility contexts pass on the exact pull-request head, D-040 permits
+  adding exactly `Python jsonschema 4.26.0 structural compatibility` and
+  `Node Ajv 8.20.0 structural compatibility` to `main`'s required contexts. The change must retain
+  every existing required context and protection without bypass or weakening, and the additive
+  result must be verified before merge. If an additive-only change cannot be made and verified,
+  stop rather than merge.
+- Read-only live observations on 2026-08-19/20 UTC found authenticated owner `imyourpriest` and
+  public origin `imyourpriest/linux-agent-workbench` with default branch `main`. Remote `main` was
+  exactly `0ecc40ee1935abd88a309ac3a61134b9357db624`, and no pull requests were open. Private
+  vulnerability reporting, secret scanning, and push protection were enabled. `main` protection
+  was strict and admin-enforced, with force pushes and deletion disabled and seven existing
+  required check contexts. CodeQL is evidenced here only by the required contexts
+  `Analyze (actions)` and `Analyze (python)`; no Advanced Security status is claimed because the
+  corresponding API value was null.
+- The earlier `f768009f501282ab97630f2660aba2cf50e3db63e120d2c7ca6cb2434aa341f0`
+  whole-diff fingerprint used culture-aware PowerShell ordering. Independent reconstruction found
+  no byte drift and established the pre-D-040 ordinal baseline as
+  `bb0e1f62df912fabc7157ad83fb537427413520287743f89691ff2f0615931db`. A final
+  post-edit fingerprint and independent review are still required before publication.
+- This pre-action entry records no commit, push, pull request, hosted run, merge, release, form
+  activation, listing, offer, contact, customer/private input, payment, account action, or other
+  external mutation. D-040 leaves every August 25 SEL, exclusive-selection, legal, privacy,
+  merchant/payment, and exact external-action gate intact. Time alone is never sufficient.
+- Any future hosted success establishes only the named configured structural checks on its named
+  run and commit. It does not establish attestation, authentication, semantic correctness,
+  provenance, freshness, privacy, isolation, standard adoption, source truth, permission, or
+  production enforcement.
+- Independent coherence review found that the draft's earlier one-commit/one-push wording
+  conflicted with its authorization for in-scope hosted remediation. The still-uncommitted D-040
+  draft now permits exactly one initial commit and push plus at most two additional remediation
+  commits and pushes to the same branch and single draft pull request. Each additional cycle must
+  respond to a concrete hosted failure, remain within R-005, rerun affected local validation and
+  freshness, receive a new exact whole-tree fingerprint and independent review before push, and
+  rerun every hosted check on the new exact head. A third cycle, scope expansion, branch or pull-
+  request change, or inability to retain controls stops the path pending a new decision.
+- Before that wording fix, the exact 43-file tree had canonical ordinal fingerprint
+  `8c570266dadbea3731e08b227159492cc5d82c2dc5c26bb67542aca971a7ed6f`. Stable local validation
+  passed: Patch 119 tests with five skips; Support 84 with five skips; parked Revenue 41 with one
+  skip; and evidence-control 22 with one skip. All three freshness checks, all three registered
+  engine workers and three immutable bundles, in-memory compilation, `pip check`, the bounded
+  six-family public-tree heuristic, `git diff --check`, and the frozen 99-file zero-difference
+  replay passed.
+- These are local structural and synthetic results, not hosted behavior, privacy, isolation, or
+  production enforcement. Python `jsonschema` 4.26.0 and Node Ajv 8.20.0 remain unexecuted locally.

@@ -239,3 +239,43 @@ This control-only receipt adds zero Patch and zero Support units. R-004 remains 
 Support units; cumulative dedicated totals remain exactly twenty-four impact and twelve revenue
 units, preserving 2:1. Revenue remains `$0.00`. No release, active form, payment, outreach,
 customer or private input, XLM movement, or other activation occurred.
+
+#### R-005 corrected batch start - 2026-08-19
+
+- The whole-account start snapshot reported 88% weekly remaining, reset August 26, 2026 at
+  9:34 PM, no resets available, and zero credits.
+- This reading is whole-account state only. No amount or delta is attributed to this repository,
+  batch, workstream, unit, agent, tool call, test, or action.
+- D-039 selects two Patch impact units and one Support revenue unit. Units are recorded only when
+  the local artifacts and validation are complete; revenue remains `$0.00`.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-19 | Patch Cabinet | 1 | Separate Python jsonschema 4.26.0 / Node Ajv 8.20.0 hosted structural-compatibility preparation | start whole-account snapshot only; no attribution |
+| 2026-08-19 | Patch Cabinet | 1 | Exact field-by-field declaration projection contract | not individually measured |
+| 2026-08-19 | Support Agent Regression Lab | 1 | One inert direct policy-clarity successor in the existing $79 hypothesis lineage | not individually measured |
+
+R-005 adds exactly two Patch impact units and one Support revenue unit. Cumulative dedicated totals
+are twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`; no
+per-unit usage is inferred.
+
+#### R-005 final whole-account checkpoint - 2026-08-19
+
+- The final signed-in Usage snapshot showed 79% weekly remaining, reset August 26, 2026 at
+  9:34 PM, no usage-limit resets available, and zero credits.
+- This is whole-account state only. The observed nine-point delta is not attributable to this
+  repository, task, workstream, unit, agent, tool call, test, or action. No per-unit usage is
+  inferred.
+
+#### R-005 publication pre-action checkpoint - 2026-08-19
+
+- The sponsor reports 67% whole-account Usage remaining and authorizes this already-started R-005
+  publication and closeout down to a hard 35% floor. Start no new three-unit batch at or below
+  45%; stop immediately at 35%, any Usage warning, or any lower sponsor report. Ordinary Usage
+  policy resumes at reset or R-005 closeout, whichever comes first.
+- This is whole-account state only. No amount or delta is attributed to this repository, task,
+  workstream, unit, agent, tool call, test, or action, and no per-unit usage is inferred.
+- This prospective publication control adds zero Patch and zero Support work units and no revenue.
+  R-005 remains exactly two Patch impact units and one Support revenue unit; cumulative dedicated
+  totals remain twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains
+  `$0.00`.

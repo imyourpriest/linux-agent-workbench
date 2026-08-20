@@ -1,0 +1,104 @@
+name: Declaration schema compatibility
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/schema-compatibility.yml"
+      - "patch-cabinet/src/patch_cabinet/declaration_compatibility.py"
+      - "patch-cabinet/tests/test_declaration_compatibility.py"
+      - "patch-cabinet/interop/maintainer-policy-declaration/v1/schema.json"
+      - "patch-cabinet/interop/maintainer-policy-declaration/v1/corpus.json"
+      - "patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/**"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/schema-compatibility.yml"
+      - "patch-cabinet/src/patch_cabinet/declaration_compatibility.py"
+      - "patch-cabinet/tests/test_declaration_compatibility.py"
+      - "patch-cabinet/interop/maintainer-policy-declaration/v1/schema.json"
+      - "patch-cabinet/interop/maintainer-policy-declaration/v1/corpus.json"
+      - "patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/**"
+
+permissions:
+  contents: read
+
+jobs:
+  python-jsonschema:
+    name: Python jsonschema 4.26.0 structural compatibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.13
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Verify closed harness freshness and bindings
+        env:
+          PYTHONPATH: patch-cabinet/src
+        run: >-
+          python -B -m patch_cabinet.declaration_compatibility
+          --project patch-cabinet
+          --check
+      - name: Acquire exact hash-locked Python distributions
+        run: >-
+          python -m pip install
+          --require-hashes
+          --only-binary=:all:
+          -r patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/requirements.lock
+      - name: Run Python structural adapter
+        working-directory: patch-cabinet
+        run: python interop/maintainer-policy-declaration/compatibility-v1/python_runner.py --project .
+
+  node-ajv:
+    name: Node Ajv 8.20.0 structural compatibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.13 for standard-library harness verification
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Verify closed harness freshness and bindings
+        env:
+          PYTHONPATH: patch-cabinet/src
+        run: >-
+          python -B -m patch_cabinet.declaration_compatibility
+          --project patch-cabinet
+          --check
+      - name: Set up Node 24
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24"
+          package-manager-cache: false
+      - name: Preflight exact lock sources and integrity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          lock = json.loads(Path("patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/package-lock.json").read_text())
+          for name, item in lock["packages"].items():
+              if not name:
+                  continue
+              if not item.get("resolved", "").startswith("https://registry.npmjs.org/"):
+                  raise SystemExit(f"non-registry resolution: {name}")
+              if not item.get("integrity", "").startswith("sha512-"):
+                  raise SystemExit(f"missing integrity: {name}")
+          PY
+      - name: Acquire exact Node dependencies without lifecycle scripts
+        working-directory: patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1
+        run: npm ci --ignore-scripts --audit=false --fund=false
+      - name: Run Node structural adapter
+        working-directory: patch-cabinet
+        run: node interop/maintainer-policy-declaration/compatibility-v1/node_runner.mjs .
