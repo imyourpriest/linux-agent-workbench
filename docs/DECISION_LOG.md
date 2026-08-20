@@ -621,3 +621,49 @@ enforcement, or any other boundary excluded by D-039.
 **Why:** The bounded source-review path can obtain the hosted evidence that cannot be observed
 locally while retaining an exact-head merge gate, a hard Usage floor, and every candidate,
 commercial, privacy, and activation restriction.
+
+## 2026-08-20 - D-041 - Required compatibility-check liveness coverage
+
+**Decision:** Post-merge verification confirmed a required-check liveness defect: the two globally
+required compatibility job contexts are absent or remain pending on documentation-only and other
+unrelated pull requests when the compatibility workflow's event-level path filters prevent the
+jobs from being created. Bypassing required checks, removing either context, or introducing a
+separate sentinel context is rejected. The correction removes only the event-level `paths`
+filters so the existing required jobs are created for every pull request and every push to
+`main`.
+
+This is a zero-unit control/reliability correction based on public-main commit
+`f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`. Its exact local branch is
+`agent/r009-required-check-coverage`, and its write ownership is limited to these four files:
+`.github/workflows/schema-compatibility.yml`,
+`patch-cabinet/tests/test_declaration_compatibility.py`, `docs/CONTROL_LOG.md`, and
+`docs/DECISION_LOG.md`.
+
+The workflow must retain unfiltered `pull_request` coverage and `push` limited to branches
+`[main]`; both exact compatibility job identifiers and names; root/job read-only permissions;
+pinned checkout, setup-python, and setup-node actions; closed-harness preflight; exact locks and
+dependency-acquisition commands; and both existing structural adapters. Registry and runner
+network availability remain external hosted dependencies and are not guaranteed. Dependency
+acquisition remains network-enabled. A named hosted success establishes only the configured
+structural result on its exact commit/run, not attestation, authentication, semantic correctness,
+provenance, path safety, privacy, isolation, permission, adoption, or production enforcement.
+
+This correction adds no Patch or Support unit. Cumulative totals remain 26 impact / 13 revenue
+units, and revenue remains `$0.00`. Every August 25, SEL final-capture, frozen/no-incident,
+exclusive-selection, legal, terms, privacy, merchant, payment, and activation gate remains
+unchanged; time alone is insufficient.
+
+D-041 authorizes exactly one local commit, one push of
+`agent/r009-required-check-coverage`, and at most one draft pull request for this correction. The
+exact reviewed head must pass normal project checks and both compatibility jobs; required-context
+read-back must remain the exact protected nine-context set. The pull request may be marked ready
+and squash-merged only while those checks, protection controls, exact-head review, and scope remain
+clean, followed by public-main and post-main verification. At most one same-branch/same-PR hosted-
+failure remediation is allowed, limited to the same four files and requiring affected local
+validation, a new exact fingerprint, and independent review before push. Any further failure,
+scope expansion, branch/PR change, or control weakening stops this path pending a new prospective
+decision. No receipt-only pull request or other external action is authorized.
+
+**Why:** Required contexts must be created reliably on every event they protect. Removing only the
+filters preserves the already reviewed jobs and evidence boundaries while restoring liveness
+without weakening branch protection or inventing a bypass signal.

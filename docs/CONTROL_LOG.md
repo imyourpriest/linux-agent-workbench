@@ -974,3 +974,37 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   independently derives its source URL and exact NUL-joined declaration ID and requires the
   authoritative parser's canonical `..` path rejection. No artifact semantic/result, hosted
   outcome, unit, activation, or revenue claim changed.
+
+## 2026-08-20 - Session 039 - D-041 required-check liveness pre-action
+
+- PR 17's independently reviewed exact head was
+  `8aa6786e856b14bd056b0f3578d9f4ca4717a99b`. Compatibility run `32338864302` passed on that head:
+  Python job `96333710802` and Node job `96333710934` each completed its exact locked acquisition
+  and configured structural adapter. CI run `32338864285` and CodeQL run `32338861676` also passed.
+- After those exact successes, main protection read-back showed the original seven required
+  contexts plus the two compatibility contexts, all app-bound to the GitHub Actions provider.
+  Strict status checks, admin enforcement, linear history, conversation resolution, review
+  settings, and force-push/deletion protections remained unchanged.
+- PR 17 was protected-squash-merged at `2026-08-20T06:26:29Z` to public-main commit
+  `f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`. Its tree exactly matched the reviewed head at tree
+  `546499e761bb9c6725a1a552b5985ef5cfbb8dc9`; the 43-path ordinal raw-byte fingerprint remained
+  `5c57c81b7ff743e27532cddd902dc8fb5b7fdbf4f2377e4984c250c8b4752e8a`.
+- Post-main compatibility run `32339607078` passed with Python job `96335871240` and Node job
+  `96335871030`. Post-main CI run `32339607075` and CodeQL run `32339607118` passed. Dependabot run
+  `32339616283` is recorded as non-required operational evidence, not a protected context or
+  production-enforcement claim.
+- The post-merge read-back exposed a liveness defect: globally required compatibility contexts can
+  be absent or remain pending on documentation-only or otherwise unrelated pull requests because
+  the workflow's event-level path filters prevent both jobs from being created. D-041 authorizes
+  only removal of those filters plus a standard-library regression guard and these two governance
+  records on branch `agent/r009-required-check-coverage` at base
+  `f9e483056d1fd8539c2a3a6c08c5eb7817d3224b`. Bypass, required-context removal, and a sentinel
+  context are rejected.
+- Hosted validator observations establish only the named configured structural results on the
+  named commits, runs, and jobs above. They do not establish availability on future runs,
+  attestation, authentication, semantic correctness, provenance, path safety, privacy, isolation,
+  permission, adoption, or production enforcement. This correction adds zero work units and zero
+  revenue; totals remain 26 impact / 13 revenue and `$0.00`, with every activation gate unchanged.
+- Independent review found the initial literal workflow guard insufficient. The final test now
+  binds the full raw workflow digest plus the canonical trigger block and each adjacent job
+  ID/name header; no hosted result, work-unit, activation, or revenue claim changed.

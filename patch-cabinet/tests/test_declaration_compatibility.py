@@ -193,7 +193,26 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.assertIn("duplicate key in JSON object", node)
 
     def test_each_hosted_job_preflights_the_closed_harness(self) -> None:
-        workflow = (self.project.parent / ".github/workflows/schema-compatibility.yml").read_text()
+        workflow_bytes = (
+            self.project.parent / ".github/workflows/schema-compatibility.yml"
+        ).read_bytes()
+        self.assertEqual(
+            hashlib.sha256(workflow_bytes).hexdigest(),
+            "da05729807cd7235842e3036832fe63ee91057d459150ec3e85bd042436ef807",
+        )
+        workflow = workflow_bytes.decode("utf-8", errors="strict")
+        trigger = workflow[workflow.index("on:\n"):workflow.index("\npermissions:")]
+        self.assertEqual(trigger, "on:\n  pull_request:\n  push:\n    branches: [main]\n")
+        python_header = (
+            "\n  python-jsonschema:\n"
+            "    name: Python jsonschema 4.26.0 structural compatibility\n"
+        )
+        node_header = (
+            "\n  node-ajv:\n"
+            "    name: Node Ajv 8.20.0 structural compatibility\n"
+        )
+        self.assertEqual(workflow.count(python_header), 1)
+        self.assertEqual(workflow.count(node_header), 1)
         command = (
             "python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py\n"
             "          --project patch-cabinet\n"
