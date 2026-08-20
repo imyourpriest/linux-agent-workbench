@@ -371,3 +371,74 @@ Append-only project record.
 - Focused interoperability tests passed 12/12. The stable full Patch suite passed 109 tests with
   five Windows privilege-dependent symlink skips. Complete generation/freshness, compilation,
   dependency, public-tree, frozen-inventory, and diff checks are recorded in the control log.
+
+## 2026-08-19 - R-005 structural compatibility and exact projection contract
+
+- Prepared two genuinely separate hosted-only structural adapters for the frozen declaration
+  schema: Python `jsonschema==4.26.0` and Node Ajv `8.20.0`. The new workflow uses separate jobs,
+  pinned actions, read-only contents permissions, exact validator configurations, hash-locked
+  Python 3.13/Linux-x64 distributions, a private exact Node package lock, no lifecycle scripts,
+  and no remote validator loader. Dependency acquisition is honestly network-enabled.
+- Bound the frozen schema/base corpus, a supplemental corpus covering required/additional fields,
+  enum/type/pattern/null-string/ignored-format/boundary cases, both runner sources, dependency
+  locks, validator configurations, every vector ID, raw-payload digest, parse/schema expectation,
+  and denominator status. Duplicate-key and NaN vectors remain decoder-boundary observations and
+  are excluded from the structural-agreement denominator.
+- Added a machine-readable projection contract covering every authoritative top-level declaration
+  field and all thirteen nested dimensions exactly once by JSON Pointer. It derives values only
+  from the one accepted synthetic declaration and verifier-owned mapping, binds source/mapping/
+  output digests, fails on missing/duplicate/unknown mappings or stale output, and never converts
+  `not_declared` into a contributor obligation or checklist.
+- These are exactly two Patch impact units. The third-party validators were not installed,
+  imported, or executed locally; hosted observations remain `not_observed`. Any later hosted
+  success would establish only the named configured structural outcome on its named commit/run,
+  not attestation, authentication, semantics, provenance, freshness, privacy, isolation,
+  standard adoption, source truth, permission, or production enforcement.
+
+## 2026-08-20 - R-005 hosted compatibility remediation cycle 1
+
+- The reviewed branch `agent/r009-policy-compatibility` was published at
+  `0ac9cd67dd8e9a91126ff1e407b054465659f4e1`, and draft PR 17 was created. The GitHub connector
+  first returned 403 `Resource not accessible by integration`; an authenticated read-only CLI
+  check verified zero existing head pull requests before the single authorized CLI fallback
+  created the draft.
+- On exact head `0ac9cd67dd8e9a91126ff1e407b054465659f4e1`, workflow run `32336332382` failed in Python job
+  `96326529034` and Node job `96326528729`. Both failures occurred in the closed-harness preflight,
+  after checkout and setup-python but before the exact locked validator-dependency installation
+  steps (`pip install --require-hashes` and `npm ci`) and before either structural-adapter step ran.
+  No hosted structural validator result or success is claimed; no claim is made that the runner
+  platform itself performed no network acquisition.
+- The package-style `python -B -m patch_cabinet.declaration_compatibility` invocation imported
+  `patch_cabinet.__init__` and `policy.py`, which required the not-yet-acquired `packaging`
+  dependency. The minimal remediation invokes the same project-owned standard-library checker by
+  its root-relative script path in both jobs, removes workflow `PYTHONPATH`, and adds regression
+  assertions for the exact two commands, pinned Python setup, and pre-acquisition ordering.
+- This is the first of at most two authorized hosted-failure remediation cycles. It adds no work
+  unit, hosted success, activation, adoption, customer, revenue, or production-enforcement claim;
+  revenue remains `$0.00`, and the third-party validator observations remain `not_observed` until
+  an exact hosted head/run succeeds.
+
+## 2026-08-20 - R-005 hosted compatibility remediation cycle 2
+
+- On exact head `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`, hosted compatibility run
+  `32337297322` completed the preflight and exact locked installs. Python job `96329209177` and
+  Node job `96329208990` both executed their structural adapters, and both reported the same
+  mismatch: vector `policy-path-pattern-reject` structurally accepted where the prepared contract
+  incorrectly expected rejection. This was an expected-outcome defect, not validator divergence,
+  and no hosted structural success is claimed.
+- The frozen v1 pattern accepts dot-only path segments. The authoritative declaration parser has
+  a separate semantic guard that rejects `.` and `..`. Draft 2020-12 pattern behavior and review
+  of pinned python-jsonschema 4.26.0 `_keywords.py` and Ajv 8.20.0 JSON Schema documentation support
+  recording schema acceptance: https://json-schema.org/draft/2020-12/json-schema-validation#section-6.3.3.
+- The one vector is renamed `policy-path-dot-segment-structural-accept` and made cross-field
+  consistent with its source URL and NUL-derived declaration ID. Its contract is now strict JSON
+  parse `accept`, schema `accept`, and included in the agreement denominator. This records a
+  structural-profile gap only; it is not authoritative-parser, path-safety, or semantic acceptance.
+- Ordinary CI run `32337297321` and CodeQL run `32337294075` passed all their checks on exact head
+  `be9e882d46e79dbaa44fadfc7a2c501fa650fa7f`. This is the second and final authorized remediation
+  cycle. Any next failure stops this path pending a new prospective decision. No unit, activation,
+  adoption, customer, or revenue claim is added; revenue remains `$0.00`.
+- Final review found that the cross-field regression assertions compared only fixed literals. They
+  now independently derive the source URL and NUL-joined declaration ID and invoke the
+  authoritative parser to require its canonical `..` path rejection. Artifact semantics,
+  expected structural results, work units, activation, and revenue are unchanged.

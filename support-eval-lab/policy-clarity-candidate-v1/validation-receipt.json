@@ -1,0 +1,11 @@
+{
+  "schema_version": "1",
+  "result": "valid_inert_direct_successor_bundle",
+  "candidate_id": "maintainer-ai-policy-clarity-synthetic-v1",
+  "manifest_sha256": "f7eb7903267b919143984576d9870400066fa02f8fd9aab75e4e0e1c952b3772",
+  "archive_sha256": "6da0f6a145425b88f52ecb92dc6f730abe83ec9ed068a747d91dbe4615c3f899",
+  "registry_sha256": "b57bd6df53e033c89139568040cacdf2018178fc225328008428763ec72cd616",
+  "predecessor_release_binding_sha256": "6fd0f2919f4fd1d7162253d9f2e453af095c4aeed990a0ad0bd1bd11f44876f6",
+  "claim_boundary": "Inert public draft and unpromoted direct successor only; no activation, private input, contact, analytics, listing, checkout, payment, customer, demand, or production-enforcement claim.",
+  "revenue_usd": "0.00"
+}

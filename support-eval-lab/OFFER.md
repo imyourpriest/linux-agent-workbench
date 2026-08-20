@@ -44,3 +44,12 @@ offered for sale; there is no listing, contact route, checkout, payment, order, 
 The separate `public-policy-audit/` synthetic demonstration does not add an offer or price. It may
 reference the same `$79` amount only as an unvalidated, not-offered future hypothesis consistent
 with this section. It is not a revenue forecast, listing, activation, order, or sale.
+
+The strict `candidate-registry.json` now records `policy-starter-synthetic-v1` and exactly one
+direct successor, `maintainer-ai-policy-clarity-synthetic-v1`, in this same hypothesis lineage.
+Both are inert pending a future exclusive selection; `selected_for_activation` is `null`. The
+successor is a public inert draft and unpromoted, not hidden or inaccessible, and is not a pivot,
+fork, competing offer, release, listing, form, contact route, analytics path, checkout, or payment
+route. A future control decision must select exactly one candidate and mark the other inert or
+retired, in addition to every existing SEL, diff/privacy/digest, legal, terms, merchant, payment,
+and external-action gate. Time alone never authorizes activation.

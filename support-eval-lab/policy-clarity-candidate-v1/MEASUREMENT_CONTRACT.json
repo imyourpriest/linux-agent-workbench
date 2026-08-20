@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "experiment_id": "policy-clarity-r005",
+  "status": "pending_future_exclusive_selection",
+  "activation": false,
+  "selected_for_activation": null,
+  "future_gates": [
+    "complete_independently_verified_SEL_final_capture",
+    "SEL_frozen_and_no_incident",
+    "exact_final_diff_privacy_and_digest_review",
+    "new_prospective_control_decision_selects_exactly_one_candidate_and_marks_other_inert_or_retired",
+    "separate_legal_terms_privacy_merchant_and_payment_review",
+    "new_external_action_decision"
+  ],
+  "time_alone_authorizes_activation": false,
+  "collection": "none",
+  "payment": "disabled"
+}

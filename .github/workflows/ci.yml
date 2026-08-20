@@ -173,6 +173,12 @@ jobs:
         working-directory: patch-cabinet
         run: python -m patch_cabinet.declaration_interop --project . --check
 
+      - name: Verify prepared declaration compatibility and projection contracts
+        working-directory: patch-cabinet
+        run: |
+          python -m patch_cabinet.declaration_compatibility --project . --check
+          python -m patch_cabinet.declaration_projection --project . --check
+
       - name: Regenerate portable declaration release candidate
         working-directory: patch-cabinet
         run: >-
@@ -220,6 +226,10 @@ jobs:
       - name: Verify inert synthetic public policy audit
         working-directory: support-eval-lab
         run: python -m support_eval_lab.public_policy_audit --project . --check
+
+      - name: Verify inert policy successor candidate
+        working-directory: support-eval-lab
+        run: python -m support_eval_lab.policy_successor --project . --check
 
       - name: Regenerate Support channel observation
         working-directory: support-eval-lab

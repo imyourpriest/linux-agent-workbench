@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "result": "closed_harness_prepared",
+  "manifest_sha256": "9e016ab3a1c19c90434d838ded04ddde0cc440759f7ff10eb012ad4b541e69f6",
+  "validator_configurations": {
+    "python_jsonschema_4_26_0": {
+      "dialect": "Draft202012Validator",
+      "check_schema": true,
+      "format_checker": null,
+      "registry_or_remote_loader": false,
+      "raw_decoder": "strict_json_loads",
+      "duplicate_key_preflight": "object_pairs_hook_reject"
+    },
+    "node_ajv_8_20_0": {
+      "entrypoint": "ajv/dist/2020.js",
+      "strict": true,
+      "strictTypes": true,
+      "allowUnionTypes": true,
+      "allErrors": true,
+      "validateFormats": false,
+      "async_loader": false,
+      "raw_decoder": "JSON.parse",
+      "duplicate_key_preflight": "object_scoped_recursive_descent_reject"
+    }
+  },
+  "hosted_observations": {
+    "python_jsonschema_4_26_0": "not_observed",
+    "node_ajv_8_20_0": "not_observed"
+  },
+  "claim_boundary": "Prepared structural compatibility only. Hosted observations are not observed locally and would not establish attestation, authentication, semantic correctness, provenance, freshness, privacy, isolation, standard adoption, source truth, permission, or production enforcement. Dependency acquisition is network-enabled."
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1",
+  "lineage_id": "ai-contribution-policy-starter-audit",
+  "predecessor_id": "policy-starter-synthetic-v1",
+  "successor_id": "maintainer-ai-policy-clarity-synthetic-v1",
+  "direct_successor": true,
+  "fork_or_competing_candidate": false,
+  "activated": false,
+  "predecessor_release_binding": {
+    "location": "support-eval-lab/policy-release-experiment",
+    "experiment_id": "policy-release-r004",
+    "status": "prepared_not_activated",
+    "tag": "ai-policy-starter-v0.1.0",
+    "asset": {"path":"ai-policy-starter-v0.1.0.zip","bytes":9433,"sha256":"e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a"},
+    "checksum": {"path":"ai-policy-starter-v0.1.0.zip.sha256","line":"e76a5999e618002d69481428a1b08952a2b77ab8f516c3de9e6b51971d8ccd4a  ai-policy-starter-v0.1.0.zip\n","sha256":"3c65fff0ccc9184d0b91f08b9e0f798d26c2128e063bab81c55c08846d79f7d1"},
+    "files": {
+      "ACTIVATION_CONTRACT.json":"0fdb0d7829364f79d28aab1755a2b9aa1025b5f20161addd0377c7ad4ddfead5",
+      "ISSUE_FORM_DRAFT.yml":"abf004a183e4779bc53af6a384549ea09a3e58a8f1db1302a2b0b86127a10b5b",
+      "MEASUREMENT_TEMPLATE.json":"ebe7bbdb8a5c54239cbabe49cba18bef3eb1f9a82c9179692c6401ade0d0046d",
+      "README.md":"a65fa245bf04dc0b6f2636ca7befc475986d3ab09b90fdb2cb6dfa0d1e4a9e3d",
+      "RELEASE.json":"86cde277eb197924cb0a29e8f1f2af0da9f8d467e6db2113ae65db2b0d513717",
+      "RELEASE_BODY.md":"ff2925f70876c3881ca515084b5cc86e08bf2be0a8f4ff63479f6e9dfa4b60c3",
+      "manifest.json":"f644c46dd90de3dcda6ef82e7b0eef49990bef65946ed37c75a5e9ae4d26ea5c",
+      "validation-receipt.json":"8db6456407a45ea2019e945c32f18f7d6c96349ff093797143710b99365e141f"
+    },
+    "hash_boundary": "recomputable_consistency_fingerprints_not_signatures_or_external_trust"
+  },
+  "predecessor_fixture_sha256": {
+    "ASYNC_HANDOFF.md":"3e14b80b1954091b7e7631d6d75b5da731506546ef46de1fa951a2bc9dd7a24b",
+    "AUDIT.md":"aa508d6b54a10bf69ab2ea4c1495b658b57a170ba71ea340cd9f55bd220d9acc",
+    "CONTRIBUTING.md":"6ec40971a70a44c550f485719d06c57b8520e89a2c4468247830b35b69ae28bd",
+    "DECISION_MATRIX.md":"4ba802ef135cc38396b0deb89e64c5045f1ec826964efb9d8bbf44ce54be2430",
+    "ISSUE_PR_CHECKLIST.md":"7bcb5c45de7cfe54adf285b93d6f4825cd476bb4e6c308773176d6f44d6ab066",
+    "README.md":"182f03509fa6641e7f7a0ac9a22c0a7505e2399a75364fdf3e549e526f8ff3f0",
+    "SCOPE.md":"5cd975948e37da195a679c5d4eda33597a838deddb99c2491b78644286fbbff8",
+    "mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json":"19f5af9b1897e771742f36f10adff74f7406ed92b2a26f46ee91d70bef044e3d"
+  },
+  "predecessor_to_successor_output_mapping": {
+    "README.md":"README.md", "SCOPE.md":"SCOPE_LIMITS.md", "ASYNC_HANDOFF.md":"ISSUE_FORM_DRAFT.yml", "AUDIT.md":"MEASUREMENT_CONTRACT.json", "DECISION_MATRIX.md":"LANDING_DRAFT.md", "CONTRIBUTING.md":"LANDING_DRAFT.md", "ISSUE_PR_CHECKLIST.md":"ISSUE_FORM_DRAFT.yml", "mpd-v1-cb8c158f561d0387ddb6059fa1fe43038a988c27ec2982cc07bdc79f2b301d37.json":"SUCCESSOR_CONTRACT.json"
+  }
+}

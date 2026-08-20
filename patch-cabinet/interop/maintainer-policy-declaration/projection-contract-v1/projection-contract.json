@@ -1,0 +1,234 @@
+{
+  "schema_version": "1",
+  "source_path": "data/maintainer-policy-declarations/synthetic/v1/mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a.json",
+  "source_sha256": "18fc07ce63a5083c767c6e8d4f6cfd95068d155fba03b039a831f154c8628add",
+  "mapping_sha256": "6d9eb9c689cde02c4e357d6300697393c281fb6fbfafb61d88e443e9a1757722",
+  "mappings": [
+    {
+      "pointer": "/schema_version",
+      "disposition": "omitted_by_target_profile",
+      "target": null,
+      "source_value": "1",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/declaration_id",
+      "disposition": "preserved_exactly",
+      "target": "Trace declaration",
+      "source_value": "mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a",
+      "target_evidence": "`/declaration_id` = `\"mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a\"`"
+    },
+    {
+      "pointer": "/record_kind",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "synthetic_example",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/assertion_basis",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "synthetic_example_not_a_maintainer_assertion",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/repository",
+      "disposition": "preserved_exactly",
+      "target": "Trace repository label",
+      "source_value": "synthetic/maintainer-policy-declaration-demo",
+      "target_evidence": "`/repository` = `\"synthetic/maintainer-policy-declaration-demo\"`"
+    },
+    {
+      "pointer": "/repository_url",
+      "disposition": "omitted_by_target_profile",
+      "target": null,
+      "source_value": "https://example.invalid/synthetic/maintainer-policy-declaration-demo",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/commit_sha",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": "0123456789abcdef0123456789abcdef01234567",
+      "target_evidence": "`/commit_sha` = `\"0123456789abcdef0123456789abcdef01234567\"`"
+    },
+    {
+      "pointer": "/policy_source_url",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": "https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md",
+      "target_evidence": "`/policy_source_url` = `\"https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md\"`"
+    },
+    {
+      "pointer": "/policy_path",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": "CONTRIBUTING.md",
+      "target_evidence": "`/policy_path` = `\"CONTRIBUTING.md\"`"
+    },
+    {
+      "pointer": "/source_sha256",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "target_evidence": "`/source_sha256` = `\"1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef\"`"
+    },
+    {
+      "pointer": "/observed_at",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "2026-08-10",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/dimensions",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": {
+        "ai_assisted_code": "not_declared",
+        "ai_assisted_documentation": "not_declared",
+        "ai_authored_issue_text": "not_declared",
+        "ai_authored_pr_text": "not_declared",
+        "autonomous_issue_submission": "not_declared",
+        "autonomous_pr_submission": "not_declared",
+        "automated_review_comments": "not_declared",
+        "good_first_issue_automation": "not_declared",
+        "security_report_automation": "not_declared",
+        "disclosure": "not_declared",
+        "human_review": "not_declared",
+        "human_accountability": "not_declared",
+        "license_ip_checks": "not_declared"
+      },
+      "target_evidence": "`/dimensions` = `{\"ai_assisted_code\":\"not_declared\",\"ai_assisted_documentation\":\"not_declared\",\"ai_authored_issue_text\":\"not_declared\",\"ai_authored_pr_text\":\"not_declared\",\"autonomous_issue_submission\":\"not_declared\",\"autonomous_pr_submission\":\"not_declared\",\"automated_review_comments\":\"not_declared\",\"good_first_issue_automation\":\"not_declared\",\"security_report_automation\":\"not_declared\",\"disclosure\":\"not_declared\",\"human_review\":\"not_declared\",\"human_accountability\":\"not_declared\",\"license_ip_checks\":\"not_declared\"}`"
+    },
+    {
+      "pointer": "/disclosure_location",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/disclosure_location` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/enforcement",
+      "disposition": "not_representable_in_target",
+      "target": null,
+      "source_value": "not_declared",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/supersedes",
+      "disposition": "omitted_by_target_profile",
+      "target": null,
+      "source_value": null,
+      "target_evidence": null
+    },
+    {
+      "pointer": "/notes",
+      "disposition": "human_review_required",
+      "target": "Field projection table",
+      "source_value": "Reserved synthetic namespace example only; no existence, identity, or authority assertion.",
+      "target_evidence": "`/notes` = `\"Reserved synthetic namespace example only; no existence, identity, or authority assertion.\"`"
+    },
+    {
+      "pointer": "/dimensions/ai_assisted_code",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/ai_assisted_code` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/ai_assisted_documentation",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/ai_assisted_documentation` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/ai_authored_issue_text",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/ai_authored_issue_text` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/ai_authored_pr_text",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/ai_authored_pr_text` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/autonomous_issue_submission",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/autonomous_issue_submission` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/autonomous_pr_submission",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/autonomous_pr_submission` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/automated_review_comments",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/automated_review_comments` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/good_first_issue_automation",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/good_first_issue_automation` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/security_report_automation",
+      "disposition": "preserved_exactly",
+      "target": "Field projection table",
+      "source_value": "not_declared",
+      "target_evidence": "`/dimensions/security_report_automation` = `\"not_declared\"`"
+    },
+    {
+      "pointer": "/dimensions/disclosure",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "not_declared",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/dimensions/human_review",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "not_declared",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/dimensions/human_accountability",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "not_declared",
+      "target_evidence": null
+    },
+    {
+      "pointer": "/dimensions/license_ip_checks",
+      "disposition": "not_established_by_source",
+      "target": null,
+      "source_value": "not_declared",
+      "target_evidence": null
+    }
+  ],
+  "non_established_claims": [
+    "identity",
+    "authority",
+    "currentness",
+    "permission",
+    "enforcement_or_adoption"
+  ],
+  "output_path": "AI_POLICY.projected.md",
+  "output_sha256": "d849691d410acfba0d62ec3a1200f15ced8e578fad5eaf9ff21d1172d7b736e7"
+}
