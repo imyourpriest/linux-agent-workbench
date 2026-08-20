@@ -727,3 +727,61 @@ external.
 are created without a workflow or compatibility-path change, while the final receipt closes the
 already authorized publication record without inventing another unit, activation, or recursive
 receipt chain.
+
+## 2026-08-20 - D-043 - Additive fast-uri security migration
+
+**Decision:** Treat five High-severity GitHub Advisory Database records reviewed on 2026-08-20
+against the hosted Node compatibility adapter's locked `fast-uri@3.1.0` transitive dependency as
+urgent zero-unit security/control maintenance. The official records show first patched 3.x
+versions 3.1.1 through 3.1.5 respectively, making 3.1.5 the first reviewed 3.x version that
+addresses all five:
+https://github.com/advisories/GHSA-q3j6-qgpj-74h6,
+https://github.com/advisories/GHSA-v39h-62p7-jpjc,
+https://github.com/advisories/GHSA-4c8g-83qw-93j6,
+https://github.com/advisories/GHSA-v2hh-gcrm-f6hx, and
+https://github.com/advisories/GHSA-7p8r-x3mc-p8w7. Preserve the published
+`patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/` evidence tree byte-for-byte
+and add an independent `compatibility-v2` successor. The successor retains Ajv `8.20.0`, pins
+`fast-uri==3.1.5` at the exact reviewed registry URL, integrity, and shasum, and keeps the schema,
+corpus, result semantics, protected job identifiers/names, least-privilege workflow controls, and
+pre-install closed-harness checks unchanged except for the mechanically required v2 roots and
+version identifiers. The v1 generator remains unchanged; v2 receives a separate generator and
+independent CI freshness check.
+
+The exact base is public-main commit `7ae123429837067f135b0173226537cebf6a49da`, the exact branch
+is `agent/r010-fast-uri-security-migration`, and write ownership is limited to
+`docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, `docs/USAGE_LEDGER.md`, `patch-cabinet/LOG.md`,
+`.github/workflows/schema-compatibility.yml`, `.github/workflows/ci.yml`,
+`patch-cabinet/src/patch_cabinet/declaration_compatibility_v2.py`,
+`patch-cabinet/tests/test_declaration_compatibility.py`, and the new complete
+`patch-cabinet/interop/maintainer-policy-declaration/compatibility-v2/` tree. No path in
+`compatibility-v1` may change. The third-party tarball and validators must not be downloaded,
+installed, imported, or executed locally, and no local `node_modules` may be created.
+
+D-043 authorizes local implementation and validation, one initial local commit and push of the
+exact reviewed branch, at most one draft replacement pull request, a ready-for-review transition
+after independent review, and an exact-head protected squash merge while unchanged branch
+protection and all required checks pass. If a concrete hosted failure occurs, at most one
+additional same-branch/same-PR remediation commit and push may address only that failure after
+affected local validation, a new exact fingerprint, and independent review; every hosted check
+must rerun on the new exact head. Dependabot pull request 18 may be closed as superseded, with a
+link to the replacement, only after the replacement pull request exists and every check on its
+exact head passes. The feature branch is retained. No force push, check bypass, protection
+weakening, branch deletion, tag, release, activation, payment, contact, or unrelated external
+mutation is authorized. Any material scope change, protection change, unexpected dependency
+behavior, or further hosted failure stops this path pending a new prospective decision.
+
+This correction adds no Patch or Support unit. Cumulative totals remain 26 impact / 13 revenue
+units and revenue remains `$0.00`. Every August 25, SEL final-capture, frozen/no-incident,
+exclusive-selection, legal, terms, privacy, merchant, payment, and activation gate remains
+unchanged; time alone is insufficient. Local static and synthetic checks can establish only
+deterministic artifact consistency and the configured fixed vectors. A later exact hosted success
+can establish only that the locked bytes installed and the named configured structural checks
+passed on its named commit/run. Neither boundary proves exploitation resistance, isolation,
+semantic correctness, provenance, permission, adoption, future availability, or production
+security/enforcement. Dependency acquisition remains network-enabled.
+
+**Why:** D-017 and D-021 require published evaluator dependencies and evidence engines to migrate
+by addition rather than in-place replacement. The versioned successor moves the active hosted
+adapter to the first reviewed 3.x version patched for all five cited advisories while preserving
+the immutable v1 record and its auditability.

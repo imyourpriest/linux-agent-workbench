@@ -177,6 +177,7 @@ jobs:
         working-directory: patch-cabinet
         run: |
           python -m patch_cabinet.declaration_compatibility --project . --check
+          python -m patch_cabinet.declaration_compatibility_v2 --project . --check
           python -m patch_cabinet.declaration_projection --project . --check
 
       - name: Regenerate portable declaration release candidate

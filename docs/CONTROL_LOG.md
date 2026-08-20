@@ -1041,3 +1041,60 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   and an unchanged nine-context protection read-back. Its eventual protected merge is
   non-recursive and will be recorded in the next ordinary control cycle rather than spawning
   another receipt. No new unit, revenue, activation, or other external action is claimed here.
+
+## 2026-08-20 - Session 041 - D-042 receipt and D-043 additive security migration
+
+- D-042's documentation-only PR 20 exact head was
+  `0dfb6a5f5674f872a0f7f6469f8d10bdb196657e`. Compatibility run `32343747670` created and passed
+  Node job `96347971003` and Python job `96347971161` on that exact documentation-only head; CI
+  `32343747655` and CodeQL `32343746443` also passed. PR 20 was protected-squash-merged at
+  `2026-08-20T07:29:15Z` to public-main commit
+  `7ae123429837067f135b0173226537cebf6a49da`. The reviewed and merged tree was
+  `0c793c8b9eaccbcbe782f36d76b034dfa3659afd`. Post-main compatibility run `32344237343`, CI
+  `32344237340`, and CodeQL `32344237151` passed on that exact public commit. These are named
+  hosted observations, not future availability or production-enforcement evidence.
+- Read-only official GitHub Advisory Database review on 2026-08-20 found five High-severity
+  records against `fast-uri@3.1.0` and first patched 3.x versions 3.1.1 through 3.1.5:
+  https://github.com/advisories/GHSA-q3j6-qgpj-74h6,
+  https://github.com/advisories/GHSA-v39h-62p7-jpjc,
+  https://github.com/advisories/GHSA-4c8g-83qw-93j6,
+  https://github.com/advisories/GHSA-v2hh-gcrm-f6hx, and
+  https://github.com/advisories/GHSA-7p8r-x3mc-p8w7. Dependabot PR 18 changes only the v1 lock and
+  fails the intended generated-artifact freshness controls; it was not modified. D-017 and D-021
+  prohibit replacing published evaluator/evidence dependencies in place, so D-043 authorizes an
+  additive v2 successor instead of merging that partial update.
+- Branch `agent/r010-fast-uri-security-migration` was created from exact public-main commit
+  `7ae123429837067f135b0173226537cebf6a49da`. D-043 was the first file write. A complete pre-edit
+  v1 path/length/SHA-256 baseline was recorded, all 11 v1 files still match it exactly, and the
+  directory has zero Git difference from the public base.
+- The independent v2 generator and closed harness retain Ajv `8.20.0`, the Python lock, schema,
+  corpus, expectations, runner semantics, protected job IDs/names, triggers, permissions, pinned
+  actions, timeouts, pre-install verification order, and acquisition flags. It first verifies the
+  published v1 lock and runner SHA-256 values, then requires the complete v2 lock and both runners
+  to equal exact mechanically reviewed v1 transformations. The Node runner checks the complete
+  five-package installed inventory before dynamically importing Ajv. The v2 lock and guard require
+  `fast-uri@3.1.5`; verifier-owned evidence binds selected
+  fields transcribed from official npm registry metadata on 2026-08-20: the exact source URL,
+  registry tarball URL, SHA-512 integrity, registry shasum, BSD-3-Clause license, and absence of an
+  observed install script/engines field. It is not a raw response archive or runtime proof. The
+  workflow now runs v2 while ordinary generated-evidence CI checks both v1 and v2 independently.
+- Double generation was byte-identical. The v2 manifest SHA-256 is
+  `013a9704723cf8cdbde62007df74e5717477006fa87a7ff2ba1cdffd1a8a1d66`; the prepared receipt is
+  still `not_observed`. Focused compatibility tests passed 14/14; the full Patch suite passed 127
+  tests with five Windows privilege-dependent skips; evidence-control passed 22 tests with one
+  Windows privilege-dependent skip. All three registered engine workers and all three immutable
+  bundles passed. Both compatibility freshness checks, the bounded public-tree heuristic,
+  in-memory compilation of 24 Python files, `pip check`, closed-inventory checks, and
+  `git diff --check` passed. The exact historical frozen selector reproduced 99 native-order
+  `ls-tree` rows at SHA-256
+  `756910a774d9988a4f4e7bd0444b2ff84f83e7cdf2a92e605e5b4fd4b9df055f`; its complete worktree
+  pathspec set remains zero-difference.
+- No validator or tarball was downloaded, installed, imported, or executed locally; no npm command
+  ran and no `node_modules` exists. No commit, push, pull request, Dependabot mutation, merge,
+  release, tag, activation, contact, payment, account action, or unrelated external mutation has
+  occurred in R-010. Local static/synthetic results do not prove exploitation resistance,
+  isolation, hosted behavior, future availability, or production security/enforcement.
+- This is zero-unit urgent security/control maintenance. Totals remain 26 Patch impact / 13
+  Support revenue units and revenue remains `$0.00`. Every August 25, SEL, frozen/no-incident,
+  exclusive-selection, legal, terms, privacy, merchant, payment, and activation gate remains
+  unchanged.

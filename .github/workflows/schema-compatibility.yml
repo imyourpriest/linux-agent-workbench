@@ -26,7 +26,7 @@ jobs:
           python-version: "3.13"
       - name: Verify closed harness freshness and bindings
         run: >-
-          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py
+          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility_v2.py
           --project patch-cabinet
           --check
       - name: Acquire exact hash-locked Python distributions
@@ -34,10 +34,10 @@ jobs:
           python -m pip install
           --require-hashes
           --only-binary=:all:
-          -r patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/requirements.lock
+          -r patch-cabinet/interop/maintainer-policy-declaration/compatibility-v2/requirements.lock
       - name: Run Python structural adapter
         working-directory: patch-cabinet
-        run: python interop/maintainer-policy-declaration/compatibility-v1/python_runner.py --project .
+        run: python interop/maintainer-policy-declaration/compatibility-v2/python_runner.py --project .
 
   node-ajv:
     name: Node Ajv 8.20.0 structural compatibility
@@ -56,7 +56,7 @@ jobs:
           python-version: "3.13"
       - name: Verify closed harness freshness and bindings
         run: >-
-          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py
+          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility_v2.py
           --project patch-cabinet
           --check
       - name: Set up Node 24
@@ -69,7 +69,7 @@ jobs:
           python - <<'PY'
           import json
           from pathlib import Path
-          lock = json.loads(Path("patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/package-lock.json").read_text())
+          lock = json.loads(Path("patch-cabinet/interop/maintainer-policy-declaration/compatibility-v2/package-lock.json").read_text())
           for name, item in lock["packages"].items():
               if not name:
                   continue
@@ -79,8 +79,8 @@ jobs:
                   raise SystemExit(f"missing integrity: {name}")
           PY
       - name: Acquire exact Node dependencies without lifecycle scripts
-        working-directory: patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1
+        working-directory: patch-cabinet/interop/maintainer-policy-declaration/compatibility-v2
         run: npm ci --ignore-scripts --audit=false --fund=false
       - name: Run Node structural adapter
         working-directory: patch-cabinet
-        run: node interop/maintainer-policy-declaration/compatibility-v1/node_runner.mjs .
+        run: node interop/maintainer-policy-declaration/compatibility-v2/node_runner.mjs .
