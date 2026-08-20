@@ -394,3 +394,26 @@ Append-only project record.
   success would establish only the named configured structural outcome on its named commit/run,
   not attestation, authentication, semantics, provenance, freshness, privacy, isolation,
   standard adoption, source truth, permission, or production enforcement.
+
+## 2026-08-20 - R-005 hosted compatibility remediation cycle 1
+
+- The reviewed branch `agent/r009-policy-compatibility` was published at
+  `0ac9cd67dd8e9a91126ff1e407b054465659f4e1`, and draft PR 17 was created. The GitHub connector
+  first returned 403 `Resource not accessible by integration`; an authenticated read-only CLI
+  check verified zero existing head pull requests before the single authorized CLI fallback
+  created the draft.
+- On exact head `0ac9cd67dd8e9a91126ff1e407b054465659f4e1`, workflow run `32336332382` failed in Python job
+  `96326529034` and Node job `96326528729`. Both failures occurred in the closed-harness preflight,
+  after checkout and setup-python but before the exact locked validator-dependency installation
+  steps (`pip install --require-hashes` and `npm ci`) and before either structural-adapter step ran.
+  No hosted structural validator result or success is claimed; no claim is made that the runner
+  platform itself performed no network acquisition.
+- The package-style `python -B -m patch_cabinet.declaration_compatibility` invocation imported
+  `patch_cabinet.__init__` and `policy.py`, which required the not-yet-acquired `packaging`
+  dependency. The minimal remediation invokes the same project-owned standard-library checker by
+  its root-relative script path in both jobs, removes workflow `PYTHONPATH`, and adds regression
+  assertions for the exact two commands, pinned Python setup, and pre-acquisition ordering.
+- This is the first of at most two authorized hosted-failure remediation cycles. It adds no work
+  unit, hosted success, activation, adoption, customer, revenue, or production-enforcement claim;
+  revenue remains `$0.00`, and the third-party validator observations remain `not_observed` until
+  an exact hosted head/run succeeds.

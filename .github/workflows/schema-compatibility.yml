@@ -39,10 +39,8 @@ jobs:
         with:
           python-version: "3.13"
       - name: Verify closed harness freshness and bindings
-        env:
-          PYTHONPATH: patch-cabinet/src
         run: >-
-          python -B -m patch_cabinet.declaration_compatibility
+          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py
           --project patch-cabinet
           --check
       - name: Acquire exact hash-locked Python distributions
@@ -71,10 +69,8 @@ jobs:
         with:
           python-version: "3.13"
       - name: Verify closed harness freshness and bindings
-        env:
-          PYTHONPATH: patch-cabinet/src
         run: >-
-          python -B -m patch_cabinet.declaration_compatibility
+          python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py
           --project patch-cabinet
           --check
       - name: Set up Node 24

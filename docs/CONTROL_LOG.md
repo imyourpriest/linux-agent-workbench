@@ -923,3 +923,28 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   replay passed.
 - These are local structural and synthetic results, not hosted behavior, privacy, isolation, or
   production enforcement. Python `jsonschema` 4.26.0 and Node Ajv 8.20.0 remain unexecuted locally.
+
+## 2026-08-20 - Session 037 - R-005 hosted compatibility remediation cycle 1
+
+- The reviewed branch `agent/r009-policy-compatibility` was pushed at exact commit
+  `0ac9cd67dd8e9a91126ff1e407b054465659f4e1`. The GitHub connector returned 403
+  `Resource not accessible by integration`; authenticated read-only CLI verification then found
+  zero pull requests for the head, and the single authorized fallback created draft PR 17 with
+  maintainer edits disabled. This entry does not authorize another PR, branch, or activation.
+- Workflow run `32336332382` failed on that exact head. Python job `96326529034` and Node job
+  `96326528729` both stopped in their closed-harness step after checkout and setup-python but before
+  the exact locked validator-dependency installation steps (`pip install --require-hashes` and
+  `npm ci`) and before either structural-adapter step ran. No hosted structural validator result
+  or success is claimed; no claim is made that the runner platform itself performed no network
+  acquisition.
+- Root cause was package-style preflight execution: `python -B -m
+  patch_cabinet.declaration_compatibility` imported `patch_cabinet.__init__` and `policy.py`, which
+  required absent `packaging` before the workflow acquired its locked dependencies. The minimal
+  in-scope fix directly runs the project-owned standard-library checker at
+  `patch-cabinet/src/patch_cabinet/declaration_compatibility.py` from the repository root in both
+  jobs, with no workflow `PYTHONPATH`. Tests bind both exact commands, both setup-python pins, and
+  their ordering before `pip install` and `npm ci`.
+- This is remediation cycle 1 of at most two authorized cycles. It adds no Patch or Support unit,
+  hosted success, activation, release, candidate selection, customer/private input, payment, or
+  revenue; cumulative totals remain 26 impact / 13 revenue units and revenue remains `$0.00`.
+  All D-039/D-040 claim limits and future gates remain unchanged.

@@ -119,13 +119,24 @@ class DeclarationCompatibilityTests(unittest.TestCase):
 
     def test_each_hosted_job_preflights_the_closed_harness(self) -> None:
         workflow = (self.project.parent / ".github/workflows/schema-compatibility.yml").read_text()
-        command = "python -B -m patch_cabinet.declaration_compatibility"
+        command = (
+            "python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py\n"
+            "          --project patch-cabinet\n"
+            "          --check"
+        )
         self.assertEqual(workflow.count(command), 2)
-        self.assertEqual(workflow.count("PYTHONPATH: patch-cabinet/src"), 2)
-        self.assertEqual(workflow.count("actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97"), 2)
-        self.assertLess(workflow.index(command), workflow.index("python -m pip install"))
-        node_job = workflow.index("node-ajv:")
-        self.assertLess(workflow.index(command, node_job), workflow.index("npm ci", node_job))
+        self.assertNotIn("-m patch_cabinet.declaration_compatibility", workflow)
+        self.assertNotIn("PYTHONPATH", workflow)
+        setup_python = "actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97"
+        self.assertEqual(workflow.count(setup_python), 2)
+        python_job = workflow[workflow.index("python-jsonschema:"):workflow.index("node-ajv:")]
+        node_job = workflow[workflow.index("node-ajv:"):]
+        self.assertEqual(python_job.count(setup_python), 1)
+        self.assertEqual(node_job.count(setup_python), 1)
+        self.assertEqual(python_job.count(command), 1)
+        self.assertLess(python_job.index(command), python_job.index("python -m pip install"))
+        self.assertEqual(node_job.count(command), 1)
+        self.assertLess(node_job.index(command), node_job.index("npm ci"))
 
 
 if __name__ == "__main__":
