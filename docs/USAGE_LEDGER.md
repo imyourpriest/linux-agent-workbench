@@ -331,3 +331,24 @@ R-010 adds zero Patch and zero Support units. Cumulative dedicated totals remain
 and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No candidate, release, tag,
 form, offer, contact, analytics, customer/private input, checkout, payment, account, merchant, tax,
 XLM, or other activation occurred.
+
+#### R-010 Dependabot alert-scope control - 2026-08-20
+
+- D-043's additive compatibility-v2 migration was protected-squash-merged at public-main commit
+  `7dafa1b4fcaceca59912265ccf03c9ac6de785a4`; its exact post-main compatibility, CI, and CodeQL
+  jobs passed. D-044 is documentation-only governance for five exact `not_used` Dependabot
+  dismissals after its own review, protected merge, and post-main checks. A dismissal is an
+  auditable and reopenable scope classification, not removal or repair of the immutable v1 bytes.
+- No new Usage snapshot was taken. The last sponsor report remains 67% whole-account Usage and the
+  sponsor's current hard floor remains 35%. No amount or delta is attributed to this repository,
+  cycle, workstream, unit, agent, tool, test, hosted run, merge, alert, or action; no per-unit usage
+  is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-20 | Shared security/control maintenance | 0 | D-043 merge receipt and D-044 five-alert `not_used` scope prepared locally; no dismissal yet | no new snapshot; last sponsor report 67% whole-account, hard 35% floor, no attribution |
+
+This control adds zero Patch and zero Support units. Cumulative dedicated totals remain exactly
+twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No alert
+has yet been dismissed by D-044, and no candidate, release, tag, form, offer, contact, analytics,
+customer/private input, checkout, payment, account, merchant, tax, XLM, or activation occurred.

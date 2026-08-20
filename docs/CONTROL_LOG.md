@@ -1098,3 +1098,75 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   Support revenue units and revenue remains `$0.00`. Every August 25, SEL, frozen/no-incident,
   exclusive-selection, legal, terms, privacy, merchant, payment, and activation gate remains
   unchanged.
+
+## 2026-08-20 - Session 042 - D-043 merge and D-044 alert-scope pre-action
+
+- PR 21 exact reviewed head `1247290585d41250841fe209435d18e59eb9ed8f` passed every required
+  check. It was protected-squash-merged at `2026-08-20T08:14:11Z` to public-main commit
+  `7dafa1b4fcaceca59912265ccf03c9ac6de785a4`, with sole parent
+  `7ae123429837067f135b0173226537cebf6a49da`. The merge tree exactly matches the reviewed tree
+  `2c1f3b2572ef402dea0a634ca90b468f06d864f1`. The retained feature branch remains at the reviewed
+  head. Main protection retained the exact nine GitHub-Actions-app-bound contexts with strict
+  checks, admin enforcement, linear history, conversation resolution, and force-push/deletion
+  protections unchanged.
+- Post-main compatibility run `32347805738` passed on the exact merge commit: Node Ajv 8.20.0 job
+  `96360178242` and Python jsonschema 4.26.0 job `96360178491` succeeded. CI run `32347805717`
+  passed Python 3.12 job `96360178358`, Python 3.14 job `96360178463`, generated-evidence job
+  `96360178467`, Python 3.13 job `96360178478`, and Windows release-readiness job `96360178614`.
+  CodeQL run `32347805618` passed actions job `96360182424`, JavaScript/TypeScript job
+  `96360182512`, and Python job `96360182533`. These are exact hosted observations of the named
+  configured jobs, not broad production-security, exploitation-resistance, isolation, semantic-
+  correctness, future-availability, or production-enforcement proof.
+- Static inspection at exact public main shows active compatibility Python/Node acquisition and
+  structural adapters route only to `compatibility-v2`; its locked inventory uses Ajv `8.20.0`
+  and `fast-uri@3.1.5`. No active workflow, Python package, or release path npm-installs, imports,
+  or executes the compatibility-v1 Node dependency tree or v1 structural adapters. Ordinary CI
+  does execute the first-party standard-library v1 freshness/binding checker, which reads and
+  strict-validates v1 contracts, locks, manifests, receipts, and runner bytes as inert data without
+  installing, importing, or executing the v1 adapters or `fast-uri`. The v2 generator separately
+  reads exact SHA-bound v1 lock and runner bytes as data for exact-transform checks. This does not
+  claim a manual user or future change can never run v1.
+- Two bounded post-merge alert refreshes found Dependabot alerts 1
+  (`GHSA-4c8g-83qw-93j6`), 2 (`GHSA-v2hh-gcrm-f6hx`), 3 (`GHSA-7p8r-x3mc-p8w7`), 4
+  (`GHSA-v39h-62p7-jpjc`), and 5 (`GHSA-q3j6-qgpj-74h6`) still `open`, not fixed or dismissed,
+  and all bound to
+  `patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/package-lock.json`.
+  D-044 prospectively permits only five individual `not_used` dismissals with its exact
+  substantive comment, and only after the documentation-only PR's exact-head review, required
+  checks, protected squash merge, and successful post-main checks. It prohibits bulk mutation,
+  `fixed`/`inaccurate` reasons, Dependabot/configuration changes, and mutation of any other alert.
+- Branch `agent/r010-dependabot-alert-scope` was created from freshly fetched `origin/main` at exact
+  commit `7dafa1b4fcaceca59912265ccf03c9ac6de785a4` and exact tree
+  `2c1f3b2572ef402dea0a634ca90b468f06d864f1`, after a clean worktree and no-tag check. D-044 was
+  the mandatory first file write. Write ownership is exactly three append-only documents:
+  `docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`. No alert, pull request,
+  repository setting, workflow, code, v1/v2 artifact, generated path, commit, push, tag, release,
+  activation, payment, contact, or other external state is changed in this local pre-action cycle.
+- D-044 requires reopening affected alerts and fresh security review before merging any future
+  change that causes an active project workflow, package, release, or automated execution path to
+  install, import, or execute the v1 Node dependency tree or adapters. A dismissal remains
+  auditable and reopenable and hides a record only from the default open-alert view; it does not
+  remove the vulnerable bytes. The eventual D-044 merge and five read-backs are non-recursive and
+  belong in the next ordinary control cycle, with no receipt pull request.
+- Local evidence-control tests passed 22 tests with one Windows privilege-dependent symlink skip;
+  all three registered evidence engines replayed successfully. Both v1 and v2 compatibility
+  freshness checks passed with manifest SHA-256 values
+  `9e016ab3a1c19c90434d838ded04ddde0cc440759f7ff10eb012ad4b541e69f6` and
+  `013a9704723cf8cdbde62007df74e5717477006fa87a7ff2ba1cdffd1a8a1d66`. The public-tree heuristic,
+  exact append-only prefix checks, exact three-path scope check, exact dismissal-comment binding,
+  `git diff --check`, and v1/v2 zero-difference checks passed. The historical frozen selector
+  reproduced 99 native-order rows at SHA-256
+  `756910a774d9988a4f4e7bd0444b2ff84f83e7cdf2a92e605e5b4fd4b9df055f`, with zero working-tree
+  or staged difference over that complete pathspec set. The exact failed command was
+  `python -m patch_cabinet.declaration_compatibility --project . --check`, run from
+  `patch-cabinet`; its exact observed error was
+  `C:\Users\IYP\AppData\Local\Programs\Python\Python313\python.exe: No module named patch_cabinet.declaration_compatibility`.
+  No artifact changed. The exact successful direct
+  commands from the repository root were
+  `python -B patch-cabinet/src/patch_cabinet/declaration_compatibility.py --project patch-cabinet --check`
+  and
+  `python -B patch-cabinet/src/patch_cabinet/declaration_compatibility_v2.py --project patch-cabinet --check`.
+  These local static/synthetic checks do not establish hosted or production behavior.
+- This is zero-unit security/control maintenance. Totals remain 26 Patch impact / 13 Support
+  revenue units and `$0.00`; all SEL, August 25, frozen/no-incident, selection, legal, privacy,
+  merchant, payment, and activation gates remain unchanged.
