@@ -2,22 +2,8 @@ name: Declaration schema compatibility
 
 on:
   pull_request:
-    paths:
-      - ".github/workflows/schema-compatibility.yml"
-      - "patch-cabinet/src/patch_cabinet/declaration_compatibility.py"
-      - "patch-cabinet/tests/test_declaration_compatibility.py"
-      - "patch-cabinet/interop/maintainer-policy-declaration/v1/schema.json"
-      - "patch-cabinet/interop/maintainer-policy-declaration/v1/corpus.json"
-      - "patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/**"
   push:
     branches: [main]
-    paths:
-      - ".github/workflows/schema-compatibility.yml"
-      - "patch-cabinet/src/patch_cabinet/declaration_compatibility.py"
-      - "patch-cabinet/tests/test_declaration_compatibility.py"
-      - "patch-cabinet/interop/maintainer-policy-declaration/v1/schema.json"
-      - "patch-cabinet/interop/maintainer-policy-declaration/v1/corpus.json"
-      - "patch-cabinet/interop/maintainer-policy-declaration/compatibility-v1/**"
 
 permissions:
   contents: read
