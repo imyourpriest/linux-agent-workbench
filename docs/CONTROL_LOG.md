@@ -1170,3 +1170,54 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - This is zero-unit security/control maintenance. Totals remain 26 Patch impact / 13 Support
   revenue units and `$0.00`; all SEL, August 25, frozen/no-incident, selection, legal, privacy,
   merchant, payment, and activation gates remain unchanged.
+
+## 2026-08-20 - Session 043 - D-044 merge, failed dismissal, and D-045 pre-action
+
+- D-044 documentation-only PR 22 exact head was
+  `03e629045106f9f83e455887e8adc7944c1c3875`; its exact three-path fingerprint was
+  `eafafa72c902dd2fda8b9914dfacc8072cf0011705af55b977e0f57bad9d107a`. All 11 pull-request
+  checks passed. PR 22 was protected-squash-merged at `2026-08-20T08:41:46Z` to public-main
+  commit `9a809d9ca68ae70225799dcbe871d189c12b2b34`, whose sole parent was
+  `7dafa1b4fcaceca59912265ccf03c9ac6de785a4` and whose tree exactly matched the reviewed tree
+  `1fb49c1b03cdf6a1215fd7b3851acfcb9e7407df`. The feature branch was retained and main protection
+  remained the exact nine GitHub-Actions-app-bound contexts with strict checks, admin enforcement,
+  linear history, conversation resolution, and force-push/deletion protections unchanged.
+- Post-main compatibility run `32350091644` passed Node job `96367160090` and Python job
+  `96367160587`. CI run `32350091532` passed generated-evidence job `96367159796`, Python 3.13 job
+  `96367159863`, Windows job `96367159970`, Python 3.12 job `96367160003`, and Python 3.14 job
+  `96367160021`. CodeQL run `32350091127` passed JavaScript/TypeScript job `96367163027`, actions
+  job `96367163028`, and Python job `96367163234`. These named hosted observations do not prove
+  broad production security, exploitation resistance, isolation, semantic correctness, future
+  availability, or production enforcement.
+- Immediately before the authorized alert sequence, public main, PR/post-main checks, protection,
+  and the complete alert inventory matched D-044. Alert 1's individual precheck matched its exact
+  number, `GHSA-4c8g-83qw-93j6`, `fast-uri`, v1 lock path, open state, and null dismissal/fix
+  fields. Its PATCH was rejected with HTTP 422 and the exact error
+  `Invalid request. Invalid property /dismissed_comment: Only 280 characters are allowed; 745 were supplied.`
+  Alert 1 remained open/null, alerts 2 through 5 were never attempted, all five alerts remained
+  open, and the dismissed-alert count remained zero. No rollback or retry occurred and no other
+  alert, file, branch, PR, protection, configuration, setting, or external state changed.
+- D-045 corrects only the impossible dismissal-comment constraint. Its replacement is bound at
+  exactly 274 characters/UTF-8 bytes and remains within the observed 280-character API limit. All
+  D-044 mappings, `not_used` reason, sequencing, active-v2/inactive-v1-Node boundary,
+  standard-library/manual distinction, future-reopen rule, exact read-backs, and no-broader-
+  mutation controls remain unchanged. No dismissal retry has occurred.
+- Branch `agent/r010-alert-comment-limit` was created from freshly fetched `origin/main` at exact
+  commit `9a809d9ca68ae70225799dcbe871d189c12b2b34` and tree
+  `1fb49c1b03cdf6a1215fd7b3851acfcb9e7407df`, after clean-worktree and no-tag checks. D-045 was
+  the mandatory first file write. Ownership is exactly three append-only documents:
+  `docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`. This local pre-action
+  cycle changes no alert, dependency, workflow, code, v1/v2 artifact, generated path, commit,
+  push, pull request, setting, tag, release, activation, payment, contact, or other external state.
+- Local evidence-control tests passed 22 tests with one Windows privilege-dependent symlink skip;
+  all three registered evidence engines replayed successfully. Direct v1/v2 freshness checks
+  passed with manifest SHA-256 values
+  `9e016ab3a1c19c90434d838ded04ddde0cc440759f7ff10eb012ad4b541e69f6` and
+  `013a9704723cf8cdbde62007df74e5717477006fa87a7ff2ba1cdffd1a8a1d66`. Exact 274-character and
+  UTF-8-byte comment binding, append-only prefix, exact three-path scope, public-tree heuristic,
+  frozen-selector, v1/v2 zero-difference, and `git diff --check` checks passed. These local
+  static/synthetic results do not establish hosted behavior or production enforcement.
+- This is zero-unit security/control maintenance. Totals remain 26 Patch impact / 13 Support
+  revenue units and `$0.00`; all SEL, August 25, frozen/no-incident, selection, legal, privacy,
+  merchant, payment, and activation gates remain unchanged. The eventual D-045 merge and alert
+  read-backs are non-recursive and belong in the next ordinary control cycle, not a receipt PR.
