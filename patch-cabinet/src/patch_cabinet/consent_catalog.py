@@ -248,6 +248,10 @@ def _parse_date(value: object, field: str) -> date:
     return parsed
 
 
+def _utc_today() -> date:
+    return datetime.now(timezone.utc).date()
+
+
 def _plain_text(value: object, field: str) -> str:
     if type(value) is not str or not value.strip() or len(value) > MAX_NOTE_CHARS:
         raise ValueError(f"{field} must be a nonempty bounded string")
@@ -324,7 +328,8 @@ def _parse_record(record: dict[str, Any]) -> ConsentRecord:
     reviewed_at = _parse_date(record["reviewed_at"], "reviewed_at")
     if reviewed_at < observed_at:
         raise ValueError("reviewed_at cannot precede observed_at")
-    if observed_at > date.today() or reviewed_at > date.today():
+    utc_today = _utc_today()
+    if observed_at > utc_today or reviewed_at > utc_today:
         raise ValueError("observation and review dates cannot be in the future")
     if record["reviewer_basis"] != "manual_pinned_text_review":
         raise ValueError("reviewer_basis must disclose manual pinned-text review")
@@ -550,7 +555,7 @@ def load_acquisition_receipt(
 
 
 def build_index(records: list[ConsentRecord], *, as_of: date) -> dict[str, object]:
-    if as_of > date.today():
+    if as_of > _utc_today():
         raise ValueError("as_of cannot be in the future")
     if any(as_of < item.observed_at or as_of < item.reviewed_at for item in records):
         raise ValueError("as_of cannot precede an observation or review date")

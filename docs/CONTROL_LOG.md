@@ -1221,3 +1221,93 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   revenue units and `$0.00`; all SEL, August 25, frozen/no-incident, selection, legal, privacy,
   merchant, payment, and activation gates remain unchanged. The eventual D-045 merge and alert
   read-backs are non-recursive and belong in the next ordinary control cycle, not a receipt PR.
+
+## 2026-08-22 - Session 044 - D-045 closeout and R-011 local batch
+
+- Verified public main at `7c7336ddba9d16dfc57f75481fd39ecb85d685e9`, cloned without tags into a
+  separate writable worktree, confirmed clean status and no tags, and created
+  `agent/r011-policy-scan-alternatives` from exact `origin/main`. The unsafe OneDrive checkout was
+  not modified. D-046 was the mandatory first project edit and prospectively selected exactly two
+  Patch impact units and one Support revenue-validation unit.
+- Closed D-045 non-recursively. PR 23 reviewed exact head
+  `a998e03742383d6bf694a24cbd84d0affd5df91f` and tree
+  `e56be17cfe5bd3f6fb5a541f144b5ff679d10e44`; protected squash merge
+  `7c7336ddba9d16dfc57f75481fd39ecb85d685e9` has sole parent
+  `9a809d9ca68ae70225799dcbe871d189c12b2b34` and the same tree. Exact-head compatibility run
+  `32550834192` passed Node job `96977170805` and Python job `96977170892`; CI run `32550834257`
+  passed Windows `96977171145`, generated evidence `96977171231`, Python 3.14 `96977171243`,
+  Python 3.13 `96977171291`, and Python 3.12 `96977171347`; CodeQL run `32550832464` passed
+  actions `96977168497`, JavaScript/TypeScript `96977168640`, and Python `96977168659`.
+- Post-main compatibility run `32550916474` passed Python `96977369317` and Node `96977369418`;
+  CI run `32550916485` passed Python 3.13 `96977369364`, Python 3.12 `96977369487`, generated
+  evidence `96977369488`, Python 3.14 `96977369490`, and Windows `96977369492`; CodeQL run
+  `32550916360` passed actions `96977370466`, Python `96977370586`, and JavaScript/TypeScript
+  `96977370596`. The exact nine required contexts and protection controls were unchanged, and
+  branch `agent/r010-alert-comment-limit` was retained.
+- Alerts 1 through 5 were individually dismissed `not_used` with D-045's exact 274-character
+  comment at `2026-08-22T04:10:48Z`, `04:10:50Z`, `04:10:51Z`, `04:10:53Z`, and `04:10:54Z`,
+  respectively, by `imyourpriest`. Final total/open/dismissed/fixed was `5/0/5/0`; every
+  `fixed_at` remained null. Dismissal is not a fix and every affected alert must be reopened before
+  any active v1 Node path is merged. Named hosted successes prove only their configured outcomes
+  on the exact commits, runs, and jobs, not semantic correctness, provenance, isolation,
+  exploitation resistance, future availability, or production enforcement.
+- R-011 recorded a no-ready public-source candidate scan, two new pinned historical consent/profile
+  pairs with a separate acquisition receipt, regenerated current and historical catalog views,
+  and one pinned alternatives review. An initial generation attempt failed without writing outputs
+  because host-local `date.today()` treated the valid `2026-08-22` UTC observation as future.
+  D-046 was expanded before production-code change to own a narrow UTC-current-date correction and
+  deterministic tests; generation then succeeded. No other date/freshness semantics changed.
+- Local Patch tests passed 129 with five Windows privilege-dependent skips; Support tests passed 84
+  with five such skips; evidence-control tests passed 22 with one such skip. All three registered
+  engines replayed, evidence inventory and public-tree heuristic checks passed, six generated
+  catalog outputs were byte-identical on regeneration, two modified modules compiled in memory,
+  and `git diff --check` passed. A mixed focused command first produced one evidence isolation-test
+  failure because `PYTHONPATH=patch-cabinet/src` contaminated that subprocess; the clean no-
+  `PYTHONPATH` evidence run passed. A later PowerShell verification conditional falsely reported a
+  compatibility-tree change because it treated quiet command output rather than `$LASTEXITCODE` as
+  a Boolean; direct name/status inspection showed no compatibility-v1/v2 diff.
+- This cycle remains local only so far: no commit, push, pull request, merge, issue, alert change,
+  protection/settings change, tag, release, activation, contact, customer/private input, checkout,
+  payment, account, merchant, tax, subscription, wallet, or XLM action occurred. Totals are now 28
+  Patch impact / 14 Support revenue units; revenue and cleared receipts remain `$0.00`.
+- The sponsor reported a reset and requested never going below 35%, but no exact signed-in numeric
+  Usage value was independently observed. The stricter ordinary stop remains 40%, with no long or
+  multi-agent unit started below 50%; no amount or delta is attributed to this repository, cycle,
+  workstream, unit, agent, tool, test, or action.
+
+## 2026-08-22 - Session 045 - D-047 independent-review remediation
+
+- Independent review found that D-046 was the first project edit and was expanded in place before
+  the UTC production-code correction, but the initial exact text/fingerprint was not preserved.
+  Static review cannot audit that chronology. D-047 prospectively binds the complete reviewed
+  24-path baseline at public main `7c7336ddba9d16dfc57f75481fd39ecb85d685e9` with fingerprint
+  `5b1a9539cb7339b018b1e56ea51e00847e7d51571cb0d86d393039ad6e8057a3` and becomes the publication
+  basis. D-047 was the first remediation edit.
+- Added direct `build_index` regression coverage: an as-of value equal to patched UTC today is
+  accepted, while UTC tomorrow is rejected as future. Production date/freshness behavior did not
+  expand. Added fail-closed inventory enforcement requiring every exact hash-allowlisted standalone
+  narrative to exist, with deletion coverage for each allowlisted name while retaining digest,
+  orphan, and capacity controls.
+- Revised only the 2026-08-22 no-ready narrative to cite the exact examined rclone issue and
+  competing-pull-request links plus bounded GSD-2 and OpenEverest issue-list near-misses and their
+  failed gates. The result is only that this bounded scan advanced no issue to scoring and
+  identified no ready candidate; it does not claim an exhaustive search or that no qualifying
+  issue exists elsewhere. The revised narrative SHA-256 is
+  `3aeac82004020a707b6dae1e09a9002fd8e3de3d8232dba8bf819eee5b600cea` and the allowlist binds it.
+- Clarified the acquisition boundary: public policy-source bytes for the historical consent
+  catalog were acquired through the GitHub Contents API and bound by the separate receipt. No
+  candidate repository was cloned or acquired for candidate work, no candidate or third-party
+  code was executed, and no upstream contact or mutation occurred.
+- Focused consent tests passed 19 with one Windows privilege-dependent symlink skip. Focused
+  evidence-control tests passed 23 with one such skip; all three registered replay engines passed
+  and all three immutable candidate bundles verified. The full Patch suite passed 130 tests with
+  five privilege-dependent skips. Six catalog outputs were byte-identical on regeneration; the
+  public-tree heuristic, in-memory compilation of both modified modules, `git diff --check`, exact
+  no-tag check, and frozen compatibility, Revenue Lab, and Support-artifact path checks passed.
+  These local/static results do not prove hosted behavior, source authenticity, semantic
+  permission, privacy, isolation, production enforcement, or future candidate readiness.
+- This is zero-unit review remediation. Totals remain 28 Patch impact / 14 Support revenue units
+  and `$0.00`. No commit, push, pull request, issue, release, form, listing, activation, contact,
+  customer/private input, payment, account, setting, protection, alert, tag, wallet, XLM, or other
+  external state changed. Every Usage, SEL, legal, privacy, merchant/payment, exact-action, and
+  guarded-publication gate remains.

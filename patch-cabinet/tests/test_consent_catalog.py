@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from datetime import date, datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 from patch_cabinet import consent_catalog
 
@@ -83,11 +84,13 @@ class ConsentCatalogTests(unittest.TestCase):
     def test_repository_catalog_has_expected_conservative_counts(self) -> None:
         project = Path(__file__).resolve().parents[1]
         loaded = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 13))
-        self.assertEqual(report["summary"]["records"], 10)
-        self.assertEqual(report["summary"]["explicitly_allows"], 0)
+        report = consent_catalog.build_index(loaded, as_of=date(2026, 8, 22))
+        self.assertEqual(report["summary"]["records"], 12)
+        self.assertEqual(report["summary"]["explicitly_allows"], 1)
         self.assertEqual(report["summary"]["explicitly_disallows"], 4)
-        self.assertEqual(report["summary"]["insufficiently_explicit"], 6)
+        self.assertEqual(report["summary"]["insufficiently_explicit"], 7)
+        self.assertEqual(report["summary"]["current_for_7_day_candidate_window"], 2)
+        self.assertEqual(report["summary"]["stale"], 10)
 
     def test_strict_json_rejects_duplicate_nonstandard_and_numeric_values(self) -> None:
         valid = json.dumps(self._record())
@@ -125,6 +128,28 @@ class ConsentCatalogTests(unittest.TestCase):
                 transform(value)
                 with self.assertRaises(ValueError):
                     consent_catalog._parse_record(value)
+
+    def test_utc_observation_date_is_not_rejected_by_prior_local_date(self) -> None:
+        record = self._record(observed="2026-08-22")
+        with patch.object(consent_catalog, "_utc_today", return_value=date(2026, 8, 22)):
+            parsed = consent_catalog._parse_record(record)
+        self.assertEqual(parsed.observed_at, date(2026, 8, 22))
+
+    def test_utc_today_uses_timezone_aware_utc_now(self) -> None:
+        instant = datetime(2026, 8, 22, 0, 30, tzinfo=timezone.utc)
+        with patch.object(consent_catalog, "datetime") as clock:
+            clock.now.return_value = instant
+            self.assertEqual(consent_catalog._utc_today(), date(2026, 8, 22))
+            clock.now.assert_called_once_with(timezone.utc)
+
+    def test_build_index_accepts_utc_today_and_rejects_utc_tomorrow(self) -> None:
+        self._write(self._record(observed="2026-08-22"))
+        records = consent_catalog.load_catalog(self.records)
+        with patch.object(consent_catalog, "_utc_today", return_value=date(2026, 8, 22)):
+            report = consent_catalog.build_index(records, as_of=date(2026, 8, 22))
+            self.assertEqual(report["as_of"], "2026-08-22")
+            with self.assertRaisesRegex(ValueError, "as_of cannot be in the future"):
+                consent_catalog.build_index(records, as_of=date(2026, 8, 23))
 
     def test_policy_url_rejects_wrong_scope_and_noncanonical_paths(self) -> None:
         record = self._record()
@@ -239,7 +264,7 @@ class ConsentCatalogTests(unittest.TestCase):
     def test_acquisition_receipts_bind_every_catalog_record(self) -> None:
         project = Path(__file__).resolve().parents[1]
         records = consent_catalog.load_catalog(project / "data" / "consent-catalog" / "v1")
-        now_utc = datetime(2026, 8, 13, 16, 0, 0, tzinfo=timezone.utc)
+        now_utc = datetime(2026, 8, 22, 5, 0, 0, tzinfo=timezone.utc)
         receipt = consent_catalog.load_acquisition_receipt(
             project / "data" / "consent-catalog" / "ACQUISITION_RECEIPT.json",
             records,
@@ -301,6 +326,15 @@ class ConsentCatalogTests(unittest.TestCase):
         self.assertEqual(len(r004_receipt["sources"]), 5)
         self.assertIn("not a signature", r004_receipt["claim_boundary"])
         source_ids.extend(item["record_id"] for item in r004_receipt["sources"])
+        r011_receipt = consent_catalog.load_acquisition_receipt(
+            project / "data" / "consent-catalog" / "R011_SOURCE_ACQUISITION_RECEIPT.json",
+            records,
+            now_utc=now_utc,
+        )
+        self.assertEqual(len(r011_receipt["sources"]), 2)
+        self.assertEqual(r011_receipt["retrieved_at"], "2026-08-22T04:38:10Z")
+        self.assertIn("not a signature", r011_receipt["claim_boundary"])
+        source_ids.extend(item["record_id"] for item in r011_receipt["sources"])
         self.assertEqual(len(source_ids), len(set(source_ids)))
         self.assertEqual(set(source_ids), {record.record_id for record in records})
 

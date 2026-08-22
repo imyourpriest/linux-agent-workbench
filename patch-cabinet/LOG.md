@@ -478,3 +478,62 @@ Append-only project record.
   establish exploitation resistance, isolation, hosted behavior, future availability, or
   production security/enforcement. This correction adds no work unit, activation, customer,
   payment, or revenue; totals remain 26 impact / 13 revenue and `$0.00`.
+
+## 2026-08-22 - R-011 fail-closed scan and historical policy records
+
+- A fresh bounded public-read-only scan considered four public candidates and found no ready
+  candidate. Zero matched the private operator-exclusion list; its entries remain undisclosed.
+  Rclone had policy evidence but no qualifying small issue; GSD-2 explicitly allowed an AI
+  pull-request workflow but had no qualifying small issue; creator-toolkit-cli retained issue 18
+  without explicit policy for the planned workflow; and OpenEverest had policy evidence without a
+  qualifying small issue. Rclone near-misses were assigned, had competing work, or were sensitive.
+  No acquisition, clone, third-party execution, contact, selection, or upstream mutation occurred.
+- Added two immutable historical consent/profile pairs from exact public `CONTRIBUTING.md` bytes:
+  rclone/rclone at `64ab1ac32260238eefca3c61327f5faf1c6e106f` is
+  `insufficiently_explicit`; gsd-build/gsd-2 at
+  `33c00aaffa56e5d394bccce1c8df59fb842e84c5` is `explicitly_allows`. A separate two-source
+  receipt binds the API URLs, Git blob SHA-1 values, byte counts, SHA-256 values, and retrieval
+  time. The records are historical policy evidence only, never candidate eligibility, contact
+  authority, or submission authority.
+- The current consent index is regenerated as of `2026-08-22`: 12 records, 2 current, 10 stale,
+  1 explicitly allows, 4 explicitly disallow, and 7 are insufficiently explicit. The manual
+  profile index contains 12 records. The intentionally historical `2026-08-13` snapshot remains
+  on that date and reports 10 fresh, 0 stale, and 2 unknown later records.
+- The catalog now evaluates future-date rejection against UTC rather than the operator host's
+  local date, preventing a valid next-UTC-day observation from being rejected while preserving
+  all other date and freshness semantics. Deterministic tests bind the UTC clock use and boundary.
+- Local Patch tests passed 129 tests with five Windows privilege-dependent link skips. Evidence-
+  control tests passed 22 tests with one such skip; all three registered engines replayed, the
+  evidence inventory and public-tree heuristic passed, generated catalog outputs were byte-stable
+  on regeneration, two modified Python modules compiled in memory, and `git diff --check` passed.
+  One earlier mixed test command inherited `PYTHONPATH=patch-cabinet/src`, causing one evidence-
+  engine isolation assertion to fail because a dependency loaded outside its wheel; rerunning the
+  evidence tests without that contaminating environment passed 22/22 except the privilege skip.
+- These are exactly two Patch impact units. Static/local tests establish bounded structural and
+  deterministic behavior only, not source authenticity, semantic permission, production
+  enforcement, or future candidate readiness.
+
+## 2026-08-22 - R-011 independent-review correction
+
+- D-046 was the first project edit and was expanded before the UTC production-code change, but its
+  initial exact text/fingerprint was not retained; static review cannot audit that chronology.
+  D-047 prospectively binds the independently reviewed 24-path baseline and is the publication
+  basis.
+- The prior broad `no acquisition` wording is superseded only as follows: public policy-source
+  bytes for the historical consent catalog were acquired through the GitHub Contents API and bound
+  by the separate receipt. No candidate repository was cloned or acquired for candidate work, no
+  candidate or third-party code was executed, and no upstream contact or mutation occurred.
+- The no-ready narrative now links the exact examined rclone issues and competing pull requests
+  and bounded GSD-2/OpenEverest issue-list near-misses. It establishes only that this bounded scan
+  advanced no examined issue to scoring and identified no ready candidate, not that no qualifying
+  issue exists or that the search was exhaustive. Its exact SHA-256 is
+  `3aeac82004020a707b6dae1e09a9002fd8e3de3d8232dba8bf819eee5b600cea`.
+- Standalone evidence checking now fails if either allowlisted narrative is absent, not only when
+  a present narrative has the wrong digest. Direct UTC index tests cover today acceptance and
+  tomorrow rejection. Focused consent tests passed 19 with one privilege skip; evidence-control
+  passed 23 with one skip and all three engines/bundles replayed; the full Patch suite passed 130
+  with five skips. Deterministic catalog regeneration, public-tree review, compilation, diff,
+  no-tag, and frozen-tree checks passed. These are local structural results only.
+- This is remediation of the already counted two Patch units, not another unit, candidate,
+  permission, activation, contact, submission, or external action. Totals remain 28 Patch impact /
+  14 Support revenue units and `$0.00`.

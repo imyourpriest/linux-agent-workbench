@@ -132,7 +132,7 @@ jobs:
         run: >-
           python -m patch_cabinet.consent_catalog
           data/consent-catalog/v1
-          --as-of 2026-08-13
+          --as-of 2026-08-22
           --markdown-out samples/consent-catalog-index.md
           --json-out samples/consent-catalog-index.json
 

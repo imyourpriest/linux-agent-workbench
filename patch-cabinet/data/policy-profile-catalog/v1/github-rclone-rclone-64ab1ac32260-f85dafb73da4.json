@@ -1,0 +1,23 @@
+{
+  "schema_version": "1",
+  "profile_id": "github-rclone-rclone-64ab1ac32260-f85dafb73da4",
+  "consent_record_id": "github-rclone-rclone-64ab1ac32260-f85dafb73da4",
+  "repository": "rclone/rclone",
+  "commit_sha": "64ab1ac32260238eefca3c61327f5faf1c6e106f",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "f85dafb73da4a3886e2b54310beee6508ae14d9c63897f84ceb9bf975b82de92",
+  "dimensions": {
+    "autonomous_issue_submission": "not_explicit",
+    "autonomous_pr_submission": "not_explicit",
+    "human_review": "required",
+    "disclosure": "not_explicit",
+    "human_accountability": "required",
+    "license_ip_checks": "not_explicit",
+    "good_first_issue_automation": "not_explicit",
+    "security_report_automation": "not_explicit"
+  },
+  "semantic_review": "manual",
+  "reviewer_basis": "manual_pinned_text_normalization",
+  "supersedes": null,
+  "notes": "The pinned policy welcomes named AI coding assistants as writing help, while requiring the human submitter to understand, build, and test the contribution."
+}
