@@ -28,13 +28,13 @@ class PolicyProfileSnapshotTests(unittest.TestCase):
         first = self.snapshot(date(2026, 8, 13))
         second = self.snapshot(date(2026, 8, 13))
         self.assertEqual(first, second)
-        self.assertEqual(first["summary"]["matched_profiles"], 10)
+        self.assertEqual(first["summary"]["matched_profiles"], 12)
         self.assertIn("not trust", first["claim_boundary"])
         self.assertNotIn("score", json.dumps(first).casefold())
 
     def test_seven_day_window_labels_fresh_stale_and_unknown(self) -> None:
         current = self.snapshot(date(2026, 8, 13))
-        self.assertEqual(current["summary"]["freshness"], {"fresh": 10, "stale": 0, "unknown": 0})
+        self.assertEqual(current["summary"]["freshness"], {"fresh": 10, "stale": 0, "unknown": 2})
         stale = self.snapshot(date(2026, 8, 21))
         self.assertGreater(stale["summary"]["freshness"]["stale"], 0)
         unknown = self.snapshot(date(2026, 8, 7))

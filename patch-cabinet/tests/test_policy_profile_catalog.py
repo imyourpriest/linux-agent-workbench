@@ -112,12 +112,12 @@ class PolicyProfileCatalogTests(unittest.TestCase):
         self.assertIn("no automatic prose interpretation", first["claim_boundary"])
         self.assertNotRegex(json.dumps(first), r'"(?:eligible|ready|authorized)"')
 
-    def test_repository_profiles_bind_all_ten_consent_records(self) -> None:
+    def test_repository_profiles_bind_all_twelve_consent_records(self) -> None:
         project = Path(__file__).resolve().parents[1]
         consent_dir = project / "data" / "consent-catalog" / "v1"
         profile_dir = project / "data" / "policy-profile-catalog" / "v1"
         loaded = policy_profile_catalog.load_profiles(profile_dir, consent_dir)
-        self.assertEqual(len(loaded), 10)
+        self.assertEqual(len(loaded), 12)
         self.assertEqual(
             {item.consent_record_id for item in loaded},
             {item.record_id for item in consent_catalog.load_catalog(consent_dir)},

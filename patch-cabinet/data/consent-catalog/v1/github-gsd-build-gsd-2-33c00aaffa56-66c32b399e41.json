@@ -1,0 +1,18 @@
+{
+  "schema_version": "1",
+  "record_id": "github-gsd-build-gsd-2-33c00aaffa56-66c32b399e41",
+  "repository": "gsd-build/gsd-2",
+  "repository_url": "https://github.com/gsd-build/gsd-2",
+  "commit_sha": "33c00aaffa56e5d394bccce1c8df59fb842e84c5",
+  "policy_source_url": "https://github.com/gsd-build/gsd-2/blob/33c00aaffa56e5d394bccce1c8df59fb842e84c5/CONTRIBUTING.md",
+  "policy_path": "CONTRIBUTING.md",
+  "source_sha256": "66c32b399e41451fad08facdd9c4c0e166c5992cb241b45e32148098de8f8379",
+  "observed_at": "2026-08-22",
+  "reviewed_at": "2026-08-22",
+  "reviewer_basis": "manual_pinned_text_review",
+  "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+  "classification": "explicitly_allows",
+  "semantic_review": "manual",
+  "supersedes": null,
+  "notes": "The pinned policy welcomes AI-generated pull requests, requires disclosure, testing, and understanding, and says AI agents opening pull requests follow its workflow; issue claiming and approval remain separate gates."
+}

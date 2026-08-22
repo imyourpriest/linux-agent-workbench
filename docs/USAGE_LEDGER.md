@@ -374,3 +374,23 @@ This correction adds zero Patch and zero Support units. Cumulative dedicated tot
 twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No alert
 has been dismissed, and no candidate, release, tag, form, offer, contact, analytics,
 customer/private input, checkout, payment, account, merchant, tax, XLM, or activation occurred.
+
+#### R-011 policy-gate scan and alternatives review - 2026-08-22
+
+- The sponsor reports that the allowance reset occurred and requests continuation without going
+  below 35% remaining. No exact signed-in numeric Usage value was independently observed. The
+  ordinary stricter stop remains 40% remaining, any warning, or any lower sponsor report, and no
+  long or multi-agent unit starts below 50%.
+- This is whole-account state only. No amount or delta is attributed to this repository, cycle,
+  workstream, unit, agent, tool, test, hosted run, or action; no per-unit usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-22 | Patch Cabinet | 1 | Fresh public-read-only fail-closed scan; no ready candidate | reset reported; exact numeric value not independently observed |
+| 2026-08-22 | Patch Cabinet | 1 | Two pinned historical consent/profile records, receipt, and regenerated catalogs | not individually measured |
+| 2026-08-22 | Support Agent Regression Lab | 1 | Pinned alternatives review narrows the inert policy hypothesis | not individually measured |
+
+R-011 adds exactly two Patch impact units and one Support revenue-validation unit. Cumulative
+dedicated totals are twenty-eight impact and fourteen revenue units, preserving 2:1. Revenue and
+cleared receipts remain `$0.00`; no release, form, listing, offer, contact, customer/private input,
+checkout, payment, account, merchant, tax, subscription, wallet, XLM, or activation occurred.

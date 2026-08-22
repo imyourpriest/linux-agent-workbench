@@ -4,15 +4,15 @@
     "name": "patch-consent-catalog",
     "version": "0.1.0"
   },
-  "as_of": "2026-08-13",
+  "as_of": "2026-08-22",
   "claim_boundary": "Pinned historical manual reviews; not current permission, automatic interpretation, candidate eligibility, or authorization to contact or submit upstream.",
   "summary": {
-    "records": 10,
-    "current_for_7_day_candidate_window": 10,
-    "stale": 0,
-    "explicitly_allows": 0,
+    "records": 12,
+    "current_for_7_day_candidate_window": 2,
+    "stale": 10,
+    "explicitly_allows": 1,
     "explicitly_disallows": 4,
-    "insufficiently_explicit": 6
+    "insufficiently_explicit": 7
   },
   "records": [
     {
@@ -27,8 +27,8 @@
       "reviewed_at": "2026-08-10",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 3,
+      "freshness": "stale",
+      "age_days_at_as_of": 12,
       "supersedes": null,
       "notes": "The pinned file delegates substantive AI rules to an external policy that is not bound by this record."
     },
@@ -44,8 +44,8 @@
       "reviewed_at": "2026-08-13",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "freshness": "stale",
+      "age_days_at_as_of": 9,
       "supersedes": null,
       "notes": "The pinned policy requires a human author in the loop and says autonomous agents should not open or drive pull requests."
     },
@@ -61,10 +61,27 @@
       "reviewed_at": "2026-08-13",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
+      "freshness": "stale",
+      "age_days_at_as_of": 9,
+      "supersedes": null,
+      "notes": "This record binds only CONTRIBUTING.md; it requires disclosure and accountability but delegates further rules and does not expressly address autonomous submission."
+    },
+    {
+      "record_id": "github-gsd-build-gsd-2-33c00aaffa56-66c32b399e41",
+      "repository": "gsd-build/gsd-2",
+      "repository_url": "https://github.com/gsd-build/gsd-2",
+      "commit_sha": "33c00aaffa56e5d394bccce1c8df59fb842e84c5",
+      "policy_source_url": "https://github.com/gsd-build/gsd-2/blob/33c00aaffa56e5d394bccce1c8df59fb842e84c5/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "66c32b399e41451fad08facdd9c4c0e166c5992cb241b45e32148098de8f8379",
+      "observed_at": "2026-08-22",
+      "reviewed_at": "2026-08-22",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "explicitly_allows",
       "freshness": "current_for_7_day_candidate_window",
       "age_days_at_as_of": 0,
       "supersedes": null,
-      "notes": "This record binds only CONTRIBUTING.md; it requires disclosure and accountability but delegates further rules and does not expressly address autonomous submission."
+      "notes": "The pinned policy welcomes AI-generated pull requests, requires disclosure, testing, and understanding, and says AI agents opening pull requests follow its workflow; issue claiming and approval remain separate gates."
     },
     {
       "record_id": "github-houngdev-creator-toolkit-cli-7fbc4b1af8f0-97146559da2e",
@@ -78,8 +95,8 @@
       "reviewed_at": "2026-08-08",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 5,
+      "freshness": "stale",
+      "age_days_at_as_of": 14,
       "supersedes": null,
       "notes": "The pinned contributor guide contains no explicit rule for this autonomous submission workflow."
     },
@@ -95,8 +112,8 @@
       "reviewed_at": "2026-08-08",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 5,
+      "freshness": "stale",
+      "age_days_at_as_of": 14,
       "supersedes": null,
       "notes": "The pinned guide asks autonomous agents and first-time code-agent users not to open issues or pull requests."
     },
@@ -112,8 +129,8 @@
       "reviewed_at": "2026-08-13",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "freshness": "stale",
+      "age_days_at_as_of": 9,
       "supersedes": null,
       "notes": "The pinned guide does not expressly address AI-assisted or autonomous issue or pull-request submission."
     },
@@ -129,10 +146,27 @@
       "reviewed_at": "2026-08-13",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
+      "freshness": "stale",
+      "age_days_at_as_of": 9,
+      "supersedes": null,
+      "notes": "The pinned guide asks contributors not to submit issues or pull requests generated by LLMs or fully automated tools."
+    },
+    {
+      "record_id": "github-rclone-rclone-64ab1ac32260-f85dafb73da4",
+      "repository": "rclone/rclone",
+      "repository_url": "https://github.com/rclone/rclone",
+      "commit_sha": "64ab1ac32260238eefca3c61327f5faf1c6e106f",
+      "policy_source_url": "https://github.com/rclone/rclone/blob/64ab1ac32260238eefca3c61327f5faf1c6e106f/CONTRIBUTING.md",
+      "policy_path": "CONTRIBUTING.md",
+      "source_sha256": "f85dafb73da4a3886e2b54310beee6508ae14d9c63897f84ceb9bf975b82de92",
+      "observed_at": "2026-08-22",
+      "reviewed_at": "2026-08-22",
+      "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
+      "classification": "insufficiently_explicit",
       "freshness": "current_for_7_day_candidate_window",
       "age_days_at_as_of": 0,
       "supersedes": null,
-      "notes": "The pinned guide asks contributors not to submit issues or pull requests generated by LLMs or fully automated tools."
+      "notes": "The pinned policy welcomes named AI coding assistants as writing help but requires the human submitter to understand, build, and test the contribution; it does not explicitly permit agent-selected autonomous issue or pull-request submission."
     },
     {
       "record_id": "github-rxdt-loopgate-harness-8e5c49be960d-af55310e4fef",
@@ -146,8 +180,8 @@
       "reviewed_at": "2026-08-08",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 5,
+      "freshness": "stale",
+      "age_days_at_as_of": 14,
       "supersedes": null,
       "notes": "The guide expects reviewed AI assistance but does not explicitly authorize this autonomous submission workflow."
     },
@@ -163,8 +197,8 @@
       "reviewed_at": "2026-08-08",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "explicitly_disallows",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 5,
+      "freshness": "stale",
+      "age_days_at_as_of": 14,
       "supersedes": null,
       "notes": "The pinned guide bars fully autonomous AI agents from issues, pull requests, and reviews."
     },
@@ -180,8 +214,8 @@
       "reviewed_at": "2026-08-13",
       "workflow_scope": "agent_selects_prepares_and_submits_with_disclosure",
       "classification": "insufficiently_explicit",
-      "freshness": "current_for_7_day_candidate_window",
-      "age_days_at_as_of": 0,
+      "freshness": "stale",
+      "age_days_at_as_of": 9,
       "supersedes": null,
       "notes": "The pinned guide controls AI-assisted work but does not expressly address the exact autonomous submission workflow."
     }

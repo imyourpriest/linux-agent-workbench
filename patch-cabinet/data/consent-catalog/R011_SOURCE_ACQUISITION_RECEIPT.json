@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "receipt_id": "consent-catalog-r011-two-source-acquisition-2026-08-22",
+  "retrieved_at": "2026-08-22T04:38:10Z",
+  "method": "github-contents-api-base64-decoded-source-bytes",
+  "claim_boundary": "This receipt records bytes returned for two exact public commit refs; it is not a signature, attestation, current permission, semantic interpretation, candidate eligibility, contact authority, or submission authorization.",
+  "sources": [
+    {
+      "record_id": "github-rclone-rclone-64ab1ac32260-f85dafb73da4",
+      "repository": "rclone/rclone",
+      "commit_sha": "64ab1ac32260238eefca3c61327f5faf1c6e106f",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/rclone/rclone/contents/CONTRIBUTING.md?ref=64ab1ac32260238eefca3c61327f5faf1c6e106f",
+      "git_blob_sha1": "bbfc08ebfdfe9a3bfde9c9682f0ba841b605df99",
+      "source_bytes": 30119,
+      "source_sha256": "f85dafb73da4a3886e2b54310beee6508ae14d9c63897f84ceb9bf975b82de92"
+    },
+    {
+      "record_id": "github-gsd-build-gsd-2-33c00aaffa56-66c32b399e41",
+      "repository": "gsd-build/gsd-2",
+      "commit_sha": "33c00aaffa56e5d394bccce1c8df59fb842e84c5",
+      "policy_path": "CONTRIBUTING.md",
+      "api_url": "https://api.github.com/repos/gsd-build/gsd-2/contents/CONTRIBUTING.md?ref=33c00aaffa56e5d394bccce1c8df59fb842e84c5",
+      "git_blob_sha1": "902a55433cc0520476ad29f9cbc3580d509d00f2",
+      "source_bytes": 22179,
+      "source_sha256": "66c32b399e41451fad08facdd9c4c0e166c5992cb241b45e32148098de8f8379"
+    }
+  ]
+}

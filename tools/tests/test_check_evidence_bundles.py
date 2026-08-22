@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -72,11 +73,13 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
         registry = checker._load_registry(self.root)
         self.assertEqual(len(checker._verify_inventory(self.root, registry)), 3)
         evidence = self.root / "patch-cabinet" / "evidence"
-        exact = evidence / "2026-08-12-no-ready-policy-gate.md"
-        exact.write_bytes(exact.read_bytes() + b"\nchanged narrative\n")
-        with self.assertRaisesRegex(ValueError, "narrative digest"):
-            checker._verify_inventory(self.root, registry)
-        shutil.copy2(ROOT / "patch-cabinet" / "evidence" / exact.name, exact)
+        for name in checker.STANDALONE_EVIDENCE_NARRATIVES:
+            with self.subTest(name=name):
+                exact = evidence / name
+                exact.write_bytes(exact.read_bytes() + b"\nchanged narrative\n")
+                with self.assertRaisesRegex(ValueError, "narrative digest"):
+                    checker._verify_inventory(self.root, registry)
+                shutil.copy2(ROOT / "patch-cabinet" / "evidence" / exact.name, exact)
         near_name = evidence / "2026-08-12-no-ready-policy-gates.md"
         near_name.write_text("near-name orphan\n", encoding="utf-8", newline="\n")
         with self.assertRaisesRegex(ValueError, "orphan"):
@@ -90,12 +93,29 @@ class EvidenceBundleCheckerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "reserved standalone narrative stem"):
             checker._verify_inventory(self.root, checker._load_registry(self.root))
 
+    def test_each_allowlisted_standalone_narrative_is_required(self) -> None:
+        registry = checker._load_registry(self.root)
+        evidence = self.root / "patch-cabinet" / "evidence"
+        for name in checker.STANDALONE_EVIDENCE_NARRATIVES:
+            with self.subTest(name=name):
+                narrative = evidence / name
+                payload = narrative.read_bytes()
+                narrative.unlink()
+                try:
+                    with self.assertRaisesRegex(
+                        ValueError,
+                        rf"^standalone evidence narrative is missing: {re.escape(name)}$",
+                    ):
+                        checker._verify_inventory(self.root, registry)
+                finally:
+                    narrative.write_bytes(payload)
+
     def test_evidence_capacity_includes_only_exact_narrative_allowlist(self) -> None:
         self.assertEqual(
             checker._evidence_entry_limit(),
             checker.MAX_BUNDLES * 4 + len(checker.STANDALONE_EVIDENCE_NARRATIVES),
         )
-        self.assertEqual(checker._evidence_entry_limit(0), 1)
+        self.assertEqual(checker._evidence_entry_limit(0), 2)
         with self.assertRaises(ValueError):
             checker._evidence_entry_limit(True)
 

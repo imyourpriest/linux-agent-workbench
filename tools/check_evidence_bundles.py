@@ -25,7 +25,10 @@ MAX_BUNDLES = 100
 STANDALONE_EVIDENCE_NARRATIVES = {
     "2026-08-12-no-ready-policy-gate.md": (
         "bbcb324bfe007d957bc177c2d3eedb6386b89eb1f3522a07744ba27f389fd077"
-    )
+    ),
+    "2026-08-22-no-ready-policy-gate.md": (
+        "3aeac82004020a707b6dae1e09a9002fd8e3de3d8232dba8bf819eee5b600cea"
+    ),
 }
 REPLAY_TIMEOUT_SECONDS = 60
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
@@ -550,6 +553,11 @@ def _verify_inventory(root: Path, registry: dict[str, object]) -> list[Bundle]:
             )
         )
 
+    evidence_names = {path.name for path in evidence_entries}
+    missing_narratives = set(STANDALONE_EVIDENCE_NARRATIVES) - evidence_names
+    if missing_narratives:
+        missing = sorted(missing_narratives)[0]
+        raise ValueError(f"standalone evidence narrative is missing: {missing}")
     actual_evidence = {
         path.name
         for path in evidence_entries

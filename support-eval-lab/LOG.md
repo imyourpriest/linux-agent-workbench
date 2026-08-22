@@ -342,3 +342,27 @@ Append-only project record.
   insufficient.
 - This is exactly one Support revenue unit. `$79` remains the single unvalidated, not-offered
   hypothesis; revenue and cleared receipts remain `$0.00`.
+
+## 2026-08-22 - Pinned alternatives review narrows the inert policy hypothesis
+
+- Compared public contribution-policy material at exact commits for GSD-2, rclone, and
+  OpenEverest:
+  - https://github.com/gsd-build/gsd-2/blob/33c00aaffa56e5d394bccce1c8df59fb842e84c5/CONTRIBUTING.md
+  - https://github.com/rclone/rclone/blob/64ab1ac32260238eefca3c61327f5faf1c6e106f/CONTRIBUTING.md
+  - https://github.com/rclone/rclone/blob/64ab1ac32260238eefca3c61327f5faf1c6e106f/AGENTS.md
+  - https://github.com/openeverest/openeverest/blob/cc647bb5a693a50be6718973dacfbe28ba35ff25/CONTRIBUTING.md
+- These free upstream materials already provide combinations of AI-use disclosure, human
+  accountability, test/evidence expectations, review workflow, templates or automation, and
+  security boundaries. Generic policy wording alone therefore does not support a defensible `$79`
+  value claim.
+- Revise rather than retire the existing inert AI Contribution Policy Starter + Audit hypothesis
+  pending the final SEL-GH-001 capture. Any defensible differentiation would require
+  repository-specific implementation and audit: tailoring to actual workflows, checking policy
+  alignment with templates and CI, documenting evidence-backed gaps, and validating review and
+  security paths.
+- This is one bounded revenue-validation unit, not demand evidence or activation. The `$79` price,
+  purchase intent, conversion, willingness to pay, customers, orders, and revenue remain
+  unvalidated; cleared revenue remains `$0.00`. No offer, release, form, listing, contact,
+  outreach, checkout, payment, account, merchant, tax, subscription, private input, wallet, or XLM
+  action occurred. Every SEL final-capture, frozen/no-incident, exclusive-selection, legal,
+  privacy, terms, merchant, payment, and future exact-action gate remains.

@@ -930,3 +930,146 @@ will be recorded in the next ordinary control cycle, with no receipt pull reques
 **Why:** GitHub's observed API limit makes D-044's original exact comment impossible to submit.
 The shorter exact comment preserves the material scope and safety boundaries while fitting the
 enforced limit; no other D-044 authority or control changes.
+
+## 2026-08-22 - D-046 - R-011 policy-gate scan and alternatives review
+
+**Decision:** Select exactly two Patch Cabinet impact units and one Support Agent Regression Lab
+revenue-validation unit. Patch unit one is a fresh, bounded, public-read-only, fail-closed
+candidate scan observed on 2026-08-22. Four public candidates were considered and zero matched the
+private operator-exclusion list; the entries remain undisclosed. No candidate is ready. At exact
+commits, `rclone/rclone` `64ab1ac32260238eefca3c61327f5faf1c6e106f` has current policy evidence
+but no qualifying small issue; `gsd-build/gsd-2`
+`33c00aaffa56e5d394bccce1c8df59fb842e84c5` explicitly allows an AI pull-request workflow but has
+no qualifying small issue; `HoungDev/creator-toolkit-cli`
+`7fbc4b1af8f074a921f4254f6d89225d612d7a3b` retains issue 18 but has no explicit policy; and
+`openeverest/openeverest` `cc647bb5a693a50be6718973dacfbe28ba35ff25` has policy evidence but no
+qualifying small issue. The reviewed rclone near-misses were assigned, had competing work, or were
+sensitive. No acquisition, clone, execution, contact, candidate selection, or upstream mutation
+occurred, and no readiness may be inferred.
+
+Patch unit two adds immutable historical consent and policy-profile records for the pinned rclone
+policy (`insufficiently_explicit`) and GSD-2 policy (`explicitly_allows`), a separate two-source
+acquisition receipt, and regenerated catalog outputs. These records are historical policy evidence
+only. They do not establish current candidate eligibility, source truth beyond the pinned bytes,
+identity, authority, permission for a specific issue, contact authority, or submission authority.
+The current consent index moves to an as-of date of 2026-08-22; the intentionally historical
+policy-profile snapshot remains as of 2026-08-13 and labels later records `unknown`.
+
+The Support unit is a dated, pinned, public-source alternatives review within the existing inert
+AI Contribution Policy Starter + Audit hypothesis. Public examples already supply generic policy
+text, so defensible differentiation would require repository-specific implementation and audit:
+workflow tailoring, policy/template/CI alignment, evidence-backed gap identification, and review
+and security-path validation. Revise rather than retire the hypothesis pending the final
+SEL-GH-001 capture. The `$79` price and all demand remain unvalidated. No activation, contact,
+release, form, listing, checkout, payment, customer, private input, account, merchant, tax,
+subscription, wallet, or XLM action is authorized or claimed.
+
+This prospective control coordinates append-only root and workstream records, the bounded Patch
+evidence/catalog changes, the current-index CI date, generated catalog outputs, and focused tests.
+Because a UTC source observation can fall on the next canonical date while the operator host is
+still on the prior local date, it also authorizes the narrow correctness change in
+`patch-cabinet/src/patch_cabinet/consent_catalog.py` and its existing consent-catalog test file to
+evaluate only future-date rejection against the current UTC date. No other date, freshness, or
+catalog semantics may change.
+It authorizes local implementation and project-owned testing on branch
+`agent/r011-policy-scan-alternatives`, based on verified public main
+`7c7336ddba9d16dfc57f75481fd39ecb85d685e9`. After the exact diff and results receive independent
+review, it authorizes one future draft-first guarded publication cycle: one local commit and push,
+at most one draft pull request, ready transition only after exact-head review and all required
+checks, and protected squash merge under unchanged protection, followed by post-main verification.
+At most one same-branch, same-pull-request remediation may address a concrete hosted failure after
+fresh local validation and independent review. Retain the feature branch. No force push, bypass,
+branch deletion, tag, release, activation, or unrelated write is authorized. Any material scope,
+source, protection, or review mismatch stops that future publication path pending a new decision.
+
+This ordinary cycle also records the non-recursive D-045 closeout. PR 23 reviewed head
+`a998e03742383d6bf694a24cbd84d0affd5df91f` and tree
+`e56be17cfe5bd3f6fb5a541f144b5ff679d10e44` were protected-squash-merged as
+`7c7336ddba9d16dfc57f75481fd39ecb85d685e9`, with sole parent
+`9a809d9ca68ae70225799dcbe871d189c12b2b34` and the same tree. Exact-head compatibility run
+`32550834192`, CI run `32550834257`, and CodeQL run `32550832464` passed their named jobs;
+post-main compatibility run `32550916474`, CI run `32550916485`, and CodeQL run `32550916360`
+passed their named jobs. The exact nine required contexts and protection controls remained
+unchanged, and branch `agent/r010-alert-comment-limit` was retained. Alerts 1 through 5 were then
+individually dismissed with reason `not_used` and D-045's exact 274-character comment at
+`2026-08-22T04:10:48Z`, `2026-08-22T04:10:50Z`, `2026-08-22T04:10:51Z`,
+`2026-08-22T04:10:53Z`, and `2026-08-22T04:10:54Z`, respectively, by `imyourpriest`. The final
+inventory was total/open/dismissed/fixed `5/0/5/0`, and every `fixed_at` remained null. Dismissal
+is not a fix; every affected alert must be reopened before merging any future active v1 Node path.
+
+Named hosted successes prove only their configured outcomes on the exact commits, runs, and jobs.
+They do not prove semantic correctness, provenance, isolation, exploitation resistance, future
+availability, permission, or production enforcement. R-011 adds exactly two Patch impact units
+and one Support revenue-validation unit, bringing cumulative totals to 28 Patch impact / 14
+Support revenue units while preserving 2:1. Revenue and cleared receipts remain `$0.00`.
+
+The sponsor reports that the allowance reset occurred and requests continuation without going
+below 35% remaining. The exact signed-in Usage value is not independently observed, and no amount
+or delta is attributed to this repository, cycle, workstream, unit, agent, tool, test, or action.
+The ordinary, stricter policy still stops at 40% remaining, any warning, or any lower sponsor
+report, and starts no long or multi-agent unit below 50%.
+
+**Why:** The batch preserves fail-closed candidate selection while adding current, pinned,
+non-authorizing policy evidence and testing whether a repository-specific service can offer value
+beyond freely available generic policy wording. It also closes the prior alert-control cycle
+without a recursive receipt pull request and preserves every SEL, privacy, legal, payment, and
+activation gate.
+
+## 2026-08-22 - D-047 - R-011 review remediation and prospective publication basis
+
+**Decision:** Independent review found that D-046 was the first project edit and was expanded in
+place before the UTC production-code correction, but the initial exact D-046 text and fingerprint
+were not preserved. Static review therefore cannot audit that chronology from immutable evidence.
+Do not rely on D-046's edit order as publication authority; any R-011 publication relies
+prospectively on this D-047 decision instead.
+
+D-047 binds and re-authorizes the complete current 24-path baseline at public-main base
+`7c7336ddba9d16dfc57f75481fd39ecb85d685e9`, with canonical baseline fingerprint
+`5b1a9539cb7339b018b1e56ea51e00847e7d51571cb0d86d393039ad6e8057a3`. The exact paths are:
+
+- `.github/workflows/ci.yml`;
+- `docs/CONTROL_LOG.md`;
+- `docs/DECISION_LOG.md`;
+- `docs/USAGE_LEDGER.md`;
+- `patch-cabinet/LOG.md`;
+- `patch-cabinet/data/consent-catalog/R011_SOURCE_ACQUISITION_RECEIPT.json`;
+- `patch-cabinet/data/consent-catalog/v1/github-gsd-build-gsd-2-33c00aaffa56-66c32b399e41.json`;
+- `patch-cabinet/data/consent-catalog/v1/github-rclone-rclone-64ab1ac32260-f85dafb73da4.json`;
+- `patch-cabinet/data/policy-profile-catalog/v1/github-gsd-build-gsd-2-33c00aaffa56-66c32b399e41.json`;
+- `patch-cabinet/data/policy-profile-catalog/v1/github-rclone-rclone-64ab1ac32260-f85dafb73da4.json`;
+- `patch-cabinet/evidence/2026-08-22-no-ready-policy-gate.md`;
+- `patch-cabinet/samples/consent-catalog-index.json`;
+- `patch-cabinet/samples/consent-catalog-index.md`;
+- `patch-cabinet/samples/policy-profile-catalog-index.json`;
+- `patch-cabinet/samples/policy-profile-catalog-index.md`;
+- `patch-cabinet/samples/policy-profile-catalog-snapshot.json`;
+- `patch-cabinet/samples/policy-profile-catalog-snapshot.md`;
+- `patch-cabinet/src/patch_cabinet/consent_catalog.py`;
+- `patch-cabinet/tests/test_consent_catalog.py`;
+- `patch-cabinet/tests/test_policy_profile_catalog.py`;
+- `patch-cabinet/tests/test_policy_profile_snapshot.py`;
+- `support-eval-lab/LOG.md`;
+- `tools/check_evidence_bundles.py`; and
+- `tools/tests/test_check_evidence_bundles.py`.
+
+Within only that same 24-path set, authorize these exact review remediations: add deterministic
+`build_index` tests proving UTC-today acceptance and UTC-tomorrow rejection without changing
+production behavior; require every hash-allowlisted standalone evidence narrative to be present
+and test deletion of each; revise only the new no-ready narrative to cite the exact reviewed
+rclone issue and competing-pull-request links while narrowing negative-search claims, then update
+its exact allowlist digest; and append clarifications to the control and Patch logs.
+
+The precise acquisition boundary supersedes only D-046 and the R-011 Patch-log entry's broad
+`no acquisition` wording. Public policy-source bytes for the historical catalog were acquired
+through the GitHub Contents API and bound in the separate receipt. No candidate repository was
+cloned or acquired for candidate work, no candidate or third-party code was executed, and no
+upstream contact or mutation occurred. The scan was bounded and no examined issue advanced to
+scoring; this is not proof that no qualifying issue exists.
+
+All unit totals, claim limits, Usage controls, SEL and activation gates, and the draft-first,
+exact-head guarded publication authority remain unchanged. No additional path, unit, external
+write, activation, or permission is authorized.
+
+**Why:** The remediation makes the standalone-evidence inventory fail closed, tests the UTC index
+boundary directly, and replaces broad negative claims with auditable bounded evidence while using
+a prospective decision whose exact pre-remediation baseline is independently fingerprinted.
