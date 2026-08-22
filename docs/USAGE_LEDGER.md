@@ -352,3 +352,25 @@ This control adds zero Patch and zero Support units. Cumulative dedicated totals
 twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No alert
 has yet been dismissed by D-044, and no candidate, release, tag, form, offer, contact, analytics,
 customer/private input, checkout, payment, account, merchant, tax, XLM, or activation occurred.
+
+#### R-010 Dependabot comment-limit correction - 2026-08-20
+
+- D-044's documentation-only PR 22 was protected-squash-merged at public-main commit
+  `9a809d9ca68ae70225799dcbe871d189c12b2b34`, and its exact post-main compatibility, CI, and
+  CodeQL jobs passed. GitHub then rejected the first alert PATCH before mutation because the
+  mandated 745-character comment exceeded the observed 280-character API limit. Alert 1 remained
+  open/null, alerts 2 through 5 were not attempted, all five remained open, and zero alerts were
+  dismissed. D-045 prepares only a 274-character replacement comment; no retry has occurred.
+- No new Usage snapshot was taken. The last sponsor report remains 67% whole-account Usage and the
+  hard floor remains 35%. No amount or delta is attributed to this repository, cycle, workstream,
+  unit, agent, tool, test, hosted run, merge, rejected request, alert, or action; no per-unit usage
+  is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-20 | Shared security/control maintenance | 0 | D-044 merge and rejected no-mutation alert attempt recorded; D-045 exact 274-character comment correction prepared locally | no new snapshot; last sponsor report 67% whole-account, hard 35% floor, no attribution |
+
+This correction adds zero Patch and zero Support units. Cumulative dedicated totals remain exactly
+twenty-six impact and thirteen revenue units, preserving 2:1. Revenue remains `$0.00`. No alert
+has been dismissed, and no candidate, release, tag, form, offer, contact, analytics,
+customer/private input, checkout, payment, account, merchant, tax, XLM, or activation occurred.

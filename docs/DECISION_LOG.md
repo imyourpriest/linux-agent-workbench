@@ -867,3 +867,66 @@ ordinary control cycle, not in a receipt pull request.
 uses the vulnerable transitive version, but the immutable v1 evidence must remain byte-for-byte
 auditable. Exact `not_used` dismissals preserve that distinction without presenting historical
 bytes as remediated or weakening the mandatory reopen-before-reactivation control.
+
+## 2026-08-20 - D-045 - Dependabot dismissal-comment API limit correction
+
+**Decision:** Correct only D-044's impossible 745-character dismissal-comment constraint. The
+authorized first alert precheck matched alert 1's exact number, `GHSA-4c8g-83qw-93j6`, `fast-uri`
+package, immutable v1 lock path, `open` state, and null dismissal/fix fields. GitHub rejected its
+PATCH with HTTP 422 and this exact error:
+`Invalid request. Invalid property /dismissed_comment: Only 280 characters are allowed; 745 were supplied.`
+Alert 1 remained open with null dismissal reason, comment, actor, time, and fix time;
+alerts 2 through 5 were never attempted. Immediate read-back found all five exact alerts open and
+zero dismissed alerts. Public main remained
+`9a809d9ca68ae70225799dcbe871d189c12b2b34`, the local worktree remained clean, and no alert,
+file, branch, pull request, protection, Dependabot configuration, setting, or other state changed
+as a result of the rejected request.
+
+D-045 supersedes only the impossible D-044 comment text and length. Every other D-044 control
+remains binding: the exact five alert/GHSA/package/v1-lock mappings; individual ordered PATCHes;
+the `not_used` reason and prohibition on `fixed`/`inaccurate`; exact prechecks and immediate
+read-backs; active-v2/inactive-v1-Node execution boundary; ordinary standard-library freshness
+checker and manual-run distinction; mandatory reopen-before-active-path merge rule; sequencing;
+feature-branch retention; zero-unit accounting; and prohibition on broader mutation.
+
+Each dismissal must instead use this exact comment, with no prefix or suffix:
+
+> fast-uri@3.1.0 remains only in immutable compatibility-v1 evidence. Active automation
+> installs/runs v2 with 3.1.5; no active path installs/imports/executes v1 Node
+> dependencies/adapters. Reopen before merging any active path to v1. not_used does not mean v1
+> bytes are fixed.
+
+The normalized comment is exactly 274 characters and 274 UTF-8 bytes, within the observed
+280-character API limit. It continues to state the immutable historical scope, active v2 route,
+inactive v1 Node dependency/adapter path, reopen-before-active-path condition, and the boundary
+that `not_used` does not mean the v1 bytes are fixed. This decision does not claim that a retry or
+dismissal has occurred.
+
+The exact base is public-main commit `9a809d9ca68ae70225799dcbe871d189c12b2b34`, the exact branch
+is `agent/r010-alert-comment-limit`, and write ownership is limited to append-only changes in
+`docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`. Authorize local
+documentation validation; one initial commit and push; at most one draft pull request; a ready
+transition after independent exact-head review; an exact-head protected squash merge under
+unchanged protection after every required check passes; and post-main check observation. Only
+after those steps pass and the complete prestate still matches may alert 1 be retried and alerts
+2 through 5 continue individually, in order, using only the exact 274-character comment above,
+`state=dismissed`, and `dismissed_reason=not_used`. Before each PATCH, re-read and require the exact
+number/GHSA/package/path/open/null state. Immediately after each PATCH, require the exact dismissed
+state, reason, comment, non-null actor/time, null fix time, and unchanged identity. Any API
+rejection, precheck mismatch, or partial read-back mismatch stops the sequence without retry,
+rollback, reopen, or continuation pending a new prospective decision.
+
+Retain the feature branch. No force push, bypass, branch deletion, tag, release, receipt pull
+request, Dependabot configuration or setting change, mutation of another alert, activation,
+payment, contact, account action, or unrelated mutation is authorized. This is zero-unit
+security/control maintenance: totals remain 26 Patch impact / 13 Support revenue units and
+revenue remains `$0.00`. No new Usage snapshot is taken; the last sponsor report remains 67%
+whole-account Usage, the hard floor remains 35%, and no amount or delta is attributed to this
+repository, cycle, workstream, unit, agent, tool, test, or action. Every August 25, SEL,
+frozen/no-incident, exclusive-selection, legal/terms/privacy/merchant/payment, and activation gate
+remains unchanged. The D-045 merge and eventual five dismissal read-backs are non-recursive and
+will be recorded in the next ordinary control cycle, with no receipt pull request.
+
+**Why:** GitHub's observed API limit makes D-044's original exact comment impossible to submit.
+The shorter exact comment preserves the material scope and safety boundaries while fitting the
+enforced limit; no other D-044 authority or control changes.
