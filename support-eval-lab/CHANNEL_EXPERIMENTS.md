@@ -135,3 +135,30 @@ items for issues carrying `support-eval-interest`; this is not proof of no priva
 interest. The source receipt is
 `observations/sel-gh-001-source-check-2026-08-10.json`. It records only source and configuration
 facts and does not establish viewers, attribution, buyer intent, customers, or revenue.
+
+### Final source-limited capture and channel closeout - 2026-08-23
+
+The registered window ended at `2026-08-23T00:33:48Z`. The final authenticated read-only capture
+completed before the `2026-08-25T00:33:48Z` deadline, from `2026-08-23T07:37:41.211Z` through
+`2026-08-23T07:37:45.221Z`. GitHub's API-version-`2022-11-28` Popular paths response returned one
+row: `/imyourpriest/linux-agent-workbench`, title `Overview`, count `1`, uniques `1`. The exact
+frozen entry path was absent from the returned current top paths. That state is `unobservable`,
+never zero or a measured upper bound, because GitHub did not expose an exact retained-window
+start, end, or cutoff.
+
+The frozen public configuration matched: the repository remained public on `main` with the same
+description and topic set; release `367339469` remained a non-draft pre-release with zero uploaded
+assets and the same body digest; its lightweight tag still targeted
+`2b162ce572379a10a61007a722a7ba7e23d43f75`; and the target entry, main issue form, and interest
+label remained present at their frozen values. A metadata-only GraphQL query returned zero current
+public issues carrying `support-eval-interest`, with no title, body, comment, or content requested.
+
+D-026 therefore ends `SEL-GH-001` as `GitHub-native discovery: insufficient signal` on zero
+observed qualifying public signals. This is not proof that no qualifying issue ever existed. The
+current-label query cannot exclude a deleted issue, an issue whose label was removed, private or
+off-platform interest, buyer intent, demand, customer, order, payment, or revenue. No owner
+entry-page preview event is logged; that is not proof of all owner activity. D-030 still prohibits
+inventing retained-window bounds, so the cumulative observation and normalized report remain
+unchanged with `null` raw and qualified views and `not-observed`. The final source receipt is
+`observations/sel-gh-001-final-source-check-2026-08-23.json`. This closeout authorizes no
+activation, selection, promotion, contact, payment, or other external action.

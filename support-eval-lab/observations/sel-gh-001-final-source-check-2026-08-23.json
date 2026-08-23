@@ -1,0 +1,155 @@
+{
+  "schema_version": "1",
+  "record_type": "source_limited_final_traffic_checkpoint",
+  "record_id": "sel-gh-001-final-source-check-2026-08-23",
+  "experiment_id": "sel-gh-001",
+  "decision": "D-048",
+  "source_mode": "authenticated_github_read_only_operator_capture",
+  "capture": {
+    "started_at": "2026-08-23T07:37:41.211Z",
+    "completed_at": "2026-08-23T07:37:45.221Z",
+    "rest_api_version": "2022-11-28"
+  },
+  "traffic_request": {
+    "endpoint": "GET /repos/imyourpriest/linux-agent-workbench/traffic/popular/paths",
+    "requested_api_version": "2022-11-28",
+    "started_at": "2026-08-23T07:37:41.214Z",
+    "completed_at": "2026-08-23T07:37:41.667Z",
+    "returned_row_count": 1,
+    "returned_rows": [
+      {
+        "path": "/imyourpriest/linux-agent-workbench",
+        "title": "Overview",
+        "count": 1,
+        "uniques": 1
+      }
+    ],
+    "target_path": "/imyourpriest/linux-agent-workbench/blob/2b162ce572379a10a61007a722a7ba7e23d43f75/support-eval-lab/channels/github-native-v0.1.0.md",
+    "exact_target_match_count": 0,
+    "target_result": "absent_from_returned_current_top_paths",
+    "target_view_state": "unobservable"
+  },
+  "source_semantics": {
+    "github_description": "top 10 popular contents over the last 14 days",
+    "response_fields": [
+      "path",
+      "title",
+      "count",
+      "uniques"
+    ],
+    "exact_window_start_exposed": false,
+    "exact_window_end_exposed": false,
+    "exact_window_cutoff_exposed": false,
+    "capture_time_substituted_for_window_boundary": false,
+    "documentation_urls": [
+      "https://docs.github.com/en/rest/metrics/traffic?apiVersion=2022-11-28",
+      "https://docs.github.com/en/repositories/viewing-activity-and-data-for-your-repository/viewing-traffic-to-a-repository?apiVersion=2022-11-28"
+    ]
+  },
+  "configuration_recheck": {
+    "started_at": "2026-08-23T07:37:41.667Z",
+    "completed_at": "2026-08-23T07:37:44.775Z",
+    "repository": {
+      "visibility": "public",
+      "private": false,
+      "default_branch": "main",
+      "description": "Auditable AI-directed experiments in open-source impact and support-agent regression evaluation",
+      "topics_as_returned": [
+        "ai-agents",
+        "github-actions",
+        "linux",
+        "open-source",
+        "reproducible-research",
+        "ai-evaluation",
+        "customer-support",
+        "llm-evaluation",
+        "python",
+        "software-testing",
+        "support-automation"
+      ]
+    },
+    "release": {
+      "id": 367339469,
+      "tag": "support-eval-starter-v0.1.0",
+      "draft": false,
+      "prerelease": true,
+      "published_at": "2026-08-09T00:33:48Z",
+      "uploaded_asset_count": 0,
+      "body_sha256": "9c2db782538e604c05188525fbb7c39424d16e33287ff867118cf285a5a03acd"
+    },
+    "lightweight_tag": {
+      "ref": "refs/tags/support-eval-starter-v0.1.0",
+      "object_type": "commit",
+      "target_commit": "2b162ce572379a10a61007a722a7ba7e23d43f75"
+    },
+    "target_commit_entry": {
+      "path": "support-eval-lab/channels/github-native-v0.1.0.md",
+      "git_blob_sha": "a910b20438c775540d6cb5252c6f6c593a9c0e83",
+      "sha256": "276ee4506b1d94a9e97e00859d28a4e501563076670b924149f2b6ce6ec9a51b",
+      "decoded_byte_count": 999
+    },
+    "main_issue_form": {
+      "path": ".github/ISSUE_TEMPLATE/support-eval-interest.yml",
+      "git_blob_sha": "c46368bf0e15a16decff035a18fc9b06e182b9b6",
+      "sha256": "e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e",
+      "decoded_byte_count": 2692
+    },
+    "interest_label": {
+      "present": true,
+      "name": "support-eval-interest",
+      "id": 11776914413,
+      "node_id": "LA_kwDOTyFfPM8AAAACvfVz7Q"
+    },
+    "frozen_configuration_matches": true
+  },
+  "interest_query": {
+    "endpoint": "POST /graphql",
+    "selection": "repository issues filtered by support-eval-interest; id, number, url, state, createdAt, closedAt, and author type/login metadata only",
+    "title_body_comments_or_content_requested": false,
+    "page_size": 100,
+    "started_at": "2026-08-23T07:37:44.775Z",
+    "completed_at": "2026-08-23T07:37:45.221Z",
+    "returned_total_count": 0,
+    "has_next_page": false,
+    "returned_node_count": 0,
+    "returned_nodes": [],
+    "privacy_review_required": false,
+    "historical_absence_established": false,
+    "claim_limit": "zero returned current public labeled records does not exclude a deleted issue, an issue whose label was removed, or private or off-platform interest"
+  },
+  "owner_preview_log": {
+    "logged_entry_page_preview_event_count": 0,
+    "claim_limit": "no owner entry-page preview event is logged; this is not proof of all owner activity"
+  },
+  "normalizer_disposition": {
+    "ingest_into_current_normalizer": false,
+    "reason": "source_does_not_expose_exact_retained_window_bounds_required_by_frozen_checked_row_contract",
+    "frozen_normalizer_changed": false,
+    "cumulative_observation_changed": false,
+    "current_report_view_state": "not-observed",
+    "current_report_raw_views": null,
+    "current_report_qualified_views": null
+  },
+  "closure": {
+    "registered_window_ended_at": "2026-08-23T00:33:48Z",
+    "final_capture_deadline": "2026-08-25T00:33:48Z",
+    "captured_after_window_end": true,
+    "captured_before_deadline": true,
+    "traffic_disposition": "target absent from returned current top paths; views unobservable",
+    "returned_current_public_labeled_issue_record_count": 0,
+    "observed_qualifying_public_signal_count": 0,
+    "channel_disposition": "insufficient_signal",
+    "basis": "D-026 ends the channel on zero observed qualifying public signals at the final observation; the metadata-only current-label query returned zero current public labeled records. This observed-signal result is not proof that no qualifying issue ever existed",
+    "authorizes_activation_or_selection": false
+  },
+  "claim_limits": [
+    "absence from returned current top paths is not zero views or a measured upper bound",
+    "capture time is not the source window cutoff",
+    "the source response does not establish an exact retained-window start, end, or cutoff",
+    "uniques is only a GitHub-reported metric and does not prove people",
+    "zero returned current public labeled records does not exclude a deleted issue or an issue whose label was removed",
+    "zero observed qualifying public signals does not prove that no qualifying issue ever existed or that no private or off-platform interest exists",
+    "no logged owner preview event does not prove all owner activity",
+    "this record does not establish identity, attribution, buyer intent, customers, orders, payments, revenue, demand, production enforcement, activation authority, or selection authority"
+  ]
+}

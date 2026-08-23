@@ -62,3 +62,19 @@ The `2026-08-10` source check is recorded separately in
 the target was not among the returned top paths at capture time. It does not mean zero views, fewer
 than ten views, a unique-person count, or an exact day-one bucket. Any broader source schema must be
 introduced prospectively and must not reinterpret historical normalizer records.
+
+The final `2026-08-23` source check is recorded separately in
+`observations/sel-gh-001-final-source-check-2026-08-23.json`. The complete returned current
+Popular paths table contained one Overview row and no exact target-path match. The response still
+did not disclose an exact retained-window start, end, or cutoff, so target traffic remains
+`unobservable` rather than zero and the receipt remains outside the frozen normalizer. The current
+normalized report remains unchanged: raw views `null`, qualified views `null`, and state
+`not-observed`.
+
+The same capture used a metadata-only GraphQL label query and returned zero current public labeled
+issue records; it did not request title, body, comments, or issue content. Under D-026, zero
+observed qualifying public signals close the channel as insufficient signal. This does not prove
+that no qualifying issue ever existed: the current-label query cannot exclude a deleted issue, an
+issue whose label was removed, or private or off-platform interest. No logged owner entry-page
+preview event is not proof of all owner activity. The receipt is source/configuration evidence
+only and does not authorize activation, selection, contact, payment, or any other external action.
