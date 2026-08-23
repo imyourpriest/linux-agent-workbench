@@ -1073,3 +1073,95 @@ write, activation, or permission is authorized.
 **Why:** The remediation makes the standalone-evidence inventory fail closed, tests the UTC index
 boundary directly, and replaces broad negative claims with auditable bounded evidence while using
 a prospective decision whose exact pre-remediation baseline is independently fingerprinted.
+
+## 2026-08-23 - D-048 - R-012 source-limited SEL-GH-001 final-capture closeout
+
+**Decision:** Authorize one zero-unit, source-limited final capture and closeout for the completed
+SEL-GH-001 observation window. The capture may make fresh read-only GitHub REST and GraphQL
+requests using REST API version `2022-11-28`; record only the complete Popular paths response,
+frozen public configuration facts, and metadata-only presence or absence of issues carrying the
+`support-eval-interest` label. Do not open an entry page or issue content. Manually logged owner
+entry-page previews remain zero only because no such event is logged; this is not proof of every
+owner activity. D-030's frozen observation normalizer, cumulative record, generated report, and
+exact-window contract remain unchanged: a source response without disclosed retained-window
+bounds stays outside that normalizer, and target-path absence is `unobservable`, never zero.
+
+Write scope is exactly these seven paths on branch `agent/r012-sel-final-capture`, based on clean
+public main `cccf398804108e80bc1c15621df72ceea946c05d`:
+
+- `docs/DECISION_LOG.md`;
+- `docs/CONTROL_LOG.md`;
+- `docs/USAGE_LEDGER.md`;
+- `support-eval-lab/observations/sel-gh-001-final-source-check-2026-08-23.json`;
+- `support-eval-lab/CHANNEL_EXPERIMENTS.md`;
+- `support-eval-lab/OBSERVATION_RECORDS.md`; and
+- `support-eval-lab/LOG.md`.
+
+Authorize local validation, independent exact-diff review, and at most one later draft-first
+guarded publication cycle after that review: one local commit and push, at most one draft pull
+request, ready transition only after exact-head review and all required checks, protected squash
+merge under unchanged protection, and post-main verification. Retain the feature branch. Any API
+failure, frozen-configuration difference, uploaded release asset, missing interest label, more
+than one exact target-path match, or returned interest issue fails closed before closeout. An
+interest issue requires separate privacy review without copying title, body, comments, or content.
+
+No frozen-normalizer source, test, generated sample, cumulative observation, release, tag, issue
+form, topic, label, repository setting, or other GitHub object may change. No activation,
+exclusive selection, listing, promotion, contact, customer or private input, identity, terms,
+merchant, tax, checkout, order, payment, subscription, wallet, XLM, account, force push, bypass,
+branch deletion, tag, release, or unrelated write is authorized. The August 25 timing and every
+frozen/no-incident, exclusive-selection, privacy, rights/terms, provenance, legal, merchant,
+payment, and external-action gate remain unchanged; time and this closeout authorize nothing.
+
+For this R-012 closeout and at most its later guarded publication cycle only, the sponsor-reported
+reset-period reading of 58% remaining and explicit request to continue toward a 15% floor
+supersede the ordinary numeric Usage thresholds. The first local Codex session snapshot showed
+57% remaining; that is operational telemetry, not a product-dashboard reading or per-project
+measurement. Stop active work at 20% remaining, begin no long or multi-agent unit at or below 25%,
+and stop immediately on a warning or lower sponsor report. The hard floor is 15%. The ordinary
+40% stop and 50% long/multi-agent threshold resume automatically at the next reset. No Usage
+amount or delta is attributed to this repository, closeout, workstream, unit, agent, tool, test,
+or action.
+
+This closeout is zero Patch and zero Support units. Cumulative totals remain 28 Patch impact / 14
+Support revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`.
+
+**Why:** The declared window has ended and the final retained-source check is due, while GitHub's
+available traffic response remains weaker than the frozen exact-window schema. A separate receipt
+can close the channel truthfully without fabricating bounds, weakening privacy, changing the
+normalizer, or implying demand or activation.
+
+## 2026-08-23 - D-049 - R-012 independently bound review remediation
+
+**Decision:** D-048's first-edit chronology is an operator-recorded assertion. Static review cannot
+independently establish that chronology, and publication must not rely on it. Prospectively bind
+the independently reviewed pre-remediation state at public-main base
+`cccf398804108e80bc1c15621df72ceea946c05d`, base tree
+`a15aa3ba7d919bec882320fcd9e20b7930f47636`, exact seven-path canonical fingerprint
+`f84f1348416c094da65e5e5df48cd181794614bb7bf551ea4fcc449831a06111`, and final source-receipt
+SHA-256 `8f0e5e474014be8d811158d21a5665ff70c353626e175dab82522fed5a1e73e5`.
+
+The bound paths remain exactly `docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`,
+`docs/USAGE_LEDGER.md`, `support-eval-lab/CHANNEL_EXPERIMENTS.md`,
+`support-eval-lab/OBSERVATION_RECORDS.md`, `support-eval-lab/LOG.md`, and
+`support-eval-lab/observations/sel-gh-001-final-source-check-2026-08-23.json`. Within only those
+paths, authorize the minimal claim corrections required by independent review: characterize the
+result as zero observed qualifying public signals and zero returned current public labeled
+records, not an independent zero-interest condition; state that the metadata-only current-label
+query cannot exclude a deleted issue or an issue whose label was previously removed; and retain
+D-026's channel disposition only as an observed-signal insufficient result, not proof that no
+qualifying issue ever existed. Do not add the reviewer's separately run extant-issue query to the
+capture record because exact query timestamps were not preserved.
+
+Authorize revalidation, independent exact-diff re-review, and the same at-most-one later
+draft-first guarded publication cycle recorded by D-048. Publication relies prospectively on
+D-049 and the independently bound state above, not D-048 chronology. Every zero-unit total, Usage
+threshold and no-attribution rule, SEL and frozen-normalizer boundary, no-activation/no-selection
+condition, privacy/payment/legal/merchant control, external-action gate, branch-retention rule,
+and prohibition on unrelated or GitHub-object mutation remains unchanged. No new work unit,
+source capture, API request, permission, or external action is authorized.
+
+**Why:** The original capture supports a current observed-signal closeout, but its chronology and
+current-label query do not support stronger historical absence claims. A prospectively bound
+baseline and narrow corrections preserve the useful source evidence without overstating what
+static review or current public metadata can prove.

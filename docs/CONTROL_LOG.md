@@ -1311,3 +1311,74 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   customer/private input, payment, account, setting, protection, alert, tag, wallet, XLM, or other
   external state changed. Every Usage, SEL, legal, privacy, merchant/payment, exact-action, and
   guarded-publication gate remains.
+
+## 2026-08-23 - Session 046 - R-012 SEL-GH-001 final source-limited capture
+
+- Created a fresh no-tag clone at exact clean public main
+  `cccf398804108e80bc1c15621df72ceea946c05d` and branch
+  `agent/r012-sel-final-capture`. The operator recorded D-048 as the first project-content edit,
+  but static review cannot independently establish that chronology and publication does not rely
+  on it. D-049 prospectively binds the independently reviewed pre-remediation state.
+- The read-only authenticated capture ran from `2026-08-23T07:37:41.211Z` through
+  `2026-08-23T07:37:45.221Z`. GitHub's API-version-`2022-11-28` Popular paths response returned
+  exactly one row: `/imyourpriest/linux-agent-workbench`, title `Overview`, count `1`, uniques `1`.
+  The exact frozen entry path matched zero returned rows. Its view state is `unobservable`, not
+  zero, because the response exposes no exact retained-window start, end, or cutoff.
+- The public repository description, topic set, default branch, release body and state,
+  lightweight tag target, target-commit entry, main issue form, and interest label matched the
+  frozen configuration. Release `367339469` remained non-draft/pre-release, published
+  `2026-08-09T00:33:48Z`, with zero uploaded assets. The release-body, entry, and issue-form
+  SHA-256 values remained `9c2db782538e604c05188525fbb7c39424d16e33287ff867118cf285a5a03acd`,
+  `276ee4506b1d94a9e97e00859d28a4e501563076670b924149f2b6ce6ec9a51b`, and
+  `e6a3a9fc9a610b109dfd74dabb3c78538ab12554dbaf2945c4679454ac70ac0e`.
+- A metadata-only GraphQL query requested issue ID, number, URL, state, timestamps, and author
+  type/login for the `support-eval-interest` label, and no title, body, comment, or content. It
+  returned total `0`, zero nodes, and no next page from `2026-08-23T07:37:44.775Z` through
+  `2026-08-23T07:37:45.221Z`. The query returned zero current public labeled records and supports
+  zero observed qualifying public signals. Under D-026 this is an observed-signal insufficient
+  result, not proof that no qualifying issue ever existed; the query cannot exclude a deleted
+  issue, an issue whose label was removed, or private or off-platform interest.
+- The final receipt is
+  `support-eval-lab/observations/sel-gh-001-final-source-check-2026-08-23.json`, SHA-256
+  `29bedfb9ac34bcb6256fef685fbd0e7da1a7f1071c766bc709e5150dcf69f13f`. The exact changed-path set
+  is `docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`, `docs/USAGE_LEDGER.md`,
+  `support-eval-lab/observations/sel-gh-001-final-source-check-2026-08-23.json`,
+  `support-eval-lab/CHANNEL_EXPERIMENTS.md`, `support-eval-lab/OBSERVATION_RECORDS.md`, and
+  `support-eval-lab/LOG.md`.
+- D-030 remains controlling. The cumulative observation and normalized report stay unchanged with
+  `null` raw/qualified views and `not-observed`; no source bounds were invented. No owner
+  entry-page preview event is logged, which is not proof of all owner activity. No activation,
+  selection, offer, listing, contact, customer/private input, order, checkout, payment, revenue,
+  account, merchant, tax, subscription, wallet, XLM, release, tag, form, label, topic, setting,
+  commit, push, pull request, merge, or other external mutation occurred.
+- This closeout adds zero Patch and zero Support units. Totals remain 28/14 and revenue and cleared
+  receipts remain `$0.00`. Every August 25, frozen/no-incident, exclusive-selection, privacy,
+  rights/terms, provenance, legal, merchant, payment, and exact external-action gate remains; this
+  closeout authorizes nothing further.
+
+## 2026-08-23 - Session 047 - D-049 independent-review claim remediation
+
+- Independent security review confirmed the R-012 pre-remediation public-main base
+  `cccf398804108e80bc1c15621df72ceea946c05d`, base tree
+  `a15aa3ba7d919bec882320fcd9e20b7930f47636`, exact seven-path canonical fingerprint
+  `f84f1348416c094da65e5e5df48cd181794614bb7bf551ea4fcc449831a06111`, and source-receipt SHA-256
+  `8f0e5e474014be8d811158d21a5665ff70c353626e175dab82522fed5a1e73e5`. D-049 prospectively binds
+  that reviewed state because D-048's first-edit chronology is operator-recorded but not
+  independently auditable from the static diff; publication does not rely on that chronology.
+- Narrowed only the R-012 issue-query claims. The evidence is zero returned current public labeled
+  records and zero observed qualifying public signals. Under D-026 this supports an
+  observed-signal insufficient result, not proof that no qualifying issue ever existed. The query
+  cannot exclude a deleted issue, an issue whose label was removed, or private or off-platform
+  interest. The reviewer's separate extant-issue query was not added as capture evidence because
+  its exact timestamps were not preserved.
+- The remediated source receipt SHA-256 is
+  `29bedfb9ac34bcb6256fef685fbd0e7da1a7f1071c766bc709e5150dcf69f13f`. No new API request, source
+  capture, normalizer/cumulative-record change, work unit, activation, selection, contact,
+  customer/private input, payment, external action, commit, push, pull request, or GitHub-object
+  mutation occurred. Totals remain 28/14 and revenue and cleared receipts remain `$0.00`; every
+  Usage, SEL, frozen/no-incident, privacy, legal, merchant/payment, and external-action boundary
+  remains unchanged.
+- The preceding `No new API request` statement applies only to the implementation remediation.
+  Independent security review separately performed read-only GitHub API and GraphQL rechecks.
+  Those review queries were not incorporated as timestamped capture evidence and caused no
+  mutation; no exact reviewer-query timestamps are claimed.

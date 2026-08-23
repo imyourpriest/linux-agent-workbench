@@ -366,3 +366,25 @@ Append-only project record.
   outreach, checkout, payment, account, merchant, tax, subscription, private input, wallet, or XLM
   action occurred. Every SEL final-capture, frozen/no-incident, exclusive-selection, legal,
   privacy, terms, merchant, payment, and future exact-action gate remains.
+
+## 2026-08-23 - SEL-GH-001 final source-limited closeout
+
+- After the registered window ended, one authenticated read-only final capture returned exactly
+  one current Popular paths row, the repository Overview with count `1` and uniques `1`; the exact
+  frozen entry path was absent. Without disclosed retained-window bounds, that absence remains
+  `unobservable`, never zero, and stays outside the frozen normalizer.
+- The public repository, description, topic set, default branch, non-draft pre-release, zero-asset
+  state, release body, lightweight tag target, target entry, main issue form, and interest label
+  matched the frozen configuration. A metadata-only GraphQL query requested no issue title, body,
+  comments, or content and returned zero current public issues carrying the frozen label.
+- Under D-026, zero observed qualifying public signals close the channel as insufficient signal.
+  This is not proof that no qualifying issue ever existed: the current-label query cannot exclude
+  a deleted issue, an issue whose label was removed, private or off-platform interest, demand,
+  customers, orders, payments, or revenue. No owner entry-page preview event is logged, which is
+  not proof of all owner activity. The current normalized report remains unchanged with `null`
+  views and `not-observed` under D-030. No activation, selection, contact, release, form, listing,
+  checkout, payment, private input, or other external mutation occurred.
+- This is zero-unit Support/control closeout. Totals remain 28 Patch impact / 14 Support revenue
+  units and cleared revenue remains `$0.00`; every August 25, frozen/no-incident,
+  exclusive-selection, privacy, rights/terms, provenance, legal, merchant, payment, and exact
+  external-action gate remains.

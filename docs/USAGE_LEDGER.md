@@ -394,3 +394,23 @@ R-011 adds exactly two Patch impact units and one Support revenue-validation uni
 dedicated totals are twenty-eight impact and fourteen revenue units, preserving 2:1. Revenue and
 cleared receipts remain `$0.00`; no release, form, listing, offer, contact, customer/private input,
 checkout, payment, account, merchant, tax, subscription, wallet, XLM, or activation occurred.
+
+#### R-012 SEL-GH-001 final source-limited closeout - 2026-08-23
+
+- The sponsor reports 58% whole-account Usage remaining and explicitly requests continuation
+  toward a hard 15% floor for this reset period. The first local Codex session snapshot showed 57%
+  remaining; this is operational telemetry, not a signed-in product-dashboard reading or a
+  project-specific meter. D-048 stops active work at 20%, starts no long or multi-agent unit at or
+  below 25%, and stops immediately on a warning or lower sponsor report. The ordinary 40%/50%
+  thresholds return at the next reset.
+- No amount or delta is attributed to this repository, closeout, workstream, unit, agent, tool,
+  test, request, or action; no per-unit Usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-23 | Shared Support/control closeout | 0 | Source-limited SEL-GH-001 final capture; zero observed qualifying public signals support an insufficient-signal result | 58% sponsor report; first local session telemetry 57%; no attribution |
+
+R-012 adds zero Patch and zero Support units. Cumulative dedicated totals remain twenty-eight
+impact and fourteen revenue units, preserving 2:1. Revenue and cleared receipts remain `$0.00`;
+no activation, selection, release, form, listing, offer, contact, customer/private input, checkout,
+payment, account, merchant, tax, subscription, wallet, or XLM action occurred.
