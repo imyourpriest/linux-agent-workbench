@@ -1,8 +1,20 @@
 # Support Agent Regression Lab charter
 
-- Status: accepted
-- Phase: prototype validation
+- Status: parked; historical charter retained
+- Phase: paused after source-limited zero-observed-signal closeout
 - Started: 2026-08-08
+
+## Current status - 2026-08-23
+
+D-050 parks this workstream. There is no active promotion, measurement window, commercial contact
+route, checkout/payment route, customer work, or activation. The preserved historical prerelease,
+entry, and public feedback issue form remain technically accessible and may receive public
+submissions, but are not an active measured demand channel. Existing public-data warnings and
+unsafe-submission/privacy response controls remain controlling; no real or private customer input
+is solicited or accepted for project work. The `$49`, `$149`, and `$79` values below are preserved
+historical hypotheses only. The public prototype and evidence remain available as portfolio
+artifacts. Parking means bounded evidence did not validate demand; it does not mean no real need
+or possible buyer exists.
 
 ## Mission
 
@@ -24,7 +36,7 @@ change. It does not pretend that subjective quality is fully automatable.
 - A separately acknowledged `sanitized-local` mode can compare test outputs prepared outside this
   tool from synthetic prompts and sanitized, customer-approved public policy material. The tool
   still performs no upload, model call, integration, or provenance/reviewer authentication.
-- Proposed paid hypotheses: $49 reusable template; $149 fixed ten-case custom pilot from one
+- Historical paid hypotheses, parked by D-050: $49 reusable template; $149 fixed ten-case custom pilot from one
   approved public policy source. The pilot handoff is a versioned archive containing ten JSONL
   cases, the rubric, one response-free comparison template, and one revision. The proposed window
   is five business days after written scope approval and receipt of the approved source; one

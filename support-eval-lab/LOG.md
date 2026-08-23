@@ -388,3 +388,28 @@ Append-only project record.
   units and cleared revenue remains `$0.00`; every August 25, frozen/no-incident,
   exclusive-selection, privacy, rights/terms, provenance, legal, merchant, payment, and exact
   external-action gate remains.
+
+## 2026-08-23 - Workstream parked after bounded no-go review
+
+- D-050 parks Support Agent Regression Lab after SEL-GH-001 closed with zero observed qualifying
+  public signals and a bounded official-source alternatives review found no buyer-evidence basis
+  for the existing hypotheses or three adjacent pivots. This does not prove no real need or buyer
+  exists.
+- Every `$49`, `$149`, and `$79` value is historical and inactive. The public prototype, reports,
+  policy artifacts, and historical prerelease remain preserved. Both policy candidates remain
+  inert and unselected. There is no active promotion, measurement window, commercial contact
+  route, checkout/payment route, customer work, activation, or selection. The preserved historical
+  prerelease, entry, and public feedback issue form remain technically accessible and may receive
+  public submissions, but are not an active measured demand channel. Existing public-data
+  warnings and unsafe-submission/privacy response controls remain controlling; no real or private
+  customer input is solicited or accepted for project work.
+- Privacy-local evaluation kit and support trace-governance pack are no-go now. Cross-platform
+  migration remains `investigate` only because OpenAI's dated Evals transition/sunset notice must
+  be revalidated and qualifying public demand observed before design.
+- This is a zero-unit park control. Totals remain 28 Patch impact / 14 Support revenue units and
+  revenue and cleared receipts remain `$0.00`. No code, test, workflow, frozen SEL artifact,
+  candidate registry, release, form, label, topic, contact, customer/private input, payment,
+  external object, wallet, or XLM changed.
+- The frozen `CHANNEL_EXPERIMENTS.md` line `Current status: active` belongs to its dated
+  `2026-08-09` activation record and is superseded by that file's appended `2026-08-23` closeout
+  and D-050. It is not the current workstream status. The historical file remains unchanged.

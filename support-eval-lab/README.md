@@ -1,5 +1,15 @@
 # Support Agent Regression Lab
 
+> **Parked historical prototype (2026-08-23):** D-050 parks this workstream after the
+> source-limited channel closed with zero observed qualifying public signals. There is no active
+> promotion, measurement window, commercial contact route, checkout/payment route, customer work,
+> or activation. The preserved historical prerelease, entry, and public feedback issue form remain
+> technically accessible and may receive public submissions, but are not an active measured demand
+> channel. Existing public-data warnings and unsafe-submission/privacy response controls remain
+> controlling; no real or private customer input is solicited or accepted for project work.
+> Historical code, reports, prerelease evidence, and the inert unselected policy candidates remain
+> preserved. This status does not claim that no real need or buyer exists.
+
 This prototype turns expected support-agent behavior into a small, repeatable regression suite. It
 compares two structured runs with explicit example or operator-supplied human-review labels and
 reports assertion failures, unresolved review, regressions, and improvements without calling a
@@ -87,10 +97,11 @@ anchor, and changing the example requires an intentional verifier release and re
 
 The isolated `policy-release-experiment/` is an inert post-SEL draft only. Regenerate it with
 `python -m support_eval_lab.policy_release --project .` and check freshness with `--check`.
-Neither command contains activation or network behavior. The earliest date is not authorization;
-all final SEL capture, independent completeness, frozen/no-incident, final review, exact digest,
-and future control-decision gates remain mandatory. It is not a listing, sale, demand result,
-adoption claim, or GitHub release, and revenue remains `$0.00`.
+Neither command contains activation or network behavior. D-050 now parks the workstream; neither
+the earliest date nor the completed historical SEL closeout authorizes activation. Any future
+reactivation requires qualifying demand and a new prospective control plus independent
+completeness, frozen/no-incident, final review, exact-digest, and external-action gates. It is not
+a listing, sale, demand result, adoption claim, or GitHub release, and revenue remains `$0.00`.
 The experiment directory is trusted-local scope. Generation and validation reject links and
 irregular directories and use exclusive random staging, but do not claim protection if an
 adversary can replace the trusted parent after inspection.
@@ -109,6 +120,10 @@ python -m support_eval_lab.public_policy_audit --project .
 python -m support_eval_lab.public_policy_audit --project . --check
 ```
 
-Real public input remains stopped until SEL-GH-001 final capture, a new prospective control
-decision, and acquisition/privacy/rights-and-terms validation. The existing `$79` hypothesis is
-unvalidated and not offered; revenue remains `$0.00`.
+The public feedback issue form remains technically accessible and may receive public submissions,
+but it is not an active measured demand channel. Existing public-data warnings and
+unsafe-submission/privacy response controls remain controlling. No real or private customer input
+is solicited or accepted for project work. D-050 parks the workstream; any future consideration
+requires qualifying demand, a new prospective control decision, and
+acquisition/privacy/rights-and-terms validation. The existing `$79` value is a parked historical
+hypothesis, not an active price or offer; revenue remains `$0.00`.
