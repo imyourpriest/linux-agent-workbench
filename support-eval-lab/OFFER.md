@@ -1,7 +1,19 @@
 # Offer hypothesis
 
-- Status: prototype; no orders or payments accepted
-- Updated: 2026-08-08
+- Status: parked historical hypothesis; no active offer, price, or activation
+- Updated: 2026-08-23
+
+## Parking notice
+
+D-050 parks every hypothesis in this file. The `$49`, `$149`, and `$79` values below are retained
+only as historical test assumptions, not current prices or offers. There is no active promotion,
+measurement window, commercial contact route, checkout/payment route, order, customer work,
+candidate selection, or activation. The preserved historical prerelease, entry, and public
+feedback issue form remain technically accessible and may receive public submissions, but are not
+an active measured demand channel. Existing public-data warnings and unsafe-submission/privacy
+response controls remain controlling; no real or private customer input is solicited or accepted
+for project work. The artifacts remain public without implying that bounded no-demand evidence
+proves no real need exists.
 
 ## Free starter
 
@@ -9,9 +21,10 @@ The public starter contains ten original synthetic support cases, a strict offli
 human-review rubric, two mocked runs, and a reproducible comparison report. Its job is to show the
 delivery format and make a useful first regression loop available at no cost.
 
-## Proposed paid tests
+## Historical proposed paid tests - parked
 
-These are unvalidated price hypotheses, not an active checkout or a claim of market value:
+These are preserved unvalidated historical test values, not current prices, an active checkout,
+or a claim of market value:
 
 | Offer | Proposed price | Proposed scope |
 |---|---:|---|
@@ -39,7 +52,8 @@ business result. The buyer remains responsible for product policy and release de
 The checked-in `policy-starter/` pack is a non-activated, synthetic demonstration. A single `$79`
 hypothesis may be evaluated later only after separate authorization and every existing revenue,
 identity, terms, tax, merchant, privacy, refund, delivery, and support gate. It is not currently
-offered for sale; there is no listing, contact route, checkout, payment, order, or customer.
+offered for sale; there is no active promotion, commercial listing or contact route,
+checkout/payment route, order, or customer work.
 
 The separate `public-policy-audit/` synthetic demonstration does not add an offer or price. It may
 reference the same `$79` amount only as an unvalidated, not-offered future hypothesis consistent
@@ -49,7 +63,8 @@ The strict `candidate-registry.json` now records `policy-starter-synthetic-v1` a
 direct successor, `maintainer-ai-policy-clarity-synthetic-v1`, in this same hypothesis lineage.
 Both are inert pending a future exclusive selection; `selected_for_activation` is `null`. The
 successor is a public inert draft and unpromoted, not hidden or inaccessible, and is not a pivot,
-fork, competing offer, release, listing, form, contact route, analytics path, checkout, or payment
-route. A future control decision must select exactly one candidate and mark the other inert or
-retired, in addition to every existing SEL, diff/privacy/digest, legal, terms, merchant, payment,
-and external-action gate. Time alone never authorizes activation.
+fork, competing offer, release, listing, analytics path, checkout, or payment route; it does not
+itself activate a form or commercial contact route. A future control decision must select exactly
+one candidate and mark the other inert or retired, in addition to every existing SEL,
+diff/privacy/digest, legal, terms, merchant, payment, and external-action gate. Time alone never
+authorizes activation.

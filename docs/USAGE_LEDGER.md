@@ -414,3 +414,23 @@ R-012 adds zero Patch and zero Support units. Cumulative dedicated totals remain
 impact and fourteen revenue units, preserving 2:1. Revenue and cleared receipts remain `$0.00`;
 no activation, selection, release, form, listing, offer, contact, customer/private input, checkout,
 payment, account, merchant, tax, subscription, wallet, or XLM action occurred.
+
+#### R-013 Support park and unit-selection pause - 2026-08-23
+
+- The sponsor-reported reset-period start remains 58% whole-account Usage with explicit authority
+  toward a hard 15% floor. Local session telemetry showed 45% remaining before R-013
+  implementation. This operational telemetry is not a signed-in product-dashboard value or a
+  per-project measurement. D-050 stops active work at 20%, begins no long or multi-agent unit at or
+  below 25%, and stops on any warning or lower sponsor report. Ordinary 40%/50% thresholds resume
+  at the next reset.
+- No amount or delta is attributed to this repository, control, workstream, unit, agent, tool,
+  research request, validation, or action; no per-unit Usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-23 | Shared control | 0 | Parked Support and paused repeated Patch/new-unit selection after bounded official-source no-go review | 58% sponsor-reported reset start; 45% local session telemetry before implementation; no attribution |
+
+R-013 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+batch, offer, channel, activation, selection, contact, customer/private input, checkout, payment,
+account, merchant, tax, subscription, wallet, or XLM action occurred.

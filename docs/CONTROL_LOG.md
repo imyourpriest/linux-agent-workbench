@@ -1382,3 +1382,51 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   Independent security review separately performed read-only GitHub API and GraphQL rechecks.
   Those review queries were not incorporated as timestamped capture evidence and caused no
   mutation; no exact reviewer-query timestamps are claimed.
+
+## 2026-08-23 - Session 048 - R-012 post-main closeout and R-013 park control
+
+- PR 25 reviewed head `e892f1604610cbba135880180c10341ff71fcb14` and tree
+  `b50997115d95a2ed061d3c48a28569a77edee395` were protected-squash-merged at public-main commit
+  `7cee864eea5bc4821ecfb6ea17091f45dba5a656`, with sole parent
+  `cccf398804108e80bc1c15621df72ceea946c05d` and the same reviewed tree. The feature branch was
+  retained at the reviewed head.
+- Post-main compatibility run `32627551168` passed jobs `97165130122` and `97165130237`. CI run
+  `32627551063` passed jobs `97165129837`, `97165129902`, `97165129918`, `97165129929`, and
+  `97165129944`. CodeQL run `32627550787` passed jobs `97165131213`, `97165131047`, and
+  `97165131207`. Main protection remained strict/admin-enforced with the same nine app-bound
+  required contexts, linear history and conversation resolution enabled, and force pushes and
+  deletion disabled. These are exact hosted/configuration observations, not proof of broad
+  semantic correctness, privacy, production enforcement, future availability, or demand.
+- D-050 parks Support Agent Regression Lab and every historical `$49`, `$149`, and `$79`
+  hypothesis. Public artifacts and the historical prerelease remain preserved; both policy
+  candidates remain inert and unselected. There is no active promotion, measurement window,
+  commercial contact route, checkout/payment route, customer work, activation, or selection. The
+  historical prerelease, entry, and public feedback issue form remain technically accessible and
+  may receive public submissions, but are not an active measured demand channel. Existing
+  public-data warnings and unsafe-submission/privacy response controls remain controlling; no real
+  or private customer input is solicited or accepted for project work.
+- The bounded ten-source official review found substantial vendor support/evaluation,
+  experiment, trace, pricing, and self-hosted capability but no buyer-demand evidence for this
+  project. Privacy-local kit and trace-governance pack are no-go now. Cross-platform migration is
+  `investigate` only because OpenAI's dated Evals transition/sunset notice requires revalidation
+  and qualifying public demand before design.
+- Immediate repeated Patch scans and all new units are paused until a future control identifies a
+  specific independently observed eligible issue or materially different revenue hypothesis with
+  a falsifiable zero-spend validation threshold. No new 2:1 batch is selected. Totals remain 28
+  Patch impact / 14 Support revenue units and revenue and cleared receipts remain `$0.00`.
+- This local control changed status and records only. No code, test, workflow, SEL receipt or
+  normalizer, candidate registry, policy artifact, release, tag, form, label, topic, setting,
+  offer activation, contact, customer/private input, payment, account, wallet, XLM, or other
+  external object changed. Local edit order is not publication evidence; any publication relies
+  on independent review of the complete exact nine-path diff under D-050.
+- Independent review bound the pre-remediation exact nine-path fingerprint
+  `3e93b784213afa5f414e4fcd2bd184d9612180b01c5e5dc92369795b63a44a1f` and identified the
+  P2 availability/privacy defect: the preserved prerelease entry and public feedback issue form
+  remain technically accessible. It also identified the P3 stale-status clarification: the frozen
+  `CHANNEL_EXPERIMENTS.md` `Current status: active` line is part of the dated `2026-08-09`
+  activation record, superseded by that file's appended `2026-08-23` closeout and D-050. This
+  same-branch remediation corrects current status prose only; it does not alter the historical
+  channel file or any release, entry, form, label, issue, setting, code, frozen artifact, or
+  external state. No new API request was made. Existing public-data warnings,
+  unsafe-submission/privacy response controls, zero-unit totals, and all privacy, payment,
+  activation, selection, Usage, and external-action boundaries remain unchanged.

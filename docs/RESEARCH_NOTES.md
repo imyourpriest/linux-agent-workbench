@@ -30,3 +30,32 @@ Observed: 2026-08-07. Links are the sources checked at launch; product terms, pr
 ## Funding conclusion
 
 The sponsor's optional XLM is unnecessary for either launch thesis. The decision is $0 cash, no wallet integration, no token incentive, and no plan upgrade. Revenue must first demonstrate a lawful buyer outcome; Patch Cabinet support, if any, follows useful upstream results.
+
+## 2026-08-23 - Evaluation alternatives and bounded no-go review
+
+Retrieved `2026-08-23`. These vendor-primary pages establish only published capabilities,
+availability statements, and list prices at retrieval time. They do not establish buyer demand,
+fit, adoption, willingness to pay, or a differentiator for this project. Pricing and the OpenAI
+transition notice are time-sensitive and require revalidation before any future decision.
+
+| Official source | Narrow observation at retrieval | R-013 consequence |
+|---|---|---|
+| [OpenAI support operating model](https://openai.com/index/openai-support-model/) | OpenAI describes an internal support loop using surfaces, knowledge, human/software evals and classifiers, Agents SDK traces, and API primitives. It expressly presents an illustrative internal OpenAI example. | Confirms the evaluation problem and integrated capability, not external buyer demand for a separate pack. |
+| [OpenAI Evals API reference](https://developers.openai.com/api/reference/resources/evals) | The official API reference exposes programmatic Evals resources and runs. | A provider-native programmatic substitute exists; API availability is not evidence for this project's demand. |
+| [Introducing AgentKit](https://openai.com/index/introducing-agentkit/) | The dated page describes datasets, trace grading, prompt optimization, and third-party-model evaluation, then records a `2026-06-03` update that Agent Builder and Evals are winding down and will be unavailable after `2026-11-30`, recommending code-based Agents SDK or Workspace Agents routes. | A cross-platform migration adapter remains `investigate` only. Revalidate the transition and observe qualifying public demand before design. |
+| [LangSmith evaluation](https://docs.langchain.com/langsmith/evaluation) | LangSmith documents offline datasets/experiments and online production-trace evaluation with human, code, and model evaluators. | Broad hosted evaluation capability is an existing substitute, not proof of demand for this project. |
+| [LangSmith pricing](https://www.langchain.com/pricing) | The page lists a `$0` Developer seat with usage billing, `$39` Plus seats, and custom Enterprise options, including evaluation/observability allowances. | A low-friction incumbent entry point weakens generic-pack differentiation; price is not buyer evidence. |
+| [Braintrust experiments](https://www.braintrust.dev/docs/evaluate/run-evaluations) | Braintrust documents immutable comparable experiment snapshots run through code, UI, or CI/CD. | Existing regression/evaluation workflow capability is a substitute, not demand evidence. |
+| [Braintrust pricing](https://www.braintrust.dev/pricing) | The page lists a `$0` Starter tier, `$249` Pro tier, and custom Enterprise tier with included and metered evaluation resources. | Free and paid alternatives exist; their prices do not validate this project's willingness-to-pay hypothesis. |
+| [Langfuse evaluation](https://langfuse.com/docs/evaluation) | Langfuse documents online/offline evaluation, datasets, experiments, manual/automated scoring, deterministic checks, and CI/CD use. | The trace-governance/evaluation surface is already broad; capability is not demand. |
+| [Langfuse self-hosted pricing](https://langfuse.com/pricing-self-host) | Langfuse states that its MIT-licensed open-source edition can self-host core observability, evaluation, prompt, and dataset features for free; Enterprise is custom-priced. | A privacy-local kit faces a capable self-hosted substitute; no observed buyer signal clears a pivot threshold. |
+| [Langfuse cloud pricing](https://langfuse.com/pricing) | The page lists free Hobby, `$29` Core, `$199` Pro, and `$2499` Enterprise entry prices with usage and feature differences. | Multiple hosted price points are alternatives evidence only, not demand or attainable revenue. |
+
+| Possible pivot | Bounded evidence result | Disposition |
+|---|---|---|
+| Privacy-local evaluation kit | Self-hosted Langfuse already publishes core evaluation/observability capability; no qualifying public buyer signal for this narrower project was observed. | No-go now; require a materially different falsifiable zero-spend demand threshold. |
+| Cross-platform migration adapter | OpenAI's dated transition notice may create migration work, but no qualifying public demand for an adapter was observed and the details can change. | `investigate` only; revalidate the notice and demand before any design. |
+| Support trace-governance pack | OpenAI's internal support model and all three evaluation vendors document traces, evaluators, datasets, experiments, or governance-adjacent features. | No-go now; capability overlap is not validated buyer demand. |
+
+None of the three pivots clears a buyer-evidence threshold. This is a bounded no-go decision, not
+proof that no buyer, need, niche, or future opportunity exists.

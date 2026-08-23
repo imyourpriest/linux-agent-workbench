@@ -1165,3 +1165,101 @@ source capture, API request, permission, or external action is authorized.
 current-label query do not support stronger historical absence claims. A prospectively bound
 baseline and narrow corrections preserve the useful source evidence without overstating what
 static review or current public metadata can prove.
+
+## 2026-08-23 - D-050 - R-013 parks Support and pauses repeated unit selection
+
+**Decision:** Select one zero-unit R-013 control-only park/pause update from exact public main
+`7cee864eea5bc4821ecfb6ea17091f45dba5a656`. Local edit order is operator process evidence only,
+not publication evidence; do not claim that this decision's edit chronology is independently
+proved. Any future publication relies only on independent exact-diff review of the complete
+current nine-path scope.
+
+Close R-012 publication non-recursively. PR 25 reviewed head
+`e892f1604610cbba135880180c10341ff71fcb14` and tree
+`b50997115d95a2ed061d3c48a28569a77edee395` were protected-squash-merged at public-main commit
+`7cee864eea5bc4821ecfb6ea17091f45dba5a656`, whose sole parent was
+`cccf398804108e80bc1c15621df72ceea946c05d` and whose tree matched the reviewed tree. The feature
+branch remains retained at the reviewed head. Post-main compatibility run `32627551168` passed
+jobs `97165130122` and `97165130237`; CI run `32627551063` passed jobs `97165129837`,
+`97165129902`, `97165129918`, `97165129929`, and `97165129944`; and CodeQL run `32627550787`
+passed jobs `97165131213`, `97165131047`, and `97165131207`. Main protection remained unchanged:
+strict app-bound required checks, admin enforcement, linear history and conversation resolution
+enabled, with force pushes and deletion disabled. These named hosted observations establish only
+their configured outcomes on the named commits, runs, and jobs, not broad semantic correctness,
+privacy, production enforcement, future availability, or demand.
+
+Park Support Agent Regression Lab and every `$49`, `$149`, and `$79` hypothesis. There is no active
+promotion, measurement window, commercial contact route, checkout/payment route, customer work,
+or activation. The preserved historical prerelease, entry, and public feedback issue form remain
+technically accessible and may receive public submissions, but are not an active measured demand
+channel. Existing public-data warnings and unsafe-submission/privacy response controls remain
+controlling; no real or private customer input is solicited or accepted for project work. Preserve
+the public prototype, reports, policy artifacts, historical prerelease, and all append-only
+evidence untouched. Both policy candidates remain inert and unselected; do not delete, rewrite,
+activate, select, or promote either. Parking records only that bounded evidence did not validate
+demand, not that the underlying need is absent or that no buyer could exist.
+
+Bounded official-source research retrieved on `2026-08-23` confirms that vendors provide support
+model, evaluation, experiment, tracing, and self-hosting capabilities and publish substitute
+products or pricing. Vendor capabilities and prices are alternatives evidence, not buyer-demand
+evidence for this project. None of three possible pivots clears a buyer-evidence threshold:
+privacy-local evaluation kit, cross-platform migration adapter, or support trace-governance pack.
+Cross-platform migration remains `investigate` only because OpenAI's dated Evals transition/sunset
+notice may create migration work; its time-sensitive details require revalidation, and qualifying
+public demand is required before any design or implementation.
+
+Pause immediate repeated Patch Cabinet scans and all new work units. Patch Cabinet remains valued,
+but a future control must identify either a specific independently observed eligible issue or a
+materially different revenue hypothesis with a falsifiable zero-spend validation threshold before
+selecting more units. No new 2:1 batch is selected. Historical totals remain exactly 28 Patch
+impact / 14 Support revenue units and revenue and cleared receipts remain `$0.00`.
+
+The exact R-013 write scope is limited to these nine paths:
+
+- `README.md`;
+- `docs/DECISION_LOG.md`;
+- `docs/CONTROL_LOG.md`;
+- `docs/USAGE_LEDGER.md`;
+- `docs/RESEARCH_NOTES.md`;
+- `support-eval-lab/CHARTER.md`;
+- `support-eval-lab/OFFER.md`;
+- `support-eval-lab/README.md`; and
+- `support-eval-lab/LOG.md`.
+
+Authorize only stale-status correction, append-only control/research/Usage/Support records, and
+local static validation within those paths. After independent exact-diff review, authorize at
+most one later draft-first guarded publication: one commit and normal push, at most one draft pull
+request, ready transition only after exact-head review and all nine required checks succeed,
+protected squash merge under unchanged protection, retained feature branch, and post-main
+verification. At most one same-branch, same-pull-request remediation may address a concrete
+review or hosted-check failure after fresh validation and independent review. No force push,
+bypass, branch deletion, release/tag/form/label/topic/settings change, activation, selection,
+contact, payment, external action, or unrelated write is authorized.
+
+For the remainder of this same reset only, the sponsor-reported 58% starting value and explicit
+authorization toward a hard 15% floor remain controlling. Local session telemetry showed 45%
+remaining before R-013 implementation; this is operational whole-account telemetry, not a product
+dashboard or per-project measurement. Stop active work at 20%, begin no long or multi-agent unit
+at or below 25%, and stop immediately on any warning or lower sponsor report. The ordinary 40%
+stop and 50% long/multi-agent threshold resume at the next reset. No Usage amount or delta is
+attributed to this repository, control, workstream, unit, agent, tool, test, or action.
+
+**Why:** SEL-GH-001 closed on zero observed qualifying public signals, while the official-source
+review found mature substitute capabilities but no independently observed buyer demand for the
+existing or adjacent hypotheses. Parking preserves useful public evidence and prevents sunk-cost
+continuation until a specific issue or materially different falsifiable hypothesis exists.
+
+**Independent-review remediation:** Independent review bound the pre-remediation exact nine-path
+fingerprint `3e93b784213afa5f414e4fcd2bd184d9612180b01c5e5dc92369795b63a44a1f` and found that the
+P2 availability/privacy defect was that the preserved historical prerelease entry still links to
+the technically accessible public feedback issue form. The P3 stale-status clarification is that
+the frozen `CHANNEL_EXPERIMENTS.md` line `Current status: active` belongs to its dated `2026-08-09`
+activation record; it is superseded by that file's appended `2026-08-23` closeout and by D-050 and
+is not a current-status claim. Correct the current R-013 status surfaces to distinguish technical
+accessibility from an active measured demand channel. Do not rewrite the frozen channel record or
+mutate the release, entry, form, label, issues, settings, or any other external object. Existing
+public-data warnings,
+unsafe-submission/privacy response controls, zero-unit totals, and every privacy, payment,
+activation, selection, Usage, and external-action boundary remain controlling. D-050 remains the
+sole publication authority for this same-branch remediation; no additional API request or
+publication action is authorized by this note.
