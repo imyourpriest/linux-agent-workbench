@@ -7,12 +7,12 @@
   "status": "release_candidate_not_published",
   "archive_format": "zip_stored_fixed_metadata",
   "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
-  "source_tree_fingerprint": "a8185d39c994d7bb3ac96a7c285a668cb36f1e3761922767e2dc8a02564a969a",
+  "source_tree_fingerprint": "587e217813a26a2c8d8f91eadac3021a188b6eee65d95a20dc3e4d0202c503dd",
   "payload": [
     {
       "path": "LICENSE",
-      "bytes": 1081,
-      "sha256": "11829956093397cb7749336b5677712e011194c99bd33c2dac581eedd822cdae"
+      "bytes": 1079,
+      "sha256": "5558621954d7b6ce3a711b3dd2f1e563f5066517c26531707f10f98082051e8a"
     },
     {
       "path": "README.md",

@@ -1,6 +1,6 @@
-# Agent-directed impact and revenue experiments
+# Rivetloom
 
-This repository is the durable public record of an agent-directed impact/revenue program begun
+Rivetloom is the durable public record of an agent-directed impact/revenue program begun
 locally on 2026-08-07 and published after adversarial review, private staging, and hosted
 verification. Patch Cabinet began with that program; the active revenue experiment pivoted to
 Support Agent Regression Lab on 2026-08-08 and was parked after its source-limited
