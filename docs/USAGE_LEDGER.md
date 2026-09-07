@@ -434,3 +434,329 @@ R-013 adds zero Patch and zero Support units. Historical totals remain twenty-ei
 fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
 batch, offer, channel, activation, selection, contact, customer/private input, checkout, payment,
 account, merchant, tax, subscription, wallet, or XLM action occurred.
+
+#### R-014 zero-unit migration qualification - 2026-08-23
+
+- The sponsor reports a new reset at `100%` whole-account Usage and authorizes work down to the
+  ordinary `40%` stop. Local session telemetry showed `97%` after investigation and `96%` before
+  record implementation. These are operational whole-account readings, not signed-in Usage-page
+  snapshots and not project-specific measurements.
+- Begin no long or multi-agent unit below `50%`; stop at `40%`, any warning, or any lower sponsor
+  report. No amount or delta is attributed to this repository, control, workstream, unit, agent,
+  tool, research request, validation, or action, and no per-unit Usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-23 | Shared control | 0 | R-014 bounded migration qualification failed the buyer-demand gate; migration remains `investigate` only | 100% sponsor-reported reset start; 97% local telemetry after investigation; 96% before record implementation; no attribution |
+
+R-014 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No
+workstream, charter, code, fixture, prototype, offer, form, release, channel, contact, third-party
+repository or source-artifact ingestion or execution, customer/private input, checkout, payment,
+account, merchant, tax, subscription, wallet, XLM, publication, or other external action occurred.
+
+#### R-015 prospective draft-publication gate - 2026-08-24
+
+- The sponsor now reports `88%` whole-account Usage remaining and authorizes continuation down to
+  the ordinary `40%` stop. This is a sponsor-reported whole-account reading, not project-specific
+  measurement. Begin no long or multi-agent unit below `50%`; stop at `40%`, any warning, or any
+  lower sponsor report.
+- No amount or delta is attributed to this repository, control, workstream, unit, agent,
+  connector, tool, validation, or action, and no per-unit Usage is inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-24 | Shared control | 0 | D-052 records a prospective draft-only publication gate for the reviewed R-014 no-go; ready and merge remain unauthorized | 88% sponsor-reported whole-account remaining; no attribution |
+
+R-015 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No local
+commit, GitHub branch or pull request, publication, ready transition, merge, protection/settings
+change, release, tag, form, issue, label, contact, payment, activation, customer/private input,
+project/third-party execution, or other external action occurred.
+
+#### R-016 no-mutation transaction closeout - 2026-08-24
+
+- The sponsor's last report remains `88%` whole-account Usage with the ordinary `40%` stop. Local
+  operational telemetry at `2026-08-24T01:56:14Z` showed `77%` remaining. These are whole-account
+  observations only, not project-specific measurements. Begin no long or multi-agent unit below
+  `50%`; stop at `40%`, any warning, or any lower sponsor report.
+- No amount or delta is attributed to this repository, control, workstream, unit, agent,
+  connector, tool, validation, rejected pre-dispatch call, or action, and no per-unit Usage is
+  inferred.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-24 | Shared control | 0 | D-052 transaction stopped at the runtime approval boundary before its first connector write was dispatched; D-053 terminates authority | 88% last sponsor report; 77% local operational telemetry; no attribution |
+
+R-016 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, or dispatched connector write occurred. Read-only
+reconciliation found no target branch or pull request; no publication, cleanup, ready transition,
+merge, contact, payment, activation, customer/private input, or other external mutation occurred.
+
+#### R-017 guarded publication recovery control - 2026-08-31
+
+- The sponsor reports that the allowance reset occurred. Local operational telemetry showed
+  `94%` remaining at `2026-09-01T00:38:54.291Z` and `83%` remaining at
+  `2026-09-01T00:44:00.059Z`. These are whole-account observations only, not signed-in dashboard
+  proof or project-specific measurement. No amount or delta is attributed to this repository,
+  control, workstream, unit, agent, tool, validation, network route, or action.
+- The ordinary stop remains `40%`; begin no long or multi-agent unit below `50%`; stop immediately
+  on any warning or lower sponsor report.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-31 | Shared control | 0 | D-054 records a newly reviewed prospective guarded publication recovery after changed execution capability; no new research or work unit | reset reported; 94% then 83% local operational telemetry; no attribution |
+
+R-017 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, publication, GitHub write, contact, payment, activation,
+customer/private input, or other external mutation occurred during this local record preparation.
+
+#### R-018 security-review correction - 2026-08-31
+
+- Local operational telemetry showed `60%` remaining at `2026-09-01T00:56:47.449Z`. This is a
+  whole-account observation only, not a project-specific measurement. No amount or delta is
+  attributed to this repository, control, workstream, unit, agent, review, tool, validation, or
+  action.
+- The ordinary stop remains `40%`; begin no long or multi-agent unit below `50%`; stop immediately
+  on any warning or lower sponsor report.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-31 | Shared control | 0 | D-055 corrects D-054's ruleset provenance after independent-review HOLD and records replacement prospective authority; no new research or work unit | 60% local operational telemetry; no attribution |
+
+R-018 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, publication, GitHub write, contact, payment, activation,
+customer/private input, or other external mutation occurred during this local correction.
+
+#### R-019 partial-transaction stop and replacement control - 2026-08-31
+
+- This already-started guarded publication cycle began above `50%`. Local operational telemetry
+  showed `47%` remaining at `2026-09-01T01:04:17.768Z`. This is a whole-account observation only;
+  no amount or delta is attributed to this repository, control, workstream, unit, agent, review,
+  tool, validation, or action.
+- Start no new long or multi-agent unit below `50%`; the ordinary stop remains `40%`; stop on any
+  warning or lower sponsor report.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-31 | Shared control | 0 | D-055 stopped after one verified-on-reconciliation dangling blob; D-056 records a new prospective replacement with corrected validator | 47% local operational telemetry; no attribution |
+
+R-019 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, branch, pull request, publication, contact, payment, activation,
+customer/private input, or other unrelated external mutation occurred. The sole external mutation
+was the known dangling blob recorded by D-056; no cleanup was attempted.
+
+#### R-020 Usage-window audit correction - 2026-08-31
+
+- The sponsor explicitly clarified that the protected `40%` floor applies to the weekly limit and
+  reported `64%` weekly remaining. Exact local telemetry at `2026-09-01T01:14:35.867Z` showed a
+  300-minute primary window at 72% used / 28% remaining and a 10080-minute secondary window at
+  37% used / 63% remaining. The one-point difference is timing, not attribution. Telemetry and
+  reset fields are operational evidence, not signed dashboard proof or per-project measurement.
+- Official documentation fetched `2026-08-31` from
+  https://developers.openai.com/codex/pricing supports distinguishing the five-hour estimate from
+  additional weekly limits, but it does not establish exact account Usage.
+- Prior local primary readings recorded as 97/96, 77, 94/83, 60, 47, and later unrecorded 39 are
+  historical raw five-hour observations only, not weekly or whole-account floor values. Sponsor
+  reports remain sponsor evidence. Going forward, primary controls five-hour calculation and
+  secondary controls weekly calculation. Begin no new long or multi-agent unit below 50% weekly;
+  stop at 40% weekly or a warning or lower sponsor weekly report. Five-hour exhaustion may affect
+  availability but does not itself trigger the protected weekly floor.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-31 | Shared control | 0 | D-057 corrects primary/secondary Usage-window attribution and records replacement prospective authority after interrupted D-056 review | sponsor 64% weekly; local secondary 63% weekly and primary 28% five-hour; no attribution |
+
+R-020 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, publication, GitHub write, contact, payment, activation,
+customer/private input, or unrelated external mutation occurred during this local correction.
+
+#### R-021 window-mapping audit correction - 2026-08-31
+
+- Map Usage windows by duration, never fixed field name: `window_minutes=10080` is weekly and
+  `window_minutes=300` is five-hour. Historical primary 97%/96% in R-014 and 77% in R-016 were
+  weekly because their window was 10080 minutes with secondary null. Later primary 94%/83%, 60%,
+  47%, and unrecorded 39% were five-hour; concurrent weekly values were 73%/72%, 68%, 66%, and 65%.
+- D-057's exact sample was five-hour 28% / weekly 63%, with sponsor report 64% weekly. Current
+  `2026-09-01T01:25:39.434Z` telemetry was five-hour 2% / weekly 59%. All local values are
+  operational evidence, not dashboard proof or project attribution.
+- Begin no new long or multi-agent unit below 50% weekly; stop at 40% weekly, warning, or lower
+  sponsor weekly report. Five-hour exhaustion affects availability only. If a consequential sample
+  lacks an unambiguous 10080-minute window, use a fresh sponsor dashboard report if available or
+  stop pending reliable weekly evidence; never infer weekly state from field name.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-08-31 | Shared control | 0 | D-058 corrects duration-based Usage mapping and records review-pending replacement authority after D-057 P3 | current five-hour 2%, weekly 59%; no attribution |
+
+R-021 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, local commit, publication, GitHub write, contact, payment, activation,
+customer/private input, or unrelated external mutation occurred during this local correction.
+
+#### R-022 run-specific weekly floor - 2026-09-01
+
+- The sponsor explicitly authorizes this run down to a protected `20%` weekly remaining floor.
+  For this run only, begin no new long or multi-agent unit below `30%` weekly and stop at `20%`
+  weekly, any warning, or any lower sponsor weekly report. This supersedes D-058's 40%/50% gates
+  only for this run and does not change future-reset defaults.
+- Map by duration: 10080 minutes is weekly and 300 minutes is five-hour, regardless field label.
+  If an unambiguous weekly window is unavailable at a consequential gate, use a fresh sponsor
+  dashboard report if available or stop; never infer from `primary`/`secondary`. Five-hour
+  exhaustion affects availability, not the weekly floor.
+- Exact local operational telemetry at `2026-09-01T21:25:05.953Z` was five-hour used 0 / remaining
+  100 and weekly used 42 / remaining 58, with reset fields present. This is not signed dashboard
+  proof or project attribution. The sponsor's 20% instruction is a floor, not a claim that current
+  weekly remaining is 20%.
+- D-058 remained pending independent review, never activated, and caused no GitHub write. D-059 is
+  wholly new prospective authority under the changed Usage constraint and remains inactive until
+  a brand-new exact-byte independent security review passes.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-01 | Shared control | 0 | D-059 records the run-specific weekly floor and review-pending replacement authority | local five-hour 100%, weekly 58%; no attribution |
+
+R-022 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, activation, contact, private input, payment, publication, GitHub write, or
+unrelated mutation occurred during this local record append.
+
+#### R-023 prewrite-validator stop - 2026-09-01
+
+- Independent review PASSed D-059's exact bytes with no P0-P3. Weekly operational telemetry was
+  53% remaining at `2026-09-01T21:38:18.318Z`.
+- The mandatory final equality script stopped before every write on a missing `restrictions`
+  property. Read-only reconciliation found unchanged remote state and corrected the validator.
+  Latest telemetry at `2026-09-01T21:42:39.041Z` was five-hour 63% and weekly 52%, selected by
+  `window_minutes=300` and `10080` respectively. These readings are not signed dashboard proof,
+  project attribution, or evidence of usage caused by this control.
+- D-060 preserves this run's no-new-long/multi-agent threshold below 30% weekly and stop at 20%
+  weekly, any warning, or lower sponsor weekly report. D-060 is wholly new prospective authority
+  and remains inactive until a brand-new exact-byte independent security review PASSes.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-01 | Shared control | 0 | D-059 stopped before every write; D-060 records the corrected review-pending replacement authority | weekly 53% at review, then 52%; five-hour 63% at latest sample; no attribution |
+
+R-023 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, activation, contact, private input, payment, publication, GitHub write,
+cleanup, or unrelated mutation occurred during this local record append.
+
+#### R-024 canonical-body-digest stop - 2026-09-01
+
+- D-060's independent review labeled the exact fingerprint and byte bindings a PASS but failed to
+  identify that its reported canonical-body digest had 63 characters. At
+  `2026-09-01T21:59:00.876Z`, the mandatory final local equality gate recomputed the digest and
+  stopped before any GitHub helper or request at `D060_PREWRITE_FAIL: canonical body hash`.
+- Read-only reconciliation proved no local byte drift and identified the actual 64-character
+  digest as `b332d554a55e0894608a3afec6c0ac5bd508f0d7c03e4e9bd605da498d508c3b`; the expected
+  transcription was missing its final `b`. This is a controlling P3 binding defect despite the
+  earlier PASS label. D-060 authority is exhausted.
+- D-061 is wholly new prospective authority and remains inactive until a brand-new independent
+  review PASSes its exact bytes, fingerprint, canonical body, and explicit 64-lowercase-hex checks.
+  It preserves the duration-based window mapping and this run's threshold: begin no new long or
+  multi-agent unit below 30% weekly and stop at 20% weekly, any warning, or any lower sponsor
+  weekly report.
+- Fresh operational telemetry at `2026-09-01T21:59:40.336Z` was 48% weekly remaining, selected by
+  `window_minutes=10080`. This is not signed dashboard proof, project attribution, or evidence of
+  usage caused by this control. Fresh remote-state reconciliation was read-only and unchanged.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-01 | Shared control | 0 | D-060 stopped locally before any GitHub request; D-061 records review-pending replacement authority with explicit 64-hex gates | weekly 48%; no attribution |
+
+R-024 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, activation, contact, private input, payment, publication, GitHub write,
+cleanup, or unrelated mutation occurred during this local record append.
+
+#### R-025 parser stop and guarded-helper selection - 2026-09-01
+
+- Independent security review PASSed D-061's exact fingerprint, valid body/file bindings, and all
+  bytes with no P0-P3. Its final equality command nevertheless failed at PowerShell parse time at
+  `2026-09-01T22:15:32.800Z` because two loops used `foreach($path in$paths)`. Parsing failed
+  before any statement executed: no local check, GitHub request, write, or mutation occurred.
+- D-061 authority is exhausted. D-062 is wholly new prospective authority and is inactive pending
+  one independent PASS of both the exact cumulative four-file bytes/bindings and the exact
+  separately bound helper bytes and behavior. PublishDraft mode is forbidden before that PASS.
+- Duration-based window mapping remains controlling. For this run, begin no new long or
+  multi-agent unit below 30% weekly and stop at 20% weekly, any warning, or any lower sponsor
+  weekly report. Operational telemetry at `2026-09-01T22:13:06.401Z` was weekly 43% and five-hour
+  5% remaining. This is not signed dashboard proof, project attribution, or proof of usage caused
+  by this control.
+- Fresh independent remote-state review was read-only and unchanged. D-050/D-051's no-go/cooldown
+  and the known dangling-blob no-reuse/no-cleanup rule remain controlling.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-01 | Shared control | 0 | D-061 stopped at parse time; D-062 selects a review-pending external guarded helper | weekly 43%; five-hour 5%; no attribution |
+
+R-025 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research, work unit, activation, contact, private input, payment, publication, GitHub request or
+write, cleanup, or unrelated mutation occurred during this local record append.
+
+#### R-026 query-interpolation stop and public-object reconciliation - 2026-09-01
+
+- D-062's first helper review HOLDed a same-array pre-POST P2; its second HOLDed a JSON-shape P2
+  and all-window-warning P3. The second reviewer also violated process by invoking pre-PASS
+  PublishDraft once; it stopped during read-only preflight before POST. Bounded reconciliation
+  found no reachable mutation from that call, but universal non-mutation is not claimed. A third
+  review PASSed the corrected 36,055-byte helper and exact cumulative bytes.
+- One later authorized D-062 invocation passed Static and remote/Usage preflight, created and
+  verified four exact blobs, POSTed the exact tree, then stopped before tree readback or commit
+  POST because StrictMode parsed `$BaseTree?recursive` as a variable. No retry occurred.
+- Root GET reconciliation confirmed the prior stale blob; the four D-062 blobs; docs subtree
+  `b45d4bf4cc93025f7e3a412b2e94b60ba3ab1ed8`; and root tree
+  `778391d1a5416e201248ac6c023282e0d71eca90`. Main was unchanged, zero PRs were open, and target
+  was absent. The six new objects are retrievable by SHA in the public repository object database,
+  so this is not a no-GitHub-write/publication record.
+- Operational telemetry at `2026-09-02T03:26:45.273Z` was weekly 31% / five-hour 26%, with no
+  reached/spend control. The current remediation/review unit began above 30%; stop remains 20%
+  weekly, any warning, or lower sponsor report.
+- D-062 is exhausted. D-063 is wholly new, zero-unit, review-pending prospective authority. It
+  permits no retry/reuse/delete/cleanup of stale objects and no PublishDraft before an independent
+  exact-byte PASS.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-01 | Shared control | 0 | D-062 stopped after four blobs and two trees; D-063 selects review-pending corrected authority | weekly 31%; five-hour 26%; no attribution |
+
+R-026 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. No new
+research/work unit, contact, private input, payment, pull request, branch, main change, or commit
+occurred. Four blobs and two trees do exist as public-repository objects retrievable by SHA.
+
+#### R-027 Rivetloom identity and D-064 guarded recovery - 2026-09-05
+
+- The sponsor explicitly authorizes this run to continue down to `0%` remaining in both the
+  300-minute five-hour and 10080-minute weekly windows. After using a reset, they expressly
+  authorized using the full new five-hour allowance; the prior weekly-zero-floor instruction
+  remains in force. There is no automatic reset action. Any real warning, reached limit,
+  spend-control signal, malformed or ambiguous telemetry, unavailable 300/10080-minute window, or
+  lower sponsor report still stops.
+- A primary product observation at reset showed `98%` five-hour and `100%` weekly remaining with
+  one reset credit still reported. The earlier `11%` weekly reading was a preparation-time sample,
+  not the latest reading. These are whole-account observations only, not signed dashboard proof,
+  project attribution, or evidence of usage caused by this repository, control, model, task,
+  agent, helper, test, or prospective publication.
+- GPT-6 Astra at ultra reasoning is the active project operating context. Model choice changes no
+  external-action, identity, payment, privacy, or security gate.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-05 | Shared control | 0 | Adopt Rivetloom identity and prepare review-pending D-064 draft recovery; no D-064 publication | reset-time primary product observation 98% five-hour / 100% weekly; one reset credit reported; no attribution |
+
+R-027 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. Local
+branding and append-only preparation occurred; no D-064 GitHub write, branch, pull request, main
+change, ready transition, merge, contact, payment, activation, or new external mutation occurred.
+Exactly four deterministic files in the current unpublished Patch Cabinet v0.2.0 release candidate
+were regenerated after the LICENSE label change; this was local candidate maintenance, not a
+release, tag, publication, work unit, or revenue event.

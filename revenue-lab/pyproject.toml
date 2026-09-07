@@ -9,7 +9,7 @@ description = "Static trusted-local evidence demos for Linux release-readiness r
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
-authors = [{ name = "Cairn-Inspo contributors" }]
+authors = [{ name = "Rivetloom contributors" }]
 dependencies = []
 
 [project.scripts]
