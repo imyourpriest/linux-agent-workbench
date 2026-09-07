@@ -537,3 +537,19 @@ Append-only project record.
 - This is remediation of the already counted two Patch units, not another unit, candidate,
   permission, activation, contact, submission, or external action. Totals remain 28 Patch impact /
   14 Support revenue units and `$0.00`.
+
+## 2026-09-07 - D-066 additive compatibility-v3 security maintenance
+
+- Added a byte-preserving successor to the historical v1/v2 declaration compatibility harnesses,
+  pinning fast-uri 3.1.7 while retaining Ajv 8.20.0, Python jsonschema 4.26.0, the fixed schema and
+  corpus, and exact configured structural semantics. The complete v2 closed inventory and verifier
+  source are SHA-bound before derivation; the v3 Node runner checks all five installed package
+  versions before its first dynamic Ajv import.
+- Active hosted jobs now route to v3; ordinary CI retains independent v1/v2/v3 freshness checks.
+  Local project-owned checks passed 19 focused compatibility tests, 135 full Patch tests with five
+  privilege-dependent skips, 23 evidence-control tests with one such skip, all three evidence
+  engine replays, public-tree review, and in-memory compilation. No third-party validator or
+  tarball was installed, imported, downloaded, or executed locally, so hosted behavior and
+  production security remain unobserved.
+- This is zero-unit maintenance. No candidate scan, upstream contact, commit, push, pull request,
+  release, activation, payment, or revenue event occurred; totals remain 28/14 and `$0.00`.

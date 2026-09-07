@@ -1,0 +1,6 @@
+{
+  "schema_version": "1",
+  "schema": {"path": "interop/maintainer-policy-declaration/v1/schema.json", "sha256": "1582238b1ac144c9df0dc58e1252da67bf41c4851f39aa2386ae2dc06a6f28a2"},
+  "base_corpus": {"path": "interop/maintainer-policy-declaration/v1/corpus.json", "sha256": "280d9d2aca66844e5fc03d6ae907e74e0dd54a8ab5f82e1daa29b8ad31a3ed2a"},
+  "reference_policy": {"allowed_ref_values": ["#/$defs/policy", "#/$defs/expectation"], "dynamic_or_external_refs": "reject"}
+}

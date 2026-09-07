@@ -760,3 +760,19 @@ change, ready transition, merge, contact, payment, activation, or new external m
 Exactly four deterministic files in the current unpublished Patch Cabinet v0.2.0 release candidate
 were regenerated after the LICENSE label change; this was local candidate maintenance, not a
 release, tag, publication, work unit, or revenue event.
+
+#### D-066 additive fast-uri 3.1.7 maintenance - 2026-09-07
+
+- The sponsor-reported start was `100%` five-hour and `22%` weekly remaining, with no warning or
+  reached limit. The prior weekly-zero-floor authorization remains in force. These are
+  whole-account observations only; no amount or delta is attributed to this repository, control,
+  workstream, unit, agent, tool, test, or action.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-07 | Shared security/control maintenance | 0 | Compatibility-v3 with fast-uri 3.1.7 prepared and locally validated; no publication | sponsor-reported start 100% five-hour / 22% weekly; no attribution |
+
+D-066 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. This is
+maintenance of the project-owned active hosted harness, not a new workstream, demand hypothesis,
+offer, release, contact, payment, or activation.

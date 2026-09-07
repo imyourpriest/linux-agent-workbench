@@ -2538,3 +2538,40 @@ Support units. Totals remain 28/14, preserving 2:1; revenue and cleared receipts
 D-063 exposed that remote mutation receipts must survive assertions and local clock skew. A new
 name, exact eleven-file scope, one-shot journal, and fresh independent review provide a coherent
 prospective recovery without rewriting provenance or reviving exhausted attempts.
+
+## 2026-09-07 - D-066 - Additive fast-uri 3.1.7 security maintenance
+
+**Decision:** Select one zero-unit, project-owned security-maintenance milestone for the active
+hosted declaration compatibility harness observed in open Dependabot pull requests 27 and 28.
+From exact public main `503c1394583251a69aed591d853c3d77100f476e`, preserve compatibility-v1
+and compatibility-v2 byte-for-byte and add compatibility-v3 with Ajv `8.20.0`, Python
+`jsonschema==4.26.0`, the existing schema and corpus contract, and `fast-uri@3.1.7`. Route only the
+active hosted compatibility jobs to v3 while keeping independent standard-library freshness and
+preservation checks for v1, v2, and v3.
+
+Official fast-uri release and GitHub Advisory Database records observed on 2026-09-07 identify
+3.1.7 as fixing GHSA-qw65-cvwx-89v3, which affects versions `>=3.0.0 <3.1.7`; this selection does
+not assert that Rivetloom's fixed corpus or hosted configuration is exploitable. GHSA-58mr-gqgx-xq4g
+affects 3.1.6 and does not apply to the preserved 3.1.5 predecessor. A metadata-only HTTPS GET of
+`https://registry.npmjs.org/fast-uri/3.1.7` confirmed the exact registry URL, SHA-512 integrity,
+SHA-1 shasum, and BSD-3-Clause license recorded by the new verifier-owned evidence. No tarball or
+third-party validator may be downloaded, installed, imported, or executed locally.
+
+Write scope is the new v3 generator and closed 12-file v3 tree, compatibility tests, the two active
+workflow files, current maintainer documentation where needed, and append-only control, usage,
+research, and Patch records. Historical v1/v2 artifacts and old release-candidate/schema/fixture
+files remain immutable. D-050/D-051 remain controlling: this is not a new business hypothesis,
+research scan, counted workstream unit, offer, contact, payment, activation, release, or revenue
+event. D-064 and all earlier publication authorities remain separate historical records and grant
+no authority for this branch. Local implementation and project-owned standard-library validation
+are authorized. Publication remains pending root authorization of the exact reviewed candidate.
+If authorized without material drift, D-066 may proceed through one normal branch push and draft
+pull request, exact-head hosted checks and review, a protected non-admin squash merge, and retained
+feature branch. Focused same-branch fixes require new exact review. Never force-push, bypass an
+admin or protection control, close or alter pull requests 27 or 28 without a separately reviewed
+disposition, change settings, delete a branch, create a tag or release, or make an unrelated
+external mutation.
+
+**Why:** The active hosted compatibility dependency has a security-maintenance update available.
+An additive successor preserves both historical evidence generations while allowing exact,
+reviewable migration of the active hosted path.

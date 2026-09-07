@@ -271,3 +271,17 @@ assertion. D-064 records POST intent and raw stdout/exit to a repository-externa
 parsing so a returned SHA survives later failure. The journal may contain reviewed public commit
 metadata but excludes tokens, authorization headers, and diagnostic stderr. This note selected no
 new work unit, offer, contact, payment, private input, or external mutation.
+
+## 2026-09-07 - fast-uri 3.1.7 maintenance evidence
+
+The official [fast-uri 3.1.7 release](https://github.com/fastify/fast-uri/releases/tag/v3.1.7)
+and [GHSA-qw65-cvwx-89v3](https://github.com/advisories/GHSA-qw65-cvwx-89v3) identify 3.1.7 as
+the patched version for the reported port-component injection affecting `>=3.0.0 <3.1.7`. This
+supports dependency maintenance; it does not establish that Rivetloom's fixed corpus or hosted
+configuration is exploitable. [GHSA-58mr-gqgx-xq4g](https://github.com/advisories/GHSA-58mr-gqgx-xq4g)
+affects only 3.1.6, not the preserved 3.1.5 predecessor.
+
+A successful metadata-only HTTPS GET of `https://registry.npmjs.org/fast-uri/3.1.7` on 2026-09-07
+confirmed the selected package name/version, BSD-3-Clause license, tarball URL, SHA-512 integrity,
+and SHA-1 shasum. The tarball itself was not downloaded. The checked-in evidence transcribes only
+those selected fields and is not a raw response archive, artifact verification, or runtime proof.
