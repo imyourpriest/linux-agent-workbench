@@ -1,0 +1,42 @@
+{
+  "schema_version": "1",
+  "canonicalization": "recursively_sorted_keys_compact_utf8_json",
+  "base_payload": {
+    "schema_version": "1", "declaration_id": "mpd-v1-99c6adc72099ab3f3ad6aaa070f50fb8916b77dc13fa0f70940f61805364572a", "record_kind": "synthetic_example", "assertion_basis": "synthetic_example_not_a_maintainer_assertion", "repository": "synthetic/maintainer-policy-declaration-demo", "repository_url": "https://example.invalid/synthetic/maintainer-policy-declaration-demo", "commit_sha": "0123456789abcdef0123456789abcdef01234567", "policy_source_url": "https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/CONTRIBUTING.md", "policy_path": "CONTRIBUTING.md", "source_sha256": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef", "observed_at": "2026-08-10",
+    "dimensions": {"ai_assisted_code":"conditional","ai_assisted_documentation":"not_declared","ai_authored_issue_text":"not_declared","ai_authored_pr_text":"not_declared","autonomous_issue_submission":"not_declared","autonomous_pr_submission":"not_declared","automated_review_comments":"not_declared","good_first_issue_automation":"not_declared","security_report_automation":"not_declared","disclosure":"not_declared","human_review":"not_declared","human_accountability":"not_declared","license_ip_checks":"not_declared"},
+    "disclosure_location": "not_declared", "enforcement": "not_declared", "supersedes": null, "notes": "Reserved synthetic namespace example only; no existence, identity, or authority assertion."
+  },
+  "vectors": [
+    {"id":"supplemental-valid","operations":[]},
+    {"id":"schema-const-reject","operations":[{"op":"set","pointer":"/schema_version","value":"2"}]},
+    {"id":"required-missing-notes","operations":[{"op":"delete","pointer":"/notes"}]},
+    {"id":"additional-top-level","operations":[{"op":"set","pointer":"/unexpected","value":"x"}]},
+    {"id":"same-key-distinct-nested-objects","operations":[{"op":"set","pointer":"/duplicate_scope_a","value":{"id":"a"}},{"op":"set","pointer":"/duplicate_scope_b","value":{"id":"b"}}]},
+    {"id":"additional-nested-dimension","operations":[{"op":"set","pointer":"/dimensions/unexpected","value":"x"}]},
+    {"id":"record-kind-enum-reject","operations":[{"op":"set","pointer":"/record_kind","value":"maintainer"}]},
+    {"id":"assertion-basis-enum-reject","operations":[{"op":"set","pointer":"/assertion_basis","value":"verified"}]},
+    {"id":"policy-enum-reject","operations":[{"op":"set","pointer":"/dimensions/ai_assisted_code","value":"sometimes"}]},
+    {"id":"expectation-enum-reject","operations":[{"op":"set","pointer":"/dimensions/human_review","value":"optional"}]},
+    {"id":"disclosure-location-enum-reject","operations":[{"op":"set","pointer":"/disclosure_location","value":"issue"}]},
+    {"id":"enforcement-enum-reject","operations":[{"op":"set","pointer":"/enforcement","value":"automatic"}]},
+    {"id":"dimensions-type-reject","operations":[{"op":"set","pointer":"/dimensions","value":[]}]},
+    {"id":"notes-type-reject","operations":[{"op":"set","pointer":"/notes","value":null}]},
+    {"id":"declaration-id-pattern-reject","operations":[{"op":"set","pointer":"/declaration_id","value":"mpd-v1-NOTHEX"}]},
+    {"id":"commit-pattern-reject","operations":[{"op":"set","pointer":"/commit_sha","value":"abc"}]},
+    {"id":"source-pattern-reject","operations":[{"op":"set","pointer":"/source_sha256","value":"abc"}]},
+    {"id":"policy-path-dot-segment-structural-accept","operations":[{"op":"set","pointer":"/policy_path","value":"../POLICY.md"},{"op":"set","pointer":"/policy_source_url","value":"https://example.invalid/synthetic/maintainer-policy-declaration-demo/blob/0123456789abcdef0123456789abcdef01234567/../POLICY.md"},{"op":"set","pointer":"/declaration_id","value":"mpd-v1-210fdb5e9a2767e702e231035be4bf447d93eb6b2d93cb9a16c04729ba831f36"}]},
+    {"id":"supersedes-null-accept","operations":[{"op":"set","pointer":"/supersedes","value":null}]},
+    {"id":"supersedes-string-accept","operations":[{"op":"set","pointer":"/supersedes","value":"mpd-v1-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}]},
+    {"id":"supersedes-pattern-reject","operations":[{"op":"set","pointer":"/supersedes","value":"mpd-v1-bad"}]},
+    {"id":"format-deliberately-ignored","operations":[{"op":"set","pointer":"/observed_at","value":"not-a-date"}]},
+    {"id":"uri-formats-deliberately-ignored","operations":[{"op":"set","pointer":"/repository_url","value":"not a uri"},{"op":"set","pointer":"/policy_source_url","value":"also not a uri"}]},
+    {"id":"repository-minlength-reject","operations":[{"op":"set","pointer":"/repository","value":"ab"}]},
+    {"id":"repository-maxlength-reject","operations":[{"op":"repeat","pointer":"/repository","value":"a","count":202}]},
+    {"id":"repository-url-maxlength-reject","operations":[{"op":"repeat","pointer":"/repository_url","value":"a","count":301}]},
+    {"id":"policy-source-url-maxlength-reject","operations":[{"op":"repeat","pointer":"/policy_source_url","value":"a","count":701}]},
+    {"id":"policy-path-maxlength-reject","operations":[{"op":"repeat","pointer":"/policy_path","value":"a","count":301}]},
+    {"id":"notes-minlength-reject","operations":[{"op":"set","pointer":"/notes","value":""}]},
+    {"id":"notes-boundary-500-accept","operations":[{"op":"repeat","pointer":"/notes","value":"a","count":500}]},
+    {"id":"notes-boundary-501-reject","operations":[{"op":"repeat","pointer":"/notes","value":"a","count":501}]}
+  ]
+}

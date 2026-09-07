@@ -2124,3 +2124,29 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   cleanup, contact, payment, activation, third-party execution, or publication occurred during
   preparation. D-064 remains inactive pending a fresh independent exact-byte security PASS.
   R-027 adds zero units; totals remain 28/14 and revenue/receipts remain `$0.00`.
+
+## 2026-09-07 - Session 063 - D-066 additive fast-uri 3.1.7 maintenance
+
+- Began from exact public main `503c1394583251a69aed591d853c3d77100f476e`, tree
+  `bd9ccb55591def3166ef34b0bde6bad8d57f231a`, in a new isolated clone and branch
+  `agent/compatibility-v3-fast-uri-317`; hooks are disabled and no submodule or `node_modules`
+  tree exists. The prior R-014 staging checkout and D-064 helper remain untouched.
+- Added a 12-file compatibility-v3 closed harness. Its verifier binds the complete 12-file v2
+  predecessor and v2 verifier source by SHA-256 before executing the already verified source bytes
+  in memory. V3 preserves the schema/base corpus, supplemental corpus, expected results, Python
+  lock, validator configurations, Ajv 8.20.0, and full pre-import Node inventory guard; only v3
+  identities/roots and the reviewed fast-uri 3.1.7 tuple/evidence change.
+- A 2026-09-07 metadata-only npm registry GET confirmed the bound URL, SHA-512 integrity, SHA-1
+  `743157d957f3cbb4c65310e033dc2ad4ad7dc60a`, and BSD-3-Clause license. No tarball or third-party
+  validator was downloaded, installed, imported, or executed locally.
+- Routed only active hosted compatibility acquisition/execution to v3 while ordinary CI retains
+  v1/v2/v3 freshness checks. Local v1/v2/v3 checks passed; focused compatibility tests passed
+  19/19; the full Patch suite passed 135 tests with five privilege-dependent skips; evidence
+  control passed 23 tests with one privilege-dependent skip and all three engines replayed; the
+  public-tree heuristic and in-memory compilation passed. These local/static results do not prove
+  hosted behavior, downloaded bytes, exploitation resistance, future availability, or production
+  enforcement. V3 manifest SHA-256 is
+  `3e6b969bdbb0a4d178e9e1f0f9c57bd41f860972385f5cfb5b4631b6753d45e5`.
+- No commit, push, pull-request mutation, merge, settings change, tag, release, dependency install,
+  contact, payment, activation, or other publication occurred. Pull requests 27 and 28 remain
+  outside this local milestone pending separately reviewed disposition.

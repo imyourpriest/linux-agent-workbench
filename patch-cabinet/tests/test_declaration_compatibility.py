@@ -12,6 +12,7 @@ from pathlib import Path
 from patch_cabinet import (
     declaration_compatibility,
     declaration_compatibility_v2,
+    declaration_compatibility_v3,
     maintainer_policy_declaration,
 )
 
@@ -35,10 +36,15 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.project = Path(__file__).resolve().parents[1]
         self.root = self.project / "interop/maintainer-policy-declaration/compatibility-v1"
         self.v2_root = self.project / "interop/maintainer-policy-declaration/compatibility-v2"
+        self.v3_root = self.project / "interop/maintainer-policy-declaration/compatibility-v3"
 
     def copy_project(self, temporary: str) -> Path:
         project = Path(temporary) / "patch-cabinet"
         shutil.copytree(self.project / "interop", project / "interop")
+        source = project / "src/patch_cabinet"
+        source.mkdir(parents=True)
+        for name in ("declaration_compatibility_v2.py", "declaration_compatibility_v3.py"):
+            shutil.copy2(self.project / "src/patch_cabinet" / name, source / name)
         return project
 
     def test_prepared_artifacts_are_fresh_and_observations_unobserved(self) -> None:
@@ -64,6 +70,25 @@ class DeclarationCompatibilityTests(unittest.TestCase):
             {"name": "maintainer-policy-declaration-compatibility", "version": "2"},
         )
 
+    def test_v2_closed_tree_remains_the_exact_v3_predecessor(self) -> None:
+        actual = {
+            path.name: hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sorted(self.v2_root.iterdir(), key=lambda item: item.name)
+        }
+        self.assertEqual(actual, declaration_compatibility_v3.V2_FILE_SHA256)
+
+    def test_v3_prepared_artifacts_are_fresh_and_observations_unobserved(self) -> None:
+        receipt = declaration_compatibility_v3.run(self.project, True)
+        self.assertEqual(receipt["result"], "closed_harness_prepared")
+        self.assertEqual(set(receipt["hosted_observations"].values()), {"not_observed"})
+        manifest = json.loads((self.v3_root / "manifest.json").read_text())
+        self.assertEqual(
+            manifest["component"],
+            {"name": "maintainer-policy-declaration-compatibility", "version": "3"},
+        )
+        self.assertEqual(manifest["predecessor"]["closed_inventory_sha256"], actual := declaration_compatibility_v3.V2_FILE_SHA256)
+        self.assertEqual(len(actual), 12)
+
     def test_v2_preserves_the_v1_schema_corpus_and_result_semantics(self) -> None:
         for name in (
             "base-corpus-binding.json",
@@ -72,6 +97,66 @@ class DeclarationCompatibilityTests(unittest.TestCase):
             "requirements.lock",
         ):
             self.assertEqual((self.v2_root / name).read_bytes(), (self.root / name).read_bytes())
+
+    def test_v3_preserves_the_v2_schema_corpus_and_result_semantics(self) -> None:
+        for name in (
+            "base-corpus-binding.json",
+            "supplemental-corpus.json",
+            "expected-results.json",
+            "requirements.lock",
+        ):
+            self.assertEqual((self.v3_root / name).read_bytes(), (self.v2_root / name).read_bytes())
+
+    def test_v3_node_dependency_tuple_and_inventory_are_exact_before_import(self) -> None:
+        lock = json.loads((self.v3_root / "package-lock.json").read_text())
+        self.assertEqual(lock["packages"]["node_modules/ajv"]["version"], "8.20.0")
+        self.assertEqual(
+            lock["packages"]["node_modules/fast-uri"],
+            {
+                "version": "3.1.7",
+                "resolved": "https://registry.npmjs.org/fast-uri/-/fast-uri-3.1.7.tgz",
+                "integrity": "sha512-dOvZVzjdZdz7phd9v6jCbwxrBW3fK6n8Rc0CtdmM4bumzMnxywBYhuph6J819RRw/ku+rLbelwfMunktuzVVHg==",
+            },
+        )
+        evidence = json.loads((self.v3_root / "node-dependency-evidence.json").read_text())
+        self.assertEqual(evidence, declaration_compatibility_v3.EXPECTED_NODE_DEPENDENCY_EVIDENCE)
+        node = (self.v3_root / "node_runner.mjs").read_text()
+        matches = re.findall(r"^const required = (\{[^\r\n]+\});$", node, re.MULTILINE)
+        self.assertEqual(len(matches), 1)
+        required = json.loads(matches[0])
+        lock_inventory = {
+            name.removeprefix("node_modules/"): item["version"]
+            for name, item in lock["packages"].items()
+            if name
+        }
+        self.assertEqual(required, lock_inventory)
+        inventory_read = node.index("for (const name of Object.keys(required))")
+        inventory_guard = node.index("installed dependency inventory differs")
+        dynamic_import = node.index('await import("ajv/dist/2020.js")')
+        self.assertLess(inventory_read, inventory_guard)
+        self.assertLess(inventory_guard, dynamic_import)
+        self.assertNotIn('import Ajv2020 from "ajv/dist/2020.js"', node)
+
+    def test_v3_predecessor_and_successor_tampering_fail_closed(self) -> None:
+        cases = (
+            ("predecessor contract", "compatibility-v2/expected-results.json", b"\n"),
+            ("predecessor generated receipt", "compatibility-v2/prepared-receipt.json", b"\n"),
+            ("successor lock", "compatibility-v3/package-lock.json", b"\n"),
+            ("successor runner", "compatibility-v3/node_runner.mjs", b"// decoy\n"),
+        )
+        for label, relative, suffix in cases:
+            with self.subTest(label=label), tempfile.TemporaryDirectory() as temporary:
+                project = self.copy_project(temporary)
+                path = project / "interop/maintainer-policy-declaration" / relative
+                path.write_bytes(path.read_bytes() + suffix)
+                with self.assertRaises(ValueError):
+                    declaration_compatibility_v3.build(project)
+        with tempfile.TemporaryDirectory() as temporary:
+            project = self.copy_project(temporary)
+            source = project / "src/patch_cabinet/declaration_compatibility_v2.py"
+            source.write_bytes(source.read_bytes() + b"\n")
+            with self.assertRaisesRegex(ValueError, "verifier source digest differs"):
+                declaration_compatibility_v3.build(project)
 
     def test_v2_node_dependency_tuple_and_inventory_are_exact(self) -> None:
         lock = json.loads((self.v2_root / "package-lock.json").read_text())
@@ -333,7 +418,7 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         ).read_bytes()
         self.assertEqual(
             hashlib.sha256(workflow_bytes).hexdigest(),
-            "0f3c3d1cef5481e8dc23295c84efad6f5c4f2db84926e07705e82a475767d802",
+            "9b288bf9add0af6ca37cde950d4d885417fde9d0ec3cf4c1a33bc2b598757ad8",
         )
         workflow = workflow_bytes.decode("utf-8", errors="strict")
         trigger = workflow[workflow.index("on:\n"):workflow.index("\npermissions:")]
@@ -349,7 +434,7 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.assertEqual(workflow.count(python_header), 1)
         self.assertEqual(workflow.count(node_header), 1)
         command = (
-            "python -B patch-cabinet/src/patch_cabinet/declaration_compatibility_v2.py\n"
+            "python -B patch-cabinet/src/patch_cabinet/declaration_compatibility_v3.py\n"
             "          --project patch-cabinet\n"
             "          --check"
         )
@@ -357,11 +442,12 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.assertNotIn("-m patch_cabinet.declaration_compatibility", workflow)
         self.assertNotIn("PYTHONPATH", workflow)
         self.assertNotIn("compatibility-v1", workflow)
+        self.assertNotIn("compatibility-v2", workflow)
         for path in (
-            "compatibility-v2/requirements.lock",
-            "compatibility-v2/python_runner.py",
-            "compatibility-v2/package-lock.json",
-            "compatibility-v2/node_runner.mjs",
+            "compatibility-v3/requirements.lock",
+            "compatibility-v3/python_runner.py",
+            "compatibility-v3/package-lock.json",
+            "compatibility-v3/node_runner.mjs",
         ):
             self.assertEqual(workflow.count(path), 1)
         setup_python = "actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97"
@@ -375,15 +461,18 @@ class DeclarationCompatibilityTests(unittest.TestCase):
         self.assertEqual(node_job.count(command), 1)
         self.assertLess(node_job.index(command), node_job.index("npm ci"))
 
-    def test_ci_retains_v1_and_adds_independent_v2_freshness_routes(self) -> None:
+    def test_ci_retains_independent_v1_v2_v3_freshness_routes(self) -> None:
         workflow = (self.project.parent / ".github/workflows/ci.yml").read_text()
         v1 = "python -m patch_cabinet.declaration_compatibility --project . --check"
         v2 = "python -m patch_cabinet.declaration_compatibility_v2 --project . --check"
+        v3 = "python -m patch_cabinet.declaration_compatibility_v3 --project . --check"
         projection = "python -m patch_cabinet.declaration_projection --project . --check"
         self.assertEqual(workflow.count(v1), 1)
         self.assertEqual(workflow.count(v2), 1)
+        self.assertEqual(workflow.count(v3), 1)
         self.assertLess(workflow.index(v1), workflow.index(v2))
-        self.assertLess(workflow.index(v2), workflow.index(projection))
+        self.assertLess(workflow.index(v2), workflow.index(v3))
+        self.assertLess(workflow.index(v3), workflow.index(projection))
 
 
 if __name__ == "__main__":

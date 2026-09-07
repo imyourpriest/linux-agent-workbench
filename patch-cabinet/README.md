@@ -8,6 +8,12 @@ validator was tested, and the companion is not a standard, detector, authority, 
 current-policy claim, ruleset generator, or enforcement gate. See the companion README for its
 duplicate-key, number, resource, identity, provenance, lineage, currentness, and authority limits.
 
+The active hosted structural compatibility jobs use the additive
+[`compatibility-v3`](interop/maintainer-policy-declaration/compatibility-v3/) harness with Ajv
+`8.20.0`, Python `jsonschema==4.26.0`, and `fast-uri@3.1.7`. Compatibility v1 and v2 remain
+byte-preserved historical evidence and are checked as inert data by standard-library freshness
+controls; local validation does not install, import, or execute their third-party dependencies.
+
 Patch Cabinet is an AI-directed, human-accountable effort to make small, useful improvements to Linux and open-source projects.
 
 It is not a pull-request volume machine. The product is a sequence of well-chosen patches whose scope, evidence, tests, upstream rules, review burden, and outcome remain inspectable.
