@@ -792,3 +792,19 @@ D-067 adds zero Patch and zero Support units. Historical totals remain twenty-ei
 fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. The guide
 is maintenance of existing controls, not a new workstream, offer, contact, payment, activation, or
 revenue event.
+
+#### D-068 declaration CLI expected-error maintenance - 2026-09-07
+
+- A whole-account tool reading during final local validation reported 21% remaining in the
+  five-hour window and 88% remaining in the weekly window, with no reached-limit or spend-control
+  signal. The sponsor authorized use of the full current allowance. No amount or delta is
+  attributed to this repository, decision, task, agent, tool, or check.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-07 | Shared first-party maintenance | 0 | D-068 declaration CLI expected-error handling prepared locally; no publication | tool-observed validation reading 21% five-hour / 88% weekly; no attribution |
+
+D-068 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. This is
+maintenance of an existing project-owned component, not a candidate scan, new workstream, offer,
+contact, payment, activation, release, or revenue event.

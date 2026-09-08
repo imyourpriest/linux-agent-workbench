@@ -2611,3 +2611,21 @@ remains `$0.00`.
 short operational procedure that preserves reproducibility, keeps dependency acquisition in the
 reviewed hosted path, and states how historical alerts must be handled without implying repair or
 dismissal authority.
+
+## 2026-09-07 - D-068 - Declaration CLI expected-error handling
+
+**Decision:** Repair the observed first-party declaration CLI usability defect: malformed JSON,
+wrong top-level JSON types, missing input, and expected output-filesystem failures currently expose
+Python tracebacks. Preserve `main(argv)` and its library exception behavior, and add a process-only
+`cli(argv)` boundary that reports one prefixed stderr diagnostic and returns status 2 for expected
+`ValueError` or `OSError`. Valid output, schema and component versions, accepted semantics, and
+argparse help behavior remain unchanged; exceptions outside those two classes continue to propagate.
+
+The exact 12-path scope is the declaration module, `pyproject.toml`, one new focused CLI test,
+`MAINTAINER_POLICY_DECLARATION.md`, the four deterministic unpublished v0.2.0 release-candidate
+artifacts, and append-only entries in the Decision, Control, Usage, and Patch logs. This is local
+zero-unit first-party maintenance. It authorizes no dependency acquisition, publication, commit,
+push, pull request, release, activation, payment, or other external mutation.
+
+**Why:** Expected operator input and local-filesystem errors need a concise command-line contract,
+while callers of the existing Python API still need the current fail-closed exceptions.

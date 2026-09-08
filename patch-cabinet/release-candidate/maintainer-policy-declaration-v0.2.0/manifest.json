@@ -7,7 +7,7 @@
   "status": "release_candidate_not_published",
   "archive_format": "zip_stored_fixed_metadata",
   "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
-  "source_tree_fingerprint": "587e217813a26a2c8d8f91eadac3021a188b6eee65d95a20dc3e4d0202c503dd",
+  "source_tree_fingerprint": "d688ebfa5fa89675141ea626abb2a747dcd39d9fb1832c9b5537fd78d78cff9b",
   "payload": [
     {
       "path": "LICENSE",
@@ -21,13 +21,13 @@
     },
     {
       "path": "SPECIFICATION.md",
-      "bytes": 8255,
-      "sha256": "4175f39f8ef26a548c4365490fdd0467887900c7eccd3acaa325f00d2fd08267"
+      "bytes": 8453,
+      "sha256": "585a816538a0fd5024741be8048d7b646240f5ee0711e9622c0aeb7b9b913ad6"
     },
     {
       "path": "maintainer_policy_declaration.py",
-      "bytes": 27691,
-      "sha256": "5186bff88d0c46950a7cf938ba048fefbcf49d42fc964dd25c1326253bd42719"
+      "bytes": 27930,
+      "sha256": "c42af8e1aae4af4c9f83ceae262830d2b899a40f2549974e68c931b7f20b5ecf"
     },
     {
       "path": "starter-unverified-project.json",

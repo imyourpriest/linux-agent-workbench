@@ -9,6 +9,7 @@ import json
 import os
 import re
 import stat
+import sys
 import tempfile
 import unicodedata
 from dataclasses import dataclass
@@ -685,5 +686,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     return 0
 
 
+def cli(argv: Sequence[str] | None = None) -> int:
+    try:
+        return main(argv)
+    except (ValueError, OSError) as error:
+        print(f"maintainer-policy-declaration: error: {error}", file=sys.stderr)
+        return 2
+
+
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(cli())
