@@ -776,3 +776,19 @@ D-066 adds zero Patch and zero Support units. Historical totals remain twenty-ei
 fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. This is
 maintenance of the project-owned active hosted harness, not a new workstream, demand hypothesis,
 offer, release, contact, payment, or activation.
+
+#### D-067 dependency-maintenance guide - 2026-09-07
+
+- A whole-account tool reading at this follow-up's start reported 89% remaining in the five-hour
+  window and 98% remaining in the weekly window. The sponsor permits use of the full current
+  five-hour allowance, and the prior weekly-zero-floor instruction remains in force. No amount or
+  delta is attributed to this repository, decision, task, agent, tool, or check.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-07 | Shared security/control maintenance | 0 | D-066 completion recorded and seven-file D-067 maintenance guide prepared locally; no follow-up publication yet | tool-observed start 89% five-hour / 98% weekly; no attribution |
+
+D-067 adds zero Patch and zero Support units. Historical totals remain twenty-eight impact and
+fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. The guide
+is maintenance of existing controls, not a new workstream, offer, contact, payment, activation, or
+revenue event.

@@ -7,6 +7,12 @@ Do not report a suspected vulnerability in a public issue, pull request, candida
 This is pre-release research software. Only the current `main` branch is considered for security
 corrections; no released version is currently supported.
 
+The maintained declaration-compatibility execution path is the version routed by the hosted
+workflow on current `main`. Older compatibility directories are preserved evidence, not supported
+runtime targets, and may retain dependencies with known vulnerabilities. See the
+[dependency-maintenance guide](docs/DEPENDENCY_MAINTENANCE.md) for the update and reactivation
+controls.
+
 ## Report privately
 
 Use the repository's **Security** tab, open **Advisories**, and select **Report a

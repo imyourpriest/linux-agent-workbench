@@ -2150,3 +2150,30 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
 - No commit, push, pull-request mutation, merge, settings change, tag, release, dependency install,
   contact, payment, activation, or other publication occurred. Pull requests 27 and 28 remain
   outside this local milestone pending separately reviewed disposition.
+
+## 2026-09-07 - Session 064 - D-066 closeout and D-067 maintenance guide
+
+- Recorded D-066's non-recursive completion: PR 30 merged at `2026-09-07T21:05:14Z` as public-main
+  commit `19a613ff047ddbfda323dfec6a092dba5867d4b1`, from candidate
+  `10ccd1ee2ef74a4c80d31ab53757b2db06b9b884`; both bind tree
+  `3e3972bc28ef33107d4b7681da58ed51286df9c4`. All ten observed post-main checks from GitHub app
+  15368 completed successfully on the merge commit. This does not extend the evidence beyond those
+  named hosted checks and commit.
+- Started D-067 from freshly fetched exact public main on local branch
+  `agent/dependency-maintenance-guide`. Added one concise guide plus maintained-support and Patch
+  Cabinet links, with append-only governance records. No config, workflow, code, generator,
+  compatibility artifact, or dependency changed.
+- Fresh state observed on 2026-09-08 UTC (2026-09-07 America/Denver) contained six open alerts:
+  6/v2/`GHSA-5jgf-p345-68v8`, 7/v2/`GHSA-fph4-wmhf-6fwf`,
+  8/v1/`GHSA-f65p-4m7j-42xc`, 9/v1/`GHSA-jqff-g426-hqxp`,
+  10/v2/`GHSA-f65p-4m7j-42xc`, and 11/v2/`GHSA-jqff-g426-hqxp`. Open Dependabot PR 27 retained
+  head `6f9ea2b2265ec6d46f40a7caad1dac2e2e688325`; PR 28 retained head
+  `951e4bbc92618026eabf5804aba1b88b010913d8`. Neither was altered. Alerts and security updates
+  were enabled independently of the absent scheduled npm version-update entry.
+- D-067 changes exactly seven documentation/log paths. Preparation made no alert dismissal, PR
+  mutation, publication, merge, setting, tag, release, or dependency change; these documents alone
+  grant no external authority. Publication follows the sponsor's instruction only after independent
+  review of the exact candidate and current remote state. Historical vulnerabilities remain in
+  preserved bytes. D-044/D-045 require fresh review and reopening every affected prior dismissal
+  before v1 reactivation; D-067 applies the same rule to preserved v2. Totals remain 28/14; revenue
+  remains `$0.00`.

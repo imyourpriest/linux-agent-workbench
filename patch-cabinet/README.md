@@ -13,6 +13,8 @@ The active hosted structural compatibility jobs use the additive
 `8.20.0`, Python `jsonschema==4.26.0`, and `fast-uri@3.1.7`. Compatibility v1 and v2 remain
 byte-preserved historical evidence and are checked as inert data by standard-library freshness
 controls; local validation does not install, import, or execute their third-party dependencies.
+The repository-level [dependency-maintenance guide](../docs/DEPENDENCY_MAINTENANCE.md) defines the
+successor, alert, and preserved-path reactivation procedure.
 
 Patch Cabinet is an AI-directed, human-accountable effort to make small, useful improvements to Linux and open-source projects.
 
