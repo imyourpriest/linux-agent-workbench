@@ -2575,3 +2575,39 @@ external mutation.
 **Why:** The active hosted compatibility dependency has a security-maintenance update available.
 An additive successor preserves both historical evidence generations while allowing exact,
 reviewable migration of the active hosted path.
+
+## 2026-09-07 - D-067 - Dependency-maintenance operating guide
+
+**Decision:** Record D-066's completed publication non-recursively, then select one separate
+zero-unit documentation follow-up under the sponsor's current continuation. PR 30 was merged at
+`2026-09-07T21:05:14Z` as commit `19a613ff047ddbfda323dfec6a092dba5867d4b1`, from candidate
+`10ccd1ee2ef74a4c80d31ab53757b2db06b9b884`; both have exact tree
+`3e3972bc28ef33107d4b7681da58ed51286df9c4`. All ten post-main checks observed for that commit,
+each from GitHub app 15368, completed successfully. This records named-commit hosted outcomes only,
+not broad production security or future enforcement. D-066 is spent and grants no authority to
+this follow-up.
+
+Add a concise dependency-maintenance guide, a maintained-support clarification in `SECURITY.md`,
+a Patch Cabinet link, and append-only entries in the Decision, Control, Usage, and Patch logs.
+The guide documents the active compatibility-v3 hosted install/runner path, first-party generators
+that execute and read the preserved v1/v2 source, contracts, and adapters as data, complete
+additive-successor scope, named-commit validation, and the current alert/Dependabot boundaries.
+It retains D-044/D-045's v1 fresh-review and reopen-before-reactivation control and applies the
+same rule to preserved v2. Exactly six open alerts (6-11) and open Dependabot PRs 27 and
+28 were observed on 2026-09-08 UTC (2026-09-07 America/Denver); their state may change after that
+observation. Security alerts and security updates were enabled independently of any scheduled npm
+version-update entry. The guide does not claim missing security coverage, fixed historical bytes,
+unexploitable behavior, dismissal authority, or authority to alter the two pull requests.
+
+Write scope is exactly `docs/DEPENDENCY_MAINTENANCE.md`, `SECURITY.md`,
+`patch-cabinet/README.md`, `docs/DECISION_LOG.md`, `docs/CONTROL_LOG.md`,
+`docs/USAGE_LEDGER.md`, and `patch-cabinet/LOG.md`. Local documentation preparation and
+project-owned checks are authorized. Publication has not occurred and any future external action
+must bind the exact reviewed candidate and then-current remote state. No recursive receipt pull
+request is required. D-067 adds zero Patch and zero Support units; totals remain 28/14 and revenue
+remains `$0.00`.
+
+**Why:** The additive compatibility design is now active on public `main`, but maintainers need a
+short operational procedure that preserves reproducibility, keeps dependency acquisition in the
+reviewed hosted path, and states how historical alerts must be handled without implying repair or
+dismissal authority.

@@ -553,3 +553,22 @@ Append-only project record.
   production security remain unobserved.
 - This is zero-unit maintenance. No candidate scan, upstream contact, commit, push, pull request,
   release, activation, payment, or revenue event occurred; totals remain 28/14 and `$0.00`.
+
+## 2026-09-07 - D-067 dependency-maintenance guide
+
+- Recorded D-066's completed publication: PR 30 merged at `2026-09-07T21:05:14Z` as
+  `19a613ff047ddbfda323dfec6a092dba5867d4b1`, from candidate
+  `10ccd1ee2ef74a4c80d31ab53757b2db06b9b884`, with shared tree
+  `3e3972bc28ef33107d4b7681da58ed51286df9c4`; all ten observed post-main checks from GitHub app
+  15368 succeeded on that commit. These are named hosted outcomes, not production enforcement.
+- Added an operating guide for the active v3 hosted dependency path and preserved v1/v2 evidence.
+  It requires a complete additive successor, exact predecessor/source/contract/lock bindings,
+  local scope checks, exact-commit hosted results, and fresh review plus reopening affected prior
+  dismissals before any preserved dependency tree or adapter returns to active execution. D-044
+  and D-045 record that rule for v1; D-067 applies it to preserved v2.
+- Six open historical-path alerts and unchanged Dependabot PRs 27 and 28 were observed on
+  2026-09-08 UTC (2026-09-07 America/Denver). Their presence is not a claim of active-path
+  exploitability, and moving hosted execution to v3 does not fix the preserved bytes. No alert,
+  pull request, setting, workflow, code, dependency, generator, or compatibility artifact changed.
+- D-067 is zero-unit documentation maintenance. Follow-up publication has not occurred; totals
+  remain 28/14 and revenue remains `$0.00`.
