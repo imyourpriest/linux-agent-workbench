@@ -2177,3 +2177,44 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   preserved bytes. D-044/D-045 require fresh review and reopening every affected prior dismissal
   before v1 reactivation; D-067 applies the same rule to preserved v2. Totals remain 28/14; revenue
   remains `$0.00`.
+
+## 2026-09-07 - Session 065 - D-068 declaration CLI expected-error maintenance
+
+- On clean `main` `877c0829e24110ac7452a88e2f97e84cadaa19d8`, truncated JSON, array, null,
+  and missing-file validation each exited 1 with a traceback and no stdout. The local fix adds a
+  process-only `cli` boundary for expected `ValueError`/`OSError`, while preserving `main` and
+  argparse exception behavior, valid output bytes, versions, schema, and accepted semantics.
+- Focused declaration-family tests passed 72 with three Windows privilege-dependent link skips.
+  The valid receipt and starter retained their prior stdout SHA-256 values
+  `569feba9e375c9333a7da8512d75adb14e97c3511cec83f50f34cba1be6011b9` and
+  `6de0718a1df5b29c1e2dafcb398e8d948408faef34e254f726be56934d3bea15`.
+- The four unpublished portable-candidate outputs were deterministically rebuilt; the archive is
+  42,459 bytes with SHA-256 `cd8dc534f5647ece2d3060c7fb0eb3ff887a9e0b45afa9d23eefb2a29658a85c`.
+  This exact 12-path local preparation used no dependency acquisition or installation and made no
+  commit, publication, release, external mutation, work unit, activation, or revenue.
+
+## 2026-09-08 - Session 066 - D-067 receipt and D-068 completion validation
+
+- A root read-only GitHub observation at approximately `2026-09-08T21:34Z` confirmed that pull
+  request 31 merged at `2026-09-08T03:58:18Z` as public-main commit
+  `877c0829e24110ac7452a88e2f97e84cadaa19d8`, tree
+  `f135488e622069ecff313ca6f4498f534c71828b`, with parent
+  `19a613ff047ddbfda323dfec6a092dba5867d4b1`. All nine required checks from GitHub app 15368 passed
+  on that exact commit, and classic protection still required them with admin enforcement. This is
+  named hosted state at the observation time, not future or production enforcement. No recursive
+  receipt-only pull request is required.
+- Current-checkout validation pinned `PYTHONPATH` to this repository's `patch-cabinet/src`; Python
+  resolved the declaration module there. The full Patch suite passed 140 tests with five Windows
+  privilege-dependent symlink skips. Its CLI coverage distinguishes static console-mapping
+  inspection, in-process `main(argv)` and argparse exception checks, and subprocess source and
+  ZIP-contained process-boundary tests. These local tests do not establish third-party, hosted, or
+  production execution.
+- Direct source CLI runs returned zero with empty stderr and retained the validation-receipt and
+  starter stdout SHA-256 values
+  `569feba9e375c9333a7da8512d75adb14e97c3511cec83f50f34cba1be6011b9` and
+  `6de0718a1df5b29c1e2dafcb398e8d948408faef34e254f726be56934d3bea15`.
+  Interoperability, projection, and compatibility v1/v2/v3 freshness checks passed. A second build
+  outside the repository matched all four checked release-candidate files byte-for-byte. The
+  public-tree heuristic, exact 12-path scope, four base-log prefixes, frozen interoperability and
+  compatibility trees, and `git diff --check` passed. No dependency was acquired or installed and
+  no external state changed.

@@ -35,6 +35,9 @@ raw-file SHA-256 in its deterministic JSON receipt. That digest is only a recomp
 not a signature. The receipt establishes no supplier identity, authority, authorization, source
 truth, policy currentness, or permission to contact or submit.
 
+Successful commands return status 0. Expected input or local-filesystem errors return status 2,
+write one `maintainer-policy-declaration: error:` diagnostic to stderr, and do not emit a traceback.
+
 From `patch-cabinet/`:
 
 ```sh

@@ -572,3 +572,42 @@ Append-only project record.
   pull request, setting, workflow, code, dependency, generator, or compatibility artifact changed.
 - D-067 is zero-unit documentation maintenance. Follow-up publication has not occurred; totals
   remain 28/14 and revenue remains `$0.00`.
+
+## 2026-09-07 - D-068 declaration CLI expected-error handling
+
+- Reproduction on clean `main` `877c0829e24110ac7452a88e2f97e84cadaa19d8` found that truncated
+  JSON, array, null, and missing-file validation each exited 1 with a Python traceback and empty
+  stdout. This trusted-local observation establishes only the command behavior tested.
+- Added a process-only `cli` wrapper that catches expected `ValueError`/`OSError`, writes one
+  prefixed stderr diagnostic, and returns 2. `main(argv)`, argparse `SystemExit`, exceptions outside
+  those two classes, valid bytes, versions, schema, and semantic acceptance remain unchanged. The console
+  entrypoint and portable script route through the wrapper.
+- Focused declaration-family tests passed 72 with three Windows privilege-dependent link skips.
+  Real subprocess tests cover the four reproduced inputs, a deterministic filesystem failure,
+  portable malformed input, and valid portable/source byte equality. Separate in-process checks
+  preserve API and argparse exceptions, while static inspection binds the console mapping.
+  In-memory compilation and diff whitespace checks passed.
+- Rebuilt exactly the four unpublished v0.2.0 portable-candidate outputs. The archive is 42,459
+  bytes with SHA-256 `cd8dc534f5647ece2d3060c7fb0eb3ff887a9e0b45afa9d23eefb2a29658a85c`;
+  the manifest SHA-256 is `5bf5032e945f9a503f763d054c5be83cdb2d5eb5fed4c2652ba5b0e744405ced`.
+  No dependency was acquired or installed, and no commit, publication, release, contact, external
+  mutation, work unit, activation, payment, or revenue event occurred. Local and synthetic tests
+  do not establish hosted or production enforcement.
+
+## 2026-09-08 - D-068 completion validation
+
+- Current-checkout validation pinned `PYTHONPATH` to this repository's `patch-cabinet/src`; Python
+  resolved `maintainer_policy_declaration.py` from that path. The full Patch suite passed 140 tests
+  with five Windows privilege-dependent symlink skips. Within that suite, static inspection binds
+  the console mapping, in-process tests preserve the `main(argv)` and argparse exception contracts,
+  and subprocess tests exercise the source and ZIP-contained process boundaries. These local tests
+  do not establish third-party, hosted, or production execution.
+- Direct source CLI runs returned zero with empty stderr. The synthetic validation receipt retained
+  SHA-256 `569feba9e375c9333a7da8512d75adb14e97c3511cec83f50f34cba1be6011b9`,
+  and the `unverified_project_declaration` starter retained SHA-256
+  `6de0718a1df5b29c1e2dafcb398e8d948408faef34e254f726be56934d3bea15`.
+- Interoperability, projection, and compatibility v1/v2/v3 freshness checks passed. A second build
+  outside the repository matched all four checked release-candidate files byte-for-byte. The
+  public-tree heuristic, exact 12-path scope, four base-log prefixes, frozen interoperability and
+  compatibility trees, and `git diff --check` passed. No dependency was acquired or installed and
+  no external state changed.
