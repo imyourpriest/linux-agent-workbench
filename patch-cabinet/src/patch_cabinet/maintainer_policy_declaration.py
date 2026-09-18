@@ -349,6 +349,8 @@ def _parse_declaration(raw: dict[str, Any]) -> Declaration:
         type(supersedes) is not str or DECLARATION_ID.fullmatch(supersedes) is None
     ):
         raise ValueError("supersedes must be null or a canonical declaration_id")
+    if supersedes == declaration_id:
+        raise ValueError("supersedes cannot reference the same declaration")
     return Declaration(
         declaration_id=declaration_id,
         record_kind=record_kind,
@@ -412,6 +414,9 @@ def build_validation_receipt(path: Path) -> dict[str, object]:
         "result": "structurally_valid",
         "claim_boundary": (
             CLAIM_BOUNDARY
+            + " This validation covers exactly one record; it does not establish catalog "
+            "membership or cross-record supersession lineage. Use render with the complete "
+            "catalog to check those relationships."
             + " The record_file_sha256 is only a recomputable file fingerprint; it is not a "
             "signature, authentication, authorization, identity, currentness, or permission claim."
         ),

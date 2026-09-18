@@ -2218,3 +2218,48 @@ The final consolidated command results, sample hashes, staged-tree scan, and ini
   public-tree heuristic, exact 12-path scope, four base-log prefixes, frozen interoperability and
   compatibility trees, and `git diff --check` passed. No dependency was acquired or installed and
   no external state changed.
+
+## 2026-09-09 - Session 067 - D-069 Blender handoff qualification
+
+- Recorded D-068 completion non-recursively. PR 32 merged at `2026-09-09T02:32:14Z` as public-main
+  commit `9f7e97e3b126e9794fc40218527b7a76630dbf83`, with reviewed tree
+  `9f9b57791bfc0a48301b2e749bf09e0c6dda0cba` and sole parent
+  `877c0829e24110ac7452a88e2f97e84cadaa19d8`; retained branch
+  `agent/declaration-cli-errors` points to `0381b17300d87344044129c2b400335db18089b7`.
+  All nine required checks passed before merge, and all eleven observed post-main checks from GitHub
+  app 15368, including Dependency Graph, completed successfully. These are named-commit hosted
+  observations, not broad correctness, production enforcement, or future-state proof. Local `main`
+  was clean at that exact merge commit.
+- A read-only public issue check found only unchanged PRs 27 and 28 and no new non-PR issue; nothing
+  was mutated. A brief static release-builder review observed per-file atomic writes, but no all-or-
+  nothing build contract or completed-build corruption. No redesign was selected and no runtime
+  reproduction was run this cycle.
+- The bounded qualification used `code_explorer`, `docs_researcher`, and `implementation_worker`
+  roles. D-069 records the failed public buyer-evidence gate and selects no workstream, prototype,
+  offer, product installation/test, outreach, account, upload, payment, or release. No dependency was
+  acquired. D-050/D-051 remain controlling.
+- This local append changes exactly `docs/DECISION_LOG.md`, `docs/RESEARCH_NOTES.md`,
+  `docs/CONTROL_LOG.md`, and `docs/USAGE_LEDGER.md`. It adds zero units; totals remain 28/14 and
+  revenue remains `$0.00`. No commit, staging, push, pull request, or external write occurred.
+
+## 2026-09-14 - Session 068 - D-070 declaration lineage scope
+
+- A trusted-local Python 3.13 subprocess reproduced that one-record `validate` accepted a
+  canonical self-reference while complete-catalog `render` rejected it. The parser now rejects
+  only that intrinsic contradiction; distinct predecessor IDs still validate without sibling
+  discovery, and catalog membership, date, lineage, fork, and cycle checks remain with `render`.
+- Focused declaration checks passed after correcting one CRLF-only regeneration mismatch. The full
+  Patch suite passed 142 tests with five privilege-dependent skips. Interop, projection, and v1/v2/v3
+  compatibility freshness checks passed; evidence replay checked three bundles, the public-tree
+  heuristic checked 288 files, and a second build matched all four candidate outputs byte-for-byte.
+  One preliminary direct-file interop invocation failed before execution because relative imports
+  require package context; the assigned CI-style package invocation then passed.
+- No dependency was acquired or installed. These local, static, and synthetic results do not
+  establish hosted behavior, external adoption, semantic correctness, or production enforcement.
+
+**2026-09-17 completion:** An independent final local pass confirmed that `Ran 142 tests` is the
+total suite count, including five skips, rather than 142 passes plus five skips. All five package-
+context declaration freshness checks, evidence-bundle replay, the public-tree heuristic, and the
+four-file byte-for-byte candidate rebuild comparison passed; no dependency, network, credential,
+Git-state, or external write was used. These results remain local or synthetic evidence and do not
+establish hosted behavior, external adoption, or production enforcement.

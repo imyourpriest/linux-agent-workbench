@@ -2,8 +2,8 @@
   "schema_version": "1",
   "status": "prepared_release_candidate_not_published",
   "archive": "maintainer-policy-declaration-v0.2.0.zip",
-  "archive_bytes": 42459,
-  "archive_sha256": "cd8dc534f5647ece2d3060c7fb0eb3ff887a9e0b45afa9d23eefb2a29658a85c",
+  "archive_bytes": 43481,
+  "archive_sha256": "e99be6851ad19d0a883493a496cb70e92e15f88ecff782f5ffeb358cc17980fe",
   "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
-  "manifest_sha256": "5bf5032e945f9a503f763d054c5be83cdb2d5eb5fed4c2652ba5b0e744405ced"
+  "manifest_sha256": "a3ed542c538fc275575106d8e6ef5674552a6332ce1dde396a1696b20cf4232c"
 }

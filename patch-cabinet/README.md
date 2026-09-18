@@ -3,10 +3,12 @@
 The versioned [`interop/maintainer-policy-declaration/v1/`](interop/maintainer-policy-declaration/v1/)
 directory is a JSON Schema Draft 2020-12 structural interoperability companion for declaration
 schema 1. It includes fixed valid/invalid/ambiguous vectors and lossy non-authorizing draft
-projections. The existing strict Python parser remains authoritative; no independent JSON Schema
-validator was tested, and the companion is not a standard, detector, authority, permission grant,
-current-policy claim, ruleset generator, or enforcement gate. See the companion README for its
-duplicate-key, number, resource, identity, provenance, lineage, currentness, and authority limits.
+projections. The existing strict Python parser remains authoritative. The frozen v1 companion's
+original evidence did not test an independent JSON Schema validator; current independent validator
+testing runs separately through the hosted compatibility-v3 structural jobs. The companion is not
+a standard, detector, authority, permission grant, current-policy claim, ruleset generator, or
+enforcement gate. See the companion README for its duplicate-key, number, resource, identity,
+provenance, lineage, currentness, and authority limits.
 
 The active hosted structural compatibility jobs use the additive
 [`compatibility-v3`](interop/maintainer-policy-declaration/compatibility-v3/) harness with Ajv
@@ -108,7 +110,9 @@ maintainer-policy-declaration validate \
 The installed `validate` command accepts exactly one record file and prints a deterministic
 structural-validation receipt. Its raw-file SHA-256 is labeled only as a recomputable fingerprint;
 neither that digest nor validation establishes authentication, authorization, identity,
-maintainer approval, source truth, policy currentness, or permission to submit.
+maintainer approval, source truth, policy currentness, or permission to submit. Validation applies
+record-intrinsic checks and rejects self-reference, but it does not establish catalog membership or
+cross-record supersession lineage. Use `render` with the complete catalog for those relationships.
 
 ## Success measures
 

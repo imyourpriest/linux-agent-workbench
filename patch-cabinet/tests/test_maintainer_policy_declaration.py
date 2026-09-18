@@ -361,6 +361,33 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "lineage"):
             declaration.load_declarations(self.records)
 
+    def test_single_record_validation_rejects_self_reference_and_defers_catalog_membership(
+        self,
+    ) -> None:
+        self_referencing = self._record()
+        self_referencing["supersedes"] = self_referencing["declaration_id"]
+        with self.assertRaisesRegex(ValueError, "same declaration"):
+            declaration.build_validation_receipt(self._write(self_referencing))
+
+        for existing in self.records.iterdir():
+            existing.unlink()
+        predecessor = self._record(observed="2026-08-08")
+        successor = self._record(
+            commit="c" * 40,
+            digest="d" * 64,
+            observed="2026-08-09",
+            supersedes=predecessor["declaration_id"],
+        )
+        successor_path = self._write(successor)
+        self.assertEqual(
+            declaration.build_validation_receipt(successor_path)["result"],
+            "structurally_valid",
+        )
+        with self.assertRaisesRegex(ValueError, "different declaration"):
+            declaration.load_declarations(self.records)
+        self._write(predecessor)
+        self.assertEqual(len(declaration.load_declarations(self.records)), 2)
+
     def test_successors_cannot_transition_between_record_kinds(self) -> None:
         for first_kind, second_kind in (
             ("synthetic_example", "unverified_project_declaration"),
@@ -501,6 +528,8 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
         boundary = receipt["claim_boundary"]
         for excluded_claim in ("not a signature", "authentication", "authorization", "currentness"):
             self.assertIn(excluded_claim, boundary)
+        self.assertIn("exactly one record", boundary)
+        self.assertIn("complete catalog", boundary)
         self.assertEqual(receipt, declaration.build_validation_receipt(source))
 
     def test_validate_command_rejects_directory_link_and_malformed_record(self) -> None:

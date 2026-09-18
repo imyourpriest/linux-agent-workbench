@@ -285,3 +285,33 @@ A successful metadata-only HTTPS GET of `https://registry.npmjs.org/fast-uri/3.1
 confirmed the selected package name/version, BSD-3-Clause license, tarball URL, SHA-512 integrity,
 and SHA-1 shasum. The tarball itself was not downloaded. The checked-in evidence transcribes only
 those selected fields and is not a raw response archive, artifact verification, or runtime proof.
+
+## 2026-09-09 - Blender handoff/preflight buyer-evidence qualification
+
+The prospective gate was declared before research: two independent bounded-project requests and at
+least one explicit willingness-to-pay signal. Three batches used these ten queries:
+
+```text
+Blender render farm missing textures pack assets tool "pay"
+Blender project assets missing files "bounty" OR "budget" OR "willing to pay"
+site.blenderartists.org render farm missing textures pack files tool
+site.docs.blender.org manual packed data external files render farm
+"Blender" "pack" "assets" "willing to pay"
+"Blender" "missing textures" "hire" OR "paid tool" OR "budget"
+site.extensions.blender.org/add-ons/blend-project-packer/ "Pack"
+site.renderjuice.com/blender/renderjuice-extensions/blend-project-packer
+"Blender" "render farm" "packaging" "paid"
+"Blender" "missing assets" "preflight" "pay"
+```
+
+| Evidence | Narrow classification |
+|---|---|
+| [RenderJuice product page](https://www.renderjuice.com/blender/renderjuice-extensions/blend-project-packer) and [extension index](https://www.renderjuice.com/blender/extensions) | Vendor says its free local/offline extension scans dependencies and missing files, handles caches, linked libraries and add-ons, rewrites paths, and emits a folder or ZIP manifest. These are vendor claims, not runtime proof or paid demand. |
+| [Blender Extensions listing](https://extensions.blender.org/add-ons/blend-project-packer/) | Official indexed/version pages supported the description after direct fetch failed. No product was installed or tested; download, version, and review counts are not claimed. |
+| [Reddit packaging request](https://www.reddit.com/r/blender/comments/1riacft/is_there_a_way_to_get_all_linked_stuff_to_be/) | A user sought help packaging linked content and later reported that Make Local All plus Pack solved it. This is a help request, not paid intent. |
+| [Blender Artists texture thread](https://blenderartists.org/t/problem-packing-and-finding-textures/1129420) and [free-packer announcement](https://www.reddit.com/r/blender/comments/1uiveft/i_finally_made_the_free_packer_addon_i_wanted_for/) | The October 2018 thread concerns render-farm textures; purchased render credits are not a purchase of a standalone preflight utility. The announcement describes a free utility; creator-reported uptake is not independent buyer intent. |
+| Public issues [#1](https://github.com/shylabs/blend-project-packer-issues/issues/1) and [#2](https://github.com/shylabs/blend-project-packer-issues/issues/2) | Open `Add OCIO color configuration preflight and packaging support` (`2026-06-18T08:57:45Z`) and `Pack Blender preferences` (`2026-08-13T10:50:11Z`) request portable color configuration and CUDA/OPTIX choice. Both use the same public account, have zero comments, and state no budget or payment; no identity or team context is inferred. |
+
+Targeted verification and an independent documentation-research pass found no qualifying paid signal
+in returned accessible evidence. The latest Blender manual was inaccessible; an older 3.3 manual is
+not a current basis. Coverage is bounded, with no market-absence or statistical-sample claim.

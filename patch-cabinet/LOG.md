@@ -611,3 +611,16 @@ Append-only project record.
   public-tree heuristic, exact 12-path scope, four base-log prefixes, frozen interoperability and
   compatibility trees, and `git diff --check` passed. No dependency was acquired or installed and
   no external state changed.
+
+## 2026-09-14 - D-070 single-record lineage scope
+
+- Added an intrinsic self-supersession rejection while preserving standalone validation of a
+  distinct canonical predecessor ID and the catalog renderer's complete lineage checks. The
+  receipt and maintainer/portable documentation now state that one-record validation cannot prove
+  catalog membership or cross-record supersession lineage.
+- Added API and real source/portable subprocess regressions. Regenerated the deterministic sample
+  receipt and four unpublished candidate files; the archive is 43,481 bytes with SHA-256
+  `e99be6851ad19d0a883493a496cb70e92e15f88ecff782f5ffeb358cc17980fe` and manifest SHA-256
+  `a3ed542c538fc275575106d8e6ef5674552a6332ce1dde396a1696b20cf4232c`.
+- This is zero-unit first-party maintenance, not a candidate, release, permission source,
+  publication, payment, or external action. Totals remain 28/14; revenue remains `$0.00`.

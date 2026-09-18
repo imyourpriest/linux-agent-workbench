@@ -8,6 +8,10 @@ component. Read `SPECIFICATION.md`, replace every placeholder in
 python maintainer_policy_declaration.py validate path/to/record.json
 ```
 
+This validates the intrinsic fields and relationships of exactly one record, including rejection
+of a self-reference. It does not establish catalog membership or cross-record supersession lineage;
+use `render` with the complete catalog to check those relationships.
+
 The included synthetic example uses the reserved `example.invalid` namespace. Structural
 validation does not authenticate identity or authority, verify source truth or current policy,
 or authorize contact or submission. SHA-256 values are recomputable fingerprints, not signatures,
