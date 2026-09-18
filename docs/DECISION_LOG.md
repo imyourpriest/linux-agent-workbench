@@ -2629,3 +2629,40 @@ push, pull request, release, activation, payment, or other external mutation.
 
 **Why:** Expected operator input and local-filesystem errors need a concise command-line contract,
 while callers of the existing Python API still need the current fail-closed exceptions.
+
+## 2026-09-09 - D-069 - Blender handoff qualification stops at buyer-evidence gate
+
+**Decision:** Record one zero-unit, control-only qualification of a materially different creative-
+workflow hypothesis: a bounded Blender project handoff/preflight solution. Before research, the
+gate required two independent requests, including one explicit willingness-to-pay signal. The
+ten-query review and targeted source verification,
+independently checked by a documentation researcher, found no qualifying paid signal in the returned
+accessible evidence. Those results do not prove that no buyer or inaccessible signal exists.
+
+Result: no-go for an offer, prototype, or new revenue workstream. Free alternatives substantially
+overlap the proposed dependency scan, missing-file, cache, linked-library, add-on, path-rewrite, and
+packaging functions. Vendor descriptions, prices, downloads, reviews, and creator claims are not
+independent buyer intent or tested behavior. Reopen only on new direct buyer evidence, or a materially
+distinct unmet requirement assessed under a fresh prospective control. Preserve D-050/D-051's park,
+no-go, and existing cooldown; set no arbitrary new cooldown date.
+
+No implementation, offer, or external action is selected. Historical totals remain 28 Patch / 14
+Support units; revenue and cleared receipts remain `$0.00`.
+
+## 2026-09-14 - D-070 - Clarify single-record declaration lineage scope
+
+**Decision:** Repair one reproduced first-party validation ambiguity from exact public-main commit
+`9f7e97e3b126e9794fc40218527b7a76630dbf83`. The one-record `validate` command accepted a canonical
+declaration whose `supersedes` value referenced its own `declaration_id`, while complete-catalog
+`render` rejected it. Reject that self-reference during record parsing, retain the catalog's
+defensive check, and continue accepting a distinct canonical predecessor ID during standalone
+validation without discovering or reading sibling files. Clarify the receipt and documentation:
+standalone validation checks one record and cannot establish catalog membership or cross-record
+supersession lineage; `render` must receive the complete catalog for those checks.
+
+Scope is limited to the declaration source, meaningful API and source/portable process tests,
+maintainer and portable documentation, the deterministic sample receipt and unpublished portable
+candidate, plus concise append-only records. Preserve schema/component versions, receipt shape and
+result, the shared claim boundary, valid starter/index bytes, and all frozen interoperability and
+compatibility evidence. This is zero-unit maintenance; totals remain 28/14 and revenue remains
+`$0.00`. It authorizes no dependency acquisition, commit, staging, publication, or external action.

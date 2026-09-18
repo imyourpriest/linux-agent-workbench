@@ -33,7 +33,10 @@ maintainer-policy-declaration validate path/to/mpd-v1-<digest>.json
 This command safely opens the file once and uses that same payload for strict validation and the
 raw-file SHA-256 in its deterministic JSON receipt. That digest is only a recomputable fingerprint,
 not a signature. The receipt establishes no supplier identity, authority, authorization, source
-truth, policy currentness, or permission to contact or submit.
+truth, policy currentness, or permission to contact or submit. Validation applies the record's
+intrinsic field, identity, provenance, and cross-field checks, including rejecting a self-reference,
+but covers exactly one record. It does not establish catalog membership or cross-record
+supersession lineage. Use `render` with the complete catalog to check those relationships.
 
 Successful commands return status 0. Expected input or local-filesystem errors return status 2,
 write one `maintainer-policy-declaration: error:` diagnostic to stderr, and do not emit a traceback.
@@ -71,7 +74,7 @@ keys, invalid UTF-8, a BOM, unsafe controls, and noncanonical values are rejecte
 | `dimensions` | Exactly the 13 dimension keys and values below |
 | `disclosure_location` | `pr_description`, `commit_trailer`, `either`, `project_defined`, or `not_declared` |
 | `enforcement` | `close_or_reject`, `request_changes`, `label_or_flag`, `maintainer_discretion`, or `not_declared` |
-| `supersedes` | `null` or an in-catalog canonical declaration ID |
+| `supersedes` | `null` or a canonical declaration ID different from this record; catalog membership is checked by `render` |
 | `notes` | Nonempty inert text, maximum 500 characters |
 
 The exact record-kind mapping is:
@@ -105,10 +108,10 @@ with a single NUL byte: literal `mpd-v1`, case-folded repository, `record_kind`,
 commit SHA, case-sensitive `policy_path`, and full lowercase source SHA-256. This uses every
 canonical identity field and does not fold punctuation.
 
-A successor must reference an existing different record, preserve the case-folded repository,
-policy path, `record_kind`, and `assertion_basis`, and use a later observation date. One record may
-have only one direct successor; missing predecessors, forks, and cycles are rejected. Synthetic and
-project declarations cannot transition into one another.
+When rendering a complete catalog, a successor must reference an existing different record,
+preserve the case-folded repository, policy path, `record_kind`, and `assertion_basis`, and use a
+later observation date. One record may have only one direct successor; missing predecessors, forks,
+and cycles are rejected. Synthetic and project declarations cannot transition into one another.
 
 The checked-in starter is specifically for `unverified_project_declaration`, has the exact matching
 assertion basis, shows each controlled vocabulary in its placeholders, and points back to this

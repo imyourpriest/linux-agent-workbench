@@ -7,7 +7,7 @@
   "status": "release_candidate_not_published",
   "archive_format": "zip_stored_fixed_metadata",
   "sha256_boundary": "recomputable_fingerprint_not_signature_attestation_or_external_trust",
-  "source_tree_fingerprint": "d688ebfa5fa89675141ea626abb2a747dcd39d9fb1832c9b5537fd78d78cff9b",
+  "source_tree_fingerprint": "0bf01bd25dd3fdd85f21dd847a158a9d4d6cc8736ddcc93c3b8594bad65866b3",
   "payload": [
     {
       "path": "LICENSE",
@@ -16,18 +16,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 766,
-      "sha256": "56dadad26ecb36dc77cbdb8665248fdd5b69347726d7fb3cdc9602dc2c3688e8"
+      "bytes": 1033,
+      "sha256": "d21c7fd046faf71e6236dad8808d1139688c8075a7e1b659e36b46bac11f24aa"
     },
     {
       "path": "SPECIFICATION.md",
-      "bytes": 8453,
-      "sha256": "585a816538a0fd5024741be8048d7b646240f5ee0711e9622c0aeb7b9b913ad6"
+      "bytes": 8858,
+      "sha256": "7695052f8aab2cb6bc06d0e6ad034e8364940a252222e90c42b6fb164ed995d0"
     },
     {
       "path": "maintainer_policy_declaration.py",
-      "bytes": 27930,
-      "sha256": "c42af8e1aae4af4c9f83ceae262830d2b899a40f2549974e68c931b7f20b5ecf"
+      "bytes": 28280,
+      "sha256": "50ae5bc1ec8add30105ce665777d71e403d4eae3409a0d3a44c50a48006d368e"
     },
     {
       "path": "starter-unverified-project.json",

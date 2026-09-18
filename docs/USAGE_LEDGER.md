@@ -808,3 +808,24 @@ D-068 adds zero Patch and zero Support units. Historical totals remain twenty-ei
 fourteen revenue units, preserving 2:1, and revenue and cleared receipts remain `$0.00`. This is
 maintenance of an existing project-owned component, not a candidate scan, new workstream, offer,
 contact, payment, activation, release, or revenue event.
+
+#### D-069 Blender handoff qualification - 2026-09-09
+
+- Whole-account telemetry at `2026-09-09T02:34:55Z` showed 80% five-hour and 62% weekly remaining.
+  The sponsor permits the full current five-hour allowance; older numeric floors are superseded for
+  this allowance. This is not project attribution, and no amount or delta is assigned to any task,
+  agent, query, source, or check.
+
+| Date | Workstream | Work units | Outcome | Usage-page snapshots |
+|---|---:|---:|---|---|
+| 2026-09-09 | Shared prospective control | 0 | D-069 Blender handoff qualification fails buyer-evidence gate; no offer or build | 80% five-hour / 62% weekly at start; no attribution |
+
+D-069 adds zero Patch and zero Support units. Historical totals remain 28/14; revenue and cleared
+receipts remain `$0.00`.
+
+#### D-070 declaration lineage scope - 2026-09-14
+
+Whole-account telemetry showed 98% five-hour and 42% weekly remaining at the start, then 24% and
+31% at `2026-09-14T21:31:44Z`, with no limit warning. The user authorized the full current
+five-hour allowance. These readings are account snapshots, not project, task, agent, command, or
+test attribution. D-070 adds zero units; totals remain 28/14 and revenue remains `$0.00`.

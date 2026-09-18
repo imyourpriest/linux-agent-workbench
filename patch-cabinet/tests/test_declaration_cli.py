@@ -141,6 +141,30 @@ class DeclarationCliTests(unittest.TestCase):
                 b"declaration is not valid strict JSON",
             )
 
+    def test_source_and_portable_reject_self_supersession(self) -> None:
+        archive_path = (
+            self.project
+            / "release-candidate"
+            / "maintainer-policy-declaration-v0.2.0"
+            / "maintainer-policy-declaration-v0.2.0.zip"
+        )
+        with tempfile.TemporaryDirectory() as temporary, zipfile.ZipFile(archive_path) as archive:
+            root = Path(temporary)
+            portable = root / "maintainer_policy_declaration.py"
+            portable.write_bytes(archive.read("maintainer_policy_declaration.py"))
+            record = json.loads(self.synthetic.read_text(encoding="utf-8"))
+            record["supersedes"] = record["declaration_id"]
+            self_referencing = root / self.synthetic.name
+            self_referencing.write_text(
+                json.dumps(record, indent=2) + "\n", encoding="utf-8", newline="\n"
+            )
+            for script in (self.script, portable):
+                with self.subTest(script=script.name):
+                    self._assert_expected_error(
+                        self._run(script, "validate", str(self_referencing)),
+                        b"supersedes cannot reference the same declaration",
+                    )
+
     def test_library_and_unexpected_exceptions_still_propagate(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             wrong = Path(temporary) / "wrong.json"
