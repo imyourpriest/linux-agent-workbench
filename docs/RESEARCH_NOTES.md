@@ -315,3 +315,56 @@ site.renderjuice.com/blender/renderjuice-extensions/blend-project-packer
 Targeted verification and an independent documentation-research pass found no qualifying paid signal
 in returned accessible evidence. The latest Blender manual was inaccessible; an older 3.3 manual is
 not a current basis. Coverage is bounded, with no market-absence or statistical-sample claim.
+
+## 2026-09-19 - Public bounty qualification
+
+Before research, D-071 required two independent current requests with explicit funding, bounded
+public-source scope, compatible contribution/safety rules, zero spend, and no private-system access.
+Eight queries were used:
+
+```text
+site:github.com issue bounty Go help wanted funded
+site:github.com issue bounty Python CLI open
+site:github.com cash reward issue open source bug bounty
+site:github.com/haveno-dex/haveno/issues "💰bounty" "$" open
+site:github.com/issues "$500 bounty" "Open" "CLI"
+site:algora.io docs bounties getting paid contributor claim payment terms AI
+site:algora.io terms bounty contributor funding payment
+site:github.com/com-lihaoyi/requests-scala/issues "Replace" "500USD" "HttpClient"
+```
+
+The documentation researcher opened the BusKill article, OpenCollective project, BusKill issue
+[106](https://github.com/BusKill/buskill-app/issues/106), com-lihaoyi discussion 6, the copied
+[issue 730](https://github.com/lihaoyi/test/issues/730) (including a redirect/failed-fetch lead),
+and WarpSpeed [issue 1](https://github.com/warpspeedopen-source/warpspeed-bounties/issues/1).
+Root additionally checked GitHub API state and canonical issue history and read Algora's GitHub
+README. Search was not exhaustive.
+
+WarpSpeed issue 1 is open, posted by `warpspeedopen-source` with GitHub association `OWNER`, and
+contains a `$960` promise payable only after an approved and merged PR, 85 comments, and no assignee.
+No owner/member/collaborator comment appeared in the API result. No assignee does not establish
+availability, and the promise does not verify funds. Work
+requires registration, full external rules, maintainer confirmation, and expert Node/TypeScript
+SQS/GCS/local-LLM attachment summarization; no AI-operation policy was verified and no signup or
+full private flow was examined.
+
+Issue 730 copies the title/body of canonical com-lihaoyi/requests-scala
+[issue 150](https://github.com/com-lihaoyi/requests-scala/issues/150), including `500USD`, but uses
+a different posting account with GitHub author association `NONE` and an “Original Author”/ID 150
+marker. Those fields prove neither real-world affiliation nor fraudulent intent. The canonical
+issue was completed and closed on 2024-06-16, so the open copy is not current upstream work; no
+payment completion is inferred.
+
+BusKill issue 106 is open, assigned, and was updated September 19; upstream says NovaCustom offered
+funding. The linked article and OpenCollective project provide contribution context, but balances
+were not independently rechecked. The assigned security-sensitive Qubes integration is excluded
+and was not counted as available work.
+
+Algora's [pricing page](https://algora.io/pricing/) advertises a payment model, not guaranteed funds.
+Its dated 2021 [terms](https://algora.io/legal/terms) text restricts automated access, so no further
+automated site access was selected and no legal clearance is claimed. The vendor
+[README](https://github.com/algora-io/algora/blob/main/README.md) describes outcome-based payments,
+not verified funding. Terms, contribution permission, demand, and funding remain distinct
+uncertainties. The active checkout has no operator-local exclusion file; no candidate scoring,
+denial-list bypass, or final eligibility claim was made. Final classification is zero fully
+qualifying requests.

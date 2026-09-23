@@ -624,3 +624,29 @@ Append-only project record.
   `a3ed542c538fc275575106d8e6ef5674552a6332ce1dde396a1696b20cf4232c`.
 - This is zero-unit first-party maintenance, not a candidate, release, permission source,
   publication, payment, or external action. Totals remain 28/14; revenue remains `$0.00`.
+
+## 2026-09-22 - D-072 nested declaration output destinations
+
+- Synthetic source and byte-identical portable runs reproduced both output-nesting directions.
+  Each exited 2 without a traceback only after creating or replacing the first output; an existing
+  JSON ancestor sentinel was overwritten. Declaration inputs remained byte-identical. This shows
+  one deterministic preflight conflict, not a general multi-file transaction requirement.
+- Output preflight now rejects either resolved ancestor/descendant relationship before writing,
+  immediately after the unchanged identical-path check. Focused API and real source/portable
+  regressions cover both orderings, normalized `..`, sentinel preservation, sibling outputs, and
+  shared textual prefixes. The existing identical-output diagnostic, input/link/identity checks,
+  valid bytes, and per-file replacement remain unchanged.
+- The corrected focused run reported `Ran 42 tests` with three privilege-dependent skips, so 39
+  non-skipped tests passed. The full Patch run reported `Ran 145 tests` with five such skips, so
+  140 non-skipped tests passed. An earlier focused run reported three test-harness directory-
+  collision errors because source and portable scripts share a stem; explicit case labels fixed
+  only the test directories, and the production guard did not change.
+- All five package-context declaration freshness checks, three registered evidence-engine replays,
+  the three-bundle evidence review, and the 288-file public-tree heuristic passed. A second build
+  matched all four candidate artifacts byte-for-byte. The archive is 43,955 bytes with SHA-256
+  `142d86673ff73ec015f5587a945c89bcd2e316d27e567df4e4997689b9bff166`; the manifest SHA-256 is
+  `8704edb077e576abbdf07be66e0db72abc296d109f527e4dfe3bee26423f7b9d`.
+- No dependency was acquired or installed, and no Node or third-party repository code execution,
+  staging, commit, push, publication, credential change, or external write occurred. These
+  local Windows and synthetic observations do not establish hosted or production enforcement;
+  portability outside the inspected code path remains static only.
