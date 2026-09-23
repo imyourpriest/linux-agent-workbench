@@ -141,6 +141,70 @@ class DeclarationCliTests(unittest.TestCase):
                 b"declaration is not valid strict JSON",
             )
 
+    def test_source_and_portable_reject_nested_outputs_before_writing(self) -> None:
+        archive_path = (
+            self.project
+            / "release-candidate"
+            / "maintainer-policy-declaration-v0.2.0"
+            / "maintainer-policy-declaration-v0.2.0.zip"
+        )
+        with tempfile.TemporaryDirectory() as temporary, zipfile.ZipFile(archive_path) as archive:
+            root = Path(temporary)
+            portable = root / "maintainer_policy_declaration.py"
+            portable.write_bytes(archive.read("maintainer_policy_declaration.py"))
+            self.assertEqual(portable.read_bytes(), self.script.read_bytes())
+            for script_kind, script in (("source", self.script), ("portable", portable)):
+                with self.subTest(script=script_kind, case="json-ancestor"):
+                    case = root / script_kind / "json-ancestor"
+                    case.mkdir(parents=True)
+                    output = case / "out"
+                    normalized_child = case / "unused" / ".." / "out" / "cards.md"
+                    result = self._run(
+                        script,
+                        "render",
+                        str(self.synthetic.parent),
+                        "--json-out",
+                        str(output),
+                        "--markdown-out",
+                        str(normalized_child),
+                    )
+                    self._assert_expected_error(result, b"cannot contain one another")
+                    self.assertFalse(output.exists())
+
+                with self.subTest(script=script_kind, case="markdown-ancestor"):
+                    case = root / script_kind / "markdown-ancestor"
+                    case.mkdir(parents=True)
+                    output = case / "out"
+                    result = self._run(
+                        script,
+                        "render",
+                        str(self.synthetic.parent),
+                        "--json-out",
+                        str(output / "cards.json"),
+                        "--markdown-out",
+                        str(output),
+                    )
+                    self._assert_expected_error(result, b"cannot contain one another")
+                    self.assertFalse(output.exists())
+
+                with self.subTest(script=script_kind, case="existing-sentinel"):
+                    case = root / script_kind / "existing-sentinel"
+                    case.mkdir(parents=True)
+                    output = case / "out"
+                    sentinel = b"preserve existing output\n"
+                    output.write_bytes(sentinel)
+                    result = self._run(
+                        script,
+                        "render",
+                        str(self.synthetic.parent),
+                        "--json-out",
+                        str(output),
+                        "--markdown-out",
+                        str(output / "cards.md"),
+                    )
+                    self._assert_expected_error(result, b"cannot contain one another")
+                    self.assertEqual(output.read_bytes(), sentinel)
+
     def test_source_and_portable_reject_self_supersession(self) -> None:
         archive_path = (
             self.project

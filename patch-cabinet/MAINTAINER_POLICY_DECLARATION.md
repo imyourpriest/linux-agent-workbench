@@ -20,7 +20,10 @@ treated as proof of identity, authority, or permission.
 - The checked-in example uses the reserved `example.invalid` synthetic namespace. It makes no
   existence or identity assertion. The starter contains invalid placeholders and is not validated
   until every placeholder is replaced.
-- Output parents are trusted local filesystems. Atomic replacement limits partial output but does not defend against adversarial parent replacement between validation and writing.
+- Output destinations are resolved before writing and cannot nest; preflight rejects an
+  ancestor/descendant conflict before writing either output. Each output is still replaced per
+  file, not as a multi-file transaction. Output parents are trusted local filesystems, and the
+  checks do not defend against adversarial parent replacement between validation and writing.
 
 ## Commands
 

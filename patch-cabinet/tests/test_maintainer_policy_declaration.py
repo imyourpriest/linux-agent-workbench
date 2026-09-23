@@ -492,6 +492,69 @@ class MaintainerPolicyDeclarationTests(unittest.TestCase):
                 ]
             )
 
+    def test_output_paths_reject_nesting_before_writing(self) -> None:
+        self._write(self._record())
+        absent_cases = (
+            (
+                self.root / "json-ancestor",
+                self.root / "unused" / ".." / "json-ancestor" / "cards.md",
+            ),
+            (self.root / "markdown-ancestor" / "index.json", self.root / "markdown-ancestor"),
+        )
+        for json_out, markdown_out in absent_cases:
+            with self.subTest(json_out=json_out, markdown_out=markdown_out):
+                with self.assertRaisesRegex(ValueError, "cannot contain one another"):
+                    declaration.main(
+                        [
+                            "render",
+                            str(self.records),
+                            "--json-out",
+                            str(json_out),
+                            "--markdown-out",
+                            str(markdown_out),
+                        ]
+                    )
+                self.assertFalse(json_out.exists())
+                self.assertFalse(markdown_out.exists())
+
+        sentinel = self.root / "sentinel"
+        sentinel_bytes = b"existing output must survive\n"
+        sentinel.write_bytes(sentinel_bytes)
+        with self.assertRaisesRegex(ValueError, "cannot contain one another"):
+            declaration.main(
+                [
+                    "render",
+                    str(self.records),
+                    "--json-out",
+                    str(sentinel),
+                    "--markdown-out",
+                    str(sentinel / "cards.md"),
+                ]
+            )
+        self.assertEqual(sentinel.read_bytes(), sentinel_bytes)
+        self.assertFalse((sentinel / "cards.md").exists())
+
+    def test_output_paths_allow_siblings_and_shared_textual_prefixes(self) -> None:
+        self._write(self._record())
+        report = declaration.build_index(declaration.load_declarations(self.records))
+        json_out = self.root / "cards"
+        markdown_out = self.root / "cards-rendered" / "cards.md"
+        self.assertEqual(
+            declaration.main(
+                [
+                    "render",
+                    str(self.records),
+                    "--json-out",
+                    str(json_out),
+                    "--markdown-out",
+                    str(markdown_out),
+                ]
+            ),
+            0,
+        )
+        self.assertEqual(json_out.read_bytes(), (json.dumps(report, indent=2) + "\n").encode())
+        self.assertEqual(markdown_out.read_bytes(), declaration.render_markdown(report).encode())
+
     def test_cli_outputs_and_starter_are_deterministic_lf_only(self) -> None:
         self._write(self._record())
         json_out = self.root / "index.json"

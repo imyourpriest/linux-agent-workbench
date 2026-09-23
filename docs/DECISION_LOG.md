@@ -2666,3 +2666,37 @@ candidate, plus concise append-only records. Preserve schema/component versions,
 result, the shared claim boundary, valid starter/index bytes, and all frozen interoperability and
 compatibility evidence. This is zero-unit maintenance; totals remain 28/14 and revenue remains
 `$0.00`. It authorizes no dependency acquisition, commit, staging, publication, or external action.
+
+## 2026-09-19 - D-071 - Public bounty qualification does not clear prospective gate
+
+**Decision:** Record one zero-unit qualification of a bounded public-source bounty hypothesis. The
+prospective gate required two independent, current, explicitly funded requests compatible with
+contribution and safety rules and preparable with zero spend and no private-system access. The
+bounded review found zero fully qualifying requests. A publicly promised reward is not verified
+funding, but escrow was not silently added as a requirement.
+
+The reviewed signals failed for distinct reasons: WarpSpeed requires registration, external-rule
+and maintainer confirmation and expert multi-service Node/TypeScript work outside the bounded
+Python/Go CLI lane; the copied requests-scala item is not current upstream work; and the BusKill
+Qubes packaging request is assigned and security-sensitive. No candidate, implementation, offer,
+or workstream is selected. This bounded result does not prove there is no bounty market.
+
+D-050's Support park, D-051's migration cooldown, and D-069's Blender decision remain unchanged.
+Reconsider only on a new concrete qualifying first-party request or material evidence; set no new
+arbitrary cooldown. Totals remain 28 Patch / 14 Support units, and revenue remains `$0.00`.
+
+## 2026-09-22 - D-072 - Reject nested declaration output destinations before writing
+
+**Decision:** Repair the reproduced first-party declaration renderer conflict in which one resolved
+output destination is an ancestor of the other. Reject either nesting direction during output-path
+preflight, immediately after the existing identical-output check and before any write. Preserve the
+existing identical-output diagnostic, input-containment and filesystem-identity checks, `main(argv)`
+`ValueError`, CLI status 2 with empty stdout and no traceback, valid output bytes, and per-file
+writing behavior. This does not add a multi-file transaction or hostile-filesystem guarantee.
+
+Scope is limited to the declaration source, focused API and source/portable process regressions,
+maintainer documentation, the four deterministic unpublished v0.2.0 candidate artifacts, and
+append-only Decision, Control, Usage, and Patch records. Preserve fixtures, samples, receipts,
+starter/index bytes, and frozen interoperability and compatibility v1/v2/v3 evidence. This is
+zero-unit first-party maintenance; totals remain 28 Patch / 14 Support units and revenue remains
+`$0.00`. It authorizes no dependency acquisition, staging, commit, publication, or external action.

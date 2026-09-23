@@ -2263,3 +2263,41 @@ context declaration freshness checks, evidence-bundle replay, the public-tree he
 four-file byte-for-byte candidate rebuild comparison passed; no dependency, network, credential,
 Git-state, or external write was used. These results remain local or synthetic evidence and do not
 establish hosted behavior, external adoption, or production enforcement.
+
+## 2026-09-19 - Session 069 - D-071 public bounty qualification
+
+- Recorded PR 33 completion once, non-recursively: it merged at `2026-09-18T03:05:59Z` as
+  `177a9c12f40c6294e4e1b6666c1e99a3e9e2c21d`, tree
+  `ba4de833c6bdf34dbf77d3aa6898e94550274181`, sole parent
+  `9f7e97e3b126e9794fc40218527b7a76630dbf83`, from head
+  `82c7d9d581864a5470cefa234939c0c87dbd1c4e`. A fresh September 19 GitHub readback confirmed the
+  merge/tree/parent and successful required check contexts. This is named hosted evidence, not
+  future or production enforcement; old checks and local tests were not repeated.
+- `docs_researcher` performed bounded source research; `implementation_worker` recorded the local
+  append after root adversarial source checks corrected an initial funded/unclaimed inference.
+  Final classification is zero fully qualifying requests, with no candidate or implementation.
+- Clean main at the exact merge preceded this four-file append. No dependency acquisition,
+  third-party code execution, credential changes, private-system access, payment, staging, commit,
+  network mutation, or external write occurred. D-071 adds zero units; totals remain 28/14 and
+  revenue remains `$0.00`.
+
+## 2026-09-22 - Session 070 - D-072 declaration output-path conflict repair
+
+- On exact HEAD `177a9c12f40c6294e4e1b6666c1e99a3e9e2c21d`, Python 3.13.15 source and
+  byte-identical portable runs reproduced both nested-output orderings and an overwritten existing
+  JSON ancestor sentinel. The narrow preflight repair rejects either resolved nesting direction
+  before writes while preserving equal-path, input, filesystem, API/CLI, valid-byte, and per-file
+  behavior. It makes no general transactionality or hostile-filesystem claim.
+- The final focused run reported 42 total tests with three skips and 39 non-skipped passes. The
+  full Patch run reported 145 total with five skips and 140 non-skipped passes. An initial focused
+  run had three test-only directory-collision errors from identical source/portable stems; explicit
+  labels corrected the harness without changing the production guard.
+- Interop, projection, and compatibility v1/v2/v3 package-context freshness checks passed. All
+  three registered evidence engines and three immutable bundles replayed; the public-tree heuristic
+  passed on 288 files. A second deterministic build matched all four candidate files. Fixtures,
+  samples, receipts, starter/index bytes, frozen interop/compatibility trees, and D071 research SHA-256
+  `237bc653aa302d19d37a0228a3d3a452d59f6371b3f32dfbc3e6c79f18623469` were preserved.
+- No dependency installation or acquisition, Node or third-party repository execution, staging,
+  commit, push, publication, credential change, or external write occurred. D-072 adds zero units;
+  totals remain 28/14 and revenue remains `$0.00`. Local Windows runtime evidence does not establish
+  hosted, other-platform, or production enforcement.

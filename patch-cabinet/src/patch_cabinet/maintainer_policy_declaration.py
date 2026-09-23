@@ -623,6 +623,12 @@ def _assert_output_paths(directory: Path, outputs: list[Path]) -> None:
     resolved_outputs = [path.resolve(strict=False) for path in outputs]
     if len(resolved_outputs) != len(set(resolved_outputs)):
         raise ValueError("JSON and Markdown outputs must use different paths")
+    if any(
+        first.is_relative_to(second) or second.is_relative_to(first)
+        for index, first in enumerate(resolved_outputs)
+        for second in resolved_outputs[index + 1 :]
+    ):
+        raise ValueError("JSON and Markdown output paths cannot contain one another")
     if any(path.is_relative_to(resolved_directory) for path in resolved_outputs):
         raise ValueError("outputs cannot be written inside the declaration directory")
     input_inodes = {

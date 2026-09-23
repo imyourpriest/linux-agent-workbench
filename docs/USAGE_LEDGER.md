@@ -829,3 +829,24 @@ Whole-account telemetry showed 98% five-hour and 42% weekly remaining at the sta
 31% at `2026-09-14T21:31:44Z`, with no limit warning. The user authorized the full current
 five-hour allowance. These readings are account snapshots, not project, task, agent, command, or
 test attribution. D-070 adds zero units; totals remain 28/14 and revenue remains `$0.00`.
+
+#### D-071 public bounty qualification - 2026-09-19
+
+Whole-account telemetry at the start showed 88% five-hour and 98% weekly remaining, with no reached
+limit or warning. The user permits the full current five-hour allowance. This is whole-account
+telemetry, not attribution to this repository, decision, agent, query, or check. D-071 adds zero
+units; totals remain 28/14 and revenue remains `$0.00`.
+
+#### D-072 declaration output-path conflict repair - 2026-09-22
+
+The whole-account start reading showed 98% five-hour and 51% weekly remaining. No exact timestamp
+or project attribution is claimed. D-072 is zero-unit first-party maintenance; totals remain 28
+Patch / 14 Support units and revenue remains `$0.00`.
+
+Local preparation and validation completed without acquisition, publication, or external mutation.
+The reading is not attributed to D-072, this repository, any agent, command, or test.
+
+Later whole-account telemetry showed 5% five-hour and 37% weekly remaining at
+`2026-09-22T06:58:20Z`, with no reached-limit or warning flag. After the user's continuation, a new
+five-hour window showed 100% five-hour and 36% weekly remaining, also without a warning. The window
+change and both readings are account snapshots, not usage attributed to this project or task.
